@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/HiveSpace/.vs/HiveSpace
+/HiveSpace/HiveSpace.Application/bin/Debug/net8.0
+/HiveSpace/HiveSpace.Application/obj
+/HiveSpace/HiveSpace.Common/bin/Debug/net8.0
+/HiveSpace/HiveSpace.Common/obj
+/HiveSpace/HiveSpace.Domain/bin/Debug/net8.0
+/HiveSpace/HiveSpace.Domain/obj
+/HiveSpace/HiveSpace.Infrastructure/bin/Debug/net8.0
+/HiveSpace/HiveSpace.Infrastructure/obj
+/HiveSpace/HiveSpace.TestDataLoader/obj
+/HiveSpace/HiveSpace.TestDataLoader/bin/Debug/net8.0
