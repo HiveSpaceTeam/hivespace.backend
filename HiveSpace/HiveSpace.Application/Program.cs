@@ -14,7 +14,6 @@ if (environment == "Production")
         options.Connect(connectionString);
     });
 }
-
 var configuration = builder.Configuration;
 
 // Add services to the container.
