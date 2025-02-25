@@ -5,6 +5,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 
+if (environment == "Production")
+{
+    string connectionString = builder.Configuration.GetValue<string>("AppConfiguration")
+    ?? throw new InvalidOperationException("The setting `AppConfiguration` was not found.");
+    builder.Configuration.AddAzureAppConfiguration(options =>
+    {
+        options.Connect(connectionString);
+    });
+}
+
 var configuration = builder.Configuration;
 
 // Add services to the container.
