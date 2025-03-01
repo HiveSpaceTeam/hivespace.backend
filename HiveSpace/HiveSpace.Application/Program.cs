@@ -23,7 +23,7 @@ builder.Services
     .AddInfrastructureServices(configuration)
     .AddAutoMapper(typeof(AutoMapperProfiles));
 
-LoggingSetup.ConfigureLogging(builder.Environment);
+LoggingSetup.ConfigureLogging(builder.Environment, configuration);
 
 var app = builder.Build();
 
