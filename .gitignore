@@ -14,3 +14,10 @@
 /HiveSpace/HiveSpace.TestDataLoader/obj
 /HiveSpace/HiveSpace.TestDataLoader/bin/Debug/net8.0
 /HiveSpace/.vs/ProjectEvaluation
+/HiveSpace/HiveSpace.Application/bin/Release/net8.0
+/HiveSpace/HiveSpace.Common/bin/Release/net8.0
+/HiveSpace/HiveSpace.Infrastructure/bin/Release/net8.0
+/HiveSpace/HiveSpace.Domain/bin/Release/net8.0
+/HiveSpace/HiveSpace.Application/Properties/PublishProfiles
+/HiveSpace/obj/Docker
+/HiveSpace/HiveSpace.Application/.config

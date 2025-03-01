@@ -88,7 +88,7 @@ namespace HiveSpace.Application.Migrations
                     OrderProvince = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
                     OrderCountry = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
                     Status = table.Column<string>(type: "text", nullable: false),
-                    PaymentMethod = table.Column<string>(type: "text", nullable: false)
+                    PaymentMethod = table.Column<string>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
