@@ -110,21 +110,19 @@ public static class ApplicationDI
 
     public static IServiceCollection ConfigureCors(this IServiceCollection services, IConfiguration configuration)
     {
-        var serviceProvider = services.BuildServiceProvider();
-        var appConfig = serviceProvider.GetRequiredService<IOptions<AppConfig>>().Value;
+        var appConfig = configuration.GetSection("AppConfig").Get<AppConfig>();
 
-        if (appConfig.Cors != null)
+        if (appConfig?.Cors != null && appConfig.Cors.Length > 0)
         {
-            services.AddCors(
-            options =>
+            services.AddCors(options =>
             {
-                options.AddPolicy(
-                    name: "_myAllowSpecificOrigins",
-                    builder => builder.WithOrigins(appConfig.Cors)
-                                      .AllowAnyHeader()
-                                      .AllowAnyMethod()
-                                      .AllowCredentials()
-                );
+                options.AddPolicy("_myAllowSpecificOrigins", builder =>
+                {
+                    builder.WithOrigins(appConfig.Cors)
+                           .AllowAnyHeader()
+                           .AllowAnyMethod()
+                           .AllowCredentials();
+                });
             });
         }
         return services;
