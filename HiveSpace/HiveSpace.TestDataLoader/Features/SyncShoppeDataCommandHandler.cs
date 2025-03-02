@@ -6,18 +6,21 @@ using HiveSpace.Domain.AggergateModels;
 using HiveSpace.Domain.Enums;
 using HiveSpace.Infrastructure;
 using HiveSpace.TestDataLoader.Features.Models;
+using Azure.Storage.Blobs.Models;
+using System.Threading;
+using HiveSpace.Application.Extensions;
 
 namespace HiveSpace.TestDataLoader.Features;
 
 public record SyncShoppeDataCommand : IRequest { }
 
-public class SyncShoppeDataCommandHandler(IShoppeApi shoppeApi, IConfiguration configuration, NichoShopDbContext context, IStorageService storageService, IMediator mediator) : IRequestHandler<SyncShoppeDataCommand>
+public class SyncShoppeDataCommandHandler(IShoppeApi shoppeApi, IConfiguration configuration, HiveSpaceDbContext context, IStorageService storageService, IMediator mediator) : IRequestHandler<SyncShoppeDataCommand>
 {
     private readonly IMediator _mediator = mediator;
     private readonly IStorageService _storageService = storageService;
     private readonly IShoppeApi _shoppeApi = shoppeApi;
     private readonly IConfiguration _configuration = configuration;
-    private readonly NichoShopDbContext _context = context;
+    private readonly HiveSpaceDbContext _context = context;
     private readonly Dictionary<string, AttributeProduct> _attributeDict = [];
     private readonly Dictionary<int, Category> _categoryDict = [];
     private readonly Dictionary<string, string> _categoryImageDict = [];
@@ -109,6 +112,13 @@ public class SyncShoppeDataCommandHandler(IShoppeApi shoppeApi, IConfiguration c
         if (categories is null)
         {
             return;
+        }
+
+        var containerClient = await _storageService.GetContainerClient(StorageType.CategoryImages.GetDisplayName());
+        await foreach (BlobItem blobItem in containerClient.GetBlobsAsync())
+        {
+            var blobClient = containerClient.GetBlobClient(blobItem.Name);
+            await blobClient.DeleteIfExistsAsync();
         }
 
         foreach (var category in categories)

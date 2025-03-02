@@ -5,7 +5,7 @@ using HiveSpace.Domain.Repositories;
 
 namespace HiveSpace.Infrastructure.Repositories
 {
-    public class OrderRepository(NichoShopDbContext context) : BaseRepository<Order, Guid>(context), IOrderRepository
+    public class OrderRepository(HiveSpaceDbContext context) : BaseRepository<Order, Guid>(context), IOrderRepository
     {
         protected override IQueryable<Order> ApplyIncludeDetail(IQueryable<Order> query)
         {

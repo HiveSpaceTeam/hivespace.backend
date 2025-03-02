@@ -3,7 +3,7 @@ using HiveSpace.Domain.AggergateModels.UserAggregate;
 using HiveSpace.Domain.Repositories;
 
 namespace HiveSpace.Infrastructure.Repositories;
-public class UserRepository(NichoShopDbContext context) : BaseRepository<User, Guid>(context), IUserRepository
+public class UserRepository(HiveSpaceDbContext context) : BaseRepository<User, Guid>(context), IUserRepository
 {
     public async Task<User?> FindUserByPhoneNumber(string phoneNumber)
     {

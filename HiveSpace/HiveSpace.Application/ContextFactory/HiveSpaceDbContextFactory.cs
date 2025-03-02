@@ -4,9 +4,9 @@ using HiveSpace.Infrastructure;
 
 namespace HiveSpace.Application.ContextFactory;
 
-public class NichoShopDbContextFactory : IDesignTimeDbContextFactory<NichoShopDbContext>
+public class HiveSpaceDbContextFactory : IDesignTimeDbContextFactory<HiveSpaceDbContext>
 {
-    public NichoShopDbContext CreateDbContext(string[] args)
+    public HiveSpaceDbContext CreateDbContext(string[] args)
     {
         // Build configuration
         var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Development";
@@ -17,11 +17,11 @@ public class NichoShopDbContextFactory : IDesignTimeDbContextFactory<NichoShopDb
             .AddJsonFile($"appsettings.{environment}.json", optional: true)
             .Build();
         Console.WriteLine(environment);
-        var optionsBuilder = new DbContextOptionsBuilder<NichoShopDbContext>();
+        var optionsBuilder = new DbContextOptionsBuilder<HiveSpaceDbContext>();
         var connectionString = configuration.GetSection("Postgres:ConnectionString").Value;
         optionsBuilder.UseNpgsql(connectionString, b => b.MigrationsAssembly("HiveSpace.Application"));
 
-        return new NichoShopDbContext(optionsBuilder.Options, configuration);
+        return new HiveSpaceDbContext(optionsBuilder.Options, configuration);
     }
 
     //public static NichoShopDbContext CreateDbContext()

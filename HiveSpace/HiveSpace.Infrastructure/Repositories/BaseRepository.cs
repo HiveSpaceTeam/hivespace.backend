@@ -7,11 +7,11 @@ using HiveSpace.Domain.Shared;
 using System.Linq.Expressions;
 
 namespace HiveSpace.Infrastructure.Repositories;
-public abstract class BaseRepository<TEntity, TKey>(NichoShopDbContext context) : IRepository<TEntity>
+public abstract class BaseRepository<TEntity, TKey>(HiveSpaceDbContext context) : IRepository<TEntity>
     where TEntity : AggregateRoot<TKey>
     where TKey : struct, IEquatable<TKey>
 {
-    protected readonly NichoShopDbContext _context = context;
+    protected readonly HiveSpaceDbContext _context = context;
 
     public void Add(TEntity entity)
     {

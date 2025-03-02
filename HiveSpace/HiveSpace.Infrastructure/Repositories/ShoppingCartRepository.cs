@@ -4,7 +4,7 @@ using HiveSpace.Domain.Repositories;
 
 namespace HiveSpace.Infrastructure.Repositories;
 
-public class ShoppingCartRepository(NichoShopDbContext context) : BaseRepository<ShoppingCart, Guid>(context), IShoppingCartRepository
+public class ShoppingCartRepository(HiveSpaceDbContext context) : BaseRepository<ShoppingCart, Guid>(context), IShoppingCartRepository
 {
     public async Task<ShoppingCart?> GetShoppingCartByUserIdAsync(Guid userId)
     {

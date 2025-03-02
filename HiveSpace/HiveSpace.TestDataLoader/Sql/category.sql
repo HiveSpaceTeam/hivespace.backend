@@ -1,2961 +1,1493 @@
+Delete From categories;
+
+INSERT INTO categories VALUES (100001, 'Health', 'Sức Khỏe', NULL, 'a111161f-eb71-46b3-9320-be6cce697eb3');
+INSERT INTO categories VALUES (100009, 'Fashion Accessories', 'Phụ Kiện Thời Trang', NULL, 'cbd9a47a-b859-4fd8-a150-fe1082efd9e7');
+INSERT INTO categories VALUES (100010, 'Home Appliances', 'Thiết Bị Điện Gia Dụng', NULL, 'd553f5ef-4ba9-4462-a276-7e20d94844c3');
+INSERT INTO categories VALUES (100011, 'Men Clothes', 'Thời Trang Nam', NULL, '19d5a1bc-d1a5-47ff-a0a5-26a3ff1fce26');
+INSERT INTO categories VALUES (100012, 'Men Shoes', 'Giày Dép Nam', NULL, 'd7278562-04f5-42c5-90c7-64c1d7fac885');
+INSERT INTO categories VALUES (100013, 'Mobile & Gadgets', 'Điện Thoại & Phụ Kiện', NULL, '9feeaef6-111f-4a06-ad11-61ff81cb950f');
+INSERT INTO categories VALUES (100015, 'Travel & Luggage', 'Du lịch & Hành lý', NULL, NULL);
+INSERT INTO categories VALUES (100016, 'Women Bags', 'Túi Ví Nữ', NULL, '0a623bf5-9e92-47a2-954b-2fbb56cfada6');
+INSERT INTO categories VALUES (100017, 'Women Clothes', 'Thời Trang Nữ', NULL, '76a4fe67-e61a-4067-9eec-57bc74cde28a');
+INSERT INTO categories VALUES (100532, 'Women Shoes', 'Giày Dép Nữ', NULL, '17f4101d-8345-42eb-a91e-8dbb97351c23');
+INSERT INTO categories VALUES (100533, 'Men Bags', 'Túi Ví Nam', NULL, '278282b0-1d93-4fcc-b77d-43f2f34561fd');
+INSERT INTO categories VALUES (100534, 'Watches', 'Đồng Hồ', NULL, '557faa4a-86eb-4f7e-a6d9-d80509cc81aa');
+INSERT INTO categories VALUES (100535, 'Audio', 'Thiết Bị Âm Thanh', NULL, NULL);
+INSERT INTO categories VALUES (100629, 'Food & Beverages', 'Thực phẩm và đồ uống', NULL, NULL);
+INSERT INTO categories VALUES (100630, 'Beauty', 'Sắc Đẹp', NULL, NULL);
+INSERT INTO categories VALUES (100631, 'Pets', 'Chăm Sóc Thú Cưng', NULL, '192fd294-75f2-4bdb-900c-bc1ba2943263');
+INSERT INTO categories VALUES (100632, 'Mom & Baby', 'Mẹ & Bé', NULL, NULL);
+INSERT INTO categories VALUES (100633, 'Baby & Kids Fashion', 'Thời trang trẻ em & trẻ sơ sinh', NULL, NULL);
+INSERT INTO categories VALUES (100634, 'Gaming & Consoles', 'Gaming & Console', NULL, NULL);
+INSERT INTO categories VALUES (100635, 'Cameras & Drones', 'Cameras & Flycam', NULL, NULL);
+INSERT INTO categories VALUES (100636, 'Home & Living', 'Nhà cửa & Đời sống', NULL, '9c9ac94e-815f-4f91-9f37-48d1bd941ec9');
+INSERT INTO categories VALUES (100637, 'Sports & Outdoors', 'Thể Thao & Dã Ngoại', NULL, NULL);
+INSERT INTO categories VALUES (100638, 'Stationery', 'Văn Phòng Phẩm', NULL, NULL);
+INSERT INTO categories VALUES (100639, 'Hobbies & Collections', 'Sở thích & Sưu tầm', NULL, NULL);
+INSERT INTO categories VALUES (100640, 'Automobiles', 'Ô tô', NULL, NULL);
+INSERT INTO categories VALUES (100641, 'Motorcycles', 'Mô tô, xe máy', NULL, NULL);
+INSERT INTO categories VALUES (100642, 'Tickets, Vouchers & Services', 'Voucher & Dịch vụ', NULL, '7fe17c80-339e-47e6-bfed-29951dd878c3');
+INSERT INTO categories VALUES (100643, 'Books & Magazines', 'Sách & Tạp Chí', NULL, NULL);
+INSERT INTO categories VALUES (100644, 'Computers & Accessories', 'Máy tính & Laptop', NULL, NULL);
+INSERT INTO categories VALUES (102053, 'Deals Near Me', 'Deal Gần bạn', NULL, NULL);
+INSERT INTO categories VALUES (100002, 'Food Supplement', 'Thực phẩm chức năng', 100001, 'b79cd6c4-e087-4d1a-b4fa-c0d404fa7b9b');
+INSERT INTO categories VALUES (100008, 'Others', 'Khác', 100001, 'ea863bd3-5b39-4d48-81ce-72dc4a84fd5b');
+INSERT INTO categories VALUES (100018, 'Medical Supplies', 'Vật tư y tế', 100001, 'cd86fb9a-2482-4e76-9e02-7e83a1307970');
+INSERT INTO categories VALUES (100019, 'Personal Care', 'Chăm sóc cá nhân', 100001, NULL);
+INSERT INTO categories VALUES (100020, 'Sexual Wellness', 'Hỗ trợ tình dục', 100001, 'ccedc945-22ba-46d0-8edc-0aa3c40316d7');
+INSERT INTO categories VALUES (100021, 'Rings', 'Nhẫn', 100009, 'e8650358-ae11-43aa-86c0-c828f7940eec');
+INSERT INTO categories VALUES (100022, 'Earrings', 'Bông tai', 100009, 'f05fa083-7bb9-4b21-b009-0b9371c686ba');
+INSERT INTO categories VALUES (100023, 'Scarves & Shawls', 'Khăn choàng', 100009, '09d95d42-25a8-45ae-8b28-10dea2755272');
+INSERT INTO categories VALUES (100024, 'Gloves', 'Găng tay', 100009, '5439d9a1-74fe-451d-868d-2e546d2d34a4');
+INSERT INTO categories VALUES (100025, 'Hair Accessories', 'Phụ kiện tóc', 100009, 'eda11081-982a-4398-94c1-eed634729845');
+INSERT INTO categories VALUES (100026, 'Bracelets & Bangles', 'Vòng tay & Lắc tay', 100009, '319ee0e6-0d65-4120-bf74-3f82f5cae2fb');
+INSERT INTO categories VALUES (100027, 'Anklets', 'Lắc chân', 100009, '41b57b39-d23b-4c35-b119-e346d9b28773');
+INSERT INTO categories VALUES (100028, 'Hats & Caps', 'Mũ', 100009, 'fef25a90-1a23-4c7e-8416-e737e9f3b627');
+INSERT INTO categories VALUES (100029, 'Necklaces', 'Dây chuyền', 100009, 'd655f7ca-61d8-41e2-a8a3-32a6638f74fb');
+INSERT INTO categories VALUES (100030, 'Eyewear', 'Kính mắt', 100009, '047e0da9-1496-4735-a861-08a4c19d25c0');
+INSERT INTO categories VALUES (100031, 'Investment Precious Metals', 'Kim loại quý', 100009, '0d0186a1-9fd5-473d-bb51-655f9c166288');
+INSERT INTO categories VALUES (100032, 'Belts', 'Thắt lưng', 100009, '61e3b044-754f-48c0-a38d-f413e74eb048');
+INSERT INTO categories VALUES (100033, 'Neckties, Bow Ties & Cravats', 'Cà vạt & Nơ cổ', 100009, '3957c850-aff8-4826-a620-678535d1e802');
+INSERT INTO categories VALUES (100034, 'Additional Accessories', 'Phụ kiện thêm', 100009, '4f477d0b-6fe1-4ca3-8adb-67e4c2e7786b');
+INSERT INTO categories VALUES (100035, 'Accessories Sets & Packages', 'Bộ phụ kiện', 100009, '093ee9e3-ed0c-4a56-b953-bd2f06025837');
+INSERT INTO categories VALUES (100036, 'Others', 'Khác', 100009, '2e4f757a-ef00-4453-9a2b-faa817506e9b');
+INSERT INTO categories VALUES (100037, 'Projectors & Accessories', 'Máy chiếu & Phụ kiện', 100010, NULL);
+INSERT INTO categories VALUES (100038, 'Small Household Appliances', 'Thiết bị điện gia dụng nhỏ', 100010, NULL);
+INSERT INTO categories VALUES (100039, 'Large Household Appliances', 'Thiết bị điện gia dụng lớn', 100010, NULL);
+INSERT INTO categories VALUES (100040, 'TVs & Accessories', 'Tivi & Phụ kiện', 100010, NULL);
+INSERT INTO categories VALUES (100041, 'Kitchen Appliances', 'Đồ gia dụng nhà bếp', 100010, '3c2588a4-e16b-46b3-b53e-bb930f4e5b51');
+INSERT INTO categories VALUES (100042, 'Electrical Circuitry & Parts', 'Mạch điện & Phụ tùng', 100010, NULL);
+INSERT INTO categories VALUES (100043, 'Batteries', 'Pin', 100010, NULL);
+INSERT INTO categories VALUES (100045, 'Remote Controls', 'Thiết bị điều khiển từ xa', 100010, NULL);
+INSERT INTO categories VALUES (100046, 'Others', 'Khác', 100010, 'ba217ccc-8c8b-440f-831f-90e7a1267b2e');
+INSERT INTO categories VALUES (100047, 'Jeans', 'Quần jean', 100011, 'fda59802-7a68-4e0a-8e3d-aea8255e746a');
+INSERT INTO categories VALUES (100048, 'Hoodies & Sweatshirts', 'Hoodie & Áo nỉ', 100011, 'd0bce07c-4cb9-47a0-98aa-fd6b9a0d1676');
+INSERT INTO categories VALUES (100049, 'Sweaters & Cardigans', 'Áo len', 100011, NULL);
+INSERT INTO categories VALUES (100050, 'Jackets, Coats & Vests', 'Áo khoác', 100011, '51e77809-15c4-4b3e-88e8-fc193eb76955');
+INSERT INTO categories VALUES (100051, 'Suits', 'Com lê', 100011, NULL);
+INSERT INTO categories VALUES (100052, 'Pants', 'Quần dài', 100011, NULL);
+INSERT INTO categories VALUES (100053, 'Shorts', 'Quần đùi', 100011, 'd654dbaa-3004-4d4b-a74b-e035c2af4bf8');
+INSERT INTO categories VALUES (100054, 'Tops', 'Áo', 100011, 'e560691c-47ec-4e8d-bbcd-121303a83a39');
+INSERT INTO categories VALUES (100055, 'Innerwear & Underwear', 'Đồ lót', 100011, '1905fdcd-509a-4668-b6f7-29975f9e410e');
+INSERT INTO categories VALUES (100056, 'Sleepwear', 'Đồ ngủ', 100011, '3c94ee57-8fa8-453c-81b1-29295f6c63cc');
+INSERT INTO categories VALUES (100057, 'Sets', 'Bộ', 100011, '9c628aad-a6a0-45bd-bfcd-b0397ca13477');
+INSERT INTO categories VALUES (100058, 'Traditional Wear', 'Trang phục truyền thống', 100011, '826f3454-eefd-4aa1-a983-b7750f50b154');
+INSERT INTO categories VALUES (100059, 'Costumes', 'Đồ hóa trang', 100011, '12e0bafe-1ef3-4c78-961b-4d16c1582c2c');
+INSERT INTO categories VALUES (100060, 'Occupational Attire', 'Trang phục ngành nghề', 100011, 'e9de164b-6f0a-4c24-ad58-56a5bbcbebd6');
+INSERT INTO categories VALUES (100061, 'Others', 'Khác', 100011, 'bdb19c07-a499-44fe-bd6b-2753b17b9f01');
+INSERT INTO categories VALUES (100062, 'Socks', 'Vớ/ Tất', 100011, '79c7f2fc-357c-4cfc-b819-45aa9d755a75');
+INSERT INTO categories VALUES (100063, 'Boots', 'Bốt', 100012, '5835c24c-1784-4215-b9cf-7ca2c1caf84e');
+INSERT INTO categories VALUES (100064, 'Sneakers', 'Giày thể thao/ Sneakers', 100012, 'b9c7171d-793c-4a82-8c57-53ac3515c0ed');
+INSERT INTO categories VALUES (100065, 'Slip Ons & Mules', 'Giày sục', 100012, '3131326b-f5f5-441d-818f-fd784f7f6c43');
+INSERT INTO categories VALUES (100066, 'Loafers & Boat Shoes', 'Giày tây lười', 100012, '0424aeb8-a00d-467c-9d1e-a28bd4c2daca');
+INSERT INTO categories VALUES (100067, 'Oxfords & Lace-Ups', 'Giày Oxfords & Giày buộc dây', 100012, 'be30fec4-336a-4faa-b270-3d11b1e91544');
+INSERT INTO categories VALUES (100068, 'Sandals & Flip Flops', 'Xăng-đan & Dép', 100012, 'f3e4d147-e851-442e-9ff0-993dc8bdad9a');
+INSERT INTO categories VALUES (100069, 'Shoe Care & Accessories', 'Phụ kiện giày dép', 100012, '8bec81da-23fe-418d-9e8b-e24ff67acd2d');
+INSERT INTO categories VALUES (100070, 'Others', 'Khác', 100012, '84d7ff31-5c22-4a2e-bd17-062ab16af14e');
+INSERT INTO categories VALUES (100071, 'Sim Cards', 'Thẻ sim', 100013, NULL);
+INSERT INTO categories VALUES (100072, 'Tablets', 'Máy tính bảng', 100013, '4c98f009-4fe5-4018-ae79-9d2715145118');
+INSERT INTO categories VALUES (100073, 'Mobile Phones', 'Điện thoại', 100013, 'b7a7983e-b431-42ba-a7bf-60a5120f2b35');
+INSERT INTO categories VALUES (100074, 'Wearable Devices', 'Thiết bị đeo thông minh', 100013, NULL);
+INSERT INTO categories VALUES (100075, 'Accessories', 'Phụ kiện', 100013, NULL);
+INSERT INTO categories VALUES (100076, 'Walkie Talkies', 'Bộ đàm', 100013, NULL);
+INSERT INTO categories VALUES (100077, 'Others', 'Khác', 100013, NULL);
+INSERT INTO categories VALUES (100085, 'Luggage', 'Vali', 100015, NULL);
+INSERT INTO categories VALUES (100086, 'Travel Bags', 'Túi du lịch', 100015, NULL);
+INSERT INTO categories VALUES (100087, 'Travel Accessories', 'Phụ kiện du lịch', 100015, NULL);
+INSERT INTO categories VALUES (100088, 'Others', 'Khác', 100015, NULL);
+INSERT INTO categories VALUES (100089, 'Backpacks', 'Ba lô', 100016, '2ecdf547-bc36-46dd-becb-35f91bb9288f');
+INSERT INTO categories VALUES (100090, 'Laptop Bags', 'Cặp laptop', 100016, 'a2db0d73-d3c9-4337-98f1-1d518e1a5068');
+INSERT INTO categories VALUES (100091, 'Clutches & Wristlets', 'Ví dự tiệc & Ví cầm tay', 100016, '8a188455-8e47-49b3-a799-7de83f3234a3');
+INSERT INTO categories VALUES (100092, 'Waist Bags & Chest Bags', 'Túi đeo hông & Túi đeo ngực', 100016, 'aa0108b8-3914-4e3b-9fb7-da386c99bfb6');
+INSERT INTO categories VALUES (100093, 'Tote Bags', 'Túi tote', 100016, '62ca593e-353f-465b-8ca3-63492d233f82');
+INSERT INTO categories VALUES (100094, 'Top-handle Bags', 'Túi quai xách', 100016, '8ebeb378-0182-40e6-b170-c33406d954ea');
+INSERT INTO categories VALUES (100095, 'Crossbody & Shoulder Bags', 'Túi đeo chéo & Túi đeo vai', 100016, '5b3c1900-7a31-468c-87a3-60c151cd36fb');
+INSERT INTO categories VALUES (100096, 'Wallets', 'Ví', 100016, '109b1b2d-d8ed-43db-b3d4-cea609670be7');
+INSERT INTO categories VALUES (100097, 'Bag Accessories', 'Phụ kiện túi', 100016, 'dbbd1a39-8797-4393-a05f-9e0f5a82d83b');
+INSERT INTO categories VALUES (100098, 'Others', 'Khác', 100016, 'b4a5b606-d84b-4cb2-90a3-def03ce19dc7');
+INSERT INTO categories VALUES (100099, 'Tops', 'Áo', 100017, '2339aa61-362a-4d78-a901-741e0ba74120');
+INSERT INTO categories VALUES (100100, 'Pants & Leggings', 'Quần', 100017, '87303be7-56f7-49b7-a7e9-a4e3ff693518');
+INSERT INTO categories VALUES (100101, 'Shorts', 'Quần đùi', 100017, '30e0cada-603f-4f38-968c-d4a8ed92bf9a');
+INSERT INTO categories VALUES (100102, 'Skirts', 'Váy', 100017, 'f83d6cff-9cba-48f1-b0af-643864af9450');
+INSERT INTO categories VALUES (100103, 'Jeans', 'Quần jeans', 100017, '163a2c7c-7df7-463c-bcf9-f307a7ed2dff');
+INSERT INTO categories VALUES (100104, 'Dresses', 'Đầm', 100017, '69737a74-bde6-4bde-af4e-9c03209c922a');
+INSERT INTO categories VALUES (100105, 'Wedding Dresses', 'Váy cưới', 100017, 'd31f0fab-e1e6-453b-aacf-9f0e278d8b38');
+INSERT INTO categories VALUES (100106, 'Jumpsuits, Playsuits & Overalls', 'Đồ liền thân', 100017, 'd47f1b51-7d30-4f55-b7c6-7306980b56dd');
+INSERT INTO categories VALUES (100107, 'Jackets, Coats & Vests', 'Áo khoác', 100017, 'fffabb60-3974-491f-86ae-a421998179dd');
+INSERT INTO categories VALUES (100108, 'Sweaters & Cardigans', 'Áo len', 100017, 'b4e5207b-aa2c-4979-8438-e978e1a9943a');
+INSERT INTO categories VALUES (100109, 'Hoodies & Sweatshirts', 'Hoodie và Áo nỉ', 100017, 'a303ade3-4af9-43ef-be6f-e3d8555d465a');
+INSERT INTO categories VALUES (100110, 'Sets', 'Bộ', 100017, 'e2001aec-2359-4ba0-97aa-f015c80f5752');
+INSERT INTO categories VALUES (100111, 'Lingerie & Underwear', 'Đồ lót', 100017, '59c633aa-f031-4bbf-81f0-22ae3f36f974');
+INSERT INTO categories VALUES (100112, 'Sleepwear & Pajamas', 'Đồ ngủ', 100017, 'aacead80-5120-4b3a-a2a3-8cb27ecd773e');
+INSERT INTO categories VALUES (100113, 'Maternity Wear', 'Đồ Bầu', 100017, 'f63269f3-7f55-4f7e-85b0-c1ccd6564a9c');
+INSERT INTO categories VALUES (100114, 'Traditional Wear', 'Đồ truyền thống', 100017, '3d447c71-b602-4ad4-b084-978795394fdb');
+INSERT INTO categories VALUES (100115, 'Costumes', 'Đồ hóa trang', 100017, '08e59305-47fd-47f3-86ca-471842837f6c');
+INSERT INTO categories VALUES (100116, 'Others', 'Khác', 100017, '95862b24-0281-481f-a5ed-7ff45d5250e7');
+INSERT INTO categories VALUES (100117, 'Fabric', 'Vải', 100017, '5400b572-491b-43a7-a2cc-aed3fc870698');
+INSERT INTO categories VALUES (100118, 'Socks & Stockings', 'Vớ/ Tất', 100017, '978be86f-0c4f-478c-86db-8b72d8efa2d5');
+INSERT INTO categories VALUES (100556, 'Boots', 'Bốt', 100532, '42c0b1b0-170e-42ad-b4d1-ab982197a014');
+INSERT INTO categories VALUES (100557, 'Sneakers', 'Giày thể thao/ sneaker', 100532, 'd687a12e-6e45-4e72-b2a3-4ca60bc8495f');
+INSERT INTO categories VALUES (100558, 'Flats', 'Giày đế bằng', 100532, 'a5c0248f-9a27-4e3e-9033-5fbdd70fee11');
+INSERT INTO categories VALUES (100559, 'Heels', 'Giày cao gót', 100532, '28645073-4812-4c05-bbd5-c3bada792e01');
+INSERT INTO categories VALUES (100560, 'Wedges', 'Giày đế xuồng', 100532, '1143fef1-a150-45fe-9018-8f593cdfe3c7');
+INSERT INTO categories VALUES (100561, 'Flat Sandals & Flip Flops', 'Xăng-đan và dép', 100532, '41bdfd73-e42e-4816-bfce-f3e5af2cac96');
+INSERT INTO categories VALUES (100562, 'Shoe Care & Accessories', 'Phụ kiện & chăm sóc giày', 100532, '74b7064f-bbf3-413c-b2eb-14104bf4fc9a');
+INSERT INTO categories VALUES (100563, 'Others', 'Khác', 100532, '697e17dc-3907-410c-8c6e-bfe80835e815');
+INSERT INTO categories VALUES (100564, 'Backpacks', 'Ba lô', 100533, '81a582bf-9872-446f-9471-d88a0401c7e1');
+INSERT INTO categories VALUES (100565, 'Laptop Bags', 'Cặp laptop', 100533, NULL);
+INSERT INTO categories VALUES (100566, 'Tote Bags', 'Túi tote', 100533, '99477397-21a3-40f9-8a06-4703b8b4d2da');
+INSERT INTO categories VALUES (100567, 'Briefcases', 'Cặp xách công sở', 100533, 'e67a77f2-d72c-4d78-ae2c-09010fc00436');
+INSERT INTO categories VALUES (100568, 'Clutches', 'Ví cầm tay', 100533, '9e8c9687-5c4e-4ef5-900f-be6fb0be5558');
+INSERT INTO categories VALUES (100569, 'Waist Bags & Chest Bags', 'Túi đeo hông & Túi đeo ngực', 100533, '88b7fe48-ab8e-486e-acb5-9669e9690ef8');
+INSERT INTO categories VALUES (100570, 'Crossbody & Shoulder Bags', 'Túi đeo chéo', 100533, 'bfd862e9-6006-4c9a-b768-47814f0b947a');
+INSERT INTO categories VALUES (100571, 'Wallets', 'Bóp/ Ví', 100533, '44c4bae6-0a9d-4423-9adf-8962551d2ae6');
+INSERT INTO categories VALUES (100572, 'Others', 'Khác', 100533, 'a17c59bf-e0b6-4210-b0fd-5a1970a9dadc');
+INSERT INTO categories VALUES (100573, 'Women Watches', 'Đồng hồ nữ', 100534, '55886b8c-688f-4f51-a534-087fc2df9686');
+INSERT INTO categories VALUES (100574, 'Men Watches', 'Đồng hồ nam', 100534, '43115200-bc3e-4696-b6cb-f0f5ffbf56bb');
+INSERT INTO categories VALUES (100575, 'Set & Couple Watches', 'Bộ đồng hồ & Đồng hồ cặp', 100534, '80faba58-64a6-4195-af7b-a316bf90fe01');
+INSERT INTO categories VALUES (100576, 'Watches Accessories', 'Phụ kiện đồng hồ', 100534, 'b725f0bf-7915-4175-87e9-8a0f7493213e');
+INSERT INTO categories VALUES (100577, 'Others', 'Khác', 100534, '094879f9-2deb-4ae1-8bee-f53467de596c');
+INSERT INTO categories VALUES (100578, 'Earphones, Headphones & Headsets', 'Tai nghe nhét tai & chụp tai', 100535, NULL);
+INSERT INTO categories VALUES (100579, 'Media Players', 'Máy nghe nhạc', 100535, NULL);
+INSERT INTO categories VALUES (100580, 'Microphones', 'Micro thu âm', 100535, NULL);
+INSERT INTO categories VALUES (100581, 'Amplifiers & Mixers', 'Amply và đầu chỉnh âm', 100535, NULL);
+INSERT INTO categories VALUES (100582, 'Home Audio & Speakers', 'Dàn âm thanh', 100535, NULL);
+INSERT INTO categories VALUES (100583, 'Audio & Video Cables & Converters', 'Cáp âm thanh/ video & Đầu chuyển', 100535, NULL);
+INSERT INTO categories VALUES (100584, 'Others', 'Khác', 100535, NULL);
+INSERT INTO categories VALUES (100645, 'Convenience / Ready-to-eat', 'Đồ chế biến sẵn', 100629, NULL);
+INSERT INTO categories VALUES (100646, 'Snacks', 'Đồ ăn vặt', 100629, NULL);
+INSERT INTO categories VALUES (100647, 'Food Staples', 'Nhu yếu phẩm', 100629, NULL);
+INSERT INTO categories VALUES (100648, 'Cooking Essentials', 'Nguyên liệu nấu ăn', 100629, NULL);
+INSERT INTO categories VALUES (100649, 'Baking Needs', 'Đồ làm bánh', 100629, NULL);
+INSERT INTO categories VALUES (100650, 'Breakfast Cereals & Spread', 'Ngũ cốc & mứt', 100629, NULL);
+INSERT INTO categories VALUES (100651, 'Beverages', 'Đồ uống', 100629, NULL);
+INSERT INTO categories VALUES (100652, 'Dairy & Eggs', 'Sữa - trứng', 100629, NULL);
+INSERT INTO categories VALUES (100653, 'Fresh & Frozen Food', 'Thực phẩm tươi sống & đông lạnh', 100629, NULL);
+INSERT INTO categories VALUES (100654, 'Bakery', 'Các loại bánh', 100629, NULL);
+INSERT INTO categories VALUES (100655, 'Alcoholic Beverages', 'Đồ uống có cồn', 100629, NULL);
+INSERT INTO categories VALUES (100656, 'Gift Set & Hampers', 'Bộ quà tặng', 100629, NULL);
+INSERT INTO categories VALUES (100657, 'Others', 'Khác', 100629, NULL);
+INSERT INTO categories VALUES (100658, 'Hand, Foot & Nail Care', 'Chăm sóc tay, chân & móng', 100630, NULL);
+INSERT INTO categories VALUES (100659, 'Hair Care', 'Chăm sóc tóc', 100630, NULL);
+INSERT INTO categories VALUES (100660, 'Men''s Care', 'Chăm sóc nam giới', 100630, NULL);
+INSERT INTO categories VALUES (100661, 'Perfumes & Fragrances', 'Nước hoa', 100630, NULL);
+INSERT INTO categories VALUES (100662, 'Makeup', 'Trang điểm', 100630, NULL);
+INSERT INTO categories VALUES (100663, 'Beauty Tools', 'Dụng cụ làm đẹp', 100630, NULL);
+INSERT INTO categories VALUES (100664, 'Skincare', 'Chăm sóc da mặt', 100630, NULL);
+INSERT INTO categories VALUES (100665, 'Beauty Sets & Packages', 'Bộ sản phẩm làm đẹp', 100630, NULL);
+INSERT INTO categories VALUES (100666, 'Others', 'Khác', 100630, NULL);
+INSERT INTO categories VALUES (100667, 'Pet Food', 'Thức ăn cho thú cưng', 100631, 'aa65e058-57fd-4f78-a948-ffa17f030859');
+INSERT INTO categories VALUES (100668, 'Pet Accessories', 'Phụ kiện cho thú cưng', 100631, 'f4352704-fd8a-4797-aadd-18cc82293723');
+INSERT INTO categories VALUES (100669, 'Litter & Toilet', 'Vệ sinh cho thú cưng', 100631, 'e89cefc0-9465-45d6-b52e-cc1df48351c8');
+INSERT INTO categories VALUES (100670, 'Pet Grooming', 'Làm đẹp cho thú cưng', 100631, 'a1aeeab8-93f5-4edd-914d-19de549ae81c');
+INSERT INTO categories VALUES (100671, 'Pet Clothing & Accessories', 'Quần áo & phụ kiện', 100631, '173c8177-0911-4a1c-9529-a331a4bac57c');
+INSERT INTO categories VALUES (100672, 'Pet Healthcare', 'Chăm sóc sức khỏe', 100631, '13ea30f6-32e3-4a69-bcaa-8fb9b0184cc0');
+INSERT INTO categories VALUES (100673, 'Others', 'Khác', 100631, '6f824bf3-6465-4900-b7f0-b94b6034460b');
+INSERT INTO categories VALUES (100674, 'Baby Travel Essentials', 'Đồ dùng du lịch cho bé', 100632, NULL);
+INSERT INTO categories VALUES (100675, 'Feeding Essentials', 'Đồ dùng ăn dặm cho bé', 100632, NULL);
+INSERT INTO categories VALUES (100676, 'Maternity Accessories', 'Phụ kiện cho mẹ', 100632, NULL);
+INSERT INTO categories VALUES (100677, 'Maternity Healthcare', 'Chăm sóc sức khỏe mẹ', 100632, NULL);
+INSERT INTO categories VALUES (100678, 'Bath & Body Care', 'Đồ dùng phòng tắm & Chăm sóc cơ thể bé', 100632, NULL);
+INSERT INTO categories VALUES (100679, 'Nursery', 'Đồ dùng phòng ngủ cho bé', 100632, NULL);
+INSERT INTO categories VALUES (100680, 'Baby Safety', 'An toàn cho bé', 100632, NULL);
+INSERT INTO categories VALUES (100681, 'Milk Formula & Baby Food', 'Sữa công thức & Thực phẩm cho bé', 100632, NULL);
+INSERT INTO categories VALUES (100682, 'Baby Healthcare', 'Chăm sóc sức khỏe bé', 100632, NULL);
+INSERT INTO categories VALUES (100683, 'Diapering & Potty', 'Tã & bô em bé', 100632, NULL);
+INSERT INTO categories VALUES (100684, 'Toys', 'Đồ chơi', 100632, NULL);
+INSERT INTO categories VALUES (100685, 'Gift Sets & Packages', 'Bộ & Gói quà tặng', 100632, NULL);
+INSERT INTO categories VALUES (100686, 'Others', 'Khác', 100632, NULL);
+INSERT INTO categories VALUES (100687, 'Baby Clothes', 'Quần áo trẻ em', 100633, NULL);
+INSERT INTO categories VALUES (100688, 'Baby Mittens & Footwear', 'Bao tay trẻ em & Tất', 100633, NULL);
+INSERT INTO categories VALUES (100689, 'Baby & Kids Accessories', 'Phụ kiện trẻ em & trẻ sơ sinh', 100633, NULL);
+INSERT INTO categories VALUES (100690, 'Boy Clothes', 'Quần áo bé trai', 100633, NULL);
+INSERT INTO categories VALUES (100691, 'Girl Clothes', 'Quần áo bé gái', 100633, NULL);
+INSERT INTO categories VALUES (100692, 'Boy Shoes', 'Giày bé trai', 100633, NULL);
+INSERT INTO categories VALUES (100693, 'Girl Shoes', 'Giày bé gái', 100633, NULL);
+INSERT INTO categories VALUES (100694, 'Others', 'Khác', 100633, NULL);
+INSERT INTO categories VALUES (100695, 'Console Machines', 'Máy chơi game', 100634, NULL);
+INSERT INTO categories VALUES (100696, 'Console Accessories', 'Phụ kiện console', 100634, NULL);
+INSERT INTO categories VALUES (100697, 'Video Games', 'Video Games', 100634, NULL);
+INSERT INTO categories VALUES (100698, 'Others', 'Khác', 100634, NULL);
+INSERT INTO categories VALUES (100699, 'Cameras', 'Máy ảnh', 100635, NULL);
+INSERT INTO categories VALUES (100700, 'Security Cameras & Systems', 'Camera giám sát', 100635, NULL);
+INSERT INTO categories VALUES (100701, 'Lenses', 'Ống kính', 100635, NULL);
+INSERT INTO categories VALUES (100702, 'Lens Accessories', 'Phụ kiện ống kính', 100635, NULL);
+INSERT INTO categories VALUES (100703, 'Camera Accessories', 'Phụ kiện máy ảnh', 100635, NULL);
+INSERT INTO categories VALUES (100704, 'Camera Care', 'Phụ kiện chăm sóc máy ảnh', 100635, NULL);
+INSERT INTO categories VALUES (100705, 'Drones', 'Flycam', 100635, NULL);
+INSERT INTO categories VALUES (100706, 'Drone Accessories', 'Phụ kiện Flycam', 100635, NULL);
+INSERT INTO categories VALUES (100707, 'Others', 'Khác', 100635, NULL);
+INSERT INTO categories VALUES (100708, 'Home Fragrance & Aromatherapy', 'Chất khử mùi, làm thơm nhà', 100636, '24a27cb8-f6e6-46f2-8fe5-ca35b40a8366');
+INSERT INTO categories VALUES (100709, 'Bathrooms', 'Đồ dùng phòng tắm', 100636, NULL);
+INSERT INTO categories VALUES (100710, 'Bedding', 'Chăn ga gối nệm', 100636, '5100b113-69e5-4757-8ab0-c1ebc64f987a');
+INSERT INTO categories VALUES (100711, 'Decoration', 'Trang trí nhà cửa', 100636, NULL);
+INSERT INTO categories VALUES (100712, 'Hand Warmers, Hot Water Bags & Ice Bags', 'Túi làm ấm', 100636, NULL);
+INSERT INTO categories VALUES (100713, 'Furniture', 'Nội thất', 100636, 'df222a8c-c4a1-40b2-bb49-7990887cbbc8');
+INSERT INTO categories VALUES (100714, 'Gardening', 'Làm vườn', 100636, NULL);
+INSERT INTO categories VALUES (100715, 'Tools & Home Improvement', 'Dụng cụ & Thiết bị tiện ích', 100636, NULL);
+INSERT INTO categories VALUES (100716, 'Home Care Supplies', 'Dụng cụ chăm sóc nhà cửa', 100636, NULL);
+INSERT INTO categories VALUES (100717, 'Kitchenware', 'Dụng cụ nhà bếp', 100636, NULL);
+INSERT INTO categories VALUES (100718, 'Dinnerware', 'Bộ đồ bàn ăn', 100636, '3a35c856-adcd-43fd-8815-6459d3cd59df');
+INSERT INTO categories VALUES (100719, 'Lighting', 'Đèn', 100636, 'a14e6304-539a-4766-a430-1670ee9c9ede');
+INSERT INTO categories VALUES (100720, 'Safety & Security', 'Bảo hộ gia đình', 100636, NULL);
+INSERT INTO categories VALUES (100721, 'Home Organizers', 'Sắp xếp nhà cửa', 100636, NULL);
+INSERT INTO categories VALUES (100722, 'Party Supplies', 'Trang trí tiệc tùng', 100636, NULL);
+INSERT INTO categories VALUES (100723, 'Fengshui & Religious Supplies', 'Đồ thờ cúng, đồ phong thủy', 100636, NULL);
+INSERT INTO categories VALUES (100724, 'Others', 'Khác', 100636, NULL);
+INSERT INTO categories VALUES (100725, 'Sports & Outdoor Recreation Equipments', 'Dụng Cụ Thể Thao & Dã Ngoại', 100637, NULL);
+INSERT INTO categories VALUES (100726, 'Sports Footwear', 'Giày Thể Thao', 100637, NULL);
+INSERT INTO categories VALUES (100727, 'Sports & Outdoor Apparels', 'Thời Trang Thể Thao & Dã Ngoại', 100637, NULL);
+INSERT INTO categories VALUES (100728, 'Sports & Outdoor Accessories', 'Phụ Kiện Thể Thao & Dã Ngoại', 100637, NULL);
+INSERT INTO categories VALUES (100729, 'Others', 'Khác', 100637, NULL);
+INSERT INTO categories VALUES (100730, 'Gift & Wrapping', 'Quà Tặng - Giấy Gói', 100638, NULL);
+INSERT INTO categories VALUES (100731, 'Writing & Correction', 'Bút Các Loại', 100638, NULL);
+INSERT INTO categories VALUES (100732, 'School & Office Equipment', 'Thiết Bị Trường Học', 100638, NULL);
+INSERT INTO categories VALUES (100733, 'Art Supplies', 'Họa cụ', 100638, NULL);
+INSERT INTO categories VALUES (100734, 'Notebooks & Papers', 'Sổ & Giấy Các Loại', 100638, NULL);
+INSERT INTO categories VALUES (100735, 'Letters & Envelopes', 'Thư Tín', 100638, NULL);
+INSERT INTO categories VALUES (100736, 'Others', 'Khác', 100638, NULL);
+INSERT INTO categories VALUES (100737, 'Collectible Items', 'Đồ Sưu Tầm', 100639, NULL);
+INSERT INTO categories VALUES (100738, 'Souvenirs', 'Quà Lưu Niệm', 100639, NULL);
+INSERT INTO categories VALUES (100739, 'Toys & Games', 'Đồ chơi - Giải trí', 100639, NULL);
+INSERT INTO categories VALUES (100740, 'CD, DVD & Bluray', 'Băng - Đĩa', 100639, NULL);
+INSERT INTO categories VALUES (100741, 'Musical Instruments & Accessories', 'Nhạc Cụ & Phụ Kiện', 100639, NULL);
+INSERT INTO categories VALUES (100742, 'Vinyl Records', 'Đĩa Than', 100639, NULL);
+INSERT INTO categories VALUES (100743, 'Photo Albums', 'Album Ảnh', 100639, NULL);
+INSERT INTO categories VALUES (100744, 'Needlework', 'Dụng Cụ May Vá', 100639, NULL);
+INSERT INTO categories VALUES (100745, 'Others', 'Khác', 100639, NULL);
+INSERT INTO categories VALUES (100746, 'Automobiles', 'Ô tô', 100640, NULL);
+INSERT INTO categories VALUES (100747, 'Automobile Interior Accessories', 'Phụ kiện nội thất ô tô', 100640, NULL);
+INSERT INTO categories VALUES (100748, 'Automobile Exterior Accessories', 'Phụ kiện ngoại thất ô tô', 100640, NULL);
+INSERT INTO categories VALUES (100749, 'Automobile Spare Parts', 'Phụ tùng ô tô', 100640, NULL);
+INSERT INTO categories VALUES (100750, 'Automotive Tools', 'Dụng cụ sửa chữa ô tô', 100640, NULL);
+INSERT INTO categories VALUES (100751, 'Automotive Care', 'Chăm sóc ô tô', 100640, NULL);
+INSERT INTO categories VALUES (100752, 'Automotive Oils & Lubes', 'Dầu nhớt và phụ gia ô tô', 100640, NULL);
+INSERT INTO categories VALUES (100753, 'Automotive Keychains & Key Covers', 'Móc chìa khóa và Bọc chìa ô tô', 100640, NULL);
+INSERT INTO categories VALUES (100754, 'Others', 'Khác', 100640, NULL);
+INSERT INTO categories VALUES (100755, 'Motorcycles', 'Mô tô, xe máy', 100641, NULL);
+INSERT INTO categories VALUES (100756, 'Motorcycle Accessories', 'Phụ kiện xe máy', 100641, NULL);
+INSERT INTO categories VALUES (100757, 'Motorcycle Spare Parts', 'Phụ tùng xe máy', 100641, NULL);
+INSERT INTO categories VALUES (100758, 'Motorcycle Helmets & Accessories', 'Mũ bảo hiểm & Phụ kiện', 100641, NULL);
+INSERT INTO categories VALUES (100759, 'Others', 'Khác', 100641, NULL);
+INSERT INTO categories VALUES (100760, 'Events & Attractions', 'Sự kiện & Giải trí', 100642, 'd3d57926-f892-45d1-a863-551e2e61af40');
+INSERT INTO categories VALUES (100761, 'F&B', 'Nhà hàng & Ăn uống', 100642, '35e1c8c9-1b7d-45cd-b047-5ea418189418');
+INSERT INTO categories VALUES (100762, 'Shopping', 'Mua sắm', 100642, '8085d112-7c9f-4ef7-8eda-16c5a2013511');
+INSERT INTO categories VALUES (100763, 'Utilities', 'Thanh toán hóa đơn', 100642, '15550d9b-031e-489c-b315-405eb6ab8c58');
+INSERT INTO categories VALUES (100764, 'Services', 'Dịch vụ khác', 100642, 'eff74ba0-0dc0-4348-8c29-e8b0f4c11a9f');
+INSERT INTO categories VALUES (100765, 'Beauty & Wellness', 'Sức khỏe & Làm đẹp', 100642, '02d1f0bb-4a6d-4bb2-8bac-90cf2b0b0837');
+INSERT INTO categories VALUES (100766, 'Transport', 'Gọi xe', 100642, 'fb919a4c-98cf-4bb9-a5f0-da2c97a050ce');
+INSERT INTO categories VALUES (100767, 'Lessons & Workshops', 'Khóa học', 100642, '4912ba19-b020-4e24-a445-0eb8fe6c6d47');
+INSERT INTO categories VALUES (100768, 'Telco', 'Nạp tiền tài khoản', 100642, 'a027559e-82f0-41bd-b64d-7621d59959d4');
+INSERT INTO categories VALUES (100769, 'Travel', 'Du lịch & Khách sạn', 100642, 'f5aef4d5-bd4b-4b2f-ad7d-c69a91bd4fc7');
+INSERT INTO categories VALUES (100774, 'Shopee', 'Mã quà tặng Shopee', 100642, '55215e55-d74f-4487-af1a-f66735d2b580');
+INSERT INTO categories VALUES (100775, 'Others', 'Khác', 100642, NULL);
+INSERT INTO categories VALUES (100776, 'Magazines & Newspaper', 'Tạp Chí & Báo Giấy', 100643, NULL);
+INSERT INTO categories VALUES (100777, 'Books', 'Sách', 100643, NULL);
+INSERT INTO categories VALUES (100778, 'E-Books', 'E-Books', 100643, NULL);
+INSERT INTO categories VALUES (100779, 'Others', 'Khác', 100643, NULL);
+INSERT INTO categories VALUES (101932, 'Desktop Computers', 'Máy Tính Bàn', 100644, NULL);
+INSERT INTO categories VALUES (101933, 'Monitors', 'Màn Hình', 100644, NULL);
+INSERT INTO categories VALUES (101934, 'Desktop & Laptop Components', 'Linh Kiện Máy Tính', 100644, NULL);
+INSERT INTO categories VALUES (101935, 'Data Storage', 'Thiết Bị Lưu Trữ', 100644, NULL);
+INSERT INTO categories VALUES (101936, 'Network Components', 'Thiết Bị Mạng', 100644, NULL);
+INSERT INTO categories VALUES (101937, 'Softwares', 'Phần Mềm', 100644, NULL);
+INSERT INTO categories VALUES (101938, 'Office Equipment', 'Thiết Bị Văn Phòng', 100644, NULL);
+INSERT INTO categories VALUES (101939, 'Printers & Scanners', 'Máy In & Máy Scan', 100644, NULL);
+INSERT INTO categories VALUES (101940, 'Peripherals & Accessories', 'Phụ Kiện Máy Tính', 100644, NULL);
+INSERT INTO categories VALUES (101941, 'Keyboards & Mice', 'Chuột & Bàn Phím', 100644, NULL);
+INSERT INTO categories VALUES (101942, 'Laptops', 'Laptop', 100644, NULL);
+INSERT INTO categories VALUES (101943, 'Others', 'Phụ Kiện Máy Tính Khác', 100644, NULL);
+INSERT INTO categories VALUES (102002, 'Bath & Body Care', 'Tắm & chăm sóc cơ thể', 100630, NULL);
+INSERT INTO categories VALUES (102054, 'ShopeePay Voucher', 'Scan & Pay Voucher', 102053, NULL);
+INSERT INTO categories VALUES (102055, 'Deal Voucher', 'Deal', 102053, NULL);
+INSERT INTO categories VALUES (102059, 'Automotive Services & Installations', 'Dịch vụ cho xe', 100640, NULL);
+INSERT INTO categories VALUES (100003, 'Weight Management', 'Hỗ trợ kiểm soát cân nặng', 100002, NULL);
+INSERT INTO categories VALUES (100004, 'Beauty Supplements', 'Hỗ trợ làm đẹp', 100002, NULL);
+INSERT INTO categories VALUES (100005, 'Fitness', 'Hỗ trợ tăng cơ', 100002, NULL);
+INSERT INTO categories VALUES (100006, 'Well Being', 'Hỗ trợ sức khỏe', 100002, NULL);
+INSERT INTO categories VALUES (100007, 'Others', 'Khác', 100002, NULL);
+INSERT INTO categories VALUES (100119, 'Over-the-counter Medicine', 'Thuốc không kê đơn', 100018, NULL);
+INSERT INTO categories VALUES (100121, 'Health Monitors & Tests', 'Kiểm tra và theo dõi sức khỏe', 100018, NULL);
+INSERT INTO categories VALUES (100122, 'Scale & Body Fat Analyzers', 'Cân sức khỏe và phân tích cơ thể', 100018, NULL);
+INSERT INTO categories VALUES (100123, 'Nasal Care', 'Chăm sóc mũi', 100018, NULL);
+INSERT INTO categories VALUES (100124, 'First Aid Supplies', 'Dụng cụ sơ cứu', 100018, NULL);
+INSERT INTO categories VALUES (100125, 'Stethoscopes', 'Ống nghe y tế', 100018, NULL);
+INSERT INTO categories VALUES (100126, 'Pain Relievers', 'Sản phẩm giảm đau dùng ngoài da', 100018, NULL);
+INSERT INTO categories VALUES (100127, 'Laboratory Tools', 'Dụng cụ thí nghiệm', 100018, NULL);
+INSERT INTO categories VALUES (100128, 'Medical Gloves & Masks', 'Bao tay và khẩu trang y tế', 100018, NULL);
+INSERT INTO categories VALUES (100129, 'Injury & Disability Support', 'Hỗ trợ chấn thương và khuyết tật', 100018, NULL);
+INSERT INTO categories VALUES (100130, 'Others', 'Khác', 100018, NULL);
+INSERT INTO categories VALUES (100131, 'Hand Sanitizers', 'Dung dịch sát khuẩn tay', 100019, NULL);
+INSERT INTO categories VALUES (100132, 'Eye Care', 'Chăm sóc mắt', 100019, NULL);
+INSERT INTO categories VALUES (100133, 'Ear Care', 'Chăm sóc tai', 100019, NULL);
+INSERT INTO categories VALUES (100134, 'Oral Care', 'Vệ sinh răng miệng', 100019, NULL);
+INSERT INTO categories VALUES (100135, 'Adult Diapers & Incontinence', 'Tã người lớn', 100019, NULL);
+INSERT INTO categories VALUES (100136, 'Feminine Care', 'Chăm sóc phụ nữ', 100019, NULL);
+INSERT INTO categories VALUES (100137, 'Massage & Therapy Devices', 'Dụng cụ massage và trị liệu', 100019, NULL);
+INSERT INTO categories VALUES (100138, 'Insect Repellents', 'Chống muỗi & xua đuổi côn trùng', 100019, NULL);
+INSERT INTO categories VALUES (100139, 'Others', 'Khác', 100019, NULL);
+INSERT INTO categories VALUES (100140, 'Condoms', 'Bao cao su', 100020, NULL);
+INSERT INTO categories VALUES (100141, 'Lubricants', 'Bôi trơn', 100020, NULL);
+INSERT INTO categories VALUES (100143, 'Performance Enhancement', 'Tăng cường sinh lý', 100020, NULL);
+INSERT INTO categories VALUES (100144, 'Others', 'Khác', 100020, NULL);
+INSERT INTO categories VALUES (100145, 'Headbands', 'Băng đô tóc', 100025, NULL);
+INSERT INTO categories VALUES (100146, 'Hair Ties, Ribbons & Scrunchies', 'Đồ buộc tóc & Nơ', 100025, NULL);
+INSERT INTO categories VALUES (100147, 'Hair Clips & Hair Pins', 'Kẹp tóc', 100025, NULL);
+INSERT INTO categories VALUES (100148, 'Wigs & Extensions', 'Tóc giả & Tóc nối', 100025, NULL);
+INSERT INTO categories VALUES (100149, 'Headpieces, Tiaras & Flower Crowns', 'Cài tóc, vương miện cài tóc', 100025, NULL);
+INSERT INTO categories VALUES (100150, 'Others', 'Khác', 100025, NULL);
+INSERT INTO categories VALUES (100151, 'Sunglasses', 'Kính mát', 100030, NULL);
+INSERT INTO categories VALUES (100152, 'Frames & Glasses', 'Gọng kính', 100030, NULL);
+INSERT INTO categories VALUES (100153, 'Eyewear Cases & Accessories', 'Hộp kính và phụ kiện', 100030, NULL);
+INSERT INTO categories VALUES (100154, 'Others', 'Khác', 100030, NULL);
+INSERT INTO categories VALUES (100155, 'Platinum & K Gold', 'Platinum & Vàng', 100031, NULL);
+INSERT INTO categories VALUES (100156, 'Silver', 'Bạc', 100031, NULL);
+INSERT INTO categories VALUES (100157, 'Diamond', 'Kim cương', 100031, NULL);
+INSERT INTO categories VALUES (100158, 'Jade', 'Ngọc bích, Cẩm thạch', 100031, NULL);
+INSERT INTO categories VALUES (100159, 'Others', 'Khác', 100031, NULL);
+INSERT INTO categories VALUES (100160, 'Brooches & Pins', 'Trâm & Ghim cài áo', 100034, NULL);
+INSERT INTO categories VALUES (100161, 'Patches', 'Miếng vá áo', 100034, NULL);
+INSERT INTO categories VALUES (100162, 'Charms, Pendants & Ornaments', 'Mặt dây chuyền và Charm', 100034, NULL);
+INSERT INTO categories VALUES (100163, 'Cufflinks', 'Măng sét nam', 100034, NULL);
+INSERT INTO categories VALUES (100164, 'Tattoos', 'Hình xăm dán', 100034, NULL);
+INSERT INTO categories VALUES (100165, 'Masks', 'Khẩu trang thời trang', 100034, NULL);
+INSERT INTO categories VALUES (100166, 'Handkerchiefs', 'Khăn tay', 100034, NULL);
+INSERT INTO categories VALUES (100167, 'Others', 'Khác', 100034, NULL);
+INSERT INTO categories VALUES (100168, 'Projectors & Projector Screens', 'Máy chiếu & Màn hình chiếu', 100037, NULL);
+INSERT INTO categories VALUES (100169, 'Pointers', 'Bút trình chiếu', 100037, NULL);
+INSERT INTO categories VALUES (100170, 'Others', 'Khác', 100037, NULL);
+INSERT INTO categories VALUES (100171, 'Foot Baths & Spas', 'Thiết bị vệ sinh chân & Thư giãn', 100038, NULL);
+INSERT INTO categories VALUES (100172, 'Water Flossers', 'Máy tăm nước', 100038, NULL);
+INSERT INTO categories VALUES (100173, 'Sewing Machines & Accessories', 'Máy may & Phụ kiện', 100038, NULL);
+INSERT INTO categories VALUES (100174, 'Telephones', 'Điện thoại', 100038, NULL);
+INSERT INTO categories VALUES (100175, 'Irons & Steamers', 'Bàn là khô & Hơi nước', 100038, NULL);
+INSERT INTO categories VALUES (100176, 'Air Treatment', 'Thiết bị xử lý không khí', 100038, NULL);
+INSERT INTO categories VALUES (100177, 'Vacuum Cleaners & Floor Care Appliances', 'Máy hút bụi & Thiết bị làm sạch sàn', 100038, NULL);
+INSERT INTO categories VALUES (100178, 'Others', 'Khác', 100038, NULL);
+INSERT INTO categories VALUES (100179, 'Washing Machines & Dryers', 'Máy giặt & Máy sấy', 100039, NULL);
+INSERT INTO categories VALUES (100180, 'Water Heaters', 'Máy nước nóng', 100039, NULL);
+INSERT INTO categories VALUES (100181, 'Cooling', 'Thiết bị làm mát', 100039, NULL);
+INSERT INTO categories VALUES (100182, 'Futon & Shoe Dryers', 'Thiết bị sấy khô nệm & Giày', 100039, NULL);
+INSERT INTO categories VALUES (100183, 'Heaters', 'Máy sưởi', 100039, NULL);
+INSERT INTO categories VALUES (100184, 'Others', 'Khác', 100039, NULL);
+INSERT INTO categories VALUES (100185, 'TVs', 'Tivi', 100040, NULL);
+INSERT INTO categories VALUES (100186, 'TV Antennas', 'Ăng ten Tivi', 100040, NULL);
+INSERT INTO categories VALUES (101330, 'Gift Wrappers', 'Giấy Gói Quà', 100730, NULL);
+INSERT INTO categories VALUES (100187, 'TV Boxes & Receivers', 'Tivi box & Đầu thu kỹ thuật số', 100040, NULL);
+INSERT INTO categories VALUES (100188, 'TV Brackets', 'Giá treo tivi', 100040, NULL);
+INSERT INTO categories VALUES (100189, 'Others', 'Khác', 100040, NULL);
+INSERT INTO categories VALUES (100190, 'Water Filters, Coolers & Dispensers', 'Máy lọc nước', 100041, NULL);
+INSERT INTO categories VALUES (100191, 'Kettles', 'Ấm đun siêu tốc', 100041, NULL);
+INSERT INTO categories VALUES (100192, 'Wine Fridges', 'Tủ ủ rượu', 100041, NULL);
+INSERT INTO categories VALUES (100193, 'Juicers, Blenders & Soya Bean Machines', 'Máy ép, Xay sinh tố & Máy làm sữa đậu nành', 100041, NULL);
+INSERT INTO categories VALUES (100194, 'Coffee Machines & Accessories', 'Máy pha cà phê & Phụ kiện', 100041, NULL);
+INSERT INTO categories VALUES (100195, 'Mixers', 'Máy trộn thực phẩm', 100041, NULL);
+INSERT INTO categories VALUES (100196, 'Dishwashers', 'Máy rửa bát đĩa', 100041, NULL);
+INSERT INTO categories VALUES (100197, 'Stoves, Hobs & Gas Regulators', 'Lò sưởi, Bếp từ & Bộ điều chỉnh gas', 100041, NULL);
+INSERT INTO categories VALUES (100198, 'Air Fryers', 'Nồi chiên không dầu', 100041, NULL);
+INSERT INTO categories VALUES (100199, 'Deep Fryers', 'Nồi chiên ngập dầu', 100041, NULL);
+INSERT INTO categories VALUES (100200, 'Microwaves', 'Lò vi sóng', 100041, NULL);
+INSERT INTO categories VALUES (100201, 'Ovens', 'Lò nướng', 100041, NULL);
+INSERT INTO categories VALUES (100202, 'Toasters', 'Máy nướng bánh', 100041, NULL);
+INSERT INTO categories VALUES (100203, 'Food Processors & Meat Grinders', 'Máy chế biến thực phẩm & Xay thịt', 100041, NULL);
+INSERT INTO categories VALUES (100204, 'Multi-function Cookers', 'Nồi nấu đa năng', 100041, NULL);
+INSERT INTO categories VALUES (100205, 'Pressure Cookers', 'Nồi áp suất', 100041, NULL);
+INSERT INTO categories VALUES (100206, 'Slow Cookers & Sous Vide Machines', 'Nồi nấu chậm & Dụng cụ nấu chân không', 100041, NULL);
+INSERT INTO categories VALUES (100207, 'Rice Cookers', 'Nồi cơm điện', 100041, NULL);
+INSERT INTO categories VALUES (100208, 'Specialty Cookware', 'Dụng cụ nấu đặc biệt', 100041, NULL);
+INSERT INTO categories VALUES (100209, 'Refrigerators', 'Tủ lạnh', 100041, NULL);
+INSERT INTO categories VALUES (100210, 'Freezers', 'Tủ đông', 100041, NULL);
+INSERT INTO categories VALUES (100211, 'Hoods', 'Máy hút khói', 100041, NULL);
+INSERT INTO categories VALUES (100212, 'Others', 'Khác', 100041, NULL);
+INSERT INTO categories VALUES (100213, 'Electric Sockets & Extension Cords', 'Ổ cắm điện & Dây nối', 100042, NULL);
+INSERT INTO categories VALUES (100214, 'Electrical Safety', 'Thiết bị an toàn điện tử', 100042, NULL);
+INSERT INTO categories VALUES (100216, 'Doorbells', 'Chuông cửa', 100042, NULL);
+INSERT INTO categories VALUES (100217, 'Switches', 'Công tắc', 100042, NULL);
+INSERT INTO categories VALUES (100218, 'House Alarms', 'Thiết bị báo động nhà ở', 100042, NULL);
+INSERT INTO categories VALUES (100219, 'Lightning Protection', 'Thiết bị chống sấm sét', 100042, NULL);
+INSERT INTO categories VALUES (100220, 'Others', 'Khác', 100042, NULL);
+INSERT INTO categories VALUES (100226, 'Hoodies', 'Áo hoodie', 100048, NULL);
+INSERT INTO categories VALUES (100227, 'Sweatshirts', 'Áo nỉ', 100048, NULL);
+INSERT INTO categories VALUES (100228, 'Others', 'Khác', 100048, NULL);
+INSERT INTO categories VALUES (100229, 'Winter Jackets & Coats', 'Áo khoác mùa đông & Áo choàng', 100050, NULL);
+INSERT INTO categories VALUES (100230, 'Jackets', 'Áo khoác', 100050, NULL);
+INSERT INTO categories VALUES (100231, 'Vests', 'Áo khoác vest', 100050, NULL);
+INSERT INTO categories VALUES (100232, 'Others', 'Khác', 100050, NULL);
+INSERT INTO categories VALUES (100233, 'Suit Sets', 'Bộ Com lê', 100051, NULL);
+INSERT INTO categories VALUES (100234, 'Suit Jackets & Blazers', 'Áo Khoác & Blazer', 100051, NULL);
+INSERT INTO categories VALUES (100235, 'Suit Pants', 'Quần âu', 100051, NULL);
+INSERT INTO categories VALUES (100236, 'Suit Vests & Waistcoats', 'Áo vest & Gi lê', 100051, NULL);
+INSERT INTO categories VALUES (100237, 'Others', 'Khác', 100051, NULL);
+INSERT INTO categories VALUES (100238, 'Cargo', 'Quần túi hộp', 100052, NULL);
+INSERT INTO categories VALUES (100239, 'Joggers', 'Quần jogger', 100052, NULL);
+INSERT INTO categories VALUES (100240, 'Pants', 'Quần dài', 100052, NULL);
+INSERT INTO categories VALUES (100241, 'Others', 'Khác', 100052, NULL);
+INSERT INTO categories VALUES (100242, 'Shirts', 'Áo sơ mi', 100054, NULL);
+INSERT INTO categories VALUES (100243, 'Polo Shirts', 'Áo polo', 100054, NULL);
+INSERT INTO categories VALUES (100244, 'T-Shirts', 'Áo thun', 100054, NULL);
+INSERT INTO categories VALUES (100245, 'Tanks', 'Áo ba lỗ', 100054, NULL);
+INSERT INTO categories VALUES (100246, 'Others', 'Khác', 100054, NULL);
+INSERT INTO categories VALUES (100247, 'Underwear', 'Quần lót', 100055, NULL);
+INSERT INTO categories VALUES (100248, 'Undershirts', 'Áo lót', 100055, NULL);
+INSERT INTO categories VALUES (100249, 'Thermal Innerwear', 'Đồ lót giữ nhiệt', 100055, NULL);
+INSERT INTO categories VALUES (100250, 'Others', 'Khác', 100055, NULL);
+INSERT INTO categories VALUES (100251, 'Tops', 'Áo', 100058, NULL);
+INSERT INTO categories VALUES (100252, 'Bottoms', 'Quần', 100058, NULL);
+INSERT INTO categories VALUES (100253, 'Sets', 'Bộ', 100058, NULL);
+INSERT INTO categories VALUES (100254, 'Others', 'Khác', 100058, NULL);
+INSERT INTO categories VALUES (100255, 'Fashion Boots', 'Bốt thời trang', 100063, NULL);
+INSERT INTO categories VALUES (100256, 'Rain Boots', 'Bốt đi mưa', 100063, NULL);
+INSERT INTO categories VALUES (100257, 'Safety Boots', 'Bốt bảo hộ', 100063, NULL);
+INSERT INTO categories VALUES (100258, 'Others', 'Khác', 100063, NULL);
+INSERT INTO categories VALUES (100259, 'Flip Flops', 'Dép xỏ ngón', 100068, NULL);
+INSERT INTO categories VALUES (100260, 'Sandals', 'Xăng-đan', 100068, NULL);
+INSERT INTO categories VALUES (100261, 'Indoor Slippers', 'Dép đi trong nhà', 100068, NULL);
+INSERT INTO categories VALUES (100262, 'Health Slippers', 'Dép mát-xa', 100068, NULL);
+INSERT INTO categories VALUES (100263, 'Others', 'Khác', 100068, NULL);
+INSERT INTO categories VALUES (100264, 'Shoe Care & Cleaning Tools', 'Dụng cụ chăm sóc & Vệ sinh giày', 100069, NULL);
+INSERT INTO categories VALUES (100265, 'Shoe Deodorizers', 'Khử mùi giày dép', 100069, NULL);
+INSERT INTO categories VALUES (100266, 'Shoe Laces', 'Dây giày', 100069, NULL);
+INSERT INTO categories VALUES (100267, 'Shoe Horns & Trees', 'Cây đón gót & Giữ form giày', 100069, NULL);
+INSERT INTO categories VALUES (100268, 'Shoe Insoles', 'Lót giày', 100069, NULL);
+INSERT INTO categories VALUES (100269, 'Others', 'Khác', 100069, NULL);
+INSERT INTO categories VALUES (100270, 'Smartwatches & Fitness Trackers', 'Đồng hồ thông minh & Vòng đeo tay sức khỏe', 100074, NULL);
+INSERT INTO categories VALUES (100271, 'VR Devices', 'Thiết bị thực tế ảo', 100074, NULL);
+INSERT INTO categories VALUES (100272, 'GPS Trackers', 'Thiết bị định vị GPS', 100074, NULL);
+INSERT INTO categories VALUES (100273, 'Others', 'Khác', 100074, NULL);
+INSERT INTO categories VALUES (100274, 'Selfie Accessories', 'Phụ kiện selfie', 100075, NULL);
+INSERT INTO categories VALUES (100275, 'Mobile Lens', 'Ống kính điện thoại', 100075, NULL);
+INSERT INTO categories VALUES (100276, 'Mobile Flashes & Selfie Lights', 'Đèn flash điện thoại & Đèn selfie', 100075, NULL);
+INSERT INTO categories VALUES (100277, 'USB & Mobile Fans', 'Quạt USB & Quạt điện thoại', 100075, NULL);
+INSERT INTO categories VALUES (100278, 'Stylus', 'Bút cảm ứng', 100075, NULL);
+INSERT INTO categories VALUES (100279, 'Phone Grips', 'Kẹp điện thoại', 100075, NULL);
+INSERT INTO categories VALUES (100280, 'Phone Straps & Keychains', 'Dây đeo điện thoại & Móc khóa', 100075, NULL);
+INSERT INTO categories VALUES (100281, 'Memory Cards', 'Thẻ nhớ', 100075, NULL);
+INSERT INTO categories VALUES (100282, 'Casting Devices', 'Thiết bị trình chiếu', 100075, NULL);
+INSERT INTO categories VALUES (100283, 'Mobile Pouches', 'Túi đựng điện thoại', 100075, NULL);
+INSERT INTO categories VALUES (100284, 'Cables, Chargers & Converters', 'Cáp, sạc & bộ chuyển đổi', 100075, NULL);
+INSERT INTO categories VALUES (100285, 'USB & Mobile Lights', 'Đèn USB & Đèn điện thoại', 100075, NULL);
+INSERT INTO categories VALUES (100286, 'Pocket Wifi', 'Bộ phát Wifi bỏ túi', 100075, NULL);
+INSERT INTO categories VALUES (100287, 'Powerbanks & Batteries', 'Sạc dự phòng & Pin', 100075, NULL);
+INSERT INTO categories VALUES (100288, 'Wearable Accessories', 'Phụ kiện cho đồng hồ thông minh', 100075, NULL);
+INSERT INTO categories VALUES (100289, 'Screen Protectors', 'Miếng dán màn hình', 100075, NULL);
+INSERT INTO categories VALUES (100290, 'Cases, Covers, & Skins', 'Vỏ bao, Ốp lưng & Miếng dán', 100075, NULL);
+INSERT INTO categories VALUES (100291, 'Others', 'Khác', 100075, NULL);
+INSERT INTO categories VALUES (100320, 'Duffel & Weekender Bags', 'Túi trống', 100086, NULL);
+INSERT INTO categories VALUES (100321, 'Foldable Bags', 'Túi gấp gọn', 100086, NULL);
+INSERT INTO categories VALUES (100322, 'Drawstring Bags', 'Túi dây rút', 100086, NULL);
+INSERT INTO categories VALUES (100323, 'Others', 'Túi khác', 100086, NULL);
+INSERT INTO categories VALUES (100324, 'Passport Holders & Covers', 'Ví hộ chiếu', 100087, NULL);
+INSERT INTO categories VALUES (100325, 'Travel Organizers', 'Túi du lịch nhiều ngăn', 100087, NULL);
+INSERT INTO categories VALUES (100326, 'Luggage Protectors & Covers', 'Áo trùm vali', 100087, NULL);
+INSERT INTO categories VALUES (100327, 'Luggage Tags', 'Thẻ hành lý', 100087, NULL);
+INSERT INTO categories VALUES (100328, 'Luggage Straps', 'Dây đai vali', 100087, NULL);
+INSERT INTO categories VALUES (100329, 'Luggage Locks', 'Khóa vali', 100087, NULL);
+INSERT INTO categories VALUES (100330, 'Luggage Scales', 'Cân hành lý', 100087, NULL);
+INSERT INTO categories VALUES (100331, 'Travel Pillows & Eye Covers', 'Gối & Bịt mắt', 100087, NULL);
+INSERT INTO categories VALUES (100332, 'Travel Size Bottles & Containers', 'Bộ chiết mỹ phẩm', 100087, NULL);
+INSERT INTO categories VALUES (100333, 'Others', 'Phụ kiện khác', 100087, NULL);
+INSERT INTO categories VALUES (100334, 'Laptop Bags & Cases', 'Túi & cặp đứng laptop', 100090, NULL);
+INSERT INTO categories VALUES (100335, 'Laptop Sleeves', 'Túi chống sốc laptop', 100090, NULL);
+INSERT INTO categories VALUES (100336, 'Laptop Backpacks', 'Ba lô laptop', 100090, NULL);
+INSERT INTO categories VALUES (100337, 'Others', 'Khác', 100090, NULL);
+INSERT INTO categories VALUES (100338, 'Card Holders', 'Ví đựng thẻ', 100096, NULL);
+INSERT INTO categories VALUES (100339, 'Coin Holders & Purses', 'Ví mini đựng tiền', 100096, NULL);
+INSERT INTO categories VALUES (100340, 'Phone & Key Wallets', 'Ví đựng điện thoại & chìa khóa', 100096, NULL);
+INSERT INTO categories VALUES (100341, 'Bifold & Trifold Wallets', 'Ví gập', 100096, NULL);
+INSERT INTO categories VALUES (100342, 'Long Wallets', 'Ví dài', 100096, NULL);
+INSERT INTO categories VALUES (100343, 'Others', 'Ví khác', 100096, NULL);
+INSERT INTO categories VALUES (100344, 'Bag Straps', 'Dây đeo túi', 100097, NULL);
+INSERT INTO categories VALUES (100345, 'Bag Holders', 'Dụng cụ treo/đựng túi', 100097, NULL);
+INSERT INTO categories VALUES (100346, 'Charms & Twillies', 'Charm và phụ kiện gắn túi', 100097, NULL);
+INSERT INTO categories VALUES (100347, 'Bag Organizers', 'Túi đa ngăn tiện ích', 100097, NULL);
+INSERT INTO categories VALUES (100348, 'Cleaning & Care Equipment', 'Dụng cụ vệ sinh và chăm sóc túi', 100097, NULL);
+INSERT INTO categories VALUES (100349, 'Others', 'Phụ kiện khác', 100097, NULL);
+INSERT INTO categories VALUES (100350, 'Tanks & Camisoles', 'Áo hai dây và ba lỗ', 100099, NULL);
+INSERT INTO categories VALUES (100351, 'Tube Tops', 'Áo ống', 100099, NULL);
+INSERT INTO categories VALUES (100352, 'T-shirts', 'Áo thun', 100099, NULL);
+INSERT INTO categories VALUES (100353, 'Shirts & Blouses', 'Áo sơ mi', 100099, NULL);
+INSERT INTO categories VALUES (100354, 'Polo Shirts', 'Áo polo', 100099, NULL);
+INSERT INTO categories VALUES (100355, 'Bodysuits', 'Áo liền thân', 100099, NULL);
+INSERT INTO categories VALUES (100356, 'Others', 'Khác', 100099, NULL);
+INSERT INTO categories VALUES (100357, 'Leggings & Treggings', 'Quần legging', 100100, NULL);
+INSERT INTO categories VALUES (100358, 'Pants', 'Quần dài', 100100, NULL);
+INSERT INTO categories VALUES (100359, 'Others', 'Khác', 100100, NULL);
+INSERT INTO categories VALUES (100360, 'Shorts', 'Quần đùi', 100101, NULL);
+INSERT INTO categories VALUES (100361, 'Skorts', 'Quần váy', 100101, NULL);
+INSERT INTO categories VALUES (100362, 'Others', 'Khác', 100101, NULL);
+INSERT INTO categories VALUES (100363, 'Jumpsuits', 'Đồ bay (Jumpsuits)', 100106, NULL);
+INSERT INTO categories VALUES (100364, 'Playsuits', 'Đồ bay ngắn (playsuits)', 100106, NULL);
+INSERT INTO categories VALUES (100365, 'Overalls', 'Quần yếm', 100106, NULL);
+INSERT INTO categories VALUES (100366, 'Others', 'Khác', 100106, NULL);
+INSERT INTO categories VALUES (100367, 'Winter Jackets & Coats', 'Áo khoác mùa đông', 100107, NULL);
+INSERT INTO categories VALUES (100368, 'Capes', 'Áo choàng', 100107, NULL);
+INSERT INTO categories VALUES (100369, 'Blazers', 'Áo blazer', 100107, NULL);
+INSERT INTO categories VALUES (100370, 'Jackets', 'Áo khoác ngoài', 100107, NULL);
+INSERT INTO categories VALUES (100371, 'Vests', 'Áo vest', 100107, NULL);
+INSERT INTO categories VALUES (100372, 'Others', 'Khác', 100107, NULL);
+INSERT INTO categories VALUES (100373, 'Sweatshirts', 'Áo khoác nỉ', 100109, NULL);
+INSERT INTO categories VALUES (100374, 'Hoodies', 'Áo hoodies', 100109, NULL);
+INSERT INTO categories VALUES (100375, 'Others', 'Khác', 100109, NULL);
+INSERT INTO categories VALUES (100376, 'Couple Sets', 'Bộ đồ đôi', 100110, NULL);
+INSERT INTO categories VALUES (100377, 'Family Sets', 'Bộ đồ gia đình', 100110, NULL);
+INSERT INTO categories VALUES (100378, 'Individual Sets', 'Đồ lẻ', 100110, NULL);
+INSERT INTO categories VALUES (100379, 'Others', 'Khác', 100110, NULL);
+INSERT INTO categories VALUES (100380, 'Sets', 'Bộ đồ lót', 100111, NULL);
+INSERT INTO categories VALUES (100381, 'Bras', 'Áo ngực', 100111, NULL);
+INSERT INTO categories VALUES (100382, 'Panties', 'Quần lót', 100111, NULL);
+INSERT INTO categories VALUES (100383, 'Thermal Innerwear', 'Đồ lót giữ nhiệt', 100111, NULL);
+INSERT INTO categories VALUES (100384, 'Bra Accessories', 'Phụ kiện đồ lót', 100111, NULL);
+INSERT INTO categories VALUES (100385, 'Shapewear', 'Đồ định hình', 100111, NULL);
+INSERT INTO categories VALUES (100386, 'Safety Pants', 'Đồ lót bảo hộ', 100111, NULL);
+INSERT INTO categories VALUES (100387, 'Sexy Lingerie', 'Đồ lót gợi cảm', 100111, NULL);
+INSERT INTO categories VALUES (100388, 'Others', 'Khác', 100111, NULL);
+INSERT INTO categories VALUES (100389, 'Pajamas', 'Pyjama', 100112, NULL);
+INSERT INTO categories VALUES (100390, 'Night Dresses', 'Váy ngủ', 100112, NULL);
+INSERT INTO categories VALUES (100391, 'Kimonos & Robes', 'Áo choàng ngủ, Áo khoác kimono', 100112, NULL);
+INSERT INTO categories VALUES (100392, 'Others', 'Khác', 100112, NULL);
+INSERT INTO categories VALUES (100393, 'Nursing Bras', 'Áo ngực cho con bú', 100113, NULL);
+INSERT INTO categories VALUES (100394, 'Maternity Dresses', 'Đầm bầu', 100113, NULL);
+INSERT INTO categories VALUES (100395, 'Maternity Tops', 'Áo bầu', 100113, NULL);
+INSERT INTO categories VALUES (100396, 'Breastfeeding Wear', 'Đồ mặc cho con bú', 100113, NULL);
+INSERT INTO categories VALUES (100397, 'Maternity Sets', 'Bộ đồ bầu', 100113, NULL);
+INSERT INTO categories VALUES (100398, 'Maternity Bottoms', 'Quần bầu, Váy bầu', 100113, NULL);
+INSERT INTO categories VALUES (100399, 'Others', 'Khác', 100113, NULL);
+INSERT INTO categories VALUES (100400, 'Tops', 'Áo', 100114, NULL);
+INSERT INTO categories VALUES (100401, 'Bottoms', 'Quần và chân váy', 100114, NULL);
+INSERT INTO categories VALUES (100402, 'Sets', 'Bộ', 100114, NULL);
+INSERT INTO categories VALUES (100403, 'Dresses', 'Đầm', 100114, NULL);
+INSERT INTO categories VALUES (100404, 'Others', 'Khác', 100114, NULL);
+INSERT INTO categories VALUES (100407, 'Cotton', 'Vải cotton', 100117, NULL);
+INSERT INTO categories VALUES (100408, 'Wool', 'Vải len', 100117, NULL);
+INSERT INTO categories VALUES (100409, 'Velvet, Silk & Satin', 'Vải nhung, lụa, satin', 100117, NULL);
+INSERT INTO categories VALUES (100410, 'Leather', 'Vải da', 100117, NULL);
+INSERT INTO categories VALUES (100411, 'Vinyl & Nylon', 'Vải nylon', 100117, NULL);
+INSERT INTO categories VALUES (100412, 'Denim', 'Vải denim', 100117, NULL);
+INSERT INTO categories VALUES (100413, 'Canvas', 'Vải canvas', 100117, NULL);
+INSERT INTO categories VALUES (100416, 'Others', 'Khác', 100117, NULL);
+INSERT INTO categories VALUES (100417, 'Socks', 'Tất', 100118, NULL);
+INSERT INTO categories VALUES (100418, 'Pantyhose', 'Quần tất', 100118, NULL);
+INSERT INTO categories VALUES (100419, 'Others', 'Khác', 100118, NULL);
+INSERT INTO categories VALUES (100585, 'Rain Boots', 'Bốt đi mưa', 100556, NULL);
+INSERT INTO categories VALUES (100586, 'Fashion Boots', 'Bốt thời trang', 100556, NULL);
+INSERT INTO categories VALUES (100587, 'Others', 'Khác', 100556, NULL);
+INSERT INTO categories VALUES (100588, 'Ballet Flats', 'Giày bale', 100558, NULL);
+INSERT INTO categories VALUES (100589, 'Loafers & Boat Shoes', 'Giày lười', 100558, NULL);
+INSERT INTO categories VALUES (100590, 'Oxfords & Lace-Ups', 'Giày Oxford & Giày buộc dây', 100558, NULL);
+INSERT INTO categories VALUES (100591, 'Slip Ons, Mary Janes & Mules', 'Giày sục & Giày búp bê', 100558, NULL);
+INSERT INTO categories VALUES (100592, 'Others', 'Khác', 100558, NULL);
+INSERT INTO categories VALUES (100593, 'Flat Sandals', 'Xăng-đan đế bằng', 100561, NULL);
+INSERT INTO categories VALUES (100594, 'Flip Flops', 'Dép kẹp/ dép xỏ ngón', 100561, NULL);
+INSERT INTO categories VALUES (100595, 'Health Slippers', 'Dép mát-xa', 100561, NULL);
+INSERT INTO categories VALUES (100596, 'Indoor Slippers', 'Dép đi trong nhà', 100561, NULL);
+INSERT INTO categories VALUES (100597, 'Others', 'Khác', 100561, NULL);
+INSERT INTO categories VALUES (100598, 'Shoe Deodorizers', 'Đồ khử mùi giày', 100562, NULL);
+INSERT INTO categories VALUES (100599, 'Insoles & Heel Liners', 'Miếng lót giày', 100562, NULL);
+INSERT INTO categories VALUES (100600, 'Shoe Horns & Trees', 'Cây đón gót & Giữ form giày', 100562, NULL);
+INSERT INTO categories VALUES (100601, 'Shoe Care & Cleaning Tools', 'Đồ chăm sóc và làm sạch giày', 100562, NULL);
+INSERT INTO categories VALUES (100602, 'Shoe Laces', 'Dây giày', 100562, NULL);
+INSERT INTO categories VALUES (100603, 'Others', 'Khác', 100562, NULL);
+INSERT INTO categories VALUES (100604, 'Laptop Bags & Cases', 'Túi & cặp đựng laptop', 100565, NULL);
+INSERT INTO categories VALUES (100605, 'Laptop Sleeves', 'Túi chống sốc laptop', 100565, NULL);
+INSERT INTO categories VALUES (100606, 'Laptop Backpacks', 'Ba lô laptop', 100565, NULL);
+INSERT INTO categories VALUES (100607, 'Others', 'Khác', 100565, NULL);
+INSERT INTO categories VALUES (100608, 'Card Holders', 'Ví đựng thẻ', 100571, NULL);
+INSERT INTO categories VALUES (100609, 'Coin Holders & Purses', 'Ví đựng tiền xu', 100571, NULL);
+INSERT INTO categories VALUES (100610, 'Phone & Key Wallets', 'Ví đựng điện thoại & chìa khóa', 100571, NULL);
+INSERT INTO categories VALUES (100611, 'Bifold & Trifold Wallets', 'Ví gập đôi & gập ba', 100571, NULL);
+INSERT INTO categories VALUES (100612, 'Long Wallets', 'Ví dài', 100571, NULL);
+INSERT INTO categories VALUES (100613, 'Others', 'Ví khác', 100571, NULL);
+INSERT INTO categories VALUES (100614, 'Straps', 'Dây đồng hồ', 100576, NULL);
+INSERT INTO categories VALUES (100615, 'Service Tools', 'Dụng cụ sửa chữa', 100576, NULL);
+INSERT INTO categories VALUES (100616, 'Buckles', 'Khóa đồng hồ', 100576, NULL);
+INSERT INTO categories VALUES (100617, 'Batteries', 'Pin đồng hồ', 100576, NULL);
+INSERT INTO categories VALUES (100618, 'Boxes', 'Hộp đựng đồng hồ', 100576, NULL);
+INSERT INTO categories VALUES (100619, 'Others', 'Khác', 100576, NULL);
+INSERT INTO categories VALUES (100620, 'MP3 & MP4 Players', 'MP3 & MP4', 100579, NULL);
+INSERT INTO categories VALUES (100621, 'CD, DVD, & Blu-ray Players', 'CD, DVD & Bluray', 100579, NULL);
+INSERT INTO categories VALUES (100622, 'Voice Recorders', 'Máy ghi âm', 100579, NULL);
+INSERT INTO categories VALUES (100623, 'Radio & Cassette Players', 'Radio & Cát-sét', 100579, NULL);
+INSERT INTO categories VALUES (100624, 'Others', 'Khác', 100579, NULL);
+INSERT INTO categories VALUES (100625, 'Speakers', 'Loa', 100582, NULL);
+INSERT INTO categories VALUES (100626, 'Home Theater Systems', 'Hệ thống âm thanh giải trí tại gia', 100582, NULL);
+INSERT INTO categories VALUES (100627, 'AV Receivers', 'Thu sóng AV', 100582, NULL);
+INSERT INTO categories VALUES (100628, 'Others', 'Khác', 100582, NULL);
+INSERT INTO categories VALUES (100780, 'Cooked Food', 'Đồ ăn chế biến sẵn', 100645, NULL);
+INSERT INTO categories VALUES (100781, 'Others', 'Khác', 100645, NULL);
+INSERT INTO categories VALUES (100782, 'Instant Rice & Porridge', 'Cơm và cháo ăn liền', 100645, NULL);
+INSERT INTO categories VALUES (100783, 'Instant Hotpot', 'Lẩu ăn liền', 100645, NULL);
+INSERT INTO categories VALUES (100784, 'Instant Noodles', 'Mì ăn liền', 100645, NULL);
+INSERT INTO categories VALUES (100785, 'Sweets & Candy', 'Kẹo', 100646, NULL);
+INSERT INTO categories VALUES (100786, 'Chocolate', 'Sô cô la', 100646, NULL);
+INSERT INTO categories VALUES (100787, 'Biscuits, Cookies & Wafers', 'Bánh quy', 100646, NULL);
+INSERT INTO categories VALUES (100788, 'Chips & Crisps', 'Khoai tây lát', 100646, NULL);
+INSERT INTO categories VALUES (100789, 'Seeds', 'Các loại hạt sấy khô', 100646, NULL);
+INSERT INTO categories VALUES (100790, 'Popcorn', 'Bỏng ngô', 100646, NULL);
+INSERT INTO categories VALUES (100791, 'Seaweed', 'Các loại rong biển ăn liền', 100646, NULL);
+INSERT INTO categories VALUES (100792, 'Nuts', 'Các loại đậu sấy khô', 100646, NULL);
+INSERT INTO categories VALUES (100793, 'Others', 'Khác', 100646, NULL);
+INSERT INTO categories VALUES (100794, 'Pudding, Jellies & Marshmallow', 'Pudding, thạch & kẹo dẻo', 100646, NULL);
+INSERT INTO categories VALUES (100795, 'Dried Snacks', 'Thức ăn khô', 100646, NULL);
+INSERT INTO categories VALUES (100796, 'Dried Goods', 'Thực phẩm khô', 100647, NULL);
+INSERT INTO categories VALUES (100797, 'Noodles', 'Mì', 100647, NULL);
+INSERT INTO categories VALUES (100798, 'Rice', 'Gạo', 100647, NULL);
+INSERT INTO categories VALUES (100799, 'Pasta', 'Mì Ý', 100647, NULL);
+INSERT INTO categories VALUES (100800, 'Others', 'Khác', 100647, NULL);
+INSERT INTO categories VALUES (100801, 'Canned Food', 'Thực phẩm đóng hộp', 100647, NULL);
+INSERT INTO categories VALUES (100802, 'Preserved Vegetables', 'Rau củ ngâm', 100647, NULL);
+INSERT INTO categories VALUES (100803, 'Oil', 'Dầu ăn', 100648, NULL);
+INSERT INTO categories VALUES (100804, 'Seasonings & Condiments', 'Gia vị & Hương liệu', 100648, NULL);
+INSERT INTO categories VALUES (100805, 'Sugar', 'Đường', 100648, NULL);
+INSERT INTO categories VALUES (100806, 'Sweetener', 'Chất tạo ngọt', 100648, NULL);
+INSERT INTO categories VALUES (100807, 'Stock, Gravy & Instant Soup', 'Sốt & súp ăn liền', 100648, NULL);
+INSERT INTO categories VALUES (100808, 'Cooking Paste & Kit', 'Gói/ bột gia vị', 100648, NULL);
+INSERT INTO categories VALUES (100809, 'Flavour Enhancers', 'Phụ gia thực phẩm', 100648, NULL);
+INSERT INTO categories VALUES (100810, 'Flour Coating', 'Bột phủ', 100648, NULL);
+INSERT INTO categories VALUES (100811, 'Others', 'Khác', 100648, NULL);
+INSERT INTO categories VALUES (100812, 'Baking Flavoring', 'Hương liệu', 100649, NULL);
+INSERT INTO categories VALUES (100813, 'Baking Powder & Soda', 'Bột nở và muối nở', 100649, NULL);
+INSERT INTO categories VALUES (100814, 'Baking Premix Flour', 'Bột pha sẵn', 100649, NULL);
+INSERT INTO categories VALUES (100815, 'Flour', 'Bột mì', 100649, NULL);
+INSERT INTO categories VALUES (100816, 'Food Coloring', 'Chất tạo màu', 100649, NULL);
+INSERT INTO categories VALUES (100817, 'Baking Decoration', 'Đồ trang trí', 100649, NULL);
+INSERT INTO categories VALUES (100818, 'Others', 'Khác', 100649, NULL);
+INSERT INTO categories VALUES (100819, 'Honey & Maple Syrups', 'Mật ong và siro', 100650, NULL);
+INSERT INTO categories VALUES (100820, 'Jam & Spread', 'Mứt', 100650, NULL);
+INSERT INTO categories VALUES (100821, 'Cereal, Granola & Oats', 'Ngũ cốc', 100650, NULL);
+INSERT INTO categories VALUES (100822, 'Breakfast Bar', 'Thanh dinh dưỡng', 100650, NULL);
+INSERT INTO categories VALUES (100823, 'Others', 'Khác', 100650, NULL);
+INSERT INTO categories VALUES (100824, 'Coffee', 'Cà phê', 100651, NULL);
+INSERT INTO categories VALUES (100825, 'Tea & Tea Bags', 'Trà & trà túi lọc', 100651, NULL);
+INSERT INTO categories VALUES (100826, 'Chocolate Drinks', 'Thức uống Sô cô la', 100651, NULL);
+INSERT INTO categories VALUES (100827, 'Energy & Isotonic Drinks', 'Nước tăng lực', 100651, NULL);
+INSERT INTO categories VALUES (100828, 'Water', 'Nước tinh khiết', 100651, NULL);
+INSERT INTO categories VALUES (100829, 'Juice & Juice Vinegar', 'Nước trái cây lên men', 100651, NULL);
+INSERT INTO categories VALUES (100830, 'Cordial & Syrups', 'Siro pha', 100651, NULL);
+INSERT INTO categories VALUES (100831, 'Carbonated Drinks & Tonics', 'Nước có ga', 100651, NULL);
+INSERT INTO categories VALUES (100832, 'Powdered Drink Mixes', 'Bột pha', 100651, NULL);
+INSERT INTO categories VALUES (100833, 'Dessert Drink', 'Đồ tráng miệng', 100651, NULL);
+INSERT INTO categories VALUES (100834, 'Traditional & Herbal Drinks', 'Trà thảo mộc', 100651, NULL);
+INSERT INTO categories VALUES (100835, 'Drink Toppings', 'Topping', 100651, NULL);
+INSERT INTO categories VALUES (100836, 'Non-dairy Milk', 'Sữa thực vật', 100651, NULL);
+INSERT INTO categories VALUES (100837, 'Others', 'Khác', 100651, NULL);
+INSERT INTO categories VALUES (100838, 'Milk', 'Sữa', 100652, NULL);
+INSERT INTO categories VALUES (100839, 'Yogurt & Cultured Milk', 'Sữa chua', 100652, NULL);
+INSERT INTO categories VALUES (100840, 'Creamers', 'Bột kem béo', 100652, NULL);
+INSERT INTO categories VALUES (100841, 'Butter & Margarine', 'Bơ động vật & thực vật', 100652, NULL);
+INSERT INTO categories VALUES (100842, 'Cheese & Cheese Powder', 'Phô mai & bột phô mai', 100652, NULL);
+INSERT INTO categories VALUES (100843, 'Ice cream', 'Kem', 100652, NULL);
+INSERT INTO categories VALUES (100844, 'Eggs', 'Trứng', 100652, NULL);
+INSERT INTO categories VALUES (100845, 'Beancurd', 'Đậu phụ', 100652, NULL);
+INSERT INTO categories VALUES (100846, 'Others', 'Khác', 100652, NULL);
+INSERT INTO categories VALUES (100847, 'Meat', 'Thịt', 100653, NULL);
+INSERT INTO categories VALUES (100848, 'Seafood', 'Hải sản', 100653, NULL);
+INSERT INTO categories VALUES (100849, 'Vegetarian Meat', 'Thịt chay', 100653, NULL);
+INSERT INTO categories VALUES (100850, 'Others', 'Khác', 100653, NULL);
+INSERT INTO categories VALUES (100851, 'Vegetables', 'Rau củ', 100653, NULL);
+INSERT INTO categories VALUES (100852, 'Fruits', 'Trái cây', 100653, NULL);
+INSERT INTO categories VALUES (100853, 'Mushroom', 'Nấm', 100653, NULL);
+INSERT INTO categories VALUES (100854, 'Frozen Processed Food', 'Thực phẩm đông lạnh chế biến sẵn', 100653, NULL);
+INSERT INTO categories VALUES (100855, 'Processed Meat & Seafood', 'Thịt và hải sản chế biến sẵn', 100653, NULL);
+INSERT INTO categories VALUES (100856, 'Breads', 'Bánh mì', 100654, NULL);
+INSERT INTO categories VALUES (100857, 'Cakes & Pies', 'Bánh kem', 100654, NULL);
+INSERT INTO categories VALUES (100858, 'Pastry', 'Bánh ngọt/ pastry', 100654, NULL);
+INSERT INTO categories VALUES (100859, 'Others', 'Khác', 100654, NULL);
+INSERT INTO categories VALUES (100860, 'Beer & Cider', 'Bia và trái cây lên men', 100655, NULL);
+INSERT INTO categories VALUES (100861, 'Wine & Champagne', 'Rượu vang & Sâm panh', 100655, NULL);
+INSERT INTO categories VALUES (100862, 'Liquor & Spirits', 'Rượu mạnh', 100655, NULL);
+INSERT INTO categories VALUES (100863, 'Sake, Soju & Umeshu', 'Rượu sake, soju & umeshu', 100655, NULL);
+INSERT INTO categories VALUES (100864, 'Others', 'Khác', 100655, NULL);
+INSERT INTO categories VALUES (100865, 'Hand Care', 'Chăm sóc tay', 100658, NULL);
+INSERT INTO categories VALUES (100866, 'Foot Care', 'Chăm sóc chân', 100658, NULL);
+INSERT INTO categories VALUES (100867, 'Nail Care', 'Chăm sóc móng', 100658, NULL);
+INSERT INTO categories VALUES (100868, 'Others', 'Khác', 100658, NULL);
+INSERT INTO categories VALUES (100869, 'Shampoo', 'Dầu gội', 100659, NULL);
+INSERT INTO categories VALUES (100870, 'Hair Colour', 'Thuốc nhuộm tóc', 100659, NULL);
+INSERT INTO categories VALUES (100871, 'Hair Treatment', 'Sản phẩm dưỡng tóc', 100659, NULL);
+INSERT INTO categories VALUES (100872, 'Hair and Scalp Conditioner', 'Dầu xả', 100659, NULL);
+INSERT INTO categories VALUES (100873, 'Hair Styling', 'Sản phẩm tạo kiểu tóc', 100659, NULL);
+INSERT INTO categories VALUES (100874, 'Others', 'Khác', 100659, NULL);
+INSERT INTO categories VALUES (100875, 'Bath & Body Care', 'Sữa tắm & chăm sóc cơ thể', 100660, NULL);
+INSERT INTO categories VALUES (100876, 'Skincare', 'Chăm sóc da', 100660, NULL);
+INSERT INTO categories VALUES (100877, 'Shaving & Grooming', 'Sản phẩm cạo râu & hớt tóc', 100660, NULL);
+INSERT INTO categories VALUES (100878, 'Hair Care', 'Chăm sóc tóc', 100660, NULL);
+INSERT INTO categories VALUES (100879, 'Others', 'Khác', 100660, NULL);
+INSERT INTO categories VALUES (100880, 'Others', 'Khác', 100662, NULL);
+INSERT INTO categories VALUES (100881, 'Face', 'Trang điểm mặt', 100662, NULL);
+INSERT INTO categories VALUES (100882, 'Eyes', 'Trang điểm mắt', 100662, NULL);
+INSERT INTO categories VALUES (100883, 'Lips', 'Trang điểm môi', 100662, NULL);
+INSERT INTO categories VALUES (100884, 'Makeup Removers', 'Tẩy trang', 100662, NULL);
+INSERT INTO categories VALUES (100885, 'Makeup Accessories', 'Dụng cụ trang điểm', 100663, NULL);
+INSERT INTO categories VALUES (101331, 'Gift Boxes', 'Hộp Quà Tặng', 100730, NULL);
+INSERT INTO categories VALUES (100886, 'Facial Care Tools', 'Dụng cụ chăm sóc da mặt', 100663, NULL);
+INSERT INTO categories VALUES (100887, 'Body Slimming Tools', 'Dụng cụ làm thon gọn cơ thể', 100663, NULL);
+INSERT INTO categories VALUES (100888, 'Hair Removal Tools', 'Dụng cụ tẩy lông', 100663, NULL);
+INSERT INTO categories VALUES (100889, 'Hair Tools', 'Dụng cụ chăm sóc tóc', 100663, NULL);
+INSERT INTO categories VALUES (100890, 'Others', 'Khác', 100663, NULL);
+INSERT INTO categories VALUES (100891, 'Facial Cleanser', 'Sữa rửa mặt', 100664, NULL);
+INSERT INTO categories VALUES (100892, 'Toner', 'Nước cân bằng da', 100664, NULL);
+INSERT INTO categories VALUES (100893, 'Facial Moisturizer', 'Kem dưỡng ẩm', 100664, NULL);
+INSERT INTO categories VALUES (100894, 'Facial Oil', 'Dầu dưỡng ẩm', 100664, NULL);
+INSERT INTO categories VALUES (100895, 'Facial Mist', 'Xịt khoáng', 100664, NULL);
+INSERT INTO categories VALUES (100896, 'Facial Serum & Essence', 'Tinh chất dưỡng', 100664, NULL);
+INSERT INTO categories VALUES (100897, 'Face Scrub & Peel', 'Tẩy tế bào chết', 100664, NULL);
+INSERT INTO categories VALUES (100898, 'Face Mask & Packs', 'Mặt nạ', 100664, NULL);
+INSERT INTO categories VALUES (100899, 'Eye Treatment', 'Sản phẩm dưỡng mắt', 100664, NULL);
+INSERT INTO categories VALUES (100900, 'Lip Treatment', 'Sản phẩm dưỡng môi', 100664, NULL);
+INSERT INTO categories VALUES (100901, 'Face Sunscreen', 'Kem chống nắng cho mặt', 100664, NULL);
+INSERT INTO categories VALUES (100902, 'After Sun Face Care', 'Kem dưỡng sau chống nắng', 100664, NULL);
+INSERT INTO categories VALUES (100903, 'Blotting Paper', 'Giấy thấm dầu', 100664, NULL);
+INSERT INTO categories VALUES (100904, 'Acne Treatment', 'Sản phẩm trị mụn', 100664, NULL);
+INSERT INTO categories VALUES (100905, 'Others', 'Khác', 100664, NULL);
+INSERT INTO categories VALUES (100906, 'Dog Food', 'Thức ăn cho chó', 100667, NULL);
+INSERT INTO categories VALUES (100907, 'Dog Treats', 'Snack cho chó', 100667, NULL);
+INSERT INTO categories VALUES (100908, 'Cat Food', 'Thức ăn cho mèo', 100667, NULL);
+INSERT INTO categories VALUES (100909, 'Cat Treats', 'Snack cho mèo', 100667, NULL);
+INSERT INTO categories VALUES (100910, 'Small Pet Food', 'Thức ăn cho thú nhỏ', 100667, NULL);
+INSERT INTO categories VALUES (100911, 'Small Pet Treats', 'Snack cho thú nhỏ', 100667, NULL);
+INSERT INTO categories VALUES (100912, 'Aquarium Pet Food', 'Thức ăn cho cá', 100667, NULL);
+INSERT INTO categories VALUES (100913, 'Bird Feed', 'Thức ăn cho chim', 100667, NULL);
+INSERT INTO categories VALUES (100914, 'Reptile Food', 'Thức ăn cho bò sát', 100667, NULL);
+INSERT INTO categories VALUES (100915, 'Others', 'Khác', 100667, NULL);
+INSERT INTO categories VALUES (100916, 'Bowls & Feeders', 'Bát & dụng cụ ăn', 100668, NULL);
+INSERT INTO categories VALUES (100917, 'Travel Essentials', 'Thiết bị du lịch', 100668, NULL);
+INSERT INTO categories VALUES (100918, 'Leashes, Collars, Harnesses & Muzzles', 'Vòng cổ, dây dắt & rọ mõm', 100668, NULL);
+INSERT INTO categories VALUES (100919, 'Toys', 'Đồ chơi', 100668, NULL);
+INSERT INTO categories VALUES (100920, 'Pet Furniture', 'Nội thất cho thú cưng', 100668, NULL);
+INSERT INTO categories VALUES (100921, 'Aquarium Needs', 'Phụ kiện thủy sinh', 100668, NULL);
+INSERT INTO categories VALUES (100922, 'Others', 'Khác', 100668, NULL);
+INSERT INTO categories VALUES (100923, 'Cat Litter & Boxes', 'Khay & Bồn vệ sinh cho mèo', 100669, NULL);
+INSERT INTO categories VALUES (100924, 'Small Pet Bedding & Litter', 'Lót chuồng cho thú nhỏ', 100669, NULL);
+INSERT INTO categories VALUES (100925, 'Diapers', 'Tã cho thú cưng', 100669, NULL);
+INSERT INTO categories VALUES (100926, 'Dog Training Pads & Trays', 'Khay huấn luyện vệ sinh cho chó', 100669, NULL);
+INSERT INTO categories VALUES (100927, 'Poop Bags & Scoopers', 'Túi & Xẻng dọn vệ sinh', 100669, NULL);
+INSERT INTO categories VALUES (100928, 'Others', 'Khác', 100669, NULL);
+INSERT INTO categories VALUES (100929, 'Hair Care', 'Chăm sóc lông', 100670, NULL);
+INSERT INTO categories VALUES (100930, 'Oral Care', 'Chăm sóc răng miệng', 100670, NULL);
+INSERT INTO categories VALUES (100931, 'Claw Care', 'Chăm sóc móng', 100670, NULL);
+INSERT INTO categories VALUES (100932, 'Others', 'Khác', 100670, NULL);
+INSERT INTO categories VALUES (100933, 'Pet Clothing', 'Quần áo thú cưng', 100671, NULL);
+INSERT INTO categories VALUES (100934, 'Wet Weather Gear', 'Áo mưa chó mèo', 100671, NULL);
+INSERT INTO categories VALUES (100935, 'Boots, Socks & Paw Protectors', 'Giày, tất & bảo vệ móng', 100671, NULL);
+INSERT INTO categories VALUES (100936, 'Neck Accessories', 'Phụ kiện đeo cổ', 100671, NULL);
+INSERT INTO categories VALUES (100937, 'Eyewear', 'Kính mắt', 100671, NULL);
+INSERT INTO categories VALUES (100938, 'Hair Accessories', 'Phụ kiện lông', 100671, NULL);
+INSERT INTO categories VALUES (100939, 'Hats', 'Mũ nón thú cưng', 100671, NULL);
+INSERT INTO categories VALUES (100940, 'Others', 'Khác', 100671, NULL);
+INSERT INTO categories VALUES (100943, 'Others', 'Khác', 100672, NULL);
+INSERT INTO categories VALUES (100944, 'Vitamins & Supplements', 'Vitamin & chất bổ sung dinh dưỡng', 100672, NULL);
+INSERT INTO categories VALUES (100945, 'Baby Carrier', 'Địu em bé', 100674, NULL);
+INSERT INTO categories VALUES (100946, 'Strollers & Travel Systems', 'Xe đẩy', 100674, NULL);
+INSERT INTO categories VALUES (100947, 'Stroller Accessories', 'Phụ kiện xe đẩy', 100674, NULL);
+INSERT INTO categories VALUES (100948, 'Car & Motorbike Seats', 'Ghế ngồi ô tô & xe máy', 100674, NULL);
+INSERT INTO categories VALUES (100949, 'Car & Motorbike Seats Accessories', 'Phụ kiện ghế ngồi ô tô & xe máy', 100674, NULL);
+INSERT INTO categories VALUES (100950, 'Diaper Bags', 'Túi đựng bỉm sữa', 100674, NULL);
+INSERT INTO categories VALUES (100951, 'Child Harnesses & Leashes', 'Dây & Đai dắt trẻ', 100674, NULL);
+INSERT INTO categories VALUES (100952, 'Others', 'Khác', 100674, NULL);
+INSERT INTO categories VALUES (100953, 'Bottle-feeding', 'Bình sữa', 100675, NULL);
+INSERT INTO categories VALUES (100954, 'Breastfeeding', 'Đồ dùng cho con bú', 100675, NULL);
+INSERT INTO categories VALUES (100955, 'Highchairs & Booster Seats', 'Ghế ăn dặm', 100675, NULL);
+INSERT INTO categories VALUES (100956, 'Utensils', 'Đồ dùng cho bé', 100675, NULL);
+INSERT INTO categories VALUES (100957, 'Bibs', 'Yếm', 100675, NULL);
+INSERT INTO categories VALUES (100958, 'Pacifiers', 'Ti giả', 100675, NULL);
+INSERT INTO categories VALUES (100959, 'Food Processors', 'Máy xay cắt thực phẩm', 100675, NULL);
+INSERT INTO categories VALUES (100960, 'Others', 'Khác', 100675, NULL);
+INSERT INTO categories VALUES (100961, 'Supporting Belts', 'Đai hỗ trợ bụng', 100676, NULL);
+INSERT INTO categories VALUES (100962, 'Maternity Pillows', 'Gối bầu', 100676, NULL);
+INSERT INTO categories VALUES (100963, 'Others', 'Khác', 100676, NULL);
+INSERT INTO categories VALUES (100964, 'Maternity Milk', 'Sữa bầu', 100677, NULL);
+INSERT INTO categories VALUES (100965, 'Maternity Vitamins & Supplement', 'Vitamin & Thực phẩm bổ sung cho mẹ', 100677, NULL);
+INSERT INTO categories VALUES (100966, 'Moisturizers & Creams', 'Kem dưỡng ẩm cho mẹ', 100677, NULL);
+INSERT INTO categories VALUES (100967, 'Others', 'Khác', 100677, NULL);
+INSERT INTO categories VALUES (100968, 'Bathing Tubs & Seats', 'Chậu tắm & Ghế tắm', 100678, NULL);
+INSERT INTO categories VALUES (100969, 'Bath Robes, Towels & Wash Cloths', 'Áo choàng tắm, Khăn tắm & Khăn mặt', 100678, NULL);
+INSERT INTO categories VALUES (100970, 'Shower Caps', 'Nón tắm', 100678, NULL);
+INSERT INTO categories VALUES (100971, 'Bathing Tools & Accessories', 'Dụng cụ tắm & Phụ kiện', 100678, NULL);
+INSERT INTO categories VALUES (100972, 'Hair Care & Body Wash', 'Sản phẩm tắm & gội cho bé', 100678, NULL);
+INSERT INTO categories VALUES (100973, 'Baby Colognes & Fragrances', 'Nước hoa cho bé', 100678, NULL);
+INSERT INTO categories VALUES (100974, 'Baby Grooming Tools', 'Bộ chăm sóc trẻ sơ sinh', 100678, NULL);
+INSERT INTO categories VALUES (100975, 'Wipes', 'Khăn lau', 100678, NULL);
+INSERT INTO categories VALUES (100976, 'Baby Laundry Detergent', 'Giặt xả quần áo trẻ em', 100678, NULL);
+INSERT INTO categories VALUES (100977, 'Others', 'Khác', 100678, NULL);
+INSERT INTO categories VALUES (100978, 'Cribs & Cradles & Beds', 'Nôi & Cũi & Giường cho bé', 100679, NULL);
+INSERT INTO categories VALUES (100979, 'Bouncers, Rockers & Jumpers', 'Ghế rung, Ghế nhún & Xích đu tập đi', 100679, NULL);
+INSERT INTO categories VALUES (100980, 'Walkers', 'Xe tập đi', 100679, NULL);
+INSERT INTO categories VALUES (100981, 'Mattresses & Bedding', 'Nệm và chăn ga', 100679, NULL);
+INSERT INTO categories VALUES (100982, 'Storage & Organization', 'Kệ & Tủ', 100679, NULL);
+INSERT INTO categories VALUES (100983, 'Others', 'Khác', 100679, NULL);
+INSERT INTO categories VALUES (100984, 'Monitors', 'Thiết bị giám sát trẻ', 100680, NULL);
+INSERT INTO categories VALUES (100985, 'Mosquito Netting', 'Màn chống muỗi', 100680, NULL);
+INSERT INTO categories VALUES (100986, 'Bumpers, Rails & Guards', 'Bộ đệm cũi, Quây cũi & Thanh chắn giường', 100680, NULL);
+INSERT INTO categories VALUES (100987, 'Edge & Corner Guards', 'Bọc góc & Cạnh', 100680, NULL);
+INSERT INTO categories VALUES (100988, 'Baby Gates & Doorways', 'Thanh chắn cửa & Cầu thang', 100680, NULL);
+INSERT INTO categories VALUES (100989, 'Safety Locks & Straps', 'Khóa & Dây đai an toàn', 100680, NULL);
+INSERT INTO categories VALUES (100990, 'Others', 'Khác', 100680, NULL);
+INSERT INTO categories VALUES (100991, 'Milk Formula', 'Sữa công thức', 100681, NULL);
+INSERT INTO categories VALUES (100992, 'Baby Porridge, Puree & Cereal', 'Cháo, Thực phẩm xay nhuyễn & Ngũ cốc', 100681, NULL);
+INSERT INTO categories VALUES (101332, 'Gift Bags', 'Túi Quà Tặng', 100730, NULL);
+INSERT INTO categories VALUES (100993, 'Baby Snack', 'Đồ ăn nhẹ cho bé', 100681, NULL);
+INSERT INTO categories VALUES (100994, 'Others', 'Khác', 100681, NULL);
+INSERT INTO categories VALUES (100995, 'Baby Vitamins & Supplements', 'Vitamin & Thực phẩm bổ sung', 100682, NULL);
+INSERT INTO categories VALUES (100996, 'Nasal Care', 'Chăm sóc mũi cho bé', 100682, NULL);
+INSERT INTO categories VALUES (100997, 'Baby Skincare', 'Chăm sóc da cho bé', 100682, NULL);
+INSERT INTO categories VALUES (100998, 'Baby Oral Care', 'Chăm sóc răng miệng cho bé', 100682, NULL);
+INSERT INTO categories VALUES (100999, 'Sun Care', 'Chống nắng cho bé', 100682, NULL);
+INSERT INTO categories VALUES (101000, 'Others', 'Khác', 100682, NULL);
+INSERT INTO categories VALUES (101001, 'Changing Pads & Kits', 'Bộ lót thay tã', 100683, NULL);
+INSERT INTO categories VALUES (101002, 'Potty Training & Commode Chairs', 'Bệ thu nhỏ bồn cầu & Bô vệ sinh', 100683, NULL);
+INSERT INTO categories VALUES (101003, 'Disposable Diapers', 'Tã dùng một lần', 100683, NULL);
+INSERT INTO categories VALUES (101004, 'Cloth Diapers & Accessories', 'Tã vải & Phụ kiện', 100683, NULL);
+INSERT INTO categories VALUES (101005, 'Others', 'Khác', 100683, NULL);
+INSERT INTO categories VALUES (101006, 'Baby & Toddler Toys', 'Đồ chơi cho trẻ sơ sinh & trẻ nhỏ', 100684, '1a651a3b-ddb5-4c83-a30e-543054f127ff');
+INSERT INTO categories VALUES (101007, 'Block Toys', 'Đồ chơi lắp ráp', 100684, NULL);
+INSERT INTO categories VALUES (101008, 'Dolls & Stuffed Toys', 'Búp bê & Thú nhồi bông', 100684, '1fb632c6-b748-42a0-8706-df951fb8603b');
+INSERT INTO categories VALUES (101009, 'Pretend Play', 'Đồ chơi nhập vai', 100684, NULL);
+INSERT INTO categories VALUES (101010, 'Toy Vehicles', 'Xe đồ chơi', 100684, NULL);
+INSERT INTO categories VALUES (101011, 'Sports & Outdoor Play', 'Đồ chơi vận động & Ngoài trời', 100684, NULL);
+INSERT INTO categories VALUES (101012, 'Educational Toys', 'Đồ chơi giáo dục', 100684, 'a3e98c4a-078c-492b-bcac-552dd80fb651');
+INSERT INTO categories VALUES (101013, 'Robot Toys', 'Đồ chơi Robot', 100684, NULL);
+INSERT INTO categories VALUES (101014, 'Slime & Squishy Toys', 'Slime & Đồ chơi nhựa dẻo', 100684, NULL);
+INSERT INTO categories VALUES (101015, 'Others', 'Khác', 100684, NULL);
+INSERT INTO categories VALUES (101016, 'Regular Outerwear', 'Áo khoác nhẹ', 100687, NULL);
+INSERT INTO categories VALUES (101017, 'Winter Outerwear', 'Áo khoác mùa đông', 100687, NULL);
+INSERT INTO categories VALUES (101018, 'Dresses', 'Váy', 100687, NULL);
+INSERT INTO categories VALUES (101019, 'Bottoms', 'Quần/Chân váy', 100687, NULL);
+INSERT INTO categories VALUES (101020, 'Sleepwear', 'Đồ ngủ', 100687, NULL);
+INSERT INTO categories VALUES (101021, 'Tops', 'Áo', 100687, NULL);
+INSERT INTO categories VALUES (101022, 'Bodysuits & Jumpsuits', 'Bộ đồ liền thân', 100687, NULL);
+INSERT INTO categories VALUES (101023, 'Sets', 'Bộ quần áo', 100687, NULL);
+INSERT INTO categories VALUES (101024, 'Swimwear', 'Đồ bơi', 100687, NULL);
+INSERT INTO categories VALUES (101025, 'Others', 'Khác', 100687, NULL);
+INSERT INTO categories VALUES (101026, 'Bags & Luggage', 'Túi xách & vali', 100689, NULL);
+INSERT INTO categories VALUES (101027, 'Hats & Caps', 'Mũ & mũ lưỡi trai', 100689, NULL);
+INSERT INTO categories VALUES (101028, 'Eyewear', 'Mắt kính', 100689, NULL);
+INSERT INTO categories VALUES (101029, 'Hair Accessories', 'Phụ kiện tóc', 100689, NULL);
+INSERT INTO categories VALUES (101030, 'Gloves', 'Găng tay', 100689, NULL);
+INSERT INTO categories VALUES (101031, 'Belts', 'Thắt lưng', 100689, NULL);
+INSERT INTO categories VALUES (101032, 'Socks', 'Tất', 100689, NULL);
+INSERT INTO categories VALUES (101033, 'Scarves', 'Khăn', 100689, NULL);
+INSERT INTO categories VALUES (101034, 'Watches', 'Đồng hồ', 100689, NULL);
+INSERT INTO categories VALUES (101035, 'Jewelry', 'Trang sức', 100689, NULL);
+INSERT INTO categories VALUES (101036, 'Rain Gear', 'Đồ đi mưa', 100689, NULL);
+INSERT INTO categories VALUES (101037, 'Earmuffs', 'Chụp tai', 100689, NULL);
+INSERT INTO categories VALUES (101038, 'Others', 'Khác', 100689, NULL);
+INSERT INTO categories VALUES (101039, 'Costumes', 'Đồ hóa trang', 100690, NULL);
+INSERT INTO categories VALUES (101040, 'Underwear & Innerwear', 'Đồ lót', 100690, NULL);
+INSERT INTO categories VALUES (101041, 'Sleepwear', 'Đồ ngủ', 100690, NULL);
+INSERT INTO categories VALUES (101042, 'Swimwear', 'Đồ bơi', 100690, NULL);
+INSERT INTO categories VALUES (101043, 'Tops', 'Áo', 100690, NULL);
+INSERT INTO categories VALUES (101044, 'Outerwear', 'Áo khoác', 100690, NULL);
+INSERT INTO categories VALUES (101045, 'Bottoms', 'Quần', 100690, NULL);
+INSERT INTO categories VALUES (101046, 'Suits & Sets', 'Com lê & đồ bộ', 100690, NULL);
+INSERT INTO categories VALUES (101047, 'Others', 'Khác', 100690, NULL);
+INSERT INTO categories VALUES (101048, 'Costumes', 'Đồ hóa trang', 100691, NULL);
+INSERT INTO categories VALUES (101049, 'Underwear & Innerwear', 'Đồ lót', 100691, NULL);
+INSERT INTO categories VALUES (101050, 'Sleepwear', 'Đồ ngủ', 100691, NULL);
+INSERT INTO categories VALUES (101051, 'Swimwear', 'Đồ bơi', 100691, NULL);
+INSERT INTO categories VALUES (101052, 'Tops', 'Áo', 100691, NULL);
+INSERT INTO categories VALUES (101053, 'Outerwear', 'Áo khoác', 100691, NULL);
+INSERT INTO categories VALUES (101054, 'Bottoms', 'Quần', 100691, NULL);
+INSERT INTO categories VALUES (101055, 'Rompers, Jumpsuits & Overalls', 'Đồ liền thân', 100691, NULL);
+INSERT INTO categories VALUES (101056, 'Dresses', 'Váy', 100691, NULL);
+INSERT INTO categories VALUES (101057, 'Suits & Sets', 'Com lê & đồ bộ', 100691, NULL);
+INSERT INTO categories VALUES (101058, 'Others', 'Khác', 100691, NULL);
+INSERT INTO categories VALUES (101059, 'Boots', 'Bốt', 100692, NULL);
+INSERT INTO categories VALUES (101060, 'Sandals', 'Dép quai hậu', 100692, NULL);
+INSERT INTO categories VALUES (101061, 'Sneakers', 'Giày thể thao', 100692, NULL);
+INSERT INTO categories VALUES (101062, 'Flip Flops', 'Dép lê', 100692, NULL);
+INSERT INTO categories VALUES (101063, 'Formal Shoes', 'Giày tây', 100692, NULL);
+INSERT INTO categories VALUES (101064, 'Loafers', 'Giày lười', 100692, NULL);
+INSERT INTO categories VALUES (101065, 'Others', 'Khác', 100692, NULL);
+INSERT INTO categories VALUES (101066, 'Boots', 'Bốt', 100693, NULL);
+INSERT INTO categories VALUES (101067, 'Sandals', 'Dép quai hậu', 100693, NULL);
+INSERT INTO categories VALUES (101068, 'Sneakers', 'Giày thể thao', 100693, NULL);
+INSERT INTO categories VALUES (101069, 'Loafers', 'Giày lười', 100693, NULL);
+INSERT INTO categories VALUES (101070, 'Flip Flops', 'Dép lê', 100693, NULL);
+INSERT INTO categories VALUES (101071, 'Flats', 'Giày bệt', 100693, NULL);
+INSERT INTO categories VALUES (101072, 'Others', 'Khác', 100693, NULL);
+INSERT INTO categories VALUES (101073, 'Playstation', 'Playstation', 100695, NULL);
+INSERT INTO categories VALUES (101074, 'Xbox', 'Xbox', 100695, NULL);
+INSERT INTO categories VALUES (101075, 'Wii', 'Wii', 100695, NULL);
+INSERT INTO categories VALUES (101076, 'Nintendo DS', 'Nintendo DS', 100695, NULL);
+INSERT INTO categories VALUES (101077, 'Gameboy', 'Gameboy', 100695, NULL);
+INSERT INTO categories VALUES (101078, 'Switch', 'Switch', 100695, NULL);
+INSERT INTO categories VALUES (101079, 'PS Vita', 'PS Vita', 100695, NULL);
+INSERT INTO categories VALUES (101080, 'PSP', 'PSP', 100695, NULL);
+INSERT INTO categories VALUES (101081, 'Others', 'Khác', 100695, NULL);
+INSERT INTO categories VALUES (101082, 'Playstation', 'Game Playstation', 100697, NULL);
+INSERT INTO categories VALUES (101083, 'Xbox', 'Game Xbox', 100697, NULL);
+INSERT INTO categories VALUES (101084, 'Wii', 'Game Wii', 100697, NULL);
+INSERT INTO categories VALUES (101085, 'Nintendo DS', 'Game Nintendo DS', 100697, NULL);
+INSERT INTO categories VALUES (101086, 'Gameboy', 'Game Gameboy', 100697, NULL);
+INSERT INTO categories VALUES (101087, 'Switch', 'Game Switch', 100697, NULL);
+INSERT INTO categories VALUES (101088, 'PS Vita', 'Game PS Vita', 100697, NULL);
+INSERT INTO categories VALUES (101089, 'PSP', 'Game PSP', 100697, NULL);
+INSERT INTO categories VALUES (101090, 'PC Game', 'Game PC', 100697, NULL);
+INSERT INTO categories VALUES (101091, 'Others', 'Game Máy Khác', 100697, NULL);
+INSERT INTO categories VALUES (101092, 'Point & Shoot', 'Máy ảnh kỹ thuật số', 100699, NULL);
+INSERT INTO categories VALUES (101093, 'Mirrorless Cameras', 'Máy ảnh không gương lật', 100699, NULL);
+INSERT INTO categories VALUES (101094, 'Action Cameras', 'Máy quay hành động', 100699, NULL);
+INSERT INTO categories VALUES (101095, 'Video Camcorders', 'Máy quay phim', 100699, NULL);
+INSERT INTO categories VALUES (101096, 'Instant Cameras', 'Máy ảnh chụp lấy liền', 100699, NULL);
+INSERT INTO categories VALUES (101097, 'Analog Cameras', 'Máy ảnh film', 100699, NULL);
+INSERT INTO categories VALUES (101098, 'DSLRs', 'Máy ảnh cơ/DSLRs', 100699, NULL);
+INSERT INTO categories VALUES (101099, 'Others', 'Khác', 100699, NULL);
+INSERT INTO categories VALUES (101100, 'CCTV Security Cameras', 'Camera giám sát kết nối internet', 100700, NULL);
+INSERT INTO categories VALUES (101101, 'DVRs', 'Đầu ghi hình', 100700, NULL);
+INSERT INTO categories VALUES (101102, 'Dummy Cameras', 'Camera giả chống trộm', 100700, NULL);
+INSERT INTO categories VALUES (101104, 'Others', 'Khác', 100700, NULL);
+INSERT INTO categories VALUES (101105, 'Lens Mount & Adaptors', 'Ngàm ống kính & Ngàm chuyển đổi ống', 100702, NULL);
+INSERT INTO categories VALUES (101106, 'Lens Caps', 'Nắp ống kính', 100702, NULL);
+INSERT INTO categories VALUES (101107, 'Filters', 'Kính lọc', 100702, NULL);
+INSERT INTO categories VALUES (101108, 'Lens Hoods', 'Loa che sáng ống kính', 100702, NULL);
+INSERT INTO categories VALUES (101109, 'Others', 'Khác', 100702, NULL);
+INSERT INTO categories VALUES (101110, 'Flashes', 'Đèn Flash', 100703, NULL);
+INSERT INTO categories VALUES (101111, 'Flash Accessories', 'Phụ kiện đèn Flash', 100703, NULL);
+INSERT INTO categories VALUES (101112, 'Gimbals & Stabilizers', 'Tay cầm chống rung', 100703, NULL);
+INSERT INTO categories VALUES (101113, 'Lighting & Studio Equipments', 'Thiết bị ánh sáng và phòng chụp', 100703, NULL);
+INSERT INTO categories VALUES (101114, 'Photo Films & Papers', 'Giấy & phim in ảnh', 100703, NULL);
+INSERT INTO categories VALUES (101115, 'Photo Printers', 'Máy in ảnh', 100703, NULL);
+INSERT INTO categories VALUES (101116, 'Camera Cases & Bags', 'Túi đựng máy ảnh', 100703, NULL);
+INSERT INTO categories VALUES (101117, 'Battery Chargers', 'Bộ sạc pin', 100703, NULL);
+INSERT INTO categories VALUES (101118, 'Batteries & Battery Grips', 'Đế pin', 100703, NULL);
+INSERT INTO categories VALUES (101119, 'Tripods, Monopods, & Accessories', 'Chân máy ảnh', 100703, NULL);
+INSERT INTO categories VALUES (101120, 'Others', 'Khác', 100703, NULL);
+INSERT INTO categories VALUES (101121, 'Dry Boxes & Cabinets', 'Tủ & hộp chống ẩm', 100704, NULL);
+INSERT INTO categories VALUES (101122, 'Cleaning Kit', 'Bộ vệ sinh máy ảnh', 100704, NULL);
+INSERT INTO categories VALUES (101123, 'Silica Gel', 'Gói hút ẩm', 100704, NULL);
+INSERT INTO categories VALUES (101124, 'Blowers', 'Bóng thổi bụi', 100704, NULL);
+INSERT INTO categories VALUES (101125, 'Lenspens & Brushes', 'Bút lau & bàn chải làm sạch ống kính', 100704, NULL);
+INSERT INTO categories VALUES (101126, 'Others', 'Khác', 100704, NULL);
+INSERT INTO categories VALUES (101127, 'Air Fresheners & Home Fragrance', 'Chất khử mùi, làm thơm', 100708, NULL);
+INSERT INTO categories VALUES (101128, 'Essential Oils', 'Tinh dầu thơm', 100708, NULL);
+INSERT INTO categories VALUES (101129, 'Diffusers, Humidifiers & Oil Burners', 'Máy khuếch tán, tạo ẩm & xông tinh dầu', 100708, NULL);
+INSERT INTO categories VALUES (101130, 'Others', 'Khác', 100708, NULL);
+INSERT INTO categories VALUES (101131, 'Toilet Bowls, Seats & Covers', 'Bồn cầu, ghế và nắp bồn cầu', 100709, NULL);
+INSERT INTO categories VALUES (101132, 'Toothbrush Holders & Toothpaste Dispensers', 'Kệ đựng bàn chải, kệ nhả kem đánh răng', 100709, NULL);
+INSERT INTO categories VALUES (101133, 'Soap Dispensers, Holders & Boxes', 'Kệ đựng xà phòng', 100709, NULL);
+INSERT INTO categories VALUES (101134, 'Bathroom Racks & Cabinets', 'Kệ để đồ phòng tắm', 100709, NULL);
+INSERT INTO categories VALUES (101135, 'Bathtubs', 'Bồn tắm', 100709, NULL);
+INSERT INTO categories VALUES (101136, 'Towels & Bathrobes', 'Khăn mặt, khăn tắm, áo choàng tắm', 100709, NULL);
+INSERT INTO categories VALUES (101137, 'Showerheads & Bidet Sprays', 'Vòi sen & vòi xịt vệ sinh', 100709, NULL);
+INSERT INTO categories VALUES (101138, 'Bath Brushes & Loofahs', 'Bông tắm', 100709, NULL);
+INSERT INTO categories VALUES (101139, 'Shower Curtains', 'Rèm cửa nhà tắm', 100709, NULL);
+INSERT INTO categories VALUES (101140, 'Shower Seats & Commodes', 'Ghế nhà tắm, ghế chống trượt', 100709, NULL);
+INSERT INTO categories VALUES (101141, 'Safety Handles', 'Tay cầm an toàn', 100709, NULL);
+INSERT INTO categories VALUES (101142, 'Shower Caps', 'Mũ tắm', 100709, NULL);
+INSERT INTO categories VALUES (101143, 'Others', 'Khác', 100709, NULL);
+INSERT INTO categories VALUES (101144, 'Cooling Mats', 'Chiếu điều hòa', 100710, NULL);
+INSERT INTO categories VALUES (101145, 'Mattress Protectors & Toppers', 'Tấm bảo vệ nệm, topper', 100710, NULL);
+INSERT INTO categories VALUES (101146, 'Blankets, Comforters & Quilts', 'Chăn, mền', 100710, NULL);
+INSERT INTO categories VALUES (101147, 'Pillows', 'Gối', 100710, NULL);
+INSERT INTO categories VALUES (101148, 'Bedsheets, Pillowcases & Bolster Cases', 'Ga trải giường, vỏ gối', 100710, NULL);
+INSERT INTO categories VALUES (101149, 'Mattresses', 'Nệm', 100710, NULL);
+INSERT INTO categories VALUES (101150, 'Mosquito Nets', 'Mùng/ Màn chống muỗi', 100710, NULL);
+INSERT INTO categories VALUES (101151, 'Bolsters', 'Gối ôm', 100710, NULL);
+INSERT INTO categories VALUES (101152, 'Others', 'Khác', 100710, NULL);
+INSERT INTO categories VALUES (101153, 'Flowers', 'Hoa trang trí', 100711, NULL);
+INSERT INTO categories VALUES (101154, 'Furniture & Appliance Covers', 'Vỏ bọc nội thất', 100711, NULL);
+INSERT INTO categories VALUES (101155, 'Curtains & Blinds', 'Rèm cửa, màn che', 100711, NULL);
+INSERT INTO categories VALUES (101156, 'Photo Frames & Wall Decoration', 'Khung ảnh & vật trang trí tường', 100711, NULL);
+INSERT INTO categories VALUES (101157, 'Wallpapers & Wall Stickers', 'Decal, tranh dán tường', 100711, NULL);
+INSERT INTO categories VALUES (101158, 'Clocks', 'Đồng hồ', 100711, NULL);
+INSERT INTO categories VALUES (101159, 'Floor Mats', 'Thảm chùi chân', 100711, NULL);
+INSERT INTO categories VALUES (101160, 'Carpets & Rugs', 'Thảm trải sàn', 100711, NULL);
+INSERT INTO categories VALUES (101161, 'Vases & Vessels', 'Bình trang trí', 100711, NULL);
+INSERT INTO categories VALUES (101162, 'Candles & Candleholders', 'Nến & đồ đựng nến', 100711, NULL);
+INSERT INTO categories VALUES (101163, 'Mirrors', 'Gương', 100711, NULL);
+INSERT INTO categories VALUES (101164, 'Table Cloths', 'Khăn trải bàn', 100711, NULL);
+INSERT INTO categories VALUES (101165, 'Others', 'Khác', 100711, NULL);
+INSERT INTO categories VALUES (101166, 'Cushions', 'Đệm ngồi', 100713, NULL);
+INSERT INTO categories VALUES (101167, 'Doorstoppers', 'Miếng chặn cửa', 100713, NULL);
+INSERT INTO categories VALUES (101168, 'Bed Frames & Headboards', 'Giường, khung giường', 100713, NULL);
+INSERT INTO categories VALUES (101169, 'Desks & Tables', 'Bàn', 100713, NULL);
+INSERT INTO categories VALUES (101170, 'Wardrobes', 'Tủ quần áo', 100713, NULL);
+INSERT INTO categories VALUES (101171, 'Benches, Chairs & Stools', 'Ghế, ghế dài, ghế đẩu', 100713, NULL);
+INSERT INTO categories VALUES (101172, 'Sofas', 'Ghế sofa', 100713, NULL);
+INSERT INTO categories VALUES (101173, 'Cupboards & Cabinets', 'Tủ bếp', 100713, NULL);
+INSERT INTO categories VALUES (101174, 'Shelves & Racks', 'Kệ & Giá', 100713, NULL);
+INSERT INTO categories VALUES (101175, 'Others', 'Khác', 100713, NULL);
+INSERT INTO categories VALUES (101176, 'Plants', 'Cây cảnh', 100714, NULL);
+INSERT INTO categories VALUES (101177, 'Garden Decorations', 'Trang trí vườn', 100714, NULL);
+INSERT INTO categories VALUES (101178, 'Garden Soils & Growing Media', 'Đất trồng', 100714, NULL);
+INSERT INTO categories VALUES (101179, 'Fertilizer', 'Phân bón', 100714, NULL);
+INSERT INTO categories VALUES (101180, 'Seeds & Bulbs', 'Hạt giống & chất hỗ trợ trồng cây', 100714, NULL);
+INSERT INTO categories VALUES (101181, 'Pots & Planters', 'Chậu cây', 100714, NULL);
+INSERT INTO categories VALUES (101182, 'Irrigation Systems', 'Hệ thống tưới nước', 100714, NULL);
+INSERT INTO categories VALUES (101183, 'Gardening Tools', 'Dụng cụ làm vườn', 100714, NULL);
+INSERT INTO categories VALUES (101184, 'Others', 'Khác', 100714, NULL);
+INSERT INTO categories VALUES (101185, 'Lawn Mowers', 'Máy cắt cỏ, dụng cụ cắt cỏ', 100714, NULL);
+INSERT INTO categories VALUES (101186, 'Industrial Adhesives & Tapes', 'Keo & chất kết chính công nghiệp', 100715, NULL);
+INSERT INTO categories VALUES (101187, 'Protective Gloves, Goggles & Masks', 'Găng tay, kính bảo hộ & mặt nạ', 100715, NULL);
+INSERT INTO categories VALUES (101188, 'Sinks & Water Taps', 'Chậu rửa & vòi nước', 100715, NULL);
+INSERT INTO categories VALUES (101189, 'Roofing & Flooring', 'Mái & sàn', 100715, NULL);
+INSERT INTO categories VALUES (101190, 'Wall Paints & Coatings', 'Sơn & chất chống thấm tường', 100715, NULL);
+INSERT INTO categories VALUES (101191, 'Tools', 'Dụng cụ', 100715, NULL);
+INSERT INTO categories VALUES (101192, 'Water Pumps, Parts & Accessories', 'Máy bơm nước & phụ kiện', 100715, NULL);
+INSERT INTO categories VALUES (101193, 'Air Pumps, Parts & Accessories', 'Máy bơm khí & phụ kiện', 100715, NULL);
+INSERT INTO categories VALUES (101194, 'Ladders', 'Thang', 100715, NULL);
+INSERT INTO categories VALUES (101195, 'Trollies', 'Xe đẩy', 100715, NULL);
+INSERT INTO categories VALUES (101196, 'Shades, Awnings & Tarpaulins', 'Mái hiên, bạt phủ', 100715, NULL);
+INSERT INTO categories VALUES (101197, 'Construction Materials', 'Vật liệu xây dựng', 100715, NULL);
+INSERT INTO categories VALUES (101198, 'Doors & Windows', 'Cửa & cửa sổ', 100715, NULL);
+INSERT INTO categories VALUES (101199, 'Others', 'Khác', 100715, NULL);
+INSERT INTO categories VALUES (101200, 'Clotheslines & Drying Racks', 'Dây phơi & giá phơi quần áo', 100716, NULL);
+INSERT INTO categories VALUES (101201, 'Cleaning Brushes', 'Bàn chải vệ sinh', 100716, NULL);
+INSERT INTO categories VALUES (101202, 'Brooms', 'Chổi', 100716, NULL);
+INSERT INTO categories VALUES (101203, 'Dusters', 'Chổi phủi bụi', 100716, NULL);
+INSERT INTO categories VALUES (101204, 'Mops', 'Cây lau nhà', 100716, NULL);
+INSERT INTO categories VALUES (101205, 'Basins, Buckets & Water Dippers', 'Chậu, xô & gáo nước', 100716, NULL);
+INSERT INTO categories VALUES (101206, 'Sponges & Scouring Pads', 'Miếng bọt biển, miếng chà vệ sinh', 100716, NULL);
+INSERT INTO categories VALUES (101207, 'Trash & Recycling Bins', 'Thùng rác', 100716, NULL);
+INSERT INTO categories VALUES (101208, 'Plastic Bags & Trash Bags', 'Túi nilon & túi rác', 100716, NULL);
+INSERT INTO categories VALUES (101209, 'Cleaning Cloths', 'Khăn vệ sinh', 100716, NULL);
+INSERT INTO categories VALUES (101210, 'Pest & Weed Control', 'Thuốc và dụng cụ diệt côn trùng', 100716, NULL);
+INSERT INTO categories VALUES (101211, 'Tissue & Paper Towels', 'Khăn giấy, giấy ướt', 100716, NULL);
+INSERT INTO categories VALUES (101212, 'Toilet Paper', 'Giấy vệ sinh', 100716, NULL);
+INSERT INTO categories VALUES (101213, 'Cleaning Agents', 'Chất tẩy rửa', 100716, NULL);
+INSERT INTO categories VALUES (101214, 'Laundry Care', 'Phụ kiện giặt là', 100716, NULL);
+INSERT INTO categories VALUES (101215, 'Others', 'Khác', 100716, NULL);
+INSERT INTO categories VALUES (101216, 'Grills & Accessories', 'Lò nướng & phụ kiện', 100717, NULL);
+INSERT INTO categories VALUES (101333, 'Ribbons', 'Ruy Băng', 100730, NULL);
+INSERT INTO categories VALUES (101217, 'Bakewares & Decorations', 'Dụng cụ nướng & trang trí bánh', 100717, NULL);
+INSERT INTO categories VALUES (101218, 'Pans', 'Chảo', 100717, NULL);
+INSERT INTO categories VALUES (101219, 'Pots', 'Nồi', 100717, NULL);
+INSERT INTO categories VALUES (101220, 'Food Storage', 'Hộp đựng thực phẩm', 100717, NULL);
+INSERT INTO categories VALUES (101221, 'Cling Wrap', 'Màng bọc thực phẩm', 100717, NULL);
+INSERT INTO categories VALUES (101222, 'Aluminium Foil', 'Giấy bạc', 100717, NULL);
+INSERT INTO categories VALUES (101223, 'Tea, Coffee & Bartending Equipments', 'Dụng cụ pha trà, cà phê', 100717, NULL);
+INSERT INTO categories VALUES (101224, 'Kitchen Racks', 'Kệ để đồ nhà bếp', 100717, NULL);
+INSERT INTO categories VALUES (101225, 'Aprons & Kitchen Gloves', 'Tạp dề & găng tay nấu nướng', 100717, NULL);
+INSERT INTO categories VALUES (101226, 'Spatulas & Cooking Tweezers', 'Cây vét bột & đồ gắp thức ăn', 100717, NULL);
+INSERT INTO categories VALUES (101227, 'Chopping Boards', 'Thớt', 100717, NULL);
+INSERT INTO categories VALUES (101228, 'Knives & Kitchen Scissors', 'Dao & kéo', 100717, NULL);
+INSERT INTO categories VALUES (101229, 'Whisks & Beaters', 'Phới đánh trứng', 100717, NULL);
+INSERT INTO categories VALUES (101230, 'Can & Bottle Openers', 'Dụng cụ mở hộp', 100717, NULL);
+INSERT INTO categories VALUES (101231, 'Measuring Glasses & Spoons', 'Dụng cụ đo lường', 100717, NULL);
+INSERT INTO categories VALUES (101232, 'Strainers', 'Dụng cụ lọc', 100717, NULL);
+INSERT INTO categories VALUES (101233, 'Graters, Peelers & Cutters', 'Bàn nạo, dụng cụ bào, cắt', 100717, NULL);
+INSERT INTO categories VALUES (101234, 'Kitchen Weighing Scales', 'Cân nhà bếp', 100717, NULL);
+INSERT INTO categories VALUES (101235, 'Sealers', 'Dụng cụ hút chân không', 100717, NULL);
+INSERT INTO categories VALUES (101237, 'Others', 'Khác', 100717, NULL);
+INSERT INTO categories VALUES (101238, 'Jugs, Pitchers & Accessories', 'Bình nước', 100718, NULL);
+INSERT INTO categories VALUES (101239, 'Tea Pots & Sets', 'Bộ ấm trà', 100718, NULL);
+INSERT INTO categories VALUES (101240, 'Cups, Mugs & Glasses', 'Cốc, ly, tách uống nước', 100718, NULL);
+INSERT INTO categories VALUES (101241, 'Water Bottles & Accessories', 'Bình nước & phụ kiện', 100718, NULL);
+INSERT INTO categories VALUES (101242, 'Bowls', 'Tô', 100718, NULL);
+INSERT INTO categories VALUES (101243, 'Plates', 'Dĩa', 100718, NULL);
+INSERT INTO categories VALUES (101244, 'Cutleries', 'Bộ dao kéo', 100718, NULL);
+INSERT INTO categories VALUES (101245, 'Straws', 'Ống hút', 100718, NULL);
+INSERT INTO categories VALUES (101246, 'Food Covers', 'Lồng bàn', 100718, NULL);
+INSERT INTO categories VALUES (101247, 'Placemats & Coasters', 'Khay, tấm lót bàn ăn', 100718, NULL);
+INSERT INTO categories VALUES (101248, 'Others', 'Khác', 100718, NULL);
+INSERT INTO categories VALUES (101249, 'Safes', 'Két sắt', 100720, NULL);
+INSERT INTO categories VALUES (101250, 'Fire Fighting Equipments', 'Thiết bị chữa cháy', 100720, NULL);
+INSERT INTO categories VALUES (101251, 'Door Hardware & Locks', 'Khóa, ổ khóa', 100720, NULL);
+INSERT INTO categories VALUES (101252, 'Others', 'Khác', 100720, NULL);
+INSERT INTO categories VALUES (101253, 'Hangers & Pegs', 'Mắc áo', 100721, NULL);
+INSERT INTO categories VALUES (101254, 'Storage Boxes, Bags & Baskets', 'Hộp đựng, giỏ đựng đồ', 100721, NULL);
+INSERT INTO categories VALUES (101255, 'Shoe Storage Boxes', 'Kệ giày, hộp giày', 100721, NULL);
+INSERT INTO categories VALUES (101256, 'Hooks', 'Móc treo', 100721, NULL);
+INSERT INTO categories VALUES (101257, 'Laundry Bags & Baskets', 'Túi giặt, giỏ đựng quần áo', 100721, NULL);
+INSERT INTO categories VALUES (101258, 'Desk Organizers', 'Kệ sách để bàn', 100721, NULL);
+INSERT INTO categories VALUES (101259, 'Wardrobe Organizers', 'Sắp xếp tủ quần áo', 100721, NULL);
+INSERT INTO categories VALUES (101260, 'Jewelry Organizers', 'Hộp đựng trang sức', 100721, NULL);
+INSERT INTO categories VALUES (101261, 'Tissue Holders', 'Hộp khăn giấy', 100721, NULL);
+INSERT INTO categories VALUES (101262, 'Others', 'Khác', 100721, NULL);
+INSERT INTO categories VALUES (101263, 'Balloons', 'Bong bóng', 100722, NULL);
+INSERT INTO categories VALUES (101264, 'Wooden Clips', 'Kẹp gỗ', 100722, NULL);
+INSERT INTO categories VALUES (101265, 'Backdrops & Banners', 'Phông nền, biểu ngữ', 100722, NULL);
+INSERT INTO categories VALUES (101266, 'Cards', 'Thiệp', 100722, NULL);
+INSERT INTO categories VALUES (101267, 'Disposable Tableware', 'Chén, đĩa dùng một lần', 100722, NULL);
+INSERT INTO categories VALUES (101268, 'Party Hats & Masks', 'Mũ, mặt nạ dự tiệc', 100722, NULL);
+INSERT INTO categories VALUES (101269, 'Sashes', 'Băng đeo chéo', 100722, NULL);
+INSERT INTO categories VALUES (101270, 'Others', 'Khác', 100722, NULL);
+INSERT INTO categories VALUES (101271, 'Fishing', 'Câu Cá', 100725, NULL);
+INSERT INTO categories VALUES (101272, 'Cycling', 'Đạp Xe', 100725, NULL);
+INSERT INTO categories VALUES (101273, 'Camping & Hiking', 'Cắm Trại & Dã ngoại', 100725, NULL);
+INSERT INTO categories VALUES (101274, 'Rock Climbing', 'Leo Núi', 100725, NULL);
+INSERT INTO categories VALUES (101275, 'Boardsports', 'Thể Thao Ván Trượt', 100725, NULL);
+INSERT INTO categories VALUES (101277, 'Soccer, Futsal & Sepak Takraw', 'Bóng Đá, Futsal & Cầu Mây', 100725, NULL);
+INSERT INTO categories VALUES (101278, 'Basketball', 'Bóng Rổ', 100725, NULL);
+INSERT INTO categories VALUES (101279, 'Volleyball', 'Bóng Chuyền', 100725, NULL);
+INSERT INTO categories VALUES (101280, 'Badminton', 'Cầu Lông', 100725, NULL);
+INSERT INTO categories VALUES (101281, 'Tennis', 'Tennis', 100725, NULL);
+INSERT INTO categories VALUES (101282, 'Table Tennis', 'Bóng Bàn', 100725, NULL);
+INSERT INTO categories VALUES (101283, 'Boxing & Martial Arts', 'Đấm bốc & Võ Tổng Hợp', 100725, NULL);
+INSERT INTO categories VALUES (101284, 'Golf', 'Golf', 100725, NULL);
+INSERT INTO categories VALUES (101285, 'Baseball & Softball', 'Bóng Chày & Bóng Ném', 100725, NULL);
+INSERT INTO categories VALUES (101286, 'Squash', 'Bóng Quần', 100725, NULL);
+INSERT INTO categories VALUES (101287, 'Shooting & Survival Games', 'Bắn Súng & Game Sinh Tồn', 100725, NULL);
+INSERT INTO categories VALUES (101288, 'Rugby', 'Bóng Bầu Dục', 100725, NULL);
+INSERT INTO categories VALUES (101289, 'Billiards', 'Bida', 100725, NULL);
+INSERT INTO categories VALUES (101290, 'Surfing & Wakeboarding', 'Lướt Ván', 100725, NULL);
+INSERT INTO categories VALUES (101291, 'Ice Skating & Winter Sports', 'Trượt Tuyết & Thể Thao Mùa Đông', 100725, NULL);
+INSERT INTO categories VALUES (101292, 'Swimming & Diving', 'Bơi Lội & Lặn', 100725, NULL);
+INSERT INTO categories VALUES (101293, 'Boating', 'Chèo Thuyền', 100725, NULL);
+INSERT INTO categories VALUES (101294, 'Yoga & Pilates', 'Yoga & Pilates', 100725, NULL);
+INSERT INTO categories VALUES (101295, 'Fitness Equipment', 'Thiết Bị Thể Thao', 100725, NULL);
+INSERT INTO categories VALUES (101296, 'Darts', 'Ném Phi Tiêu', 100725, NULL);
+INSERT INTO categories VALUES (101297, 'Others', 'Môn Thể Thao Khác', 100725, NULL);
+INSERT INTO categories VALUES (101298, 'Basketball Shoes', 'Giày Bóng Rổ', 100726, NULL);
+INSERT INTO categories VALUES (101299, 'Running Shoes', 'Giày Chạy Bộ', 100726, NULL);
+INSERT INTO categories VALUES (101300, 'Training Shoes', 'Giày Tập Luyện', 100726, NULL);
+INSERT INTO categories VALUES (101301, 'Tennis Shoes', 'Giày Tennis', 100726, NULL);
+INSERT INTO categories VALUES (101302, 'Volleyball Shoes', 'Giày Bóng Chuyền', 100726, NULL);
+INSERT INTO categories VALUES (101303, 'Badminton Shoes', 'Giày Cầu Lông', 100726, NULL);
+INSERT INTO categories VALUES (101304, 'Futsal Shoes', 'Giày Futsal', 100726, NULL);
+INSERT INTO categories VALUES (101305, 'Hiking Shoes', 'Giày Dã Ngoại', 100726, NULL);
+INSERT INTO categories VALUES (101306, 'Soccer Shoes', 'Giày Bóng Đá', 100726, NULL);
+INSERT INTO categories VALUES (101307, 'Kid''s Sport Shoes', 'Giày Thể Thao Trẻ Em', 100726, NULL);
+INSERT INTO categories VALUES (101308, 'Others', 'Giày Thể Thao Khác', 100726, NULL);
+INSERT INTO categories VALUES (101309, 'Sets', 'Bộ Đồ Thể Thao', 100727, NULL);
+INSERT INTO categories VALUES (101310, 'Jackets', 'Áo Khoác', 100727, NULL);
+INSERT INTO categories VALUES (101311, 'T-shirts', 'Áo Thể Thao', 100727, NULL);
+INSERT INTO categories VALUES (101312, 'Jerseys', 'Áo CLB', 100727, NULL);
+INSERT INTO categories VALUES (101313, 'Bottoms', 'Quần Thể Thao', 100727, NULL);
+INSERT INTO categories VALUES (101314, 'Swimming Attire', 'Đồ Bơi', 100727, NULL);
+INSERT INTO categories VALUES (101315, 'Sports Bras', 'Áo Lót Thể Thao', 100727, NULL);
+INSERT INTO categories VALUES (101316, 'Kid''s Sports Apparel', 'Thời Trang Thể Thao Trẻ Em', 100727, NULL);
+INSERT INTO categories VALUES (101317, 'Others', 'Khác', 100727, NULL);
+INSERT INTO categories VALUES (101318, 'Stopwatches & Pedometers', 'Đồng Hồ Bấm Giây & Máy Đếm Bước Chân', 100728, NULL);
+INSERT INTO categories VALUES (101319, 'Shoe Bags', 'Túi Đựng Giày', 100728, NULL);
+INSERT INTO categories VALUES (101320, 'Sports Wristbands', 'Vòng Tay Thể Thao', 100728, NULL);
+INSERT INTO categories VALUES (101321, 'Sports Headbands', 'Băng Đô Thể Thao', 100728, NULL);
+INSERT INTO categories VALUES (101322, 'Sports & Outdoor Hats', 'Mũ Thể Thao & Dã Ngoại', 100728, NULL);
+INSERT INTO categories VALUES (101323, 'Dry Bags', 'Túi Chống Thấm', 100728, NULL);
+INSERT INTO categories VALUES (101324, 'Rain Coats', 'Áo Mưa', 100728, NULL);
+INSERT INTO categories VALUES (101325, 'Umbrellas', 'Ô/Dù', 100728, NULL);
+INSERT INTO categories VALUES (101326, 'Mouthguards & Sport Tapes', 'Dụng Cụ Bảo Vệ Miệng & Băng Keo Thể Thao', 100728, NULL);
+INSERT INTO categories VALUES (101327, 'Training Equipments', 'Phụ Kiện Tập Luyện', 100728, NULL);
+INSERT INTO categories VALUES (101328, 'Gym Protective Gears', 'Đồ Bảo Hộ Gym', 100728, NULL);
+INSERT INTO categories VALUES (101329, 'Others', 'Phụ Kiện Khác', 100728, NULL);
+INSERT INTO categories VALUES (101334, 'Bubble Wraps', 'Xốp Chống Sốc', 100730, NULL);
+INSERT INTO categories VALUES (101335, 'Carton Boxes', 'Hộp Carton', 100730, NULL);
+INSERT INTO categories VALUES (101336, 'Others', 'Khác', 100730, NULL);
+INSERT INTO categories VALUES (101337, 'Pens & Inks', 'Bút & Mực', 100731, NULL);
+INSERT INTO categories VALUES (101338, 'Pencils', 'Bút Chì', 100731, NULL);
+INSERT INTO categories VALUES (101339, 'Eraser & Correction Supplies', 'Dụng Cụ Tẩy Xóa', 100731, NULL);
+INSERT INTO categories VALUES (101340, 'Markers', 'Bút Lông Màu', 100731, NULL);
+INSERT INTO categories VALUES (101341, 'Highlighters', 'Bút Dạ Quang', 100731, NULL);
+INSERT INTO categories VALUES (101342, 'Others', 'Khác', 100731, NULL);
+INSERT INTO categories VALUES (101343, 'Writing Boards & Board Stands', 'Bảng Viết & Giá Treo Bảng', 100732, NULL);
+INSERT INTO categories VALUES (101344, 'Calculators', 'Máy tính cầm tay', 100732, NULL);
+INSERT INTO categories VALUES (101345, 'Pen Knives & Paper Cutters', 'Dao Rọc Giấy & Máy Cắt Giấy', 100732, NULL);
+INSERT INTO categories VALUES (101346, 'Strings & Tapes', 'Dây & Băng Keo Dán', 100732, NULL);
+INSERT INTO categories VALUES (101347, 'Glues', 'Hồ Dán', 100732, NULL);
+INSERT INTO categories VALUES (101348, 'Label Printers', 'Máy In Nhãn', 100732, NULL);
+INSERT INTO categories VALUES (101349, 'Lanyards & Name Tags', 'Dây Đeo Thẻ & Thẻ Tên', 100732, NULL);
+INSERT INTO categories VALUES (101350, 'Clips, Pins & Tacks', 'Kẹp & Ghim Bấm', 100732, NULL);
+INSERT INTO categories VALUES (101351, 'Hole Punchers', 'Máy Đục Lỗ', 100732, NULL);
+INSERT INTO categories VALUES (101352, 'Scissors', 'Kéo', 100732, NULL);
+INSERT INTO categories VALUES (101353, 'Ink Stamps & Pads', 'Mực Đóng Dấu', 100732, NULL);
+INSERT INTO categories VALUES (101354, 'Staplers & Staples', 'Đồ Bấm Kim và Kim Bấm', 100732, NULL);
+INSERT INTO categories VALUES (101355, 'Calendars', 'Lịch', 100732, NULL);
+INSERT INTO categories VALUES (101356, 'Folders, Paper Organizers & Accessories', 'Dụng Cụ Lưu Trữ Giấy Tờ', 100732, NULL);
+INSERT INTO categories VALUES (101357, 'Rulers, Protractors & Stencils', 'Thước Các Loại & Giấy Nến', 100732, NULL);
+INSERT INTO categories VALUES (101358, 'Sharpeners', 'Gọt bút chì', 100732, NULL);
+INSERT INTO categories VALUES (101359, 'Pencil Cases', 'Hộp Bút', 100732, NULL);
+INSERT INTO categories VALUES (101360, 'Others', 'Khác', 100732, NULL);
+INSERT INTO categories VALUES (101361, 'Color Pencils', 'Bút Chì Màu', 100733, NULL);
+INSERT INTO categories VALUES (101362, 'Crayons & Pastels', 'Bút Màu & Phấn Màu', 100733, NULL);
+INSERT INTO categories VALUES (101363, 'Water & Poster Colours', 'Màu Nước', 100733, NULL);
+INSERT INTO categories VALUES (101364, 'Oil Paint', 'Sơn Dầu', 100733, NULL);
+INSERT INTO categories VALUES (101365, 'Acrylic Paint', 'Sơn Acrylic', 100733, NULL);
+INSERT INTO categories VALUES (101366, 'Paint Brushes', 'Cọ Vẽ', 100733, NULL);
+INSERT INTO categories VALUES (101367, 'Paint Palettes', 'Bảng Màu', 100733, NULL);
+INSERT INTO categories VALUES (101368, 'Canvases & Easels', 'Vải & Giá Vẽ', 100733, NULL);
+INSERT INTO categories VALUES (101369, 'Sketch Books', 'Sổ vẽ phác thảo', 100733, NULL);
+INSERT INTO categories VALUES (101370, 'Others', 'Khác', 100733, NULL);
+INSERT INTO categories VALUES (101371, 'Bookmarks', 'Đánh Dấu Trang', 100734, NULL);
+INSERT INTO categories VALUES (101372, 'Book Covers', 'Bọc Sách', 100734, NULL);
+INSERT INTO categories VALUES (101373, 'Thermal Paper & Continuous Paper', 'Giấy Nhiệt', 100734, NULL);
+INSERT INTO categories VALUES (101374, 'Printing & Photocopy Paper', 'Giấy In', 100734, NULL);
+INSERT INTO categories VALUES (101375, 'Loose Leaf', 'Ruột Sổ', 100734, NULL);
+INSERT INTO categories VALUES (101376, 'Memo & Sticky Notes', 'Giấy Ghi Chú', 100734, NULL);
+INSERT INTO categories VALUES (101377, 'Art Paper & Boards', 'Giấy Mỹ Thuật', 100734, NULL);
+INSERT INTO categories VALUES (101378, 'Notebooks & Notepads', 'Tập, Vở Các Loại', 100734, NULL);
+INSERT INTO categories VALUES (101379, 'Labels & Stickers', 'Nhãn Dán Các Loại', 100734, NULL);
+INSERT INTO categories VALUES (101380, 'Others', 'Khác', 100734, NULL);
+INSERT INTO categories VALUES (101381, 'Envelopes & Angpao', 'Phong Bì & Bao Lì Xì', 100735, NULL);
+INSERT INTO categories VALUES (101382, 'Post Cards', 'Bưu Thiếp', 100735, NULL);
+INSERT INTO categories VALUES (101383, 'Postage Stamps & Duty Stamps', 'Tem Các Loại', 100735, NULL);
+INSERT INTO categories VALUES (101384, 'Others', 'Khác', 100735, NULL);
+INSERT INTO categories VALUES (101385, 'Action Figurines', 'Mô hình nhân vật', 100737, NULL);
+INSERT INTO categories VALUES (101386, 'Statues & Sculptures', 'Tượng tĩnh', 100737, NULL);
+INSERT INTO categories VALUES (101387, 'Mecha Models & Diecast', 'Mô hình mecha/gundam', 100737, NULL);
+INSERT INTO categories VALUES (101388, 'Vehicle Models & Diecast', 'Mô hình xe', 100737, NULL);
+INSERT INTO categories VALUES (101390, 'Idol Collectibles', 'Bộ sưu tập nhân vật nổi tiếng', 100737, NULL);
+INSERT INTO categories VALUES (101391, 'Sports Collectibles', 'Bộ sưu tập thể thao', 100737, NULL);
+INSERT INTO categories VALUES (101392, 'Anime & Manga Collectibles', 'Bộ sưu tập hoạt hình truyện tranh', 100737, NULL);
+INSERT INTO categories VALUES (101393, 'Coins', 'Tiền xu & tiền giấy sưu tầm', 100737, NULL);
+INSERT INTO categories VALUES (101394, 'Others', 'Khác', 100737, NULL);
+INSERT INTO categories VALUES (101395, 'Hand Fans', 'Quạt Cầm Tay', 100738, NULL);
+INSERT INTO categories VALUES (101396, 'Keychains', 'Móc khóa', 100738, NULL);
+INSERT INTO categories VALUES (101397, 'Coin Banks', 'Ống tiết kiệm', 100738, NULL);
+INSERT INTO categories VALUES (101398, 'Fridge Magnets', 'Nam Châm', 100738, NULL);
+INSERT INTO categories VALUES (101399, 'Others', 'Khác', 100738, NULL);
+INSERT INTO categories VALUES (101400, 'Dice, Board & Card Games', 'Đồ chơi thẻ bài & boardgame', 100739, NULL);
+INSERT INTO categories VALUES (101401, 'Magic Toys', 'Đồ chơi ảo thuật', 100739, NULL);
+INSERT INTO categories VALUES (101402, 'Prank Toys', 'Đồ chơi chọc ghẹo', 100739, NULL);
+INSERT INTO categories VALUES (101403, 'Rubik''s Cubes', 'Đồ chơi rubik', 100739, NULL);
+INSERT INTO categories VALUES (101404, 'Spinning Tops', 'Đồ chơi con xoay', 100739, NULL);
+INSERT INTO categories VALUES (101405, 'Kendamas', 'Kendama', 100739, NULL);
+INSERT INTO categories VALUES (101406, 'Yo-yos', 'Yo yo', 100739, NULL);
+INSERT INTO categories VALUES (101407, 'Remote Control Toys & Accessories', 'Đồ chơi điều khiển từ xa', 100739, NULL);
+INSERT INTO categories VALUES (101408, 'Capsule Toys', 'Đồ chơi trứng', 100739, NULL);
+INSERT INTO categories VALUES (101409, 'Others', 'Khác', 100739, NULL);
+INSERT INTO categories VALUES (101410, 'Keyboards & Pianos', 'Đàn Piano & Organ', 100741, NULL);
+INSERT INTO categories VALUES (101411, 'Percussion Instruments', 'Nhạc Cụ Gõ', 100741, NULL);
+INSERT INTO categories VALUES (101412, 'Wind Instruments', 'Sáo, kèn', 100741, NULL);
+INSERT INTO categories VALUES (101413, 'Music Accessories', 'Phụ Kiện Âm Nhạc', 100741, NULL);
+INSERT INTO categories VALUES (101414, 'Others', 'Khác', 100741, NULL);
+INSERT INTO categories VALUES (101415, 'Navigation & AV Receivers', 'Thiết bị định vị và Hệ thống hình ảnh/âm thanh', 100747, NULL);
+INSERT INTO categories VALUES (101416, 'Amplifiers, Speakers & Subwoofers', 'Hệ thống loa', 100747, NULL);
+INSERT INTO categories VALUES (101417, 'Organizers & Compartments', 'Dụng cụ chứa', 100747, NULL);
+INSERT INTO categories VALUES (101418, 'Perfumes, Air Fresheners & Purifiers', 'Nước hoa, Nước hoa khử mùi, Thiết bị lọc không khí', 100747, NULL);
+INSERT INTO categories VALUES (101419, 'Carpets & Mats', 'Thảm & Đệm lót', 100747, NULL);
+INSERT INTO categories VALUES (101420, 'Seat Headrests & Back Supports', 'Gối tựa đầu & lưng', 100747, NULL);
+INSERT INTO categories VALUES (101421, 'Car Mattresses', 'Nệm giường ô tô', 100747, NULL);
+INSERT INTO categories VALUES (101422, 'Steering Wheels & Covers', 'Vô lăng & Bọc vô lăng', 100747, NULL);
+INSERT INTO categories VALUES (101423, 'Seats & Seat Covers', 'Ghế & Áo ghế', 100747, NULL);
+INSERT INTO categories VALUES (101424, 'Phone Holders', 'Giá đỡ điện thoại', 100747, NULL);
+INSERT INTO categories VALUES (101425, 'USB Chargers, FM & Bluetooth Transmitters', 'Cốc sạc USB, Thiết bị thu phát FM & Bluetooth', 100747, NULL);
+INSERT INTO categories VALUES (101426, 'Pedals & Gear Sticks', 'Chân ga và Cần số', 100747, NULL);
+INSERT INTO categories VALUES (101427, 'Sun Shields & Dash Covers', 'Tấm che nắng và Thảm Taplo', 100747, NULL);
+INSERT INTO categories VALUES (101428, 'Locks & Security', 'Khóa và thiết bị chống trộm', 100747, NULL);
+INSERT INTO categories VALUES (101429, 'Camcorders & Parking Cameras', 'Camera hành trình & Camera lùi', 100747, NULL);
+INSERT INTO categories VALUES (101430, 'HUD, Speedometers & Gauges', 'HUD, Đồng hồ tốc độ, Đồng hồ số', 100747, NULL);
+INSERT INTO categories VALUES (101431, 'Others', 'Khác', 100747, NULL);
+INSERT INTO categories VALUES (101432, 'Garnish', 'Nẹp viền', 100748, NULL);
+INSERT INTO categories VALUES (101433, 'Antennas', 'Ăng-ten thu phát sóng', 100748, NULL);
+INSERT INTO categories VALUES (101434, 'Covers', 'Bạt phủ', 100748, NULL);
+INSERT INTO categories VALUES (101435, 'Stickers, Logos & Emblems', 'Hình dán, logo, huy hiệu', 100748, NULL);
+INSERT INTO categories VALUES (101436, 'Mud Flaps & Splash Guards', 'Tấm chắn bùn', 100748, NULL);
+INSERT INTO categories VALUES (101437, 'Sill Plates', 'Nẹp cửa chống trầy', 100748, NULL);
+INSERT INTO categories VALUES (101438, 'Gutters', 'Rãnh thoát nước mưa', 100748, NULL);
+INSERT INTO categories VALUES (101439, 'Horns & Accessories', 'Còi & phụ kiện', 100748, NULL);
+INSERT INTO categories VALUES (101440, 'Mirrors & Accessories', 'Gương & Phụ kiện', 100748, NULL);
+INSERT INTO categories VALUES (101441, 'License Plate Accessories', 'Phụ kiện biển số', 100748, NULL);
+INSERT INTO categories VALUES (101442, 'Others', 'Khác', 100748, NULL);
+INSERT INTO categories VALUES (101443, 'Body, Frame & Bumpers', 'Hệ thống khung xe và giảm sóc', 100749, NULL);
+INSERT INTO categories VALUES (101444, 'Windshield Wipers & Washers', 'Cần gạt nước & vòng đệm kính chắn gió', 100749, NULL);
+INSERT INTO categories VALUES (101445, 'Exhaust & Emissions', 'Hệ thống khí xả', 100749, NULL);
+INSERT INTO categories VALUES (101446, 'Wheels, Rims & Accessories', 'Bánh xe, Vành & Phụ kiện', 100749, NULL);
+INSERT INTO categories VALUES (101447, 'Tires & Accessories', 'Lốp & Phụ kiện', 100749, NULL);
+INSERT INTO categories VALUES (101448, 'Shocks, Struts & Suspension', 'Giảm xóc, thanh chống và hệ thống treo', 100749, NULL);
+INSERT INTO categories VALUES (101449, 'Radiators, Engine Cooling & Climate Control', 'Bộ tản nhiệt, Làm mát động cơ & Kiểm soát nhiệt', 100749, NULL);
+INSERT INTO categories VALUES (101450, 'Drivetrain, Transmission & Clutches', 'Hệ thống truyền động, hộp số & ly hợp', 100749, NULL);
+INSERT INTO categories VALUES (101451, 'Bearing & Seals', 'Vòng bi & con dấu', 100749, NULL);
+INSERT INTO categories VALUES (101452, 'Engine Parts', 'Bộ phận động cơ', 100749, NULL);
+INSERT INTO categories VALUES (101453, 'Brake System', 'Hệ thống phanh', 100749, NULL);
+INSERT INTO categories VALUES (101454, 'Belts, Hoses & Pulleys', 'Dây chuyền động', 100749, NULL);
+INSERT INTO categories VALUES (101455, 'Electronics', 'Thiết bị điện tử', 100749, NULL);
+INSERT INTO categories VALUES (101456, 'Fuel System', 'Hệ thống xử lý nhiên liệu', 100749, NULL);
+INSERT INTO categories VALUES (101457, 'Others', 'Khác', 100749, NULL);
+INSERT INTO categories VALUES (101458, 'Test, Diagnostic & Repair Tools', 'Dụng cụ Kiểm tra, chẩn đoán & sửa chữa', 100750, NULL);
+INSERT INTO categories VALUES (101459, 'Tire Pressure Detectors', 'Máy đo áp suất lốp', 100750, NULL);
+INSERT INTO categories VALUES (101460, 'Others', 'Khác', 100750, NULL);
+INSERT INTO categories VALUES (101461, 'Wash & Waxes', 'Dung dịch tẩy rửa', 100751, NULL);
+INSERT INTO categories VALUES (101462, 'Glass Care & Water Repellents', 'Rửa kính & Chất chống bám nước', 100751, NULL);
+INSERT INTO categories VALUES (101463, 'Interior Care', 'Chăm sóc nội thất', 100751, NULL);
+INSERT INTO categories VALUES (101464, 'Tire & Wheel Care', 'Chăm sóc lốp & vành', 100751, NULL);
+INSERT INTO categories VALUES (101465, 'Polish, Coating & Sealants', 'Đánh bóng, sơn phủ & chất làm kín', 100751, NULL);
+INSERT INTO categories VALUES (101466, 'Others', 'Khác', 100751, NULL);
+INSERT INTO categories VALUES (101467, 'Oils', 'Dầu', 100752, NULL);
+INSERT INTO categories VALUES (101468, 'Fuel Additives & Savers', 'Phụ gia', 100752, NULL);
+INSERT INTO categories VALUES (101469, 'Greases & Lubricants', 'Mỡ & Chất bôi trơn', 100752, NULL);
+INSERT INTO categories VALUES (101470, 'Antifreezes & Coolants', 'Chất chống đông & chất làm mát', 100752, NULL);
+INSERT INTO categories VALUES (101471, 'Automotive Fluids', 'Dầu máy', 100752, NULL);
+INSERT INTO categories VALUES (101472, 'Others', 'Khác', 100752, NULL);
+INSERT INTO categories VALUES (101473, 'Carpets', 'Lót sàn', 100756, NULL);
+INSERT INTO categories VALUES (101474, 'Speedometers, Odometers & Gauges', 'Đồng hồ đo', 100756, NULL);
+INSERT INTO categories VALUES (101475, 'Covers', 'Bạt phủ', 100756, NULL);
+INSERT INTO categories VALUES (101476, 'Stickers, Logos & Emblems', 'Hình dán, logo, huy hiệu', 100756, NULL);
+INSERT INTO categories VALUES (101477, 'Seats & Seat Covers', 'Ghế & bọc ghế', 100756, NULL);
+INSERT INTO categories VALUES (101478, 'Mirrors & Accessories', 'Gương và phụ kiện', 100756, NULL);
+INSERT INTO categories VALUES (101479, 'Locks & Security', 'Khóa và thiết bị chống trộm', 100756, NULL);
+INSERT INTO categories VALUES (101480, 'Boxes & Cases', 'Thùng chứa đồ', 100756, NULL);
+INSERT INTO categories VALUES (101481, 'Phone Holders', 'Giá đỡ điện thoại', 100756, NULL);
+INSERT INTO categories VALUES (101482, 'Mud Flaps & Splash Guards', 'Tấm chắn bùn', 100756, NULL);
+INSERT INTO categories VALUES (101483, 'Others', 'Khác', 100756, NULL);
+INSERT INTO categories VALUES (101484, 'Ignition & Engine Parts', 'Bộ phận đánh lửa & động cơ', 100757, NULL);
+INSERT INTO categories VALUES (101485, 'Fuel System', 'Hệ thống xử lý nhiên liệu', 100757, NULL);
+INSERT INTO categories VALUES (101486, 'Brake System', 'Hệ thống phanh', 100757, NULL);
+INSERT INTO categories VALUES (101487, 'Shocks, Struts & Suspension', 'Hệ thống giảm xóc', 100757, NULL);
+INSERT INTO categories VALUES (101488, 'Drivetrain, Transmission & Clutches', 'Hệ thống dẫn động', 100757, NULL);
+INSERT INTO categories VALUES (101489, 'Batteries & Accessories', 'Pin & Phụ kiện', 100757, NULL);
+INSERT INTO categories VALUES (101490, 'Horns & Accessories', 'Còi & Phụ kiện', 100757, NULL);
+INSERT INTO categories VALUES (101491, 'Cables & Tubes', 'Dây cáp & Ống', 100757, NULL);
+INSERT INTO categories VALUES (101492, 'Body & Frame', 'Hệ thống khung xe', 100757, NULL);
+INSERT INTO categories VALUES (101493, 'Exhaust & Emissions', 'Hệ thống khí xả', 100757, NULL);
+INSERT INTO categories VALUES (101494, 'Wheels, Rims & Accessories', 'Bánh xe, Vành & Phụ kiện', 100757, NULL);
+INSERT INTO categories VALUES (101495, 'Tires & Accessories', 'Lốp xe & Phụ kiện', 100757, NULL);
+INSERT INTO categories VALUES (101496, 'Lighting', 'Đèn', 100757, NULL);
+INSERT INTO categories VALUES (101497, 'Others', 'Khác', 100757, NULL);
+INSERT INTO categories VALUES (101498, 'Theme Parks & Attractions', 'Công viên giải trí', 100760, NULL);
+INSERT INTO categories VALUES (101499, 'Events, Fairs & Conferences', 'Sự kiện & Hội thảo', 100760, NULL);
+INSERT INTO categories VALUES (101500, 'Movies', 'Vé xem phim - Kịch', 100760, NULL);
+INSERT INTO categories VALUES (101501, 'Concerts & Exhibitions', 'Hòa nhạc & Triển lãm', 100760, NULL);
+INSERT INTO categories VALUES (101502, 'Others', 'Khác', 100760, NULL);
+INSERT INTO categories VALUES (101503, 'Dine-in & Takeaway', 'Ăn tại chỗ & Mang đi', 100761, NULL);
+INSERT INTO categories VALUES (101504, 'Food Delivery', 'Giao thức ăn', 100761, NULL);
+INSERT INTO categories VALUES (101505, 'Others', 'Khác', 100761, NULL);
+INSERT INTO categories VALUES (101506, 'Malls & Department Stores', 'Trung tâm thương mại', 100762, NULL);
+INSERT INTO categories VALUES (101507, 'Supermarkets', 'Siêu thị', 100762, NULL);
+INSERT INTO categories VALUES (101508, 'Others', 'Khác', 100762, NULL);
+INSERT INTO categories VALUES (101509, 'Housekeeping', 'Dọn dẹp nhà cửa', 100764, NULL);
+INSERT INTO categories VALUES (101510, 'Delivery & Moving', 'Giao & Vận chuyển hàng hóa', 100764, NULL);
+INSERT INTO categories VALUES (101511, 'Insurance', 'Bảo hiểm', 100764, NULL);
+INSERT INTO categories VALUES (101512, 'Air-Conditioning Servicing', 'Lắp đặt sửa chữa máy lạnh', 100764, NULL);
+INSERT INTO categories VALUES (101513, 'Photography & Printing', 'Gói chụp hình', 100764, NULL);
+INSERT INTO categories VALUES (101514, 'Others', 'Khác', 100764, NULL);
+INSERT INTO categories VALUES (101515, 'Health', 'Chăm sóc sức khỏe', 100765, NULL);
+INSERT INTO categories VALUES (101516, 'Dental', 'Nha khoa', 100765, NULL);
+INSERT INTO categories VALUES (101517, 'Fitness', 'Gym & Yoga', 100765, NULL);
+INSERT INTO categories VALUES (101518, 'Hair', 'Salon tóc', 100765, NULL);
+INSERT INTO categories VALUES (101519, 'Spa & Massage', 'Spa & Massage', 100765, NULL);
+INSERT INTO categories VALUES (101520, 'Others', 'Khác', 100765, NULL);
+INSERT INTO categories VALUES (101521, 'Internet & Cable TV', 'Internet & Truyền hình cáp', 100768, NULL);
+INSERT INTO categories VALUES (101522, 'Mobile Data', 'Gói data 3G/4G', 100768, NULL);
+INSERT INTO categories VALUES (101523, 'Mobile Top-ups & Pre-paid', 'Nạp trực tiếp & Mua mã thẻ', 100768, NULL);
+INSERT INTO categories VALUES (101524, 'Others', 'Khác', 100768, NULL);
+INSERT INTO categories VALUES (101525, 'Accommodation', 'Đặt phòng', 100769, NULL);
+INSERT INTO categories VALUES (101526, 'Hot Springs', 'Suối nước nóng', 100769, NULL);
+INSERT INTO categories VALUES (101527, 'Flights', 'Vé máy bay', 100769, NULL);
+INSERT INTO categories VALUES (101528, 'Trains', 'Vé tàu lửa', 100769, NULL);
+INSERT INTO categories VALUES (101529, 'Buses', 'Vé xe buýt', 100769, NULL);
+INSERT INTO categories VALUES (101530, 'Car Rentals', 'Thuê phương tiện', 100769, NULL);
+INSERT INTO categories VALUES (101531, 'Tour & Packages', 'Tour du lịch', 100769, NULL);
+INSERT INTO categories VALUES (101532, 'Others', 'Khác', 100769, NULL);
+INSERT INTO categories VALUES (101533, 'Shopee Official', 'Shopee Official', 100774, NULL);
+INSERT INTO categories VALUES (101534, 'Shopee Paid Ads Credits', 'Phí quảng cáo Shopee', 100774, NULL);
+INSERT INTO categories VALUES (101535, 'Others', 'Khác', 100774, NULL);
+INSERT INTO categories VALUES (101536, 'Business', 'Tạp Chí Kinh Tế', 100776, NULL);
+INSERT INTO categories VALUES (101537, 'Lifestyle', 'Tạp Chí Đời Sống', 100776, NULL);
+INSERT INTO categories VALUES (101538, 'Teenager', 'Tạp Chí Tuổi Teen', 100776, NULL);
+INSERT INTO categories VALUES (101539, 'Others', 'Khác', 100776, NULL);
+INSERT INTO categories VALUES (101540, 'Comics & Manga', 'Truyện Tranh', 100777, NULL);
+INSERT INTO categories VALUES (101541, 'Children''s Books', 'Sách Thiếu Nhi', 100777, NULL);
+INSERT INTO categories VALUES (101542, 'Agriculture, Forestry & Fishery', 'Sách Nông - Lâm - Ngư Nghiệp', 100777, NULL);
+INSERT INTO categories VALUES (101543, 'Adult''s Books', 'Sách Người Lớn', 100777, NULL);
+INSERT INTO categories VALUES (101544, 'Arts, Design & Photography', 'Sách Nghệ thuật, Thiết kế & Nhiếp ảnh', 100777, NULL);
+INSERT INTO categories VALUES (101545, 'Recipes & Cooking', 'Sách Dạy Nấu Ăn', 100777, NULL);
+INSERT INTO categories VALUES (101546, 'Business & Investment', 'Sách Kinh Tế - Kinh Doanh', 100777, NULL);
+INSERT INTO categories VALUES (101547, 'Politics, Law & Social Sciences', 'Sách Chính Trị - Pháp Lý & Khoa Học', 100777, NULL);
+INSERT INTO categories VALUES (101548, 'Computers & Technology', 'Sách Công Nghệ Thông Tin', 100777, NULL);
+INSERT INTO categories VALUES (101549, 'Health, Fitness & Dieting', 'Sách Sức Khỏe, Rèn Luyện & Ăn Kiêng', 100777, NULL);
+INSERT INTO categories VALUES (101550, 'Travel & Tourism', 'Sách Du Lịch - Du Ký', 100777, NULL);
+INSERT INTO categories VALUES (101551, 'Language Learning & Dictionaries', 'Sách Học Ngoại Ngữ & Từ Điển', 100777, NULL);
+INSERT INTO categories VALUES (101552, 'Hobbies', 'Sách Sở Thích Cá Nhân', 100777, NULL);
+INSERT INTO categories VALUES (101553, 'LGBTQ+ Literature', 'Văn Học LGBTQ+', 100777, NULL);
+INSERT INTO categories VALUES (101554, 'Light Novels', 'Light Novels', 100777, NULL);
+INSERT INTO categories VALUES (101555, 'Classic Literature', 'Văn Học Kinh Điển', 100777, NULL);
+INSERT INTO categories VALUES (101556, 'Fantasy', 'Văn Học Giả Tưởng', 100777, NULL);
+INSERT INTO categories VALUES (101557, 'Action, Crime & Thrillers', 'Văn Học Hành Động, Tội Phạm & Kinh Dị', 100777, NULL);
+INSERT INTO categories VALUES (101558, 'Romance', 'Văn Học Lãng Mạn', 100777, NULL);
+INSERT INTO categories VALUES (101559, 'Biography & Memoirs', 'Tiểu Sử - Hồi Ký', 100777, NULL);
+INSERT INTO categories VALUES (101560, 'Science & Maths', 'Khoa Học - Toán Học', 100777, NULL);
+INSERT INTO categories VALUES (101561, 'Medical', 'Sách Y Học', 100777, NULL);
+INSERT INTO categories VALUES (101562, 'Parenting & Family', 'Sách Gia Đình', 100777, NULL);
+INSERT INTO categories VALUES (101563, 'Psychology & Relationships', 'Sách Tâm Lý Học', 100777, NULL);
+INSERT INTO categories VALUES (101564, 'Religion & Philosophy', 'Sách Tôn giáo & Triết học', 100777, NULL);
+INSERT INTO categories VALUES (101565, 'History & Cultures', 'Sách Lịch Sử - Văn Hóa', 100777, NULL);
+INSERT INTO categories VALUES (101566, 'Careers, Self Help & Personal Development', 'Sách Hướng Nghiệp & Phát Triển Bản Thân', 100777, NULL);
+INSERT INTO categories VALUES (101567, 'Horoscopes', 'Sách Chiêm Tinh', 100777, NULL);
+INSERT INTO categories VALUES (101568, 'Education & School', 'Sách Giáo Dục', 100777, NULL);
+INSERT INTO categories VALUES (101569, 'Sticker & Colouring Books', 'Sách Hình Dán & Tô Màu', 100777, NULL);
+INSERT INTO categories VALUES (101570, 'Music', 'Sách Âm Nhạc', 100777, NULL);
+INSERT INTO categories VALUES (101571, 'Baby & Soft Books', 'Sách Vải', 100777, NULL);
+INSERT INTO categories VALUES (101572, 'Audio Books', 'Sách Nói', 100777, NULL);
+INSERT INTO categories VALUES (101573, 'Others', 'Khác', 100777, NULL);
+INSERT INTO categories VALUES (101944, 'Desktop PC', 'Bộ Máy Tính Bàn', 101932, NULL);
+INSERT INTO categories VALUES (101945, 'Mini PC', 'Máy Tính Mini', 101932, NULL);
+INSERT INTO categories VALUES (101946, 'Server PC', 'Máy Chủ', 101932, NULL);
+INSERT INTO categories VALUES (101947, 'All-in-One Desktops', 'Máy Tính All in one', 101932, NULL);
+INSERT INTO categories VALUES (101948, 'Others', 'Khác', 101932, NULL);
+INSERT INTO categories VALUES (101949, 'Fans & Heatsinks', 'Quạt và Tản Nhiệt', 101934, NULL);
+INSERT INTO categories VALUES (101950, 'Processors', 'CPU - Bộ Vi Xử Lý', 101934, NULL);
+INSERT INTO categories VALUES (101951, 'Motherboards', 'Mainboard - Bo Mạch Chủ', 101934, NULL);
+INSERT INTO categories VALUES (101952, 'Graphics Cards', 'VGA - Card Màn Hình', 101934, NULL);
+INSERT INTO categories VALUES (101953, 'Thermal Paste', 'Keo Tản Nhiệt', 101934, NULL);
+INSERT INTO categories VALUES (101954, 'Power Supply Units', 'Nguồn Máy Tính', 101934, NULL);
+INSERT INTO categories VALUES (101955, 'RAM', 'Ram Máy Tính', 101934, NULL);
+INSERT INTO categories VALUES (101956, 'UPS & Stabilizers', 'Bộ Lưu Điện', 101934, NULL);
+INSERT INTO categories VALUES (101957, 'PC Cases', 'Case Máy Tính', 101934, NULL);
+INSERT INTO categories VALUES (101958, 'Optical Drives', 'Ổ Đĩa Quang', 101934, NULL);
+INSERT INTO categories VALUES (101959, 'Sound Cards', 'Bo Mạch Âm Thanh', 101934, NULL);
+INSERT INTO categories VALUES (101960, 'Others', 'Khác', 101934, NULL);
+INSERT INTO categories VALUES (101961, 'Hard Drives', 'Ổ Cứng Di Động', 101935, NULL);
+INSERT INTO categories VALUES (101962, 'SSD', 'Ổ Cứng SSD', 101935, NULL);
+INSERT INTO categories VALUES (101963, 'Network Attached Storage (NAS)', 'Ổ Cứng Mạng (NAS)', 101935, NULL);
+INSERT INTO categories VALUES (101964, 'Flash Drives & OTG', 'USB & OTG', 101935, NULL);
+INSERT INTO categories VALUES (101965, 'Hard Disk Casings & Dockings', 'Thiết Bị Đựng Ổ Cứng', 101935, NULL);
+INSERT INTO categories VALUES (101966, 'Compact Discs', 'Đĩa CD', 101935, NULL);
+INSERT INTO categories VALUES (101967, 'Others', 'Khác', 101935, NULL);
+INSERT INTO categories VALUES (101968, 'Modems & Wireless Routers', 'Bộ Phát Wifi', 101936, NULL);
+INSERT INTO categories VALUES (101969, 'Repeaters', 'Bộ Kích Wifi', 101936, NULL);
+INSERT INTO categories VALUES (101970, 'Wireless Adapters & Network Cards', 'Bộ Thu Wifi', 101936, NULL);
+INSERT INTO categories VALUES (101971, 'Powerline Adapters', 'Bộ Chuyển Đổi Mạng', 101936, NULL);
+INSERT INTO categories VALUES (101972, 'Network Switches & PoE', 'Bộ chia mạng', 101936, NULL);
+INSERT INTO categories VALUES (101973, 'Network Cables & Connectors', 'Cáp Máy Tính', 101936, NULL);
+INSERT INTO categories VALUES (101974, 'KVM Switches', 'Bộ Chuyển Mạch KVM', 101936, NULL);
+INSERT INTO categories VALUES (101975, 'Print Servers', 'Máy Chủ Máy In', 101936, NULL);
+INSERT INTO categories VALUES (101976, 'Others', 'Khác', 101936, NULL);
+INSERT INTO categories VALUES (101977, 'Typewriters', 'Máy Đánh Chữ', 101938, NULL);
+INSERT INTO categories VALUES (101978, 'Absence Machines', 'Máy Chấm Công', 101938, NULL);
+INSERT INTO categories VALUES (101979, 'Paper Shredders', 'Máy Hủy Tài Liệu', 101938, NULL);
+INSERT INTO categories VALUES (101980, 'Money Counters', 'Máy Đếm Tiền', 101938, NULL);
+INSERT INTO categories VALUES (101981, 'Others', 'Khác', 101938, NULL);
+INSERT INTO categories VALUES (101982, 'Printers, Scanners & Photocopy Machines', 'Máy In, Máy Scan & Máy Photo', 101939, NULL);
+INSERT INTO categories VALUES (101983, 'Thermal & Barcode Printers', 'Máy In Mã Vạch', 101939, NULL);
+INSERT INTO categories VALUES (101984, 'Inks & Toners', 'Mực In & Khay Mực', 101939, NULL);
+INSERT INTO categories VALUES (101985, '3D Printers', 'Máy In 3D', 101939, NULL);
+INSERT INTO categories VALUES (101986, 'Others', 'Khác', 101939, NULL);
+INSERT INTO categories VALUES (101987, 'USB Hubs & Card Readers', 'Bộ chia cổng USB & Đọc thẻ nhớ', 101940, NULL);
+INSERT INTO categories VALUES (101988, 'Webcams', 'Webcam', 101940, NULL);
+INSERT INTO categories VALUES (101989, 'Laptop Skins & Covers', 'Miếng Dán & Ốp Laptop', 101940, NULL);
+INSERT INTO categories VALUES (101990, 'Cooling Pads', 'Đế Tản Nhiệt', 101940, NULL);
+INSERT INTO categories VALUES (101991, 'Laptop Stands & Foldable Laptop Desks', 'Bàn Laptop', 101940, NULL);
+INSERT INTO categories VALUES (101992, 'Keyboard & Trackpad Covers', 'Miếng Dán Bàn Phím', 101940, NULL);
+INSERT INTO categories VALUES (101993, 'Laptop Batteries', 'Pin Laptop', 101940, NULL);
+INSERT INTO categories VALUES (101994, 'Laptop Chargers & Adaptors', 'Bộ Sạc Laptop', 101940, NULL);
+INSERT INTO categories VALUES (101995, 'Video Conference Devices', 'Thiết Bị Truyền Hình Hội Nghị', 101940, NULL);
+INSERT INTO categories VALUES (101996, 'Mouse Pads', 'Bàn Di Chuột', 101940, NULL);
+INSERT INTO categories VALUES (101997, 'Others', 'Khác', 101940, NULL);
+INSERT INTO categories VALUES (101998, 'Mice', 'Chuột Máy Tính', 101941, NULL);
+INSERT INTO categories VALUES (101999, 'Keyboards', 'Bàn Phím Máy Tính', 101941, NULL);
+INSERT INTO categories VALUES (102000, 'Drawing Tablets', 'Bảng Vẽ Điện Tử', 101941, NULL);
+INSERT INTO categories VALUES (102001, 'Others', 'Khác', 101941, NULL);
+INSERT INTO categories VALUES (102003, 'Body Wash & Soap', 'Xà phòng & sữa tắm', 102002, NULL);
+INSERT INTO categories VALUES (102004, 'Body Scrub & Peel', 'Tẩy tế bào chết cơ thể', 102002, NULL);
+INSERT INTO categories VALUES (102005, 'Body Masks', 'Mặt nạ ủ cơ thể', 102002, NULL);
+INSERT INTO categories VALUES (102006, 'Body Oil', 'Dầu dưỡng da', 102002, NULL);
+INSERT INTO categories VALUES (102007, 'Body Cream, Lotion & Butter', 'Kem & sữa dưỡng thể', 102002, NULL);
+INSERT INTO categories VALUES (102008, 'Body Deodorants', 'Khử mùi cơ thể', 102002, NULL);
+INSERT INTO categories VALUES (102009, 'Massage Oil', 'Dầu massage', 102002, NULL);
+INSERT INTO categories VALUES (102010, 'Hair Removal Cream & Wax', 'Kem tẩy lông & wax lông', 102002, NULL);
+INSERT INTO categories VALUES (102011, 'Sun Care', 'Chống nắng', 102002, NULL);
+INSERT INTO categories VALUES (102012, 'Breast Care', 'Chăm sóc ngực', 102002, NULL);
+INSERT INTO categories VALUES (102013, 'Others', 'Khác', 102002, NULL);
+INSERT INTO categories VALUES (102017, 'String Instruments', 'Nhạc Cụ Dây', 100741, NULL);
+INSERT INTO categories VALUES (102036, 'Design', 'Thiết kế', 100764, NULL);
+INSERT INTO categories VALUES (102056, 'ShopeePay Voucher', 'Scan & Pay Voucher', 102054, NULL);
+INSERT INTO categories VALUES (102057, 'Deal Voucher', 'Deal', 102055, NULL);
+INSERT INTO categories VALUES (102070, 'Ready-to-Drink Milk', 'Sữa pha sẵn', 100681, NULL);
+INSERT INTO categories VALUES (102094, 'Digital Products', 'Nạp Tiền, Hóa Đơn, Phim & Khác', 100774, NULL);
 
 
 --
--- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: thangadmin
---
-DELETE FROM categories;
---
--- Script was generated by Devart dbForge Studio for PostgreSQL, Version 3.1.839.0
--- Product home page: http://www.devart.com/dbforge/postgresql/studio
--- Script date 12/29/2024 10:50:03 AM
--- Server version: 16.4
+-- TOC entry 3438 (class 0 OID 0)
+-- Dependencies: 228
+-- Name: categories_Id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100001, E'Health', E'Sức Khỏe', NULL, E'27a7f269-ab81-4920-a792-ff9d2354ec29');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100009, E'Fashion Accessories', E'Phụ Kiện Thời Trang', NULL, E'1e4f79d7-9c1d-43ed-ba8f-1c488d595596');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100010, E'Home Appliances', E'Thiết Bị Điện Gia Dụng', NULL, E'5edc7e30-4771-41eb-b8a9-f3228e64e3c2');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100011, E'Men Clothes', E'Thời Trang Nam', NULL, E'd5c14512-6d8f-4fb4-8d7d-3b94aff9d5fd');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100012, E'Men Shoes', E'Giày Dép Nam', NULL, E'4d0cc49d-b03b-4b4e-ad88-252c9823b554');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100013, E'Mobile & Gadgets', E'Điện Thoại & Phụ Kiện', NULL, E'5bc07f70-36ea-4066-945f-6c4eeb7b88a9');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100015, E'Travel & Luggage', E'Du lịch & Hành lý', NULL, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100016, E'Women Bags', E'Túi Ví Nữ', NULL, E'0475702b-85ad-406a-b520-f102c47db9d2');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100017, E'Women Clothes', E'Thời Trang Nữ', NULL, E'28e1f065-8450-4d78-b507-d70c324fa69c');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100532, E'Women Shoes', E'Giày Dép Nữ', NULL, E'3884b28d-0051-478f-9a84-e5f26f40b7cb');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100533, E'Men Bags', E'Túi Ví Nam', NULL, E'b9a4ceb9-60f5-4505-a30e-b210c09969f8');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100534, E'Watches', E'Đồng Hồ', NULL, E'671a1ff0-7d68-4691-9da3-ad31b035a15f');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100535, E'Audio', E'Thiết Bị Âm Thanh', NULL, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100629, E'Food & Beverages', E'Thực phẩm và đồ uống', NULL, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100630, E'Beauty', E'Sắc Đẹp', NULL, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100631, E'Pets', E'Chăm Sóc Thú Cưng', NULL, E'd16d6efe-15d9-41d8-8976-07938b622139');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100632, E'Mom & Baby', E'Mẹ & Bé', NULL, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100633, E'Baby & Kids Fashion', E'Thời trang trẻ em & trẻ sơ sinh', NULL, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100634, E'Gaming & Consoles', E'Gaming & Console', NULL, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100635, E'Cameras & Drones', E'Cameras & Flycam', NULL, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100636, E'Home & Living', E'Nhà cửa & Đời sống', NULL, E'619f82b9-b5df-4400-8bf3-0c59c634e787');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100637, E'Sports & Outdoors', E'Thể Thao & Dã Ngoại', NULL, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100638, E'Stationery', E'Văn Phòng Phẩm', NULL, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100639, E'Hobbies & Collections', E'Sở thích & Sưu tầm', NULL, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100640, E'Automobiles', E'Ô tô', NULL, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100641, E'Motorcycles', E'Mô tô, xe máy', NULL, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100642, E'Tickets, Vouchers & Services', E'Voucher & Dịch vụ', NULL, E'0a9c4853-35da-4b23-9f5e-94dd573d6683');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100643, E'Books & Magazines', E'Sách & Tạp Chí', NULL, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100644, E'Computers & Accessories', E'Máy tính & Laptop', NULL, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102053, E'Deals Near Me', E'Deal Gần bạn', NULL, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100002, E'Food Supplement', E'Thực phẩm chức năng', 100001, E'ce515d80-f851-412f-9d3d-62bdfbe9c40b');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100008, E'Others', E'Khác', 100001, E'ef4421a3-a010-43a6-b827-88c8244fb275');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100018, E'Medical Supplies', E'Vật tư y tế', 100001, E'60476c4c-0f92-4920-9bf6-c15b9808c3ac');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100019, E'Personal Care', E'Chăm sóc cá nhân', 100001, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100020, E'Sexual Wellness', E'Hỗ trợ tình dục', 100001, E'6b713530-c18c-42c9-b3c5-1663318ec229');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100021, E'Rings', E'Nhẫn', 100009, E'00d7e32f-559b-46f5-a77b-dee434e47f39');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100022, E'Earrings', E'Bông tai', 100009, E'b29b040f-e263-4488-993e-d40fa69da25e');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100023, E'Scarves & Shawls', E'Khăn choàng', 100009, E'b75a8904-dfda-4d3d-b805-540fcf96ca82');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100024, E'Gloves', E'Găng tay', 100009, E'1eb4161e-884f-49b9-aa14-9b187e8adbb8');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100025, E'Hair Accessories', E'Phụ kiện tóc', 100009, E'1d4f79db-6430-448b-98aa-20cb93080390');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100026, E'Bracelets & Bangles', E'Vòng tay & Lắc tay', 100009, E'317b9238-b53e-42f0-84b3-6cac7a9e4b24');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100027, E'Anklets', E'Lắc chân', 100009, E'2e90a599-cbe5-4be5-bf22-57cfd18410fd');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100028, E'Hats & Caps', E'Mũ', 100009, E'61a9e0ad-0c49-4143-b176-fd8259154483');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100029, E'Necklaces', E'Dây chuyền', 100009, E'69777629-1dde-48c0-a4a3-0b4f73415514');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100030, E'Eyewear', E'Kính mắt', 100009, E'9b56a078-0b63-4fa8-854d-82e09341eff5');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100031, E'Investment Precious Metals', E'Kim loại quý', 100009, E'c621e834-7f1e-41e3-8333-f46c1593189d');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100032, E'Belts', E'Thắt lưng', 100009, E'5ddfe5d4-e8be-4eae-9342-12df5ad74516');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100033, E'Neckties, Bow Ties & Cravats', E'Cà vạt & Nơ cổ', 100009, E'dd1e62fa-d671-4486-833c-8624e53a89d3');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100034, E'Additional Accessories', E'Phụ kiện thêm', 100009, E'2055784a-3b21-41c4-b144-4258c9ef80c2');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100035, E'Accessories Sets & Packages', E'Bộ phụ kiện', 100009, E'80b9138a-df2c-4ecb-8012-8570169f7f82');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100036, E'Others', E'Khác', 100009, E'e2b91f21-b4dd-420d-87cc-77537699cc9a');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100037, E'Projectors & Accessories', E'Máy chiếu & Phụ kiện', 100010, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100038, E'Small Household Appliances', E'Thiết bị điện gia dụng nhỏ', 100010, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100039, E'Large Household Appliances', E'Thiết bị điện gia dụng lớn', 100010, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100040, E'TVs & Accessories', E'Tivi & Phụ kiện', 100010, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100041, E'Kitchen Appliances', E'Đồ gia dụng nhà bếp', 100010, E'77af440d-c1e9-4288-82b0-52b5ce3bd56a');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100042, E'Electrical Circuitry & Parts', E'Mạch điện & Phụ tùng', 100010, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100043, E'Batteries', E'Pin', 100010, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100045, E'Remote Controls', E'Thiết bị điều khiển từ xa', 100010, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100046, E'Others', E'Khác', 100010, E'27ba8e50-a9ae-4aaa-8268-0247c7be97ab');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100047, E'Jeans', E'Quần jean', 100011, E'de11bc8d-e7fa-4f16-8cb2-fed21a3dec58');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100048, E'Hoodies & Sweatshirts', E'Hoodie & Áo nỉ', 100011, E'569c041a-f3a4-4612-a1de-9b3e9634f6e5');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100049, E'Sweaters & Cardigans', E'Áo len', 100011, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100050, E'Jackets, Coats & Vests', E'Áo khoác', 100011, E'eea0b9be-ed78-4e2d-bce9-695f5cb567ca');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100051, E'Suits', E'Com lê', 100011, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100052, E'Pants', E'Quần dài', 100011, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100053, E'Shorts', E'Quần đùi', 100011, E'e4771e95-c7e6-4ba9-ac5b-8f3af4734abd');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100054, E'Tops', E'Áo', 100011, E'5a8732ca-233d-462e-8323-df209778af70');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100055, E'Innerwear & Underwear', E'Đồ lót', 100011, E'9600afc2-90b0-40be-8db0-13533f05a912');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100056, E'Sleepwear', E'Đồ ngủ', 100011, E'c8f7a70c-8984-4bcc-bf91-a45c4f95bc59');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100057, E'Sets', E'Bộ', 100011, E'04d6138e-ec4f-426a-ae66-6cebbb634ee0');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100058, E'Traditional Wear', E'Trang phục truyền thống', 100011, E'328672a2-f80f-4f97-ae03-b46604ed3e07');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100059, E'Costumes', E'Đồ hóa trang', 100011, E'ead87eef-766f-43aa-974d-45887613124f');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100060, E'Occupational Attire', E'Trang phục ngành nghề', 100011, E'e29cd2e5-4dba-4fa3-bbbd-81e9045eb523');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100061, E'Others', E'Khác', 100011, E'e46bb4a8-76ce-415d-96dd-55264fa3bb43');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100062, E'Socks', E'Vớ/ Tất', 100011, E'73f8e34e-abe5-44dd-adf0-44ae1dbd0997');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100063, E'Boots', E'Bốt', 100012, E'466ed6d0-ad7b-410c-8db6-c59dd1970f08');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100064, E'Sneakers', E'Giày thể thao/ Sneakers', 100012, E'55d6c8d1-06d3-4e6e-bbeb-8bf7e60ca148');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100065, E'Slip Ons & Mules', E'Giày sục', 100012, E'a575a217-659e-403f-adbb-478fa19d909b');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100066, E'Loafers & Boat Shoes', E'Giày tây lười', 100012, E'3efcd7b4-f808-4312-bc54-7be093e0d50a');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100067, E'Oxfords & Lace-Ups', E'Giày Oxfords & Giày buộc dây', 100012, E'026b6c5e-d1a7-45e1-8e1e-a90cfbce6e91');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100068, E'Sandals & Flip Flops', E'Xăng-đan & Dép', 100012, E'2fa149b7-cc31-4ddf-bdac-18d9ec97c680');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100069, E'Shoe Care & Accessories', E'Phụ kiện giày dép', 100012, E'7a4b3902-696c-4710-b8cf-bf8c2452256d');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100070, E'Others', E'Khác', 100012, E'd60e7142-e069-4c67-b3b0-20cd5f5b5602');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100071, E'Sim Cards', E'Thẻ sim', 100013, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100072, E'Tablets', E'Máy tính bảng', 100013, E'c3d84e6b-3489-4627-a1c1-356e343d9748');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100073, E'Mobile Phones', E'Điện thoại', 100013, E'a399fcca-2c8d-4e61-afcb-9ec6223e5d91');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100074, E'Wearable Devices', E'Thiết bị đeo thông minh', 100013, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100075, E'Accessories', E'Phụ kiện', 100013, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100076, E'Walkie Talkies', E'Bộ đàm', 100013, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100077, E'Others', E'Khác', 100013, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100085, E'Luggage', E'Vali', 100015, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100086, E'Travel Bags', E'Túi du lịch', 100015, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100087, E'Travel Accessories', E'Phụ kiện du lịch', 100015, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100088, E'Others', E'Khác', 100015, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100089, E'Backpacks', E'Ba lô', 100016, E'143d0353-7eb8-4677-bcd7-a8e27949b018');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100090, E'Laptop Bags', E'Cặp laptop', 100016, E'a0de2164-de0e-46d5-ac1e-341ee859be7c');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100091, E'Clutches & Wristlets', E'Ví dự tiệc & Ví cầm tay', 100016, E'cec69a4e-be49-45ef-ac42-3f7645fe2380');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100092, E'Waist Bags & Chest Bags', E'Túi đeo hông & Túi đeo ngực', 100016, E'd53016ca-6ece-4be5-9d66-6da8ce512f38');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100093, E'Tote Bags', E'Túi tote', 100016, E'011a846e-4a1a-41de-a517-336fc560d298');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100094, E'Top-handle Bags', E'Túi quai xách', 100016, E'225f130a-acb6-48fe-a5fb-710be8272d19');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100095, E'Crossbody & Shoulder Bags', E'Túi đeo chéo & Túi đeo vai', 100016, E'464edc72-57f6-4c90-9e8a-be45d2ffe36f');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100096, E'Wallets', E'Ví', 100016, E'3aa68b99-6b62-459d-a9b6-0962213764a1');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100097, E'Bag Accessories', E'Phụ kiện túi', 100016, E'1d6a7f30-8d9a-4288-a8d1-56daa767ce79');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100098, E'Others', E'Khác', 100016, E'00b106ff-26d4-4950-8ab4-1862f3533cd1');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100099, E'Tops', E'Áo', 100017, E'98819d6c-a7ee-42a0-9dd8-3df07666d11f');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100100, E'Pants & Leggings', E'Quần', 100017, E'23ecdb94-f73c-4ed7-9a56-79b3bd943b8d');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100101, E'Shorts', E'Quần đùi', 100017, E'6e54476c-94f7-4954-9767-2d0454ad90fc');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100102, E'Skirts', E'Váy', 100017, E'b6a32db1-632d-4bce-9270-25fba17a4695');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100103, E'Jeans', E'Quần jeans', 100017, E'e9476974-54ca-4b34-bb14-8a155ff54a61');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100104, E'Dresses', E'Đầm', 100017, E'0d2bc100-bbc3-41fd-9c6d-79b9d66fef06');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100105, E'Wedding Dresses', E'Váy cưới', 100017, E'1a8c61ce-fad8-4fd2-b31d-4a6759ea000d');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100106, E'Jumpsuits, Playsuits & Overalls', E'Đồ liền thân', 100017, E'31b41e15-d01b-439a-802d-88e089444eb0');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100107, E'Jackets, Coats & Vests', E'Áo khoác', 100017, E'22ebe752-d347-4e78-9c95-f171bd8b4b88');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100108, E'Sweaters & Cardigans', E'Áo len', 100017, E'8659c3fd-3f2f-49f1-887c-1e589e5f4cb5');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100109, E'Hoodies & Sweatshirts', E'Hoodie và Áo nỉ', 100017, E'677406c1-fea4-4fe4-b794-331f505b4110');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100110, E'Sets', E'Bộ', 100017, E'c44ea020-934e-48b3-8818-0f1b8213f4c3');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100111, E'Lingerie & Underwear', E'Đồ lót', 100017, E'0501ba6a-8e2a-4636-92c8-92ef87eb2e03');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100112, E'Sleepwear & Pajamas', E'Đồ ngủ', 100017, E'a1b16226-f27c-44eb-8d14-6a1667a875e6');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100113, E'Maternity Wear', E'Đồ Bầu', 100017, E'f835f899-db9c-4df9-a8ad-d32c435fb388');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100114, E'Traditional Wear', E'Đồ truyền thống', 100017, E'3103a475-47c0-4d40-8203-c98fd6575937');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100115, E'Costumes', E'Đồ hóa trang', 100017, E'6781c2a1-222a-4798-a6a6-b8339db3e013');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100116, E'Others', E'Khác', 100017, E'e1ae4d38-5873-4655-863c-daf65f869f3b');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100117, E'Fabric', E'Vải', 100017, E'1dbb9e9d-7327-4a11-b5ae-cbcfa854d031');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100118, E'Socks & Stockings', E'Vớ/ Tất', 100017, E'da566add-4264-4c9f-a327-15e475edc19d');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100556, E'Boots', E'Bốt', 100532, E'70e93306-0c3b-41aa-b642-723c84e22942');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100557, E'Sneakers', E'Giày thể thao/ sneaker', 100532, E'706a0eb0-3acc-487f-b1f5-e3803d1ff01b');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100558, E'Flats', E'Giày đế bằng', 100532, E'7ccd685e-90b0-4fc8-aef2-b35dbaa1f1d5');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100559, E'Heels', E'Giày cao gót', 100532, E'5f75ee7a-e6f8-4d0c-b653-71e43bfa14e9');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100560, E'Wedges', E'Giày đế xuồng', 100532, E'82098964-3775-4b70-a082-26d69d15d4d4');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100561, E'Flat Sandals & Flip Flops', E'Xăng-đan và dép', 100532, E'ad28be53-56bb-4102-be88-a00d460e1b32');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100562, E'Shoe Care & Accessories', E'Phụ kiện & chăm sóc giày', 100532, E'7328898a-8624-463a-9ff1-3bbe69f060a3');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100563, E'Others', E'Khác', 100532, E'16b7a220-13da-4b5e-a804-d5105e61534c');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100564, E'Backpacks', E'Ba lô', 100533, E'bc6a7c7a-3f4b-41cf-bcbb-6ab72d60099d');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100565, E'Laptop Bags', E'Cặp laptop', 100533, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100566, E'Tote Bags', E'Túi tote', 100533, E'f2e73532-6d23-4a39-ba97-3c3973d8fa9c');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100567, E'Briefcases', E'Cặp xách công sở', 100533, E'72182558-8ad4-4f63-82db-c50511673407');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100568, E'Clutches', E'Ví cầm tay', 100533, E'39817814-1eb2-4c7c-96d4-a9e33ea2969a');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100569, E'Waist Bags & Chest Bags', E'Túi đeo hông & Túi đeo ngực', 100533, E'36b6e407-0fb6-45bb-8894-55ad7d7eebd5');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100570, E'Crossbody & Shoulder Bags', E'Túi đeo chéo', 100533, E'57d50999-f638-4173-a6f9-3a2a69accff9');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100571, E'Wallets', E'Bóp/ Ví', 100533, E'1805fc46-f6f9-42ec-9b88-b939681d28b6');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100572, E'Others', E'Khác', 100533, E'f398f087-4edd-4b84-ac80-c4c940967f9a');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100573, E'Women Watches', E'Đồng hồ nữ', 100534, E'ef9292bf-a6d5-4f5b-be89-81532f78deaa');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100574, E'Men Watches', E'Đồng hồ nam', 100534, E'1f2bfd1c-dfcc-4fb9-89d0-d7b36cfe4a4f');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100575, E'Set & Couple Watches', E'Bộ đồng hồ & Đồng hồ cặp', 100534, E'75fc504e-8862-496e-8229-fc67ae5bda6c');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100576, E'Watches Accessories', E'Phụ kiện đồng hồ', 100534, E'ec0b5dbf-8db2-4f21-b052-b88f6514d722');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100577, E'Others', E'Khác', 100534, E'31dd0fee-ec7f-49d8-a962-b8c879243b51');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100578, E'Earphones, Headphones & Headsets', E'Tai nghe nhét tai & chụp tai', 100535, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100579, E'Media Players', E'Máy nghe nhạc', 100535, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100580, E'Microphones', E'Micro thu âm', 100535, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100581, E'Amplifiers & Mixers', E'Amply và đầu chỉnh âm', 100535, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100582, E'Home Audio & Speakers', E'Dàn âm thanh', 100535, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100583, E'Audio & Video Cables & Converters', E'Cáp âm thanh/ video & Đầu chuyển', 100535, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100584, E'Others', E'Khác', 100535, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100645, E'Convenience / Ready-to-eat', E'Đồ chế biến sẵn', 100629, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100646, E'Snacks', E'Đồ ăn vặt', 100629, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100647, E'Food Staples', E'Nhu yếu phẩm', 100629, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100648, E'Cooking Essentials', E'Nguyên liệu nấu ăn', 100629, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100649, E'Baking Needs', E'Đồ làm bánh', 100629, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100650, E'Breakfast Cereals & Spread', E'Ngũ cốc & mứt', 100629, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100651, E'Beverages', E'Đồ uống', 100629, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100652, E'Dairy & Eggs', E'Sữa - trứng', 100629, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100653, E'Fresh & Frozen Food', E'Thực phẩm tươi sống & đông lạnh', 100629, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100654, E'Bakery', E'Các loại bánh', 100629, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100655, E'Alcoholic Beverages', E'Đồ uống có cồn', 100629, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100656, E'Gift Set & Hampers', E'Bộ quà tặng', 100629, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100657, E'Others', E'Khác', 100629, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100658, E'Hand, Foot & Nail Care', E'Chăm sóc tay, chân & móng', 100630, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100659, E'Hair Care', E'Chăm sóc tóc', 100630, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100660, E'Men''s Care', E'Chăm sóc nam giới', 100630, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100661, E'Perfumes & Fragrances', E'Nước hoa', 100630, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100662, E'Makeup', E'Trang điểm', 100630, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100663, E'Beauty Tools', E'Dụng cụ làm đẹp', 100630, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100664, E'Skincare', E'Chăm sóc da mặt', 100630, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100665, E'Beauty Sets & Packages', E'Bộ sản phẩm làm đẹp', 100630, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100666, E'Others', E'Khác', 100630, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100667, E'Pet Food', E'Thức ăn cho thú cưng', 100631, E'78d2c665-0c73-4fa5-8177-37c46cdf5758');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100668, E'Pet Accessories', E'Phụ kiện cho thú cưng', 100631, E'7c3573f9-c7da-4af7-a060-95a533cc8add');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100669, E'Litter & Toilet', E'Vệ sinh cho thú cưng', 100631, E'd7e73432-1610-4c12-aae6-b33adb57a26f');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100670, E'Pet Grooming', E'Làm đẹp cho thú cưng', 100631, E'7eb91f89-44c7-4c3b-9cec-6105d3655ec3');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100671, E'Pet Clothing & Accessories', E'Quần áo & phụ kiện', 100631, E'fb5f2121-5408-4457-8e1f-da8015362121');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100672, E'Pet Healthcare', E'Chăm sóc sức khỏe', 100631, E'9f6b3db6-5e17-4aa3-8013-a5130bc76c6a');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100673, E'Others', E'Khác', 100631, E'ce25240d-3676-46fc-8297-d5d809d4c8a9');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100674, E'Baby Travel Essentials', E'Đồ dùng du lịch cho bé', 100632, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100675, E'Feeding Essentials', E'Đồ dùng ăn dặm cho bé', 100632, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100676, E'Maternity Accessories', E'Phụ kiện cho mẹ', 100632, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100677, E'Maternity Healthcare', E'Chăm sóc sức khỏe mẹ', 100632, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100678, E'Bath & Body Care', E'Đồ dùng phòng tắm & Chăm sóc cơ thể bé', 100632, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100679, E'Nursery', E'Đồ dùng phòng ngủ cho bé', 100632, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100680, E'Baby Safety', E'An toàn cho bé', 100632, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100681, E'Milk Formula & Baby Food', E'Sữa công thức & Thực phẩm cho bé', 100632, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100682, E'Baby Healthcare', E'Chăm sóc sức khỏe bé', 100632, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100683, E'Diapering & Potty', E'Tã & bô em bé', 100632, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100684, E'Toys', E'Đồ chơi', 100632, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100685, E'Gift Sets & Packages', E'Bộ & Gói quà tặng', 100632, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100686, E'Others', E'Khác', 100632, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100687, E'Baby Clothes', E'Quần áo trẻ em', 100633, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100688, E'Baby Mittens & Footwear', E'Bao tay trẻ em & Tất', 100633, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100689, E'Baby & Kids Accessories', E'Phụ kiện trẻ em & trẻ sơ sinh', 100633, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100690, E'Boy Clothes', E'Quần áo bé trai', 100633, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100691, E'Girl Clothes', E'Quần áo bé gái', 100633, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100692, E'Boy Shoes', E'Giày bé trai', 100633, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100693, E'Girl Shoes', E'Giày bé gái', 100633, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100694, E'Others', E'Khác', 100633, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100695, E'Console Machines', E'Máy chơi game', 100634, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100696, E'Console Accessories', E'Phụ kiện console', 100634, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100697, E'Video Games', E'Video Games', 100634, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100698, E'Others', E'Khác', 100634, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100699, E'Cameras', E'Máy ảnh', 100635, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100700, E'Security Cameras & Systems', E'Camera giám sát', 100635, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100701, E'Lenses', E'Ống kính', 100635, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100702, E'Lens Accessories', E'Phụ kiện ống kính', 100635, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100703, E'Camera Accessories', E'Phụ kiện máy ảnh', 100635, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100704, E'Camera Care', E'Phụ kiện chăm sóc máy ảnh', 100635, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100705, E'Drones', E'Flycam', 100635, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100706, E'Drone Accessories', E'Phụ kiện Flycam', 100635, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100707, E'Others', E'Khác', 100635, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100708, E'Home Fragrance & Aromatherapy', E'Chất khử mùi, làm thơm nhà', 100636, E'a3569a1f-73fc-41f3-923a-21fce121a74f');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100709, E'Bathrooms', E'Đồ dùng phòng tắm', 100636, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100710, E'Bedding', E'Chăn ga gối nệm', 100636, E'bb63195d-9164-4f70-8c5f-989504716431');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100711, E'Decoration', E'Trang trí nhà cửa', 100636, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100712, E'Hand Warmers, Hot Water Bags & Ice Bags', E'Túi làm ấm', 100636, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100713, E'Furniture', E'Nội thất', 100636, E'd6d278ce-299c-43d4-8856-153e4f531516');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100714, E'Gardening', E'Làm vườn', 100636, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100715, E'Tools & Home Improvement', E'Dụng cụ & Thiết bị tiện ích', 100636, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100716, E'Home Care Supplies', E'Dụng cụ chăm sóc nhà cửa', 100636, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100717, E'Kitchenware', E'Dụng cụ nhà bếp', 100636, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100718, E'Dinnerware', E'Bộ đồ bàn ăn', 100636, E'bc91b280-d160-4d77-a976-56dac78b28cd');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100719, E'Lighting', E'Đèn', 100636, E'a9880fd5-9590-4966-86d9-91d91949b5dd');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100720, E'Safety & Security', E'Bảo hộ gia đình', 100636, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100721, E'Home Organizers', E'Sắp xếp nhà cửa', 100636, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100722, E'Party Supplies', E'Trang trí tiệc tùng', 100636, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100723, E'Fengshui & Religious Supplies', E'Đồ thờ cúng, đồ phong thủy', 100636, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100724, E'Others', E'Khác', 100636, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100725, E'Sports & Outdoor Recreation Equipments', E'Dụng Cụ Thể Thao & Dã Ngoại', 100637, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100726, E'Sports Footwear', E'Giày Thể Thao', 100637, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100727, E'Sports & Outdoor Apparels', E'Thời Trang Thể Thao & Dã Ngoại', 100637, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100728, E'Sports & Outdoor Accessories', E'Phụ Kiện Thể Thao & Dã Ngoại', 100637, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100729, E'Others', E'Khác', 100637, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100730, E'Gift & Wrapping', E'Quà Tặng - Giấy Gói', 100638, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100731, E'Writing & Correction', E'Bút Các Loại', 100638, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100732, E'School & Office Equipment', E'Thiết Bị Trường Học', 100638, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100733, E'Art Supplies', E'Họa cụ', 100638, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100734, E'Notebooks & Papers', E'Sổ & Giấy Các Loại', 100638, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100735, E'Letters & Envelopes', E'Thư Tín', 100638, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100736, E'Others', E'Khác', 100638, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100737, E'Collectible Items', E'Đồ Sưu Tầm', 100639, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100738, E'Souvenirs', E'Quà Lưu Niệm', 100639, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100739, E'Toys & Games', E'Đồ chơi - Giải trí', 100639, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100740, E'CD, DVD & Bluray', E'Băng - Đĩa', 100639, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100741, E'Musical Instruments & Accessories', E'Nhạc Cụ & Phụ Kiện', 100639, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100742, E'Vinyl Records', E'Đĩa Than', 100639, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100743, E'Photo Albums', E'Album Ảnh', 100639, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100744, E'Needlework', E'Dụng Cụ May Vá', 100639, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100745, E'Others', E'Khác', 100639, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100746, E'Automobiles', E'Ô tô', 100640, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100747, E'Automobile Interior Accessories', E'Phụ kiện nội thất ô tô', 100640, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100748, E'Automobile Exterior Accessories', E'Phụ kiện ngoại thất ô tô', 100640, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100749, E'Automobile Spare Parts', E'Phụ tùng ô tô', 100640, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100750, E'Automotive Tools', E'Dụng cụ sửa chữa ô tô', 100640, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100751, E'Automotive Care', E'Chăm sóc ô tô', 100640, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100752, E'Automotive Oils & Lubes', E'Dầu nhớt và phụ gia ô tô', 100640, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100753, E'Automotive Keychains & Key Covers', E'Móc chìa khóa và Bọc chìa ô tô', 100640, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100754, E'Others', E'Khác', 100640, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100755, E'Motorcycles', E'Mô tô, xe máy', 100641, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100756, E'Motorcycle Accessories', E'Phụ kiện xe máy', 100641, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100757, E'Motorcycle Spare Parts', E'Phụ tùng xe máy', 100641, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100758, E'Motorcycle Helmets & Accessories', E'Mũ bảo hiểm & Phụ kiện', 100641, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100759, E'Others', E'Khác', 100641, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100760, E'Events & Attractions', E'Sự kiện & Giải trí', 100642, E'72bb2caa-669e-4050-a3a2-f486a1bdc3db');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100761, E'F&B', E'Nhà hàng & Ăn uống', 100642, E'f8443248-00d7-437a-a059-1fa928444775');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100762, E'Shopping', E'Mua sắm', 100642, E'04dd2f0b-1c3c-480b-b488-c6980366e099');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100763, E'Utilities', E'Thanh toán hóa đơn', 100642, E'd97b8c9a-9b5c-4d5b-87ab-7f16a6e44964');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100764, E'Services', E'Dịch vụ khác', 100642, E'540e0b5e-ab1c-4ead-9f77-b56c8fb98d77');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100765, E'Beauty & Wellness', E'Sức khỏe & Làm đẹp', 100642, E'7448bd85-81a3-4333-b269-ec3647863179');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100766, E'Transport', E'Gọi xe', 100642, E'199cdb12-1b7f-4144-b773-283e5cac4d82');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100767, E'Lessons & Workshops', E'Khóa học', 100642, E'a5f98d84-5136-4d12-9ec1-5aa7f893f29a');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100768, E'Telco', E'Nạp tiền tài khoản', 100642, E'fd71e08f-2da7-4da6-925f-24a291995954');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100769, E'Travel', E'Du lịch & Khách sạn', 100642, E'a99701e6-f01f-4599-9ab0-4ee6bf7e24f0');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100774, E'Shopee', E'Mã quà tặng Shopee', 100642, E'6d74dc01-673a-4b77-8846-f378396d03e9');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100775, E'Others', E'Khác', 100642, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100776, E'Magazines & Newspaper', E'Tạp Chí & Báo Giấy', 100643, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100777, E'Books', E'Sách', 100643, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100778, E'E-Books', E'E-Books', 100643, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100779, E'Others', E'Khác', 100643, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101932, E'Desktop Computers', E'Máy Tính Bàn', 100644, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101933, E'Monitors', E'Màn Hình', 100644, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101934, E'Desktop & Laptop Components', E'Linh Kiện Máy Tính', 100644, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101935, E'Data Storage', E'Thiết Bị Lưu Trữ', 100644, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101936, E'Network Components', E'Thiết Bị Mạng', 100644, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101937, E'Softwares', E'Phần Mềm', 100644, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101938, E'Office Equipment', E'Thiết Bị Văn Phòng', 100644, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101939, E'Printers & Scanners', E'Máy In & Máy Scan', 100644, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101940, E'Peripherals & Accessories', E'Phụ Kiện Máy Tính', 100644, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101941, E'Keyboards & Mice', E'Chuột & Bàn Phím', 100644, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101942, E'Laptops', E'Laptop', 100644, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101943, E'Others', E'Phụ Kiện Máy Tính Khác', 100644, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102002, E'Bath & Body Care', E'Tắm & chăm sóc cơ thể', 100630, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102054, E'ShopeePay Voucher', E'Scan & Pay Voucher', 102053, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102055, E'Deal Voucher', E'Deal', 102053, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102059, E'Automotive Services & Installations', E'Dịch vụ cho xe', 100640, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100003, E'Weight Management', E'Hỗ trợ kiểm soát cân nặng', 100002, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100004, E'Beauty Supplements', E'Hỗ trợ làm đẹp', 100002, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100005, E'Fitness', E'Hỗ trợ tăng cơ', 100002, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100006, E'Well Being', E'Hỗ trợ sức khỏe', 100002, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100007, E'Others', E'Khác', 100002, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100119, E'Over-the-counter Medicine', E'Thuốc không kê đơn', 100018, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100121, E'Health Monitors & Tests', E'Kiểm tra và theo dõi sức khỏe', 100018, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100122, E'Scale & Body Fat Analyzers', E'Cân sức khỏe và phân tích cơ thể', 100018, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100123, E'Nasal Care', E'Chăm sóc mũi', 100018, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100124, E'First Aid Supplies', E'Dụng cụ sơ cứu', 100018, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100125, E'Stethoscopes', E'Ống nghe y tế', 100018, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100126, E'Pain Relievers', E'Sản phẩm giảm đau dùng ngoài da', 100018, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100127, E'Laboratory Tools', E'Dụng cụ thí nghiệm', 100018, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100128, E'Medical Gloves & Masks', E'Bao tay và khẩu trang y tế', 100018, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100129, E'Injury & Disability Support', E'Hỗ trợ chấn thương và khuyết tật', 100018, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100130, E'Others', E'Khác', 100018, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100131, E'Hand Sanitizers', E'Dung dịch sát khuẩn tay', 100019, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100132, E'Eye Care', E'Chăm sóc mắt', 100019, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100133, E'Ear Care', E'Chăm sóc tai', 100019, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100134, E'Oral Care', E'Vệ sinh răng miệng', 100019, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100135, E'Adult Diapers & Incontinence', E'Tã người lớn', 100019, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100136, E'Feminine Care', E'Chăm sóc phụ nữ', 100019, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100137, E'Massage & Therapy Devices', E'Dụng cụ massage và trị liệu', 100019, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100138, E'Insect Repellents', E'Chống muỗi & xua đuổi côn trùng', 100019, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100139, E'Others', E'Khác', 100019, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100140, E'Condoms', E'Bao cao su', 100020, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100141, E'Lubricants', E'Bôi trơn', 100020, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100143, E'Performance Enhancement', E'Tăng cường sinh lý', 100020, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100144, E'Others', E'Khác', 100020, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100145, E'Headbands', E'Băng đô tóc', 100025, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100146, E'Hair Ties, Ribbons & Scrunchies', E'Đồ buộc tóc & Nơ', 100025, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100147, E'Hair Clips & Hair Pins', E'Kẹp tóc', 100025, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100148, E'Wigs & Extensions', E'Tóc giả & Tóc nối', 100025, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100149, E'Headpieces, Tiaras & Flower Crowns', E'Cài tóc, vương miện cài tóc', 100025, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100150, E'Others', E'Khác', 100025, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100151, E'Sunglasses', E'Kính mát', 100030, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100152, E'Frames & Glasses', E'Gọng kính', 100030, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100153, E'Eyewear Cases & Accessories', E'Hộp kính và phụ kiện', 100030, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100154, E'Others', E'Khác', 100030, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100155, E'Platinum & K Gold', E'Platinum & Vàng', 100031, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100156, E'Silver', E'Bạc', 100031, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100157, E'Diamond', E'Kim cương', 100031, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100158, E'Jade', E'Ngọc bích, Cẩm thạch', 100031, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100159, E'Others', E'Khác', 100031, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100160, E'Brooches & Pins', E'Trâm & Ghim cài áo', 100034, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100161, E'Patches', E'Miếng vá áo', 100034, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100162, E'Charms, Pendants & Ornaments', E'Mặt dây chuyền và Charm', 100034, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100163, E'Cufflinks', E'Măng sét nam', 100034, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100164, E'Tattoos', E'Hình xăm dán', 100034, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100165, E'Masks', E'Khẩu trang thời trang', 100034, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100166, E'Handkerchiefs', E'Khăn tay', 100034, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100167, E'Others', E'Khác', 100034, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100168, E'Projectors & Projector Screens', E'Máy chiếu & Màn hình chiếu', 100037, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100169, E'Pointers', E'Bút trình chiếu', 100037, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100170, E'Others', E'Khác', 100037, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100171, E'Foot Baths & Spas', E'Thiết bị vệ sinh chân & Thư giãn', 100038, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100172, E'Water Flossers', E'Máy tăm nước', 100038, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100173, E'Sewing Machines & Accessories', E'Máy may & Phụ kiện', 100038, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100174, E'Telephones', E'Điện thoại', 100038, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100175, E'Irons & Steamers', E'Bàn là khô & Hơi nước', 100038, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100176, E'Air Treatment', E'Thiết bị xử lý không khí', 100038, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100177, E'Vacuum Cleaners & Floor Care Appliances', E'Máy hút bụi & Thiết bị làm sạch sàn', 100038, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100178, E'Others', E'Khác', 100038, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100179, E'Washing Machines & Dryers', E'Máy giặt & Máy sấy', 100039, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100180, E'Water Heaters', E'Máy nước nóng', 100039, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100181, E'Cooling', E'Thiết bị làm mát', 100039, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100182, E'Futon & Shoe Dryers', E'Thiết bị sấy khô nệm & Giày', 100039, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100183, E'Heaters', E'Máy sưởi', 100039, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100184, E'Others', E'Khác', 100039, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100185, E'TVs', E'Tivi', 100040, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100186, E'TV Antennas', E'Ăng ten Tivi', 100040, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100187, E'TV Boxes & Receivers', E'Tivi box & Đầu thu kỹ thuật số', 100040, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100188, E'TV Brackets', E'Giá treo tivi', 100040, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100189, E'Others', E'Khác', 100040, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100190, E'Water Filters, Coolers & Dispensers', E'Máy lọc nước', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100191, E'Kettles', E'Ấm đun siêu tốc', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100192, E'Wine Fridges', E'Tủ ủ rượu', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100193, E'Juicers, Blenders & Soya Bean Machines', E'Máy ép, Xay sinh tố & Máy làm sữa đậu nành', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100194, E'Coffee Machines & Accessories', E'Máy pha cà phê & Phụ kiện', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100195, E'Mixers', E'Máy trộn thực phẩm', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100196, E'Dishwashers', E'Máy rửa bát đĩa', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100197, E'Stoves, Hobs & Gas Regulators', E'Lò sưởi, Bếp từ & Bộ điều chỉnh gas', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100198, E'Air Fryers', E'Nồi chiên không dầu', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100199, E'Deep Fryers', E'Nồi chiên ngập dầu', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100200, E'Microwaves', E'Lò vi sóng', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100201, E'Ovens', E'Lò nướng', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100202, E'Toasters', E'Máy nướng bánh', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100203, E'Food Processors & Meat Grinders', E'Máy chế biến thực phẩm & Xay thịt', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100204, E'Multi-function Cookers', E'Nồi nấu đa năng', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100205, E'Pressure Cookers', E'Nồi áp suất', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100206, E'Slow Cookers & Sous Vide Machines', E'Nồi nấu chậm & Dụng cụ nấu chân không', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100207, E'Rice Cookers', E'Nồi cơm điện', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100208, E'Specialty Cookware', E'Dụng cụ nấu đặc biệt', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100209, E'Refrigerators', E'Tủ lạnh', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100210, E'Freezers', E'Tủ đông', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100211, E'Hoods', E'Máy hút khói', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100212, E'Others', E'Khác', 100041, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100213, E'Electric Sockets & Extension Cords', E'Ổ cắm điện & Dây nối', 100042, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100214, E'Electrical Safety', E'Thiết bị an toàn điện tử', 100042, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100216, E'Doorbells', E'Chuông cửa', 100042, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100217, E'Switches', E'Công tắc', 100042, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100218, E'House Alarms', E'Thiết bị báo động nhà ở', 100042, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100219, E'Lightning Protection', E'Thiết bị chống sấm sét', 100042, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100220, E'Others', E'Khác', 100042, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100226, E'Hoodies', E'Áo hoodie', 100048, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100227, E'Sweatshirts', E'Áo nỉ', 100048, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100228, E'Others', E'Khác', 100048, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100229, E'Winter Jackets & Coats', E'Áo khoác mùa đông & Áo choàng', 100050, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100230, E'Jackets', E'Áo khoác', 100050, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100231, E'Vests', E'Áo khoác vest', 100050, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100232, E'Others', E'Khác', 100050, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100233, E'Suit Sets', E'Bộ Com lê', 100051, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100234, E'Suit Jackets & Blazers', E'Áo Khoác & Blazer', 100051, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100235, E'Suit Pants', E'Quần âu', 100051, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100236, E'Suit Vests & Waistcoats', E'Áo vest & Gi lê', 100051, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100237, E'Others', E'Khác', 100051, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100238, E'Cargo', E'Quần túi hộp', 100052, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100239, E'Joggers', E'Quần jogger', 100052, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100240, E'Pants', E'Quần dài', 100052, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100241, E'Others', E'Khác', 100052, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100242, E'Shirts', E'Áo sơ mi', 100054, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100243, E'Polo Shirts', E'Áo polo', 100054, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100244, E'T-Shirts', E'Áo thun', 100054, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100245, E'Tanks', E'Áo ba lỗ', 100054, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100246, E'Others', E'Khác', 100054, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100247, E'Underwear', E'Quần lót', 100055, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100248, E'Undershirts', E'Áo lót', 100055, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100249, E'Thermal Innerwear', E'Đồ lót giữ nhiệt', 100055, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100250, E'Others', E'Khác', 100055, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100251, E'Tops', E'Áo', 100058, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100252, E'Bottoms', E'Quần', 100058, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100253, E'Sets', E'Bộ', 100058, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100254, E'Others', E'Khác', 100058, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100255, E'Fashion Boots', E'Bốt thời trang', 100063, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100256, E'Rain Boots', E'Bốt đi mưa', 100063, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100257, E'Safety Boots', E'Bốt bảo hộ', 100063, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100258, E'Others', E'Khác', 100063, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100259, E'Flip Flops', E'Dép xỏ ngón', 100068, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100260, E'Sandals', E'Xăng-đan', 100068, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100261, E'Indoor Slippers', E'Dép đi trong nhà', 100068, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100262, E'Health Slippers', E'Dép mát-xa', 100068, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100263, E'Others', E'Khác', 100068, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100264, E'Shoe Care & Cleaning Tools', E'Dụng cụ chăm sóc & Vệ sinh giày', 100069, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100265, E'Shoe Deodorizers', E'Khử mùi giày dép', 100069, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100266, E'Shoe Laces', E'Dây giày', 100069, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100267, E'Shoe Horns & Trees', E'Cây đón gót & Giữ form giày', 100069, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100268, E'Shoe Insoles', E'Lót giày', 100069, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100269, E'Others', E'Khác', 100069, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100270, E'Smartwatches & Fitness Trackers', E'Đồng hồ thông minh & Vòng đeo tay sức khỏe', 100074, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100271, E'VR Devices', E'Thiết bị thực tế ảo', 100074, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100272, E'GPS Trackers', E'Thiết bị định vị GPS', 100074, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100273, E'Others', E'Khác', 100074, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100274, E'Selfie Accessories', E'Phụ kiện selfie', 100075, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100275, E'Mobile Lens', E'Ống kính điện thoại', 100075, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100276, E'Mobile Flashes & Selfie Lights', E'Đèn flash điện thoại & Đèn selfie', 100075, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100277, E'USB & Mobile Fans', E'Quạt USB & Quạt điện thoại', 100075, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100278, E'Stylus', E'Bút cảm ứng', 100075, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100279, E'Phone Grips', E'Kẹp điện thoại', 100075, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100280, E'Phone Straps & Keychains', E'Dây đeo điện thoại & Móc khóa', 100075, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100281, E'Memory Cards', E'Thẻ nhớ', 100075, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100282, E'Casting Devices', E'Thiết bị trình chiếu', 100075, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100283, E'Mobile Pouches', E'Túi đựng điện thoại', 100075, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100284, E'Cables, Chargers & Converters', E'Cáp, sạc & bộ chuyển đổi', 100075, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100285, E'USB & Mobile Lights', E'Đèn USB & Đèn điện thoại', 100075, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100286, E'Pocket Wifi', E'Bộ phát Wifi bỏ túi', 100075, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100287, E'Powerbanks & Batteries', E'Sạc dự phòng & Pin', 100075, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100288, E'Wearable Accessories', E'Phụ kiện cho đồng hồ thông minh', 100075, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100289, E'Screen Protectors', E'Miếng dán màn hình', 100075, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100290, E'Cases, Covers, & Skins', E'Vỏ bao, Ốp lưng & Miếng dán', 100075, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100291, E'Others', E'Khác', 100075, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100320, E'Duffel & Weekender Bags', E'Túi trống', 100086, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100321, E'Foldable Bags', E'Túi gấp gọn', 100086, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100322, E'Drawstring Bags', E'Túi dây rút', 100086, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100323, E'Others', E'Túi khác', 100086, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100324, E'Passport Holders & Covers', E'Ví hộ chiếu', 100087, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100325, E'Travel Organizers', E'Túi du lịch nhiều ngăn', 100087, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100326, E'Luggage Protectors & Covers', E'Áo trùm vali', 100087, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100327, E'Luggage Tags', E'Thẻ hành lý', 100087, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100328, E'Luggage Straps', E'Dây đai vali', 100087, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100329, E'Luggage Locks', E'Khóa vali', 100087, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100330, E'Luggage Scales', E'Cân hành lý', 100087, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100331, E'Travel Pillows & Eye Covers', E'Gối & Bịt mắt', 100087, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100332, E'Travel Size Bottles & Containers', E'Bộ chiết mỹ phẩm', 100087, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100333, E'Others', E'Phụ kiện khác', 100087, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100334, E'Laptop Bags & Cases', E'Túi & cặp đứng laptop', 100090, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100335, E'Laptop Sleeves', E'Túi chống sốc laptop', 100090, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100336, E'Laptop Backpacks', E'Ba lô laptop', 100090, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100337, E'Others', E'Khác', 100090, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100338, E'Card Holders', E'Ví đựng thẻ', 100096, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100339, E'Coin Holders & Purses', E'Ví mini đựng tiền', 100096, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100340, E'Phone & Key Wallets', E'Ví đựng điện thoại & chìa khóa', 100096, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100341, E'Bifold & Trifold Wallets', E'Ví gập', 100096, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100342, E'Long Wallets', E'Ví dài', 100096, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100343, E'Others', E'Ví khác', 100096, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100344, E'Bag Straps', E'Dây đeo túi', 100097, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100345, E'Bag Holders', E'Dụng cụ treo/đựng túi', 100097, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100346, E'Charms & Twillies', E'Charm và phụ kiện gắn túi', 100097, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100347, E'Bag Organizers', E'Túi đa ngăn tiện ích', 100097, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100348, E'Cleaning & Care Equipment', E'Dụng cụ vệ sinh và chăm sóc túi', 100097, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100349, E'Others', E'Phụ kiện khác', 100097, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100350, E'Tanks & Camisoles', E'Áo hai dây và ba lỗ', 100099, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100351, E'Tube Tops', E'Áo ống', 100099, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100352, E'T-shirts', E'Áo thun', 100099, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100353, E'Shirts & Blouses', E'Áo sơ mi', 100099, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100354, E'Polo Shirts', E'Áo polo', 100099, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100355, E'Bodysuits', E'Áo liền thân', 100099, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100356, E'Others', E'Khác', 100099, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100357, E'Leggings & Treggings', E'Quần legging', 100100, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100358, E'Pants', E'Quần dài', 100100, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100359, E'Others', E'Khác', 100100, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100360, E'Shorts', E'Quần đùi', 100101, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100361, E'Skorts', E'Quần váy', 100101, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100362, E'Others', E'Khác', 100101, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100363, E'Jumpsuits', E'Đồ bay (Jumpsuits)', 100106, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100364, E'Playsuits', E'Đồ bay ngắn (playsuits)', 100106, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100365, E'Overalls', E'Quần yếm', 100106, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100366, E'Others', E'Khác', 100106, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100367, E'Winter Jackets & Coats', E'Áo khoác mùa đông', 100107, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100368, E'Capes', E'Áo choàng', 100107, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100369, E'Blazers', E'Áo blazer', 100107, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100370, E'Jackets', E'Áo khoác ngoài', 100107, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100371, E'Vests', E'Áo vest', 100107, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100372, E'Others', E'Khác', 100107, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100373, E'Sweatshirts', E'Áo khoác nỉ', 100109, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100374, E'Hoodies', E'Áo hoodies', 100109, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100375, E'Others', E'Khác', 100109, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100376, E'Couple Sets', E'Bộ đồ đôi', 100110, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100377, E'Family Sets', E'Bộ đồ gia đình', 100110, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100378, E'Individual Sets', E'Đồ lẻ', 100110, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100379, E'Others', E'Khác', 100110, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100380, E'Sets', E'Bộ đồ lót', 100111, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100381, E'Bras', E'Áo ngực', 100111, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100382, E'Panties', E'Quần lót', 100111, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100383, E'Thermal Innerwear', E'Đồ lót giữ nhiệt', 100111, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100384, E'Bra Accessories', E'Phụ kiện đồ lót', 100111, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100385, E'Shapewear', E'Đồ định hình', 100111, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100386, E'Safety Pants', E'Đồ lót bảo hộ', 100111, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100387, E'Sexy Lingerie', E'Đồ lót gợi cảm', 100111, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100388, E'Others', E'Khác', 100111, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100389, E'Pajamas', E'Pyjama', 100112, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100390, E'Night Dresses', E'Váy ngủ', 100112, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100391, E'Kimonos & Robes', E'Áo choàng ngủ, Áo khoác kimono', 100112, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100392, E'Others', E'Khác', 100112, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100393, E'Nursing Bras', E'Áo ngực cho con bú', 100113, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100394, E'Maternity Dresses', E'Đầm bầu', 100113, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100395, E'Maternity Tops', E'Áo bầu', 100113, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100396, E'Breastfeeding Wear', E'Đồ mặc cho con bú', 100113, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100397, E'Maternity Sets', E'Bộ đồ bầu', 100113, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100398, E'Maternity Bottoms', E'Quần bầu, Váy bầu', 100113, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100399, E'Others', E'Khác', 100113, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100400, E'Tops', E'Áo', 100114, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100401, E'Bottoms', E'Quần và chân váy', 100114, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100402, E'Sets', E'Bộ', 100114, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100403, E'Dresses', E'Đầm', 100114, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100404, E'Others', E'Khác', 100114, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100407, E'Cotton', E'Vải cotton', 100117, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100408, E'Wool', E'Vải len', 100117, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100409, E'Velvet, Silk & Satin', E'Vải nhung, lụa, satin', 100117, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100410, E'Leather', E'Vải da', 100117, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100411, E'Vinyl & Nylon', E'Vải nylon', 100117, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100412, E'Denim', E'Vải denim', 100117, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100413, E'Canvas', E'Vải canvas', 100117, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100416, E'Others', E'Khác', 100117, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100417, E'Socks', E'Tất', 100118, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100418, E'Pantyhose', E'Quần tất', 100118, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100419, E'Others', E'Khác', 100118, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100585, E'Rain Boots', E'Bốt đi mưa', 100556, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100586, E'Fashion Boots', E'Bốt thời trang', 100556, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100587, E'Others', E'Khác', 100556, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100588, E'Ballet Flats', E'Giày bale', 100558, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100589, E'Loafers & Boat Shoes', E'Giày lười', 100558, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100590, E'Oxfords & Lace-Ups', E'Giày Oxford & Giày buộc dây', 100558, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100591, E'Slip Ons, Mary Janes & Mules', E'Giày sục & Giày búp bê', 100558, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100592, E'Others', E'Khác', 100558, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100593, E'Flat Sandals', E'Xăng-đan đế bằng', 100561, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100594, E'Flip Flops', E'Dép kẹp/ dép xỏ ngón', 100561, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100595, E'Health Slippers', E'Dép mát-xa', 100561, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100596, E'Indoor Slippers', E'Dép đi trong nhà', 100561, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100597, E'Others', E'Khác', 100561, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100598, E'Shoe Deodorizers', E'Đồ khử mùi giày', 100562, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100599, E'Insoles & Heel Liners', E'Miếng lót giày', 100562, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100600, E'Shoe Horns & Trees', E'Cây đón gót & Giữ form giày', 100562, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100601, E'Shoe Care & Cleaning Tools', E'Đồ chăm sóc và làm sạch giày', 100562, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100602, E'Shoe Laces', E'Dây giày', 100562, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100603, E'Others', E'Khác', 100562, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100604, E'Laptop Bags & Cases', E'Túi & cặp đựng laptop', 100565, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100605, E'Laptop Sleeves', E'Túi chống sốc laptop', 100565, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100606, E'Laptop Backpacks', E'Ba lô laptop', 100565, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100607, E'Others', E'Khác', 100565, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100608, E'Card Holders', E'Ví đựng thẻ', 100571, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100609, E'Coin Holders & Purses', E'Ví đựng tiền xu', 100571, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100610, E'Phone & Key Wallets', E'Ví đựng điện thoại & chìa khóa', 100571, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100611, E'Bifold & Trifold Wallets', E'Ví gập đôi & gập ba', 100571, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100612, E'Long Wallets', E'Ví dài', 100571, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100613, E'Others', E'Ví khác', 100571, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100614, E'Straps', E'Dây đồng hồ', 100576, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100615, E'Service Tools', E'Dụng cụ sửa chữa', 100576, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100616, E'Buckles', E'Khóa đồng hồ', 100576, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100617, E'Batteries', E'Pin đồng hồ', 100576, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100618, E'Boxes', E'Hộp đựng đồng hồ', 100576, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100619, E'Others', E'Khác', 100576, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100620, E'MP3 & MP4 Players', E'MP3 & MP4', 100579, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100621, E'CD, DVD, & Blu-ray Players', E'CD, DVD & Bluray', 100579, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100622, E'Voice Recorders', E'Máy ghi âm', 100579, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100623, E'Radio & Cassette Players', E'Radio & Cát-sét', 100579, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100624, E'Others', E'Khác', 100579, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100625, E'Speakers', E'Loa', 100582, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100626, E'Home Theater Systems', E'Hệ thống âm thanh giải trí tại gia', 100582, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100627, E'AV Receivers', E'Thu sóng AV', 100582, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100628, E'Others', E'Khác', 100582, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100780, E'Cooked Food', E'Đồ ăn chế biến sẵn', 100645, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100781, E'Others', E'Khác', 100645, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100782, E'Instant Rice & Porridge', E'Cơm và cháo ăn liền', 100645, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100783, E'Instant Hotpot', E'Lẩu ăn liền', 100645, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100784, E'Instant Noodles', E'Mì ăn liền', 100645, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100785, E'Sweets & Candy', E'Kẹo', 100646, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100786, E'Chocolate', E'Sô cô la', 100646, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100787, E'Biscuits, Cookies & Wafers', E'Bánh quy', 100646, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100788, E'Chips & Crisps', E'Khoai tây lát', 100646, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100789, E'Seeds', E'Các loại hạt sấy khô', 100646, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100790, E'Popcorn', E'Bỏng ngô', 100646, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100791, E'Seaweed', E'Các loại rong biển ăn liền', 100646, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100792, E'Nuts', E'Các loại đậu sấy khô', 100646, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100793, E'Others', E'Khác', 100646, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100794, E'Pudding, Jellies & Marshmallow', E'Pudding, thạch & kẹo dẻo', 100646, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100795, E'Dried Snacks', E'Thức ăn khô', 100646, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100796, E'Dried Goods', E'Thực phẩm khô', 100647, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100797, E'Noodles', E'Mì', 100647, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100798, E'Rice', E'Gạo', 100647, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100799, E'Pasta', E'Mì Ý', 100647, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100800, E'Others', E'Khác', 100647, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100801, E'Canned Food', E'Thực phẩm đóng hộp', 100647, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100802, E'Preserved Vegetables', E'Rau củ ngâm', 100647, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100803, E'Oil', E'Dầu ăn', 100648, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100804, E'Seasonings & Condiments', E'Gia vị & Hương liệu', 100648, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100805, E'Sugar', E'Đường', 100648, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100806, E'Sweetener', E'Chất tạo ngọt', 100648, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100807, E'Stock, Gravy & Instant Soup', E'Sốt & súp ăn liền', 100648, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100808, E'Cooking Paste & Kit', E'Gói/ bột gia vị', 100648, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100809, E'Flavour Enhancers', E'Phụ gia thực phẩm', 100648, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100810, E'Flour Coating', E'Bột phủ', 100648, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100811, E'Others', E'Khác', 100648, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100812, E'Baking Flavoring', E'Hương liệu', 100649, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100813, E'Baking Powder & Soda', E'Bột nở và muối nở', 100649, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100814, E'Baking Premix Flour', E'Bột pha sẵn', 100649, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100815, E'Flour', E'Bột mì', 100649, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100816, E'Food Coloring', E'Chất tạo màu', 100649, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100817, E'Baking Decoration', E'Đồ trang trí', 100649, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100818, E'Others', E'Khác', 100649, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100819, E'Honey & Maple Syrups', E'Mật ong và siro', 100650, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100820, E'Jam & Spread', E'Mứt', 100650, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100821, E'Cereal, Granola & Oats', E'Ngũ cốc', 100650, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100822, E'Breakfast Bar', E'Thanh dinh dưỡng', 100650, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100823, E'Others', E'Khác', 100650, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100824, E'Coffee', E'Cà phê', 100651, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100825, E'Tea & Tea Bags', E'Trà & trà túi lọc', 100651, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100826, E'Chocolate Drinks', E'Thức uống Sô cô la', 100651, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100827, E'Energy & Isotonic Drinks', E'Nước tăng lực', 100651, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100828, E'Water', E'Nước tinh khiết', 100651, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100829, E'Juice & Juice Vinegar', E'Nước trái cây lên men', 100651, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100830, E'Cordial & Syrups', E'Siro pha', 100651, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100831, E'Carbonated Drinks & Tonics', E'Nước có ga', 100651, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100832, E'Powdered Drink Mixes', E'Bột pha', 100651, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100833, E'Dessert Drink', E'Đồ tráng miệng', 100651, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100834, E'Traditional & Herbal Drinks', E'Trà thảo mộc', 100651, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100835, E'Drink Toppings', E'Topping', 100651, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100836, E'Non-dairy Milk', E'Sữa thực vật', 100651, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100837, E'Others', E'Khác', 100651, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100838, E'Milk', E'Sữa', 100652, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100839, E'Yogurt & Cultured Milk', E'Sữa chua', 100652, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100840, E'Creamers', E'Bột kem béo', 100652, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100841, E'Butter & Margarine', E'Bơ động vật & thực vật', 100652, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100842, E'Cheese & Cheese Powder', E'Phô mai & bột phô mai', 100652, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100843, E'Ice cream', E'Kem', 100652, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100844, E'Eggs', E'Trứng', 100652, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100845, E'Beancurd', E'Đậu phụ', 100652, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100846, E'Others', E'Khác', 100652, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100847, E'Meat', E'Thịt', 100653, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100848, E'Seafood', E'Hải sản', 100653, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100849, E'Vegetarian Meat', E'Thịt chay', 100653, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100850, E'Others', E'Khác', 100653, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100851, E'Vegetables', E'Rau củ', 100653, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100852, E'Fruits', E'Trái cây', 100653, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100853, E'Mushroom', E'Nấm', 100653, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100854, E'Frozen Processed Food', E'Thực phẩm đông lạnh chế biến sẵn', 100653, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100855, E'Processed Meat & Seafood', E'Thịt và hải sản chế biến sẵn', 100653, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100856, E'Breads', E'Bánh mì', 100654, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100857, E'Cakes & Pies', E'Bánh kem', 100654, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100858, E'Pastry', E'Bánh ngọt/ pastry', 100654, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100859, E'Others', E'Khác', 100654, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100860, E'Beer & Cider', E'Bia và trái cây lên men', 100655, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100861, E'Wine & Champagne', E'Rượu vang & Sâm panh', 100655, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100862, E'Liquor & Spirits', E'Rượu mạnh', 100655, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100863, E'Sake, Soju & Umeshu', E'Rượu sake, soju & umeshu', 100655, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100864, E'Others', E'Khác', 100655, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100865, E'Hand Care', E'Chăm sóc tay', 100658, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100866, E'Foot Care', E'Chăm sóc chân', 100658, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100867, E'Nail Care', E'Chăm sóc móng', 100658, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100868, E'Others', E'Khác', 100658, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100869, E'Shampoo', E'Dầu gội', 100659, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100870, E'Hair Colour', E'Thuốc nhuộm tóc', 100659, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100871, E'Hair Treatment', E'Sản phẩm dưỡng tóc', 100659, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100872, E'Hair and Scalp Conditioner', E'Dầu xả', 100659, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100873, E'Hair Styling', E'Sản phẩm tạo kiểu tóc', 100659, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100874, E'Others', E'Khác', 100659, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100875, E'Bath & Body Care', E'Sữa tắm & chăm sóc cơ thể', 100660, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100876, E'Skincare', E'Chăm sóc da', 100660, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100877, E'Shaving & Grooming', E'Sản phẩm cạo râu & hớt tóc', 100660, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100878, E'Hair Care', E'Chăm sóc tóc', 100660, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100879, E'Others', E'Khác', 100660, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100880, E'Others', E'Khác', 100662, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100881, E'Face', E'Trang điểm mặt', 100662, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100882, E'Eyes', E'Trang điểm mắt', 100662, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100883, E'Lips', E'Trang điểm môi', 100662, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100884, E'Makeup Removers', E'Tẩy trang', 100662, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100885, E'Makeup Accessories', E'Dụng cụ trang điểm', 100663, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100886, E'Facial Care Tools', E'Dụng cụ chăm sóc da mặt', 100663, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100887, E'Body Slimming Tools', E'Dụng cụ làm thon gọn cơ thể', 100663, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100888, E'Hair Removal Tools', E'Dụng cụ tẩy lông', 100663, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100889, E'Hair Tools', E'Dụng cụ chăm sóc tóc', 100663, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100890, E'Others', E'Khác', 100663, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100891, E'Facial Cleanser', E'Sữa rửa mặt', 100664, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100892, E'Toner', E'Nước cân bằng da', 100664, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100893, E'Facial Moisturizer', E'Kem dưỡng ẩm', 100664, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100894, E'Facial Oil', E'Dầu dưỡng ẩm', 100664, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100895, E'Facial Mist', E'Xịt khoáng', 100664, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100896, E'Facial Serum & Essence', E'Tinh chất dưỡng', 100664, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100897, E'Face Scrub & Peel', E'Tẩy tế bào chết', 100664, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100898, E'Face Mask & Packs', E'Mặt nạ', 100664, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100899, E'Eye Treatment', E'Sản phẩm dưỡng mắt', 100664, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100900, E'Lip Treatment', E'Sản phẩm dưỡng môi', 100664, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100901, E'Face Sunscreen', E'Kem chống nắng cho mặt', 100664, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100902, E'After Sun Face Care', E'Kem dưỡng sau chống nắng', 100664, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100903, E'Blotting Paper', E'Giấy thấm dầu', 100664, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100904, E'Acne Treatment', E'Sản phẩm trị mụn', 100664, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100905, E'Others', E'Khác', 100664, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100906, E'Dog Food', E'Thức ăn cho chó', 100667, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100907, E'Dog Treats', E'Snack cho chó', 100667, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100908, E'Cat Food', E'Thức ăn cho mèo', 100667, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100909, E'Cat Treats', E'Snack cho mèo', 100667, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100910, E'Small Pet Food', E'Thức ăn cho thú nhỏ', 100667, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100911, E'Small Pet Treats', E'Snack cho thú nhỏ', 100667, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100912, E'Aquarium Pet Food', E'Thức ăn cho cá', 100667, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100913, E'Bird Feed', E'Thức ăn cho chim', 100667, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100914, E'Reptile Food', E'Thức ăn cho bò sát', 100667, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100915, E'Others', E'Khác', 100667, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100916, E'Bowls & Feeders', E'Bát & dụng cụ ăn', 100668, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100917, E'Travel Essentials', E'Thiết bị du lịch', 100668, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100918, E'Leashes, Collars, Harnesses & Muzzles', E'Vòng cổ, dây dắt & rọ mõm', 100668, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100919, E'Toys', E'Đồ chơi', 100668, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100920, E'Pet Furniture', E'Nội thất cho thú cưng', 100668, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100921, E'Aquarium Needs', E'Phụ kiện thủy sinh', 100668, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100922, E'Others', E'Khác', 100668, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100923, E'Cat Litter & Boxes', E'Khay & Bồn vệ sinh cho mèo', 100669, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100924, E'Small Pet Bedding & Litter', E'Lót chuồng cho thú nhỏ', 100669, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100925, E'Diapers', E'Tã cho thú cưng', 100669, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100926, E'Dog Training Pads & Trays', E'Khay huấn luyện vệ sinh cho chó', 100669, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100927, E'Poop Bags & Scoopers', E'Túi & Xẻng dọn vệ sinh', 100669, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100928, E'Others', E'Khác', 100669, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100929, E'Hair Care', E'Chăm sóc lông', 100670, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100930, E'Oral Care', E'Chăm sóc răng miệng', 100670, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100931, E'Claw Care', E'Chăm sóc móng', 100670, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100932, E'Others', E'Khác', 100670, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100933, E'Pet Clothing', E'Quần áo thú cưng', 100671, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100934, E'Wet Weather Gear', E'Áo mưa chó mèo', 100671, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100935, E'Boots, Socks & Paw Protectors', E'Giày, tất & bảo vệ móng', 100671, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100936, E'Neck Accessories', E'Phụ kiện đeo cổ', 100671, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100937, E'Eyewear', E'Kính mắt', 100671, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100938, E'Hair Accessories', E'Phụ kiện lông', 100671, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100939, E'Hats', E'Mũ nón thú cưng', 100671, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100940, E'Others', E'Khác', 100671, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100943, E'Others', E'Khác', 100672, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100944, E'Vitamins & Supplements', E'Vitamin & chất bổ sung dinh dưỡng', 100672, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100945, E'Baby Carrier', E'Địu em bé', 100674, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100946, E'Strollers & Travel Systems', E'Xe đẩy', 100674, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100947, E'Stroller Accessories', E'Phụ kiện xe đẩy', 100674, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100948, E'Car & Motorbike Seats', E'Ghế ngồi ô tô & xe máy', 100674, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100949, E'Car & Motorbike Seats Accessories', E'Phụ kiện ghế ngồi ô tô & xe máy', 100674, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100950, E'Diaper Bags', E'Túi đựng bỉm sữa', 100674, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100951, E'Child Harnesses & Leashes', E'Dây & Đai dắt trẻ', 100674, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100952, E'Others', E'Khác', 100674, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100953, E'Bottle-feeding', E'Bình sữa', 100675, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100954, E'Breastfeeding', E'Đồ dùng cho con bú', 100675, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100955, E'Highchairs & Booster Seats', E'Ghế ăn dặm', 100675, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100956, E'Utensils', E'Đồ dùng cho bé', 100675, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100957, E'Bibs', E'Yếm', 100675, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100958, E'Pacifiers', E'Ti giả', 100675, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100959, E'Food Processors', E'Máy xay cắt thực phẩm', 100675, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100960, E'Others', E'Khác', 100675, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100961, E'Supporting Belts', E'Đai hỗ trợ bụng', 100676, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100962, E'Maternity Pillows', E'Gối bầu', 100676, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100963, E'Others', E'Khác', 100676, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100964, E'Maternity Milk', E'Sữa bầu', 100677, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100965, E'Maternity Vitamins & Supplement', E'Vitamin & Thực phẩm bổ sung cho mẹ', 100677, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100966, E'Moisturizers & Creams', E'Kem dưỡng ẩm cho mẹ', 100677, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100967, E'Others', E'Khác', 100677, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100968, E'Bathing Tubs & Seats', E'Chậu tắm & Ghế tắm', 100678, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100969, E'Bath Robes, Towels & Wash Cloths', E'Áo choàng tắm, Khăn tắm & Khăn mặt', 100678, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100970, E'Shower Caps', E'Nón tắm', 100678, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100971, E'Bathing Tools & Accessories', E'Dụng cụ tắm & Phụ kiện', 100678, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100972, E'Hair Care & Body Wash', E'Sản phẩm tắm & gội cho bé', 100678, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100973, E'Baby Colognes & Fragrances', E'Nước hoa cho bé', 100678, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100974, E'Baby Grooming Tools', E'Bộ chăm sóc trẻ sơ sinh', 100678, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100975, E'Wipes', E'Khăn lau', 100678, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100976, E'Baby Laundry Detergent', E'Giặt xả quần áo trẻ em', 100678, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100977, E'Others', E'Khác', 100678, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100978, E'Cribs & Cradles & Beds', E'Nôi & Cũi & Giường cho bé', 100679, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100979, E'Bouncers, Rockers & Jumpers', E'Ghế rung, Ghế nhún & Xích đu tập đi', 100679, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100980, E'Walkers', E'Xe tập đi', 100679, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100981, E'Mattresses & Bedding', E'Nệm và chăn ga', 100679, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100982, E'Storage & Organization', E'Kệ & Tủ', 100679, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100983, E'Others', E'Khác', 100679, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100984, E'Monitors', E'Thiết bị giám sát trẻ', 100680, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100985, E'Mosquito Netting', E'Màn chống muỗi', 100680, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100986, E'Bumpers, Rails & Guards', E'Bộ đệm cũi, Quây cũi & Thanh chắn giường', 100680, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100987, E'Edge & Corner Guards', E'Bọc góc & Cạnh', 100680, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100988, E'Baby Gates & Doorways', E'Thanh chắn cửa & Cầu thang', 100680, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100989, E'Safety Locks & Straps', E'Khóa & Dây đai an toàn', 100680, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100990, E'Others', E'Khác', 100680, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100991, E'Milk Formula', E'Sữa công thức', 100681, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100992, E'Baby Porridge, Puree & Cereal', E'Cháo, Thực phẩm xay nhuyễn & Ngũ cốc', 100681, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100993, E'Baby Snack', E'Đồ ăn nhẹ cho bé', 100681, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100994, E'Others', E'Khác', 100681, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100995, E'Baby Vitamins & Supplements', E'Vitamin & Thực phẩm bổ sung', 100682, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100996, E'Nasal Care', E'Chăm sóc mũi cho bé', 100682, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100997, E'Baby Skincare', E'Chăm sóc da cho bé', 100682, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100998, E'Baby Oral Care', E'Chăm sóc răng miệng cho bé', 100682, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(100999, E'Sun Care', E'Chống nắng cho bé', 100682, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101000, E'Others', E'Khác', 100682, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101001, E'Changing Pads & Kits', E'Bộ lót thay tã', 100683, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101002, E'Potty Training & Commode Chairs', E'Bệ thu nhỏ bồn cầu & Bô vệ sinh', 100683, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101003, E'Disposable Diapers', E'Tã dùng một lần', 100683, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101004, E'Cloth Diapers & Accessories', E'Tã vải & Phụ kiện', 100683, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101005, E'Others', E'Khác', 100683, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101006, E'Baby & Toddler Toys', E'Đồ chơi cho trẻ sơ sinh & trẻ nhỏ', 100684, E'b1ef598b-4276-4754-8e4d-13d8e3e3efe0');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101007, E'Block Toys', E'Đồ chơi lắp ráp', 100684, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101008, E'Dolls & Stuffed Toys', E'Búp bê & Thú nhồi bông', 100684, E'636ab74f-d5ea-4675-8f6c-5e659f8bf77e');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101009, E'Pretend Play', E'Đồ chơi nhập vai', 100684, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101010, E'Toy Vehicles', E'Xe đồ chơi', 100684, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101011, E'Sports & Outdoor Play', E'Đồ chơi vận động & Ngoài trời', 100684, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101012, E'Educational Toys', E'Đồ chơi giáo dục', 100684, E'bb93fba4-b0ae-480c-b72e-4cf63ff46f37');
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101013, E'Robot Toys', E'Đồ chơi Robot', 100684, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101014, E'Slime & Squishy Toys', E'Slime & Đồ chơi nhựa dẻo', 100684, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101015, E'Others', E'Khác', 100684, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101016, E'Regular Outerwear', E'Áo khoác nhẹ', 100687, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101017, E'Winter Outerwear', E'Áo khoác mùa đông', 100687, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101018, E'Dresses', E'Váy', 100687, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101019, E'Bottoms', E'Quần/Chân váy', 100687, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101020, E'Sleepwear', E'Đồ ngủ', 100687, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101021, E'Tops', E'Áo', 100687, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101022, E'Bodysuits & Jumpsuits', E'Bộ đồ liền thân', 100687, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101023, E'Sets', E'Bộ quần áo', 100687, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101024, E'Swimwear', E'Đồ bơi', 100687, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101025, E'Others', E'Khác', 100687, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101026, E'Bags & Luggage', E'Túi xách & vali', 100689, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101027, E'Hats & Caps', E'Mũ & mũ lưỡi trai', 100689, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101028, E'Eyewear', E'Mắt kính', 100689, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101029, E'Hair Accessories', E'Phụ kiện tóc', 100689, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101030, E'Gloves', E'Găng tay', 100689, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101031, E'Belts', E'Thắt lưng', 100689, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101032, E'Socks', E'Tất', 100689, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101033, E'Scarves', E'Khăn', 100689, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101034, E'Watches', E'Đồng hồ', 100689, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101035, E'Jewelry', E'Trang sức', 100689, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101036, E'Rain Gear', E'Đồ đi mưa', 100689, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101037, E'Earmuffs', E'Chụp tai', 100689, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101038, E'Others', E'Khác', 100689, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101039, E'Costumes', E'Đồ hóa trang', 100690, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101040, E'Underwear & Innerwear', E'Đồ lót', 100690, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101041, E'Sleepwear', E'Đồ ngủ', 100690, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101042, E'Swimwear', E'Đồ bơi', 100690, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101043, E'Tops', E'Áo', 100690, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101044, E'Outerwear', E'Áo khoác', 100690, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101045, E'Bottoms', E'Quần', 100690, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101046, E'Suits & Sets', E'Com lê & đồ bộ', 100690, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101047, E'Others', E'Khác', 100690, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101048, E'Costumes', E'Đồ hóa trang', 100691, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101049, E'Underwear & Innerwear', E'Đồ lót', 100691, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101050, E'Sleepwear', E'Đồ ngủ', 100691, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101051, E'Swimwear', E'Đồ bơi', 100691, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101052, E'Tops', E'Áo', 100691, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101053, E'Outerwear', E'Áo khoác', 100691, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101054, E'Bottoms', E'Quần', 100691, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101055, E'Rompers, Jumpsuits & Overalls', E'Đồ liền thân', 100691, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101056, E'Dresses', E'Váy', 100691, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101057, E'Suits & Sets', E'Com lê & đồ bộ', 100691, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101058, E'Others', E'Khác', 100691, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101059, E'Boots', E'Bốt', 100692, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101060, E'Sandals', E'Dép quai hậu', 100692, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101061, E'Sneakers', E'Giày thể thao', 100692, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101062, E'Flip Flops', E'Dép lê', 100692, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101063, E'Formal Shoes', E'Giày tây', 100692, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101064, E'Loafers', E'Giày lười', 100692, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101065, E'Others', E'Khác', 100692, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101066, E'Boots', E'Bốt', 100693, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101067, E'Sandals', E'Dép quai hậu', 100693, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101068, E'Sneakers', E'Giày thể thao', 100693, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101069, E'Loafers', E'Giày lười', 100693, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101070, E'Flip Flops', E'Dép lê', 100693, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101071, E'Flats', E'Giày bệt', 100693, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101072, E'Others', E'Khác', 100693, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101073, E'Playstation', E'Playstation', 100695, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101074, E'Xbox', E'Xbox', 100695, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101075, E'Wii', E'Wii', 100695, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101076, E'Nintendo DS', E'Nintendo DS', 100695, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101077, E'Gameboy', E'Gameboy', 100695, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101078, E'Switch', E'Switch', 100695, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101079, E'PS Vita', E'PS Vita', 100695, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101080, E'PSP', E'PSP', 100695, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101081, E'Others', E'Khác', 100695, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101082, E'Playstation', E'Game Playstation', 100697, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101083, E'Xbox', E'Game Xbox', 100697, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101084, E'Wii', E'Game Wii', 100697, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101085, E'Nintendo DS', E'Game Nintendo DS', 100697, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101086, E'Gameboy', E'Game Gameboy', 100697, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101087, E'Switch', E'Game Switch', 100697, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101088, E'PS Vita', E'Game PS Vita', 100697, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101089, E'PSP', E'Game PSP', 100697, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101090, E'PC Game', E'Game PC', 100697, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101091, E'Others', E'Game Máy Khác', 100697, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101092, E'Point & Shoot', E'Máy ảnh kỹ thuật số', 100699, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101093, E'Mirrorless Cameras', E'Máy ảnh không gương lật', 100699, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101094, E'Action Cameras', E'Máy quay hành động', 100699, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101095, E'Video Camcorders', E'Máy quay phim', 100699, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101096, E'Instant Cameras', E'Máy ảnh chụp lấy liền', 100699, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101097, E'Analog Cameras', E'Máy ảnh film', 100699, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101098, E'DSLRs', E'Máy ảnh cơ/DSLRs', 100699, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101099, E'Others', E'Khác', 100699, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101100, E'CCTV Security Cameras', E'Camera giám sát kết nối internet', 100700, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101101, E'DVRs', E'Đầu ghi hình', 100700, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101102, E'Dummy Cameras', E'Camera giả chống trộm', 100700, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101104, E'Others', E'Khác', 100700, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101105, E'Lens Mount & Adaptors', E'Ngàm ống kính & Ngàm chuyển đổi ống', 100702, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101106, E'Lens Caps', E'Nắp ống kính', 100702, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101107, E'Filters', E'Kính lọc', 100702, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101108, E'Lens Hoods', E'Loa che sáng ống kính', 100702, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101109, E'Others', E'Khác', 100702, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101110, E'Flashes', E'Đèn Flash', 100703, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101111, E'Flash Accessories', E'Phụ kiện đèn Flash', 100703, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101112, E'Gimbals & Stabilizers', E'Tay cầm chống rung', 100703, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101113, E'Lighting & Studio Equipments', E'Thiết bị ánh sáng và phòng chụp', 100703, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101114, E'Photo Films & Papers', E'Giấy & phim in ảnh', 100703, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101115, E'Photo Printers', E'Máy in ảnh', 100703, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101116, E'Camera Cases & Bags', E'Túi đựng máy ảnh', 100703, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101117, E'Battery Chargers', E'Bộ sạc pin', 100703, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101118, E'Batteries & Battery Grips', E'Đế pin', 100703, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101119, E'Tripods, Monopods, & Accessories', E'Chân máy ảnh', 100703, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101120, E'Others', E'Khác', 100703, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101121, E'Dry Boxes & Cabinets', E'Tủ & hộp chống ẩm', 100704, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101122, E'Cleaning Kit', E'Bộ vệ sinh máy ảnh', 100704, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101123, E'Silica Gel', E'Gói hút ẩm', 100704, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101124, E'Blowers', E'Bóng thổi bụi', 100704, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101125, E'Lenspens & Brushes', E'Bút lau & bàn chải làm sạch ống kính', 100704, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101126, E'Others', E'Khác', 100704, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101127, E'Air Fresheners & Home Fragrance', E'Chất khử mùi, làm thơm', 100708, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101128, E'Essential Oils', E'Tinh dầu thơm', 100708, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101129, E'Diffusers, Humidifiers & Oil Burners', E'Máy khuếch tán, tạo ẩm & xông tinh dầu', 100708, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101130, E'Others', E'Khác', 100708, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101131, E'Toilet Bowls, Seats & Covers', E'Bồn cầu, ghế và nắp bồn cầu', 100709, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101132, E'Toothbrush Holders & Toothpaste Dispensers', E'Kệ đựng bàn chải, kệ nhả kem đánh răng', 100709, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101133, E'Soap Dispensers, Holders & Boxes', E'Kệ đựng xà phòng', 100709, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101134, E'Bathroom Racks & Cabinets', E'Kệ để đồ phòng tắm', 100709, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101135, E'Bathtubs', E'Bồn tắm', 100709, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101136, E'Towels & Bathrobes', E'Khăn mặt, khăn tắm, áo choàng tắm', 100709, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101137, E'Showerheads & Bidet Sprays', E'Vòi sen & vòi xịt vệ sinh', 100709, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101138, E'Bath Brushes & Loofahs', E'Bông tắm', 100709, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101139, E'Shower Curtains', E'Rèm cửa nhà tắm', 100709, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101140, E'Shower Seats & Commodes', E'Ghế nhà tắm, ghế chống trượt', 100709, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101141, E'Safety Handles', E'Tay cầm an toàn', 100709, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101142, E'Shower Caps', E'Mũ tắm', 100709, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101143, E'Others', E'Khác', 100709, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101144, E'Cooling Mats', E'Chiếu điều hòa', 100710, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101145, E'Mattress Protectors & Toppers', E'Tấm bảo vệ nệm, topper', 100710, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101146, E'Blankets, Comforters & Quilts', E'Chăn, mền', 100710, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101147, E'Pillows', E'Gối', 100710, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101148, E'Bedsheets, Pillowcases & Bolster Cases', E'Ga trải giường, vỏ gối', 100710, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101149, E'Mattresses', E'Nệm', 100710, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101150, E'Mosquito Nets', E'Mùng/ Màn chống muỗi', 100710, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101151, E'Bolsters', E'Gối ôm', 100710, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101152, E'Others', E'Khác', 100710, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101153, E'Flowers', E'Hoa trang trí', 100711, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101154, E'Furniture & Appliance Covers', E'Vỏ bọc nội thất', 100711, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101155, E'Curtains & Blinds', E'Rèm cửa, màn che', 100711, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101156, E'Photo Frames & Wall Decoration', E'Khung ảnh & vật trang trí tường', 100711, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101157, E'Wallpapers & Wall Stickers', E'Decal, tranh dán tường', 100711, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101158, E'Clocks', E'Đồng hồ', 100711, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101159, E'Floor Mats', E'Thảm chùi chân', 100711, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101160, E'Carpets & Rugs', E'Thảm trải sàn', 100711, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101161, E'Vases & Vessels', E'Bình trang trí', 100711, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101162, E'Candles & Candleholders', E'Nến & đồ đựng nến', 100711, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101163, E'Mirrors', E'Gương', 100711, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101164, E'Table Cloths', E'Khăn trải bàn', 100711, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101165, E'Others', E'Khác', 100711, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101166, E'Cushions', E'Đệm ngồi', 100713, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101167, E'Doorstoppers', E'Miếng chặn cửa', 100713, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101168, E'Bed Frames & Headboards', E'Giường, khung giường', 100713, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101169, E'Desks & Tables', E'Bàn', 100713, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101170, E'Wardrobes', E'Tủ quần áo', 100713, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101171, E'Benches, Chairs & Stools', E'Ghế, ghế dài, ghế đẩu', 100713, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101172, E'Sofas', E'Ghế sofa', 100713, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101173, E'Cupboards & Cabinets', E'Tủ bếp', 100713, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101174, E'Shelves & Racks', E'Kệ & Giá', 100713, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101175, E'Others', E'Khác', 100713, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101176, E'Plants', E'Cây cảnh', 100714, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101177, E'Garden Decorations', E'Trang trí vườn', 100714, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101178, E'Garden Soils & Growing Media', E'Đất trồng', 100714, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101179, E'Fertilizer', E'Phân bón', 100714, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101180, E'Seeds & Bulbs', E'Hạt giống & chất hỗ trợ trồng cây', 100714, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101181, E'Pots & Planters', E'Chậu cây', 100714, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101182, E'Irrigation Systems', E'Hệ thống tưới nước', 100714, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101183, E'Gardening Tools', E'Dụng cụ làm vườn', 100714, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101184, E'Others', E'Khác', 100714, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101185, E'Lawn Mowers', E'Máy cắt cỏ, dụng cụ cắt cỏ', 100714, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101186, E'Industrial Adhesives & Tapes', E'Keo & chất kết chính công nghiệp', 100715, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101187, E'Protective Gloves, Goggles & Masks', E'Găng tay, kính bảo hộ & mặt nạ', 100715, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101188, E'Sinks & Water Taps', E'Chậu rửa & vòi nước', 100715, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101189, E'Roofing & Flooring', E'Mái & sàn', 100715, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101190, E'Wall Paints & Coatings', E'Sơn & chất chống thấm tường', 100715, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101191, E'Tools', E'Dụng cụ', 100715, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101192, E'Water Pumps, Parts & Accessories', E'Máy bơm nước & phụ kiện', 100715, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101193, E'Air Pumps, Parts & Accessories', E'Máy bơm khí & phụ kiện', 100715, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101194, E'Ladders', E'Thang', 100715, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101195, E'Trollies', E'Xe đẩy', 100715, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101196, E'Shades, Awnings & Tarpaulins', E'Mái hiên, bạt phủ', 100715, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101197, E'Construction Materials', E'Vật liệu xây dựng', 100715, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101198, E'Doors & Windows', E'Cửa & cửa sổ', 100715, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101199, E'Others', E'Khác', 100715, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101200, E'Clotheslines & Drying Racks', E'Dây phơi & giá phơi quần áo', 100716, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101201, E'Cleaning Brushes', E'Bàn chải vệ sinh', 100716, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101202, E'Brooms', E'Chổi', 100716, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101203, E'Dusters', E'Chổi phủi bụi', 100716, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101204, E'Mops', E'Cây lau nhà', 100716, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101205, E'Basins, Buckets & Water Dippers', E'Chậu, xô & gáo nước', 100716, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101206, E'Sponges & Scouring Pads', E'Miếng bọt biển, miếng chà vệ sinh', 100716, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101207, E'Trash & Recycling Bins', E'Thùng rác', 100716, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101208, E'Plastic Bags & Trash Bags', E'Túi nilon & túi rác', 100716, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101209, E'Cleaning Cloths', E'Khăn vệ sinh', 100716, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101210, E'Pest & Weed Control', E'Thuốc và dụng cụ diệt côn trùng', 100716, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101211, E'Tissue & Paper Towels', E'Khăn giấy, giấy ướt', 100716, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101212, E'Toilet Paper', E'Giấy vệ sinh', 100716, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101213, E'Cleaning Agents', E'Chất tẩy rửa', 100716, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101214, E'Laundry Care', E'Phụ kiện giặt là', 100716, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101215, E'Others', E'Khác', 100716, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101216, E'Grills & Accessories', E'Lò nướng & phụ kiện', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101217, E'Bakewares & Decorations', E'Dụng cụ nướng & trang trí bánh', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101218, E'Pans', E'Chảo', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101219, E'Pots', E'Nồi', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101220, E'Food Storage', E'Hộp đựng thực phẩm', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101221, E'Cling Wrap', E'Màng bọc thực phẩm', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101222, E'Aluminium Foil', E'Giấy bạc', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101223, E'Tea, Coffee & Bartending Equipments', E'Dụng cụ pha trà, cà phê', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101224, E'Kitchen Racks', E'Kệ để đồ nhà bếp', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101225, E'Aprons & Kitchen Gloves', E'Tạp dề & găng tay nấu nướng', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101226, E'Spatulas & Cooking Tweezers', E'Cây vét bột & đồ gắp thức ăn', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101227, E'Chopping Boards', E'Thớt', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101228, E'Knives & Kitchen Scissors', E'Dao & kéo', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101229, E'Whisks & Beaters', E'Phới đánh trứng', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101230, E'Can & Bottle Openers', E'Dụng cụ mở hộp', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101231, E'Measuring Glasses & Spoons', E'Dụng cụ đo lường', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101232, E'Strainers', E'Dụng cụ lọc', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101233, E'Graters, Peelers & Cutters', E'Bàn nạo, dụng cụ bào, cắt', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101234, E'Kitchen Weighing Scales', E'Cân nhà bếp', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101235, E'Sealers', E'Dụng cụ hút chân không', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101237, E'Others', E'Khác', 100717, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101238, E'Jugs, Pitchers & Accessories', E'Bình nước', 100718, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101239, E'Tea Pots & Sets', E'Bộ ấm trà', 100718, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101240, E'Cups, Mugs & Glasses', E'Cốc, ly, tách uống nước', 100718, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101241, E'Water Bottles & Accessories', E'Bình nước & phụ kiện', 100718, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101242, E'Bowls', E'Tô', 100718, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101243, E'Plates', E'Dĩa', 100718, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101244, E'Cutleries', E'Bộ dao kéo', 100718, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101245, E'Straws', E'Ống hút', 100718, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101246, E'Food Covers', E'Lồng bàn', 100718, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101247, E'Placemats & Coasters', E'Khay, tấm lót bàn ăn', 100718, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101248, E'Others', E'Khác', 100718, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101249, E'Safes', E'Két sắt', 100720, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101250, E'Fire Fighting Equipments', E'Thiết bị chữa cháy', 100720, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101251, E'Door Hardware & Locks', E'Khóa, ổ khóa', 100720, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101252, E'Others', E'Khác', 100720, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101253, E'Hangers & Pegs', E'Mắc áo', 100721, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101254, E'Storage Boxes, Bags & Baskets', E'Hộp đựng, giỏ đựng đồ', 100721, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101255, E'Shoe Storage Boxes', E'Kệ giày, hộp giày', 100721, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101256, E'Hooks', E'Móc treo', 100721, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101257, E'Laundry Bags & Baskets', E'Túi giặt, giỏ đựng quần áo', 100721, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101258, E'Desk Organizers', E'Kệ sách để bàn', 100721, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101259, E'Wardrobe Organizers', E'Sắp xếp tủ quần áo', 100721, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101260, E'Jewelry Organizers', E'Hộp đựng trang sức', 100721, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101261, E'Tissue Holders', E'Hộp khăn giấy', 100721, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101262, E'Others', E'Khác', 100721, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101263, E'Balloons', E'Bong bóng', 100722, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101264, E'Wooden Clips', E'Kẹp gỗ', 100722, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101265, E'Backdrops & Banners', E'Phông nền, biểu ngữ', 100722, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101266, E'Cards', E'Thiệp', 100722, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101267, E'Disposable Tableware', E'Chén, đĩa dùng một lần', 100722, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101268, E'Party Hats & Masks', E'Mũ, mặt nạ dự tiệc', 100722, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101269, E'Sashes', E'Băng đeo chéo', 100722, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101270, E'Others', E'Khác', 100722, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101271, E'Fishing', E'Câu Cá', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101272, E'Cycling', E'Đạp Xe', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101273, E'Camping & Hiking', E'Cắm Trại & Dã ngoại', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101274, E'Rock Climbing', E'Leo Núi', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101275, E'Boardsports', E'Thể Thao Ván Trượt', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101277, E'Soccer, Futsal & Sepak Takraw', E'Bóng Đá, Futsal & Cầu Mây', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101278, E'Basketball', E'Bóng Rổ', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101279, E'Volleyball', E'Bóng Chuyền', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101280, E'Badminton', E'Cầu Lông', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101281, E'Tennis', E'Tennis', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101282, E'Table Tennis', E'Bóng Bàn', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101283, E'Boxing & Martial Arts', E'Đấm bốc & Võ Tổng Hợp', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101284, E'Golf', E'Golf', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101285, E'Baseball & Softball', E'Bóng Chày & Bóng Ném', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101286, E'Squash', E'Bóng Quần', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101287, E'Shooting & Survival Games', E'Bắn Súng & Game Sinh Tồn', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101288, E'Rugby', E'Bóng Bầu Dục', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101289, E'Billiards', E'Bida', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101290, E'Surfing & Wakeboarding', E'Lướt Ván', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101291, E'Ice Skating & Winter Sports', E'Trượt Tuyết & Thể Thao Mùa Đông', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101292, E'Swimming & Diving', E'Bơi Lội & Lặn', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101293, E'Boating', E'Chèo Thuyền', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101294, E'Yoga & Pilates', E'Yoga & Pilates', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101295, E'Fitness Equipment', E'Thiết Bị Thể Thao', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101296, E'Darts', E'Ném Phi Tiêu', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101297, E'Others', E'Môn Thể Thao Khác', 100725, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101298, E'Basketball Shoes', E'Giày Bóng Rổ', 100726, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101299, E'Running Shoes', E'Giày Chạy Bộ', 100726, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101300, E'Training Shoes', E'Giày Tập Luyện', 100726, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101301, E'Tennis Shoes', E'Giày Tennis', 100726, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101302, E'Volleyball Shoes', E'Giày Bóng Chuyền', 100726, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101303, E'Badminton Shoes', E'Giày Cầu Lông', 100726, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101304, E'Futsal Shoes', E'Giày Futsal', 100726, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101305, E'Hiking Shoes', E'Giày Dã Ngoại', 100726, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101306, E'Soccer Shoes', E'Giày Bóng Đá', 100726, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101307, E'Kid''s Sport Shoes', E'Giày Thể Thao Trẻ Em', 100726, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101308, E'Others', E'Giày Thể Thao Khác', 100726, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101309, E'Sets', E'Bộ Đồ Thể Thao', 100727, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101310, E'Jackets', E'Áo Khoác', 100727, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101311, E'T-shirts', E'Áo Thể Thao', 100727, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101312, E'Jerseys', E'Áo CLB', 100727, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101313, E'Bottoms', E'Quần Thể Thao', 100727, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101314, E'Swimming Attire', E'Đồ Bơi', 100727, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101315, E'Sports Bras', E'Áo Lót Thể Thao', 100727, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101316, E'Kid''s Sports Apparel', E'Thời Trang Thể Thao Trẻ Em', 100727, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101317, E'Others', E'Khác', 100727, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101318, E'Stopwatches & Pedometers', E'Đồng Hồ Bấm Giây & Máy Đếm Bước Chân', 100728, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101319, E'Shoe Bags', E'Túi Đựng Giày', 100728, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101320, E'Sports Wristbands', E'Vòng Tay Thể Thao', 100728, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101321, E'Sports Headbands', E'Băng Đô Thể Thao', 100728, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101322, E'Sports & Outdoor Hats', E'Mũ Thể Thao & Dã Ngoại', 100728, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101323, E'Dry Bags', E'Túi Chống Thấm', 100728, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101324, E'Rain Coats', E'Áo Mưa', 100728, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101325, E'Umbrellas', E'Ô/Dù', 100728, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101326, E'Mouthguards & Sport Tapes', E'Dụng Cụ Bảo Vệ Miệng & Băng Keo Thể Thao', 100728, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101327, E'Training Equipments', E'Phụ Kiện Tập Luyện', 100728, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101328, E'Gym Protective Gears', E'Đồ Bảo Hộ Gym', 100728, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101329, E'Others', E'Phụ Kiện Khác', 100728, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101330, E'Gift Wrappers', E'Giấy Gói Quà', 100730, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101331, E'Gift Boxes', E'Hộp Quà Tặng', 100730, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101332, E'Gift Bags', E'Túi Quà Tặng', 100730, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101333, E'Ribbons', E'Ruy Băng', 100730, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101334, E'Bubble Wraps', E'Xốp Chống Sốc', 100730, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101335, E'Carton Boxes', E'Hộp Carton', 100730, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101336, E'Others', E'Khác', 100730, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101337, E'Pens & Inks', E'Bút & Mực', 100731, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101338, E'Pencils', E'Bút Chì', 100731, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101339, E'Eraser & Correction Supplies', E'Dụng Cụ Tẩy Xóa', 100731, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101340, E'Markers', E'Bút Lông Màu', 100731, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101341, E'Highlighters', E'Bút Dạ Quang', 100731, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101342, E'Others', E'Khác', 100731, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101343, E'Writing Boards & Board Stands', E'Bảng Viết & Giá Treo Bảng', 100732, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101344, E'Calculators', E'Máy tính cầm tay', 100732, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101345, E'Pen Knives & Paper Cutters', E'Dao Rọc Giấy & Máy Cắt Giấy', 100732, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101346, E'Strings & Tapes', E'Dây & Băng Keo Dán', 100732, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101347, E'Glues', E'Hồ Dán', 100732, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101348, E'Label Printers', E'Máy In Nhãn', 100732, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101349, E'Lanyards & Name Tags', E'Dây Đeo Thẻ & Thẻ Tên', 100732, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101350, E'Clips, Pins & Tacks', E'Kẹp & Ghim Bấm', 100732, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101351, E'Hole Punchers', E'Máy Đục Lỗ', 100732, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101352, E'Scissors', E'Kéo', 100732, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101353, E'Ink Stamps & Pads', E'Mực Đóng Dấu', 100732, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101354, E'Staplers & Staples', E'Đồ Bấm Kim và Kim Bấm', 100732, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101355, E'Calendars', E'Lịch', 100732, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101356, E'Folders, Paper Organizers & Accessories', E'Dụng Cụ Lưu Trữ Giấy Tờ', 100732, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101357, E'Rulers, Protractors & Stencils', E'Thước Các Loại & Giấy Nến', 100732, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101358, E'Sharpeners', E'Gọt bút chì', 100732, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101359, E'Pencil Cases', E'Hộp Bút', 100732, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101360, E'Others', E'Khác', 100732, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101361, E'Color Pencils', E'Bút Chì Màu', 100733, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101362, E'Crayons & Pastels', E'Bút Màu & Phấn Màu', 100733, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101363, E'Water & Poster Colours', E'Màu Nước', 100733, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101364, E'Oil Paint', E'Sơn Dầu', 100733, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101365, E'Acrylic Paint', E'Sơn Acrylic', 100733, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101366, E'Paint Brushes', E'Cọ Vẽ', 100733, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101367, E'Paint Palettes', E'Bảng Màu', 100733, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101368, E'Canvases & Easels', E'Vải & Giá Vẽ', 100733, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101369, E'Sketch Books', E'Sổ vẽ phác thảo', 100733, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101370, E'Others', E'Khác', 100733, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101371, E'Bookmarks', E'Đánh Dấu Trang', 100734, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101372, E'Book Covers', E'Bọc Sách', 100734, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101373, E'Thermal Paper & Continuous Paper', E'Giấy Nhiệt', 100734, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101374, E'Printing & Photocopy Paper', E'Giấy In', 100734, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101375, E'Loose Leaf', E'Ruột Sổ', 100734, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101376, E'Memo & Sticky Notes', E'Giấy Ghi Chú', 100734, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101377, E'Art Paper & Boards', E'Giấy Mỹ Thuật', 100734, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101378, E'Notebooks & Notepads', E'Tập, Vở Các Loại', 100734, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101379, E'Labels & Stickers', E'Nhãn Dán Các Loại', 100734, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101380, E'Others', E'Khác', 100734, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101381, E'Envelopes & Angpao', E'Phong Bì & Bao Lì Xì', 100735, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101382, E'Post Cards', E'Bưu Thiếp', 100735, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101383, E'Postage Stamps & Duty Stamps', E'Tem Các Loại', 100735, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101384, E'Others', E'Khác', 100735, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101385, E'Action Figurines', E'Mô hình nhân vật', 100737, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101386, E'Statues & Sculptures', E'Tượng tĩnh', 100737, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101387, E'Mecha Models & Diecast', E'Mô hình mecha/gundam', 100737, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101388, E'Vehicle Models & Diecast', E'Mô hình xe', 100737, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101390, E'Idol Collectibles', E'Bộ sưu tập nhân vật nổi tiếng', 100737, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101391, E'Sports Collectibles', E'Bộ sưu tập thể thao', 100737, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101392, E'Anime & Manga Collectibles', E'Bộ sưu tập hoạt hình truyện tranh', 100737, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101393, E'Coins', E'Tiền xu & tiền giấy sưu tầm', 100737, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101394, E'Others', E'Khác', 100737, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101395, E'Hand Fans', E'Quạt Cầm Tay', 100738, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101396, E'Keychains', E'Móc khóa', 100738, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101397, E'Coin Banks', E'Ống tiết kiệm', 100738, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101398, E'Fridge Magnets', E'Nam Châm', 100738, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101399, E'Others', E'Khác', 100738, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101400, E'Dice, Board & Card Games', E'Đồ chơi thẻ bài & boardgame', 100739, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101401, E'Magic Toys', E'Đồ chơi ảo thuật', 100739, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101402, E'Prank Toys', E'Đồ chơi chọc ghẹo', 100739, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101403, E'Rubik''s Cubes', E'Đồ chơi rubik', 100739, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101404, E'Spinning Tops', E'Đồ chơi con xoay', 100739, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101405, E'Kendamas', E'Kendama', 100739, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101406, E'Yo-yos', E'Yo yo', 100739, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101407, E'Remote Control Toys & Accessories', E'Đồ chơi điều khiển từ xa', 100739, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101408, E'Capsule Toys', E'Đồ chơi trứng', 100739, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101409, E'Others', E'Khác', 100739, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101410, E'Keyboards & Pianos', E'Đàn Piano & Organ', 100741, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101411, E'Percussion Instruments', E'Nhạc Cụ Gõ', 100741, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101412, E'Wind Instruments', E'Sáo, kèn', 100741, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101413, E'Music Accessories', E'Phụ Kiện Âm Nhạc', 100741, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101414, E'Others', E'Khác', 100741, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101415, E'Navigation & AV Receivers', E'Thiết bị định vị và Hệ thống hình ảnh/âm thanh', 100747, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101416, E'Amplifiers, Speakers & Subwoofers', E'Hệ thống loa', 100747, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101417, E'Organizers & Compartments', E'Dụng cụ chứa', 100747, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101418, E'Perfumes, Air Fresheners & Purifiers', E'Nước hoa, Nước hoa khử mùi, Thiết bị lọc không khí', 100747, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101419, E'Carpets & Mats', E'Thảm & Đệm lót', 100747, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101420, E'Seat Headrests & Back Supports', E'Gối tựa đầu & lưng', 100747, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101421, E'Car Mattresses', E'Nệm giường ô tô', 100747, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101422, E'Steering Wheels & Covers', E'Vô lăng & Bọc vô lăng', 100747, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101423, E'Seats & Seat Covers', E'Ghế & Áo ghế', 100747, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101424, E'Phone Holders', E'Giá đỡ điện thoại', 100747, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101425, E'USB Chargers, FM & Bluetooth Transmitters', E'Cốc sạc USB, Thiết bị thu phát FM & Bluetooth', 100747, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101426, E'Pedals & Gear Sticks', E'Chân ga và Cần số', 100747, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101427, E'Sun Shields & Dash Covers', E'Tấm che nắng và Thảm Taplo', 100747, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101428, E'Locks & Security', E'Khóa và thiết bị chống trộm', 100747, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101429, E'Camcorders & Parking Cameras', E'Camera hành trình & Camera lùi', 100747, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101430, E'HUD, Speedometers & Gauges', E'HUD, Đồng hồ tốc độ, Đồng hồ số', 100747, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101431, E'Others', E'Khác', 100747, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101432, E'Garnish', E'Nẹp viền', 100748, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101433, E'Antennas', E'Ăng-ten thu phát sóng', 100748, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101434, E'Covers', E'Bạt phủ', 100748, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101435, E'Stickers, Logos & Emblems', E'Hình dán, logo, huy hiệu', 100748, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101436, E'Mud Flaps & Splash Guards', E'Tấm chắn bùn', 100748, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101437, E'Sill Plates', E'Nẹp cửa chống trầy', 100748, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101438, E'Gutters', E'Rãnh thoát nước mưa', 100748, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101439, E'Horns & Accessories', E'Còi & phụ kiện', 100748, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101440, E'Mirrors & Accessories', E'Gương & Phụ kiện', 100748, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101441, E'License Plate Accessories', E'Phụ kiện biển số', 100748, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101442, E'Others', E'Khác', 100748, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101443, E'Body, Frame & Bumpers', E'Hệ thống khung xe và giảm sóc', 100749, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101444, E'Windshield Wipers & Washers', E'Cần gạt nước & vòng đệm kính chắn gió', 100749, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101445, E'Exhaust & Emissions', E'Hệ thống khí xả', 100749, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101446, E'Wheels, Rims & Accessories', E'Bánh xe, Vành & Phụ kiện', 100749, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101447, E'Tires & Accessories', E'Lốp & Phụ kiện', 100749, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101448, E'Shocks, Struts & Suspension', E'Giảm xóc, thanh chống và hệ thống treo', 100749, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101449, E'Radiators, Engine Cooling & Climate Control', E'Bộ tản nhiệt, Làm mát động cơ & Kiểm soát nhiệt', 100749, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101450, E'Drivetrain, Transmission & Clutches', E'Hệ thống truyền động, hộp số & ly hợp', 100749, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101451, E'Bearing & Seals', E'Vòng bi & con dấu', 100749, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101452, E'Engine Parts', E'Bộ phận động cơ', 100749, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101453, E'Brake System', E'Hệ thống phanh', 100749, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101454, E'Belts, Hoses & Pulleys', E'Dây chuyền động', 100749, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101455, E'Electronics', E'Thiết bị điện tử', 100749, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101456, E'Fuel System', E'Hệ thống xử lý nhiên liệu', 100749, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101457, E'Others', E'Khác', 100749, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101458, E'Test, Diagnostic & Repair Tools', E'Dụng cụ Kiểm tra, chẩn đoán & sửa chữa', 100750, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101459, E'Tire Pressure Detectors', E'Máy đo áp suất lốp', 100750, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101460, E'Others', E'Khác', 100750, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101461, E'Wash & Waxes', E'Dung dịch tẩy rửa', 100751, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101462, E'Glass Care & Water Repellents', E'Rửa kính & Chất chống bám nước', 100751, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101463, E'Interior Care', E'Chăm sóc nội thất', 100751, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101464, E'Tire & Wheel Care', E'Chăm sóc lốp & vành', 100751, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101465, E'Polish, Coating & Sealants', E'Đánh bóng, sơn phủ & chất làm kín', 100751, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101466, E'Others', E'Khác', 100751, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101467, E'Oils', E'Dầu', 100752, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101468, E'Fuel Additives & Savers', E'Phụ gia', 100752, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101469, E'Greases & Lubricants', E'Mỡ & Chất bôi trơn', 100752, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101470, E'Antifreezes & Coolants', E'Chất chống đông & chất làm mát', 100752, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101471, E'Automotive Fluids', E'Dầu máy', 100752, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101472, E'Others', E'Khác', 100752, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101473, E'Carpets', E'Lót sàn', 100756, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101474, E'Speedometers, Odometers & Gauges', E'Đồng hồ đo', 100756, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101475, E'Covers', E'Bạt phủ', 100756, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101476, E'Stickers, Logos & Emblems', E'Hình dán, logo, huy hiệu', 100756, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101477, E'Seats & Seat Covers', E'Ghế & bọc ghế', 100756, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101478, E'Mirrors & Accessories', E'Gương và phụ kiện', 100756, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101479, E'Locks & Security', E'Khóa và thiết bị chống trộm', 100756, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101480, E'Boxes & Cases', E'Thùng chứa đồ', 100756, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101481, E'Phone Holders', E'Giá đỡ điện thoại', 100756, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101482, E'Mud Flaps & Splash Guards', E'Tấm chắn bùn', 100756, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101483, E'Others', E'Khác', 100756, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101484, E'Ignition & Engine Parts', E'Bộ phận đánh lửa & động cơ', 100757, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101485, E'Fuel System', E'Hệ thống xử lý nhiên liệu', 100757, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101486, E'Brake System', E'Hệ thống phanh', 100757, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101487, E'Shocks, Struts & Suspension', E'Hệ thống giảm xóc', 100757, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101488, E'Drivetrain, Transmission & Clutches', E'Hệ thống dẫn động', 100757, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101489, E'Batteries & Accessories', E'Pin & Phụ kiện', 100757, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101490, E'Horns & Accessories', E'Còi & Phụ kiện', 100757, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101491, E'Cables & Tubes', E'Dây cáp & Ống', 100757, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101492, E'Body & Frame', E'Hệ thống khung xe', 100757, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101493, E'Exhaust & Emissions', E'Hệ thống khí xả', 100757, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101494, E'Wheels, Rims & Accessories', E'Bánh xe, Vành & Phụ kiện', 100757, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101495, E'Tires & Accessories', E'Lốp xe & Phụ kiện', 100757, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101496, E'Lighting', E'Đèn', 100757, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101497, E'Others', E'Khác', 100757, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101498, E'Theme Parks & Attractions', E'Công viên giải trí', 100760, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101499, E'Events, Fairs & Conferences', E'Sự kiện & Hội thảo', 100760, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101500, E'Movies', E'Vé xem phim - Kịch', 100760, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101501, E'Concerts & Exhibitions', E'Hòa nhạc & Triển lãm', 100760, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101502, E'Others', E'Khác', 100760, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101503, E'Dine-in & Takeaway', E'Ăn tại chỗ & Mang đi', 100761, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101504, E'Food Delivery', E'Giao thức ăn', 100761, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101505, E'Others', E'Khác', 100761, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101506, E'Malls & Department Stores', E'Trung tâm thương mại', 100762, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101507, E'Supermarkets', E'Siêu thị', 100762, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101508, E'Others', E'Khác', 100762, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101509, E'Housekeeping', E'Dọn dẹp nhà cửa', 100764, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101510, E'Delivery & Moving', E'Giao & Vận chuyển hàng hóa', 100764, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101511, E'Insurance', E'Bảo hiểm', 100764, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101512, E'Air-Conditioning Servicing', E'Lắp đặt sửa chữa máy lạnh', 100764, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101513, E'Photography & Printing', E'Gói chụp hình', 100764, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101514, E'Others', E'Khác', 100764, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101515, E'Health', E'Chăm sóc sức khỏe', 100765, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101516, E'Dental', E'Nha khoa', 100765, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101517, E'Fitness', E'Gym & Yoga', 100765, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101518, E'Hair', E'Salon tóc', 100765, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101519, E'Spa & Massage', E'Spa & Massage', 100765, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101520, E'Others', E'Khác', 100765, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101521, E'Internet & Cable TV', E'Internet & Truyền hình cáp', 100768, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101522, E'Mobile Data', E'Gói data 3G/4G', 100768, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101523, E'Mobile Top-ups & Pre-paid', E'Nạp trực tiếp & Mua mã thẻ', 100768, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101524, E'Others', E'Khác', 100768, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101525, E'Accommodation', E'Đặt phòng', 100769, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101526, E'Hot Springs', E'Suối nước nóng', 100769, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101527, E'Flights', E'Vé máy bay', 100769, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101528, E'Trains', E'Vé tàu lửa', 100769, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101529, E'Buses', E'Vé xe buýt', 100769, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101530, E'Car Rentals', E'Thuê phương tiện', 100769, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101531, E'Tour & Packages', E'Tour du lịch', 100769, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101532, E'Others', E'Khác', 100769, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101533, E'Shopee Official', E'Shopee Official', 100774, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101534, E'Shopee Paid Ads Credits', E'Phí quảng cáo Shopee', 100774, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101535, E'Others', E'Khác', 100774, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101536, E'Business', E'Tạp Chí Kinh Tế', 100776, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101537, E'Lifestyle', E'Tạp Chí Đời Sống', 100776, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101538, E'Teenager', E'Tạp Chí Tuổi Teen', 100776, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101539, E'Others', E'Khác', 100776, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101540, E'Comics & Manga', E'Truyện Tranh', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101541, E'Children''s Books', E'Sách Thiếu Nhi', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101542, E'Agriculture, Forestry & Fishery', E'Sách Nông - Lâm - Ngư Nghiệp', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101543, E'Adult''s Books', E'Sách Người Lớn', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101544, E'Arts, Design & Photography', E'Sách Nghệ thuật, Thiết kế & Nhiếp ảnh', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101545, E'Recipes & Cooking', E'Sách Dạy Nấu Ăn', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101546, E'Business & Investment', E'Sách Kinh Tế - Kinh Doanh', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101547, E'Politics, Law & Social Sciences', E'Sách Chính Trị - Pháp Lý & Khoa Học', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101548, E'Computers & Technology', E'Sách Công Nghệ Thông Tin', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101549, E'Health, Fitness & Dieting', E'Sách Sức Khỏe, Rèn Luyện & Ăn Kiêng', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101550, E'Travel & Tourism', E'Sách Du Lịch - Du Ký', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101551, E'Language Learning & Dictionaries', E'Sách Học Ngoại Ngữ & Từ Điển', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101552, E'Hobbies', E'Sách Sở Thích Cá Nhân', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101553, E'LGBTQ+ Literature', E'Văn Học LGBTQ+', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101554, E'Light Novels', E'Light Novels', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101555, E'Classic Literature', E'Văn Học Kinh Điển', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101556, E'Fantasy', E'Văn Học Giả Tưởng', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101557, E'Action, Crime & Thrillers', E'Văn Học Hành Động, Tội Phạm & Kinh Dị', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101558, E'Romance', E'Văn Học Lãng Mạn', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101559, E'Biography & Memoirs', E'Tiểu Sử - Hồi Ký', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101560, E'Science & Maths', E'Khoa Học - Toán Học', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101561, E'Medical', E'Sách Y Học', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101562, E'Parenting & Family', E'Sách Gia Đình', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101563, E'Psychology & Relationships', E'Sách Tâm Lý Học', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101564, E'Religion & Philosophy', E'Sách Tôn giáo & Triết học', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101565, E'History & Cultures', E'Sách Lịch Sử - Văn Hóa', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101566, E'Careers, Self Help & Personal Development', E'Sách Hướng Nghiệp & Phát Triển Bản Thân', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101567, E'Horoscopes', E'Sách Chiêm Tinh', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101568, E'Education & School', E'Sách Giáo Dục', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101569, E'Sticker & Colouring Books', E'Sách Hình Dán & Tô Màu', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101570, E'Music', E'Sách Âm Nhạc', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101571, E'Baby & Soft Books', E'Sách Vải', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101572, E'Audio Books', E'Sách Nói', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101573, E'Others', E'Khác', 100777, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101944, E'Desktop PC', E'Bộ Máy Tính Bàn', 101932, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101945, E'Mini PC', E'Máy Tính Mini', 101932, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101946, E'Server PC', E'Máy Chủ', 101932, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101947, E'All-in-One Desktops', E'Máy Tính All in one', 101932, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101948, E'Others', E'Khác', 101932, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101949, E'Fans & Heatsinks', E'Quạt và Tản Nhiệt', 101934, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101950, E'Processors', E'CPU - Bộ Vi Xử Lý', 101934, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101951, E'Motherboards', E'Mainboard - Bo Mạch Chủ', 101934, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101952, E'Graphics Cards', E'VGA - Card Màn Hình', 101934, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101953, E'Thermal Paste', E'Keo Tản Nhiệt', 101934, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101954, E'Power Supply Units', E'Nguồn Máy Tính', 101934, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101955, E'RAM', E'Ram Máy Tính', 101934, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101956, E'UPS & Stabilizers', E'Bộ Lưu Điện', 101934, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101957, E'PC Cases', E'Case Máy Tính', 101934, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101958, E'Optical Drives', E'Ổ Đĩa Quang', 101934, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101959, E'Sound Cards', E'Bo Mạch Âm Thanh', 101934, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101960, E'Others', E'Khác', 101934, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101961, E'Hard Drives', E'Ổ Cứng Di Động', 101935, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101962, E'SSD', E'Ổ Cứng SSD', 101935, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101963, E'Network Attached Storage (NAS)', E'Ổ Cứng Mạng (NAS)', 101935, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101964, E'Flash Drives & OTG', E'USB & OTG', 101935, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101965, E'Hard Disk Casings & Dockings', E'Thiết Bị Đựng Ổ Cứng', 101935, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101966, E'Compact Discs', E'Đĩa CD', 101935, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101967, E'Others', E'Khác', 101935, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101968, E'Modems & Wireless Routers', E'Bộ Phát Wifi', 101936, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101969, E'Repeaters', E'Bộ Kích Wifi', 101936, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101970, E'Wireless Adapters & Network Cards', E'Bộ Thu Wifi', 101936, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101971, E'Powerline Adapters', E'Bộ Chuyển Đổi Mạng', 101936, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101972, E'Network Switches & PoE', E'Bộ chia mạng', 101936, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101973, E'Network Cables & Connectors', E'Cáp Máy Tính', 101936, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101974, E'KVM Switches', E'Bộ Chuyển Mạch KVM', 101936, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101975, E'Print Servers', E'Máy Chủ Máy In', 101936, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101976, E'Others', E'Khác', 101936, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101977, E'Typewriters', E'Máy Đánh Chữ', 101938, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101978, E'Absence Machines', E'Máy Chấm Công', 101938, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101979, E'Paper Shredders', E'Máy Hủy Tài Liệu', 101938, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101980, E'Money Counters', E'Máy Đếm Tiền', 101938, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101981, E'Others', E'Khác', 101938, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101982, E'Printers, Scanners & Photocopy Machines', E'Máy In, Máy Scan & Máy Photo', 101939, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101983, E'Thermal & Barcode Printers', E'Máy In Mã Vạch', 101939, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101984, E'Inks & Toners', E'Mực In & Khay Mực', 101939, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101985, E'3D Printers', E'Máy In 3D', 101939, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101986, E'Others', E'Khác', 101939, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101987, E'USB Hubs & Card Readers', E'Bộ chia cổng USB & Đọc thẻ nhớ', 101940, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101988, E'Webcams', E'Webcam', 101940, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101989, E'Laptop Skins & Covers', E'Miếng Dán & Ốp Laptop', 101940, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101990, E'Cooling Pads', E'Đế Tản Nhiệt', 101940, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101991, E'Laptop Stands & Foldable Laptop Desks', E'Bàn Laptop', 101940, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101992, E'Keyboard & Trackpad Covers', E'Miếng Dán Bàn Phím', 101940, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101993, E'Laptop Batteries', E'Pin Laptop', 101940, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101994, E'Laptop Chargers & Adaptors', E'Bộ Sạc Laptop', 101940, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101995, E'Video Conference Devices', E'Thiết Bị Truyền Hình Hội Nghị', 101940, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101996, E'Mouse Pads', E'Bàn Di Chuột', 101940, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101997, E'Others', E'Khác', 101940, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101998, E'Mice', E'Chuột Máy Tính', 101941, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(101999, E'Keyboards', E'Bàn Phím Máy Tính', 101941, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102000, E'Drawing Tablets', E'Bảng Vẽ Điện Tử', 101941, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102001, E'Others', E'Khác', 101941, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102003, E'Body Wash & Soap', E'Xà phòng & sữa tắm', 102002, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102004, E'Body Scrub & Peel', E'Tẩy tế bào chết cơ thể', 102002, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102005, E'Body Masks', E'Mặt nạ ủ cơ thể', 102002, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102006, E'Body Oil', E'Dầu dưỡng da', 102002, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102007, E'Body Cream, Lotion & Butter', E'Kem & sữa dưỡng thể', 102002, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102008, E'Body Deodorants', E'Khử mùi cơ thể', 102002, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102009, E'Massage Oil', E'Dầu massage', 102002, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102010, E'Hair Removal Cream & Wax', E'Kem tẩy lông & wax lông', 102002, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102011, E'Sun Care', E'Chống nắng', 102002, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102012, E'Breast Care', E'Chăm sóc ngực', 102002, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102013, E'Others', E'Khác', 102002, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102017, E'String Instruments', E'Nhạc Cụ Dây', 100741, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102036, E'Design', E'Thiết kế', 100764, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102056, E'ShopeePay Voucher', E'Scan & Pay Voucher', 102054, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102057, E'Deal Voucher', E'Deal', 102055, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102070, E'Ready-to-Drink Milk', E'Sữa pha sẵn', 100681, NULL);
-INSERT INTO categories("Id", "Name", "DisplayName", "ParentId", "FileImageId") VALUES
-(102094, E'Digital Products', E'Nạp Tiền, Hóa Đơn, Phim & Khác', 100774, NULL);
+SELECT pg_catalog.setval('"categories_Id_seq"', 1, false);
+
+
+-- Completed on 2025-03-02 18:49:10
+
+--
+-- PostgreSQL database dump complete
+--
+

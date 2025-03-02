@@ -10,9 +10,9 @@ public record LoadDataFromSqlCommand : IRequest
 {
 }
 
-public class LoadDataFromSqlCommandHandler(NichoShopDbContext context) : IRequestHandler<LoadDataFromSqlCommand>
+public class LoadDataFromSqlCommandHandler(HiveSpaceDbContext context) : IRequestHandler<LoadDataFromSqlCommand>
 {
-    private readonly NichoShopDbContext _context = context;
+    private readonly HiveSpaceDbContext _context = context;
     public async Task Handle(LoadDataFromSqlCommand command, CancellationToken cancellationToken)
     {
 

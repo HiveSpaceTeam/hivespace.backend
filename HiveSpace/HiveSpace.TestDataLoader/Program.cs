@@ -30,7 +30,7 @@ internal class Program
             .ConfigureServices((context, services) =>
             {
                 var configuration = context.Configuration;
-                services.AddDbContext<NichoShopDbContext>(options =>
+                services.AddDbContext<HiveSpaceDbContext>(options =>
                     options.UseNpgsql(configuration.GetSection("Postgres:ConnectionString").Value));
 
                 services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));

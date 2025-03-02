@@ -7,9 +7,9 @@ using Npgsql;
 using System.Data;
 
 namespace HiveSpace.Application.Queries;
-public class QueryService(NichoShopDbContext dbContext) : IQueryService
+public class QueryService(HiveSpaceDbContext dbContext) : IQueryService
 {
-    private readonly NichoShopDbContext _dbContext = dbContext;
+    private readonly HiveSpaceDbContext _dbContext = dbContext;
 
     public async Task<List<CategoryViewModel>> GetCategoryViewModelsAsync()
     {
