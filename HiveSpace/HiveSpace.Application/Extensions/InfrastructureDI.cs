@@ -16,7 +16,7 @@ public static class InfrastructureDI
 
     public static IServiceCollection ConfigreDatabaseContext(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<NichoShopDbContext>(options =>
+        services.AddDbContext<HiveSpaceDbContext>(options =>
             options.UseNpgsql(configuration.GetSection("Postgres:ConnectionString").Value, b => b.MigrationsAssembly("HiveSpace.Application")));
         return services;
     }

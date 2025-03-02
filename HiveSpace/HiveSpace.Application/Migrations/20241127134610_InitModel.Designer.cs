@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace HiveSpace.Application.Migrations
 {
-    [DbContext(typeof(NichoShopDbContext))]
+    [DbContext(typeof(HiveSpaceDbContext))]
     [Migration("20241127134610_InitModel")]
     partial class InitModel
     {

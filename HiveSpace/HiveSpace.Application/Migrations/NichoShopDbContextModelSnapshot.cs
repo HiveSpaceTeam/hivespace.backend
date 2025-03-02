@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace HiveSpace.Application.Migrations
 {
-    [DbContext(typeof(NichoShopDbContext))]
+    [DbContext(typeof(HiveSpaceDbContext))]
     partial class NichoShopDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

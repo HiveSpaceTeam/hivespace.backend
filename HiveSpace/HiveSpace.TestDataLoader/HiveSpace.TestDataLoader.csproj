@@ -5,7 +5,8 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-	</PropertyGroup>
+	  <UserSecretsId>8457dea5-07b3-4374-ad0e-243922cea5a5</UserSecretsId>
+  </PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Json.NET.ContractResolverExtentions" Version="1.0.1" />

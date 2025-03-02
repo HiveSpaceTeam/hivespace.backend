@@ -11,7 +11,7 @@ using HiveSpace.Infrastructure.EntityConfigurations;
 using HiveSpace.Infrastructure.EntityConfigurations.Location;
 
 namespace HiveSpace.Infrastructure;
-public class NichoShopDbContext(DbContextOptions<NichoShopDbContext> options, IConfiguration configuration) : DbContext(options)
+public class HiveSpaceDbContext(DbContextOptions<HiveSpaceDbContext> options, IConfiguration configuration) : DbContext(options)
 {
 
     private IConfiguration _configuration = configuration;
