@@ -9,6 +9,7 @@ public static class SetupOption
     {
         services.Configure<JwtOptions>(configuration.GetSection(nameof(JwtOptions)));
         services.Configure<AppConfig>(configuration.GetSection(nameof(AppConfig)));
+        services.Configure<RedisOption>(configuration.GetSection("Redis"));
         return services;
     }
 }
