@@ -1,7 +1,6 @@
-﻿namespace HiveSpace.Application.Models.AppSettings
+﻿namespace HiveSpace.Application.Models.AppSettings;
+
+public class AppConfig
 {
-    public class AppConfig
-    {
-        public string[] Cors { get; set; }
-    }
+    public string[] Cors { get; set; } = [];
 }

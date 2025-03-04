@@ -16,6 +16,7 @@ using HiveSpace.Common.Service;
 using HiveSpace.Commons.Models;
 using NLog.Extensions.Logging;
 using System.Text;
+using StackExchange.Redis;
 
 namespace HiveSpace.Application.Extensions;
 
@@ -36,6 +37,7 @@ public static class ApplicationDI
         services.ConfigureAuthencation(configuration);
         services.ConfigureQuery();
         services.ConfigureCors(configuration);
+        services.ConfigureCache(configuration);
         return services;
     }
 
@@ -131,6 +133,19 @@ public static class ApplicationDI
     public static IServiceCollection ConfigureQuery(this IServiceCollection services)
     {
         services.AddScoped<IQueryService, QueryService>();
+        return services;
+    }
+
+    public static IServiceCollection ConfigureCache(this IServiceCollection services, IConfiguration configuration)
+    {
+        var redisOption = configuration.GetSection("Redis").Get<RedisOption>();
+        if (redisOption is null) return services;
+
+        services.AddMemoryCache();
+        services.AddSingleton<IConnectionMultiplexer>(sp =>
+            ConnectionMultiplexer.Connect(redisOption.ConnectionString));
+        services.AddSingleton<IDatabase>(sp =>
+            sp.GetRequiredService<IConnectionMultiplexer>().GetDatabase());
         return services;
     }
 }
