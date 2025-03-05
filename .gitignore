@@ -23,3 +23,4 @@
 /HiveSpace/HiveSpace.Application/.config
 /HiveSpace/HiveSpace.TestDataLoader/bin/Release/net8.0
 /.vs/hivespace.backend/config/applicationhost.config
+/.vs
