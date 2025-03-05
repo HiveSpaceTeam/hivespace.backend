@@ -22,10 +22,11 @@ public class UserAddressService : IUserAddressService
         _redisService = redisService;
     }
 
+    private string CacheKey(Guid userId) => $"userAddress_{userId}";
+
     public async Task<List<UserAddressDto>> GetUserAddressAsync()
     {
-        var cacheKey = $"userAddress_{_userContext.UserId}";
-        var result = await _redisService.GetOrCreateAsync(cacheKey, async () =>
+        var result = await _redisService.GetOrCreateAsync(CacheKey(_userContext.UserId), async () =>
         {
             var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true) ?? throw new NotFoundException("i18nUser.messages.notFoundUser");
             var userAddresses = user.Addresses.ToList();
@@ -51,6 +52,7 @@ public class UserAddressService : IUserAddressService
         };
         var address = user.AddAddress(userAddressProp);
         await _userRepository.SaveChangesAsync();
+        await _redisService.RemoveAsync(CacheKey(_userContext.UserId));
         return address.Id;
     }
 
@@ -74,6 +76,7 @@ public class UserAddressService : IUserAddressService
             };
             user.UpdateAddress(userAddressId, userAddressProp);
             await _userRepository.SaveChangesAsync();
+            await _redisService.RemoveAsync(CacheKey(_userContext.UserId));
             return true;
         }
         return false;
