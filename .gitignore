@@ -22,3 +22,5 @@
 /HiveSpace/obj/Docker
 /HiveSpace/HiveSpace.Application/.config
 /HiveSpace/HiveSpace.TestDataLoader/bin/Release/net8.0
+/.vs/hivespace.backend
+/.vs/VSWorkspaceState.json
