@@ -77,6 +77,7 @@ public static class ApplicationDI
         services.AddScoped<ISkuService, SkuSerive>();
         services.AddScoped<IOrderService, OrderService>();
         services.AddScoped<ICacheService, CacheService>();
+        services.AddScoped<ITransactionService, TransactionService>();
         return services;
     }
 
