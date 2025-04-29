@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace HiveSpace.Application.Migrations
 {
     [DbContext(typeof(HiveSpaceDbContext))]
-    partial class NichoShopDbContextModelSnapshot : ModelSnapshot
+    partial class HiveSpaceDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
