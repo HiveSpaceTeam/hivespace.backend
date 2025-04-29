@@ -2,6 +2,8 @@
 using HiveSpace.Domain.Repositories;
 using HiveSpace.Infrastructure;
 using HiveSpace.Infrastructure.Repositories;
+using HiveSpace.Domain.SeedWork;
+using HiveSpace.Infrastructure.Interceptors;
 
 namespace HiveSpace.Application.Extensions;
 
@@ -16,8 +18,9 @@ public static class InfrastructureDI
 
     public static IServiceCollection ConfigreDatabaseContext(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<HiveSpaceDbContext>(options =>
-            options.UseNpgsql(configuration.GetSection("Postgres:ConnectionString").Value, b => b.MigrationsAssembly("HiveSpace.Application")));
+        services.AddDbContext<HiveSpaceDbContext>((sp, options) =>
+            options.UseNpgsql(configuration.GetSection("Postgres:ConnectionString").Value, b => b.MigrationsAssembly("HiveSpace.Application"))
+                   .AddInterceptors(sp.GetRequiredService<SoftDeleteInterceptor>(), sp.GetRequiredService<UpdateAuditableInterceptor>()));
         return services;
     }
 

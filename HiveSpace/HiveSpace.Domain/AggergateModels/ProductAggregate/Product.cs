@@ -3,7 +3,7 @@ using HiveSpace.Domain.Enums;
 using HiveSpace.Domain.SeedWork;
 
 namespace HiveSpace.Domain.AggergateModels.ProductAggregate;
-public class Product : AggregateRoot<int>, IAuditable
+public class Product : AggregateRoot<int>, IAuditable, ISoftDeletable
 {
     public string Name { get; private set; } = default!;
 
@@ -31,6 +31,9 @@ public class Product : AggregateRoot<int>, IAuditable
 
     private readonly List<Sku> _skus = [];
     public IReadOnlyCollection<Sku> Skus => _skus.AsReadOnly();
+
+    public bool IsDeleted { get; set; }
+    public DateTimeOffset? DeletedAt { get; set; }
 
     private Product()
     {

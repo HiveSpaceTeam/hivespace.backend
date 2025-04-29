@@ -1,8 +1,9 @@
 ﻿using HiveSpace.Domain.Seedwork;
+using HiveSpace.Domain.SeedWork;
 using HiveSpace.Domain.Shared;
 
 namespace HiveSpace.Domain.AggergateModels.UserAggregate;
-public class UserAddress : Entity<Guid>
+public class UserAddress : Entity<Guid>, IAuditable
 {
     public string FullName { get; private set; }
 
@@ -21,6 +22,10 @@ public class UserAddress : Entity<Guid>
     public PhoneNumber PhoneNumber { get; private set; }
 
     public bool IsDefault { get; private set; } = false;
+
+    public DateTimeOffset CreatedAt { get; private set; }
+
+    public DateTimeOffset? UpdatedAt { get; private set; }
 
     private UserAddress() { }
 
