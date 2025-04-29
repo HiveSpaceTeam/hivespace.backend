@@ -3,6 +3,7 @@ using System;
 using HiveSpace.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace HiveSpace.Application.Migrations
 {
     [DbContext(typeof(HiveSpaceDbContext))]
-    partial class NichoShopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250429141316_AddAuditableSoftDelete")]
+    partial class AddAuditableSoftDelete
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

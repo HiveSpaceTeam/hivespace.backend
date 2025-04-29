@@ -130,4 +130,16 @@ public abstract class BaseRepository<TEntity, TKey>(HiveSpaceDbContext context) 
     {
         return await _context.SaveChangesAsync(cancellationToken);
     }
+
+    public void UpdateWithConcurrency<T>(T entity, DateTimeOffset originalDateTimeUpdated, DateTimeOffset newDateTimeUpdated) where T : TEntity, IAuditable
+    {
+        _context.Entry(entity).OriginalValues[nameof(entity.UpdatedAt)] = originalDateTimeUpdated;
+        _context.Entry(entity).CurrentValues[nameof(entity.UpdatedAt)] = newDateTimeUpdated;
+        _context.Set<T>().Update(entity);
+    }
+
+    public void UpdateWithConcurrency<T>(T entity, DateTimeOffset originalDateTimeUpdated) where T : TEntity, IAuditable
+    {
+        UpdateWithConcurrency(entity, originalDateTimeUpdated, DateTimeOffset.UtcNow);
+    }
 }
