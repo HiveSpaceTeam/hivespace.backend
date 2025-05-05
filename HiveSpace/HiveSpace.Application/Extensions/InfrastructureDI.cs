@@ -11,8 +11,17 @@ public static class InfrastructureDI
 {
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
     {
-        services.ConfigreDatabaseContext(configuration);
         services.ConfigureRepositories();
+        services.ConfigureEfcoreInterceptor();
+        services.ConfigreDatabaseContext(configuration);
+        return services;
+    }
+
+
+    public static IServiceCollection ConfigureEfcoreInterceptor(this IServiceCollection services)
+    {
+        services.AddScoped<SoftDeleteInterceptor>();
+        services.AddScoped<UpdateAuditableInterceptor>();
         return services;
     }
 
