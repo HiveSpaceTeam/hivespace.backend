@@ -37,9 +37,9 @@ namespace HiveSpace.Application.Services
             return await _queryService.GetProductSearchViewModelAsync(param);
         }
 
-        public async Task<List<ProductHomeViewModel>> GetProductHomeViewModelAsync(ProductHomeRequestDto param)
+        public async Task<List<ProductHomeViewModel>> GetProductHomeViewModelAsync(int pageSize, int pageIndex)
         {
-            return await _queryService.GetProductHomeViewModelAsync(param);
+            return await _queryService.GetProductHomeViewModelAsync(pageSize, pageIndex);
         }
 
         public async Task<List<ProductsByCategoryDto>> GetProductsByCategoryAsync(int categoryId)
