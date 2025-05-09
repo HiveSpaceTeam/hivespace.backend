@@ -47,9 +47,9 @@ namespace HiveSpace.Application.Controllers
             return Ok(result);
         }
 
-        [HttpPost("home")]
+        [HttpGet("home={isHome}&pageSize={pageSize}&pageIndex={pageIndex}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetProductHomeViewModel([FromBody] ProductHomeRequestDto param)
+        public async Task<IActionResult> GetProductHomeViewModel(bool isHome = false, int pageSize = 50, int pageIndex = 0)
         {
             var validationResult = _productHomeValidator.Validate(param);
             if (!validationResult.IsValid)
@@ -61,7 +61,7 @@ namespace HiveSpace.Application.Controllers
             return Ok(result);
         }
 
-        [HttpGet("by-category/{categoryId}")]
+        [HttpGet("categoryId={categoryId}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<IActionResult> GetProductsByCategory(int categoryId)
         {
