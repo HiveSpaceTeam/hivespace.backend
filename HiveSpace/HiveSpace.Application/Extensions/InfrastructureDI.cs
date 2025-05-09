@@ -17,7 +17,6 @@ public static class InfrastructureDI
         return services;
     }
 
-
     public static IServiceCollection ConfigureEfcoreInterceptor(this IServiceCollection services)
     {
         services.AddScoped<SoftDeleteInterceptor>();

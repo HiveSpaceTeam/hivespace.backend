@@ -91,6 +91,7 @@ public class UserAddressService : IUserAddressService
         {
             user.SetDefaultAddress(userAddressId);
             await _userRepository.SaveChangesAsync();
+            await _redisService.RemoveAsync(CacheKey(_userContext.UserId));
             return true;
         }
         return false;
@@ -105,6 +106,7 @@ public class UserAddressService : IUserAddressService
         {
             user.RemoveAddress(userAddressId);
             await _userRepository.SaveChangesAsync();
+            await _redisService.RemoveAsync(CacheKey(_userContext.UserId));
             return true;
         }
         return false;

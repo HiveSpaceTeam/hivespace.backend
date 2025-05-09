@@ -208,12 +208,12 @@ public class QueryService(HiveSpaceDbContext dbContext) : IQueryService
         return res;
     }
 
-    public async Task<List<ProductHomeViewModel>> GetProductHomeViewModelAsync(ProductHomeRequestDto param)
+    public async Task<List<ProductHomeViewModel>> GetProductHomeViewModelAsync(int pageSize, int pageIndex)
     {
         List<ProductHomeViewModel> res = new List<ProductHomeViewModel>();
 
         // Handle offset
-        int offSet = param.PageSize * (param.PageIndex - 1);
+        int offSet = pageSize * (pageIndex - 1);
 
         string query = $@"
             WITH first_sku_per_product
@@ -233,7 +233,7 @@ public class QueryService(HiveSpaceDbContext dbContext) : IQueryService
               LEFT JOIN first_sku_per_product AS skus
                 ON p.""Id"" = skus.""ProductId""
                 AND skus.rn = 1
-            LIMIT {param.PageSize} 
+            LIMIT {pageSize} 
             OFFSET {offSet};";
         var items = await _dbContext.Database.ExecuteSqlRawAsync(query);
 

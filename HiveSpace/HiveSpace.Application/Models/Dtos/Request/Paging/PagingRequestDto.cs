@@ -1,5 +1,4 @@
-﻿using HiveSpace.Domain.Enums;
-using HiveSpace.Domain.Shared;
+﻿using HiveSpace.Domain.Shared;
 
 namespace HiveSpace.Application.Models.Dtos.Request.Paging
 {

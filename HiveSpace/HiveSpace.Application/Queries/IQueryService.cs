@@ -9,7 +9,7 @@ public interface IQueryService
     Task<List<LocationViewModel>> GetLocationViewModelsAsync(int type, string? parentCode);
     Task<List<CartItemViewModel>> GetCartItemViewModelsAsync(Guid userId);
     Task<List<ProductSearchViewModel>> GetProductSearchViewModelAsync(ProductSearchRequestDto param);
-    Task<List<ProductHomeViewModel>> GetProductHomeViewModelAsync(ProductHomeRequestDto param);
+    Task<List<ProductHomeViewModel>> GetProductHomeViewModelAsync(int pageSize, int pageIndex);
     Task<List<ProductsByCategoryDto>> GetProductSearchViewModelAsync(int categoryId);
     Task<List<ProductCategoryViewModel>> GetCategoryTree(int categoryId);
 }

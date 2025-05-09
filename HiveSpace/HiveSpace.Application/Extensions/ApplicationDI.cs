@@ -1,22 +1,30 @@
 ﻿using FluentValidation;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
 using HiveSpace.Application.Filters;
 using HiveSpace.Application.Interfaces;
 using HiveSpace.Application.Models.AppSettings;
+using HiveSpace.Application.Models.Dtos.Request.CartItem;
+using HiveSpace.Application.Models.Dtos.Request.Paging;
+using HiveSpace.Application.Models.Dtos.Request.Product;
+using HiveSpace.Application.Models.Dtos.Request.ShoppingCart;
 using HiveSpace.Application.Models.Dtos.Request.User;
 using HiveSpace.Application.Models.Dtos.Request.UserAddress;
 using HiveSpace.Application.Queries;
 using HiveSpace.Application.Services;
+using HiveSpace.Application.Validators.Order;
+using HiveSpace.Application.Validators.Paging;
+using HiveSpace.Application.Validators.Product;
+using HiveSpace.Application.Validators.ShoppingCart;
 using HiveSpace.Application.Validators.User;
 using HiveSpace.Application.Validators.UserAddress;
 using HiveSpace.Common.Interface;
 using HiveSpace.Common.Service;
 using HiveSpace.Commons.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using NLog.Extensions.Logging;
-using System.Text;
 using StackExchange.Redis;
+using System.Text;
 
 namespace HiveSpace.Application.Extensions;
 
@@ -62,6 +70,15 @@ public static class ApplicationDI
         services.AddScoped<IValidator<CreateUserRequestDto>, CreateUserValidator>();
         services.AddScoped<IValidator<LoginRequestDto>, LoginValidator>();
         services.AddScoped<IValidator<UserAddressRequestDto>, UserAddressValidator>();
+        services.AddScoped<IValidator<ChangePasswordRequestDto>, ChangePasswordValidator>();
+        services.AddScoped<IValidator<UpdateUserRequestDto>, UpdateUserValidator>();
+        services.AddScoped<IValidator<ProductSearchRequestDto>, ProductSearchValidator>();
+        services.AddScoped<IValidator<ProductHomeRequestDto>, ProductHomeValidator>();
+        services.AddScoped<IValidator<CreateOrderRequestDto>, CreateOrderValidator>();
+        services.AddScoped<IValidator<AddItemToCartRequestDto>, AddItemToCartValidator>();
+        services.AddScoped<IValidator<UpdateCartItemRequestDto>, UpdateCartItemValidator>();
+        services.AddScoped<IValidator<UpdateMultiCartItemSelectionDto>, UpdateMultiCartItemSelectionValidator>();
+        services.AddScoped<IValidator<PagingRequestDto>, PagingValidator>();
         return services;
     }
 
