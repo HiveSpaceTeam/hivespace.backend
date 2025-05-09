@@ -48,7 +48,7 @@ public class ShoppingCartController : Controller
         return Ok(result);
     }
 
-    [HttpPut("items/multi-selection")]
+    [HttpPut("items")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
     [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
