@@ -7,7 +7,6 @@ using HiveSpace.Common.Interface;
 using HiveSpace.Common.Models;
 using HiveSpace.Domain.AggergateModels.UserAggregate;
 using HiveSpace.Domain.Enums;
-using HiveSpace.Domain.Exceptions;
 using HiveSpace.Domain.Repositories;
 
 namespace HiveSpace.Application.Services;
@@ -24,17 +23,7 @@ public class UserService(IUserRepository userRepository, IJwtService jwtService,
 
         if (user is not null)
         {
-            throw new DomainException
-            {
-                Errors =
-                [
-                    new() {
-                        Field="PhoneNumber",
-                        MessageCode="i18nUser.PhoneNumberExisted",
-                        ErrorCode=ErrorCode.PhoneNumberExisted
-                    }
-                ]
-            };
+            throw ExceptionHelper.DomainException(ApplicationErrorCode.PhoneNumberExisted, nameof(User.PhoneNumber), requestDto.PhoneNumber);
         }
 
         var passwordHashed = PasswordHelper.Hash(requestDto.Password);
@@ -44,7 +33,8 @@ public class UserService(IUserRepository userRepository, IJwtService jwtService,
             requestDto.UserName,
             null,
             null,
-            null, null);
+            null, 
+            null);
 
         _userRepository.Add(newUser);
         await _userRepository.SaveChangesAsync();
@@ -55,13 +45,14 @@ public class UserService(IUserRepository userRepository, IJwtService jwtService,
 
     public async Task<LoginResponseDto> LoginAsync(LoginRequestDto requestDto)
     {
-        var user = await _userRepository.FindUserByPhoneNumber(requestDto.PhoneNumber) ?? throw new NotFoundException("i18nAuth.messages.notFoundPhoneNumber");
+        var user = await _userRepository.FindUserByPhoneNumber(requestDto.PhoneNumber) 
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound, nameof(User.PhoneNumber), requestDto.PhoneNumber);
 
         var isVerified = PasswordHelper.Verify(requestDto.Password, user.PasswordHashed);
 
         if (!isVerified)
         {
-            throw new UnauthorizedAccessException("i18nAuth.messages.passwordIncorrect");
+            throw ExceptionHelper.DomainException(ApplicationErrorCode.IncorrectPassword);
         }
 
         var identity = new Identity
@@ -71,7 +62,7 @@ public class UserService(IUserRepository userRepository, IJwtService jwtService,
             Email = user.Email ?? "",
         };
 
-        ContextData contextData = new ContextData
+        ContextData contextData = new ()
         {
             Username = user.UserName,
             FullName = user.FullName,
@@ -81,7 +72,8 @@ public class UserService(IUserRepository userRepository, IJwtService jwtService,
 
     public async Task<bool> UpdateUserInfoAsync(UpdateUserRequestDto param)
     {
-        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true) ?? throw new NotFoundException("i18nUser.messages.notFoundUser");
+        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true)
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
 
         user.UpdateUserInfo(param.UserName, param.FullName, param.Email, param.PhoneNumber, param.Gender, param.DateOfBirth);
         await _userRepository.SaveChangesAsync();
@@ -90,23 +82,22 @@ public class UserService(IUserRepository userRepository, IJwtService jwtService,
 
     public async Task<UserInfoDto> GetUserInfoAsync()
     {
-        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true) ?? throw new NotFoundException("i18nUser.messages.notFoundUser");
+        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true)
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
         var res = _mapper.Map<UserInfoDto>(user);
         return res;
     }
 
     public async Task<bool> ChangePassword(ChangePasswordRequestDto requestDto)
     {
-        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true) ?? throw new NotFoundException("i18nUser.messages.notFoundUser");
+        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true)
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
 
         var isVerified = PasswordHelper.Verify(requestDto.Password, user.PasswordHashed);
 
         if (!isVerified)
         {
-            throw new DomainException
-            {
-                MessageCode = "i18nUser.messages.incorrectPassword"
-            };
+            throw ExceptionHelper.DomainException(ApplicationErrorCode.IncorrectPassword, nameof(user.PasswordHashed), requestDto.Password);
         }
         var passwordHashed = PasswordHelper.Hash(requestDto.NewPassword);
         user.UpdatePassword(passwordHashed);

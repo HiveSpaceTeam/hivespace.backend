@@ -33,7 +33,7 @@ public partial class PhoneNumber : ValueObject
                     new() {
                         Field="PhoneNumber",
                         MessageCode="i18nPhoneNumber.InvalidPhoneNumber",
-                        ErrorCode=ErrorCode.InvalidPhoneNumber
+                        ErrorCode=ApplicationErrorCode.InvalidPhoneNumber
                     }
                 ]
             };

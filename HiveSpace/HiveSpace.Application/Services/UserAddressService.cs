@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using HiveSpace.Application.Helpers;
 using HiveSpace.Application.Interfaces;
 using HiveSpace.Application.Models.Dtos.Request.UserAddress;
 using HiveSpace.Common.Interface;
 using HiveSpace.Domain.AggergateModels.UserAggregate;
+using HiveSpace.Domain.Enums;
 using HiveSpace.Domain.Exceptions;
 using HiveSpace.Domain.Repositories;
 
@@ -28,7 +30,8 @@ public class UserAddressService : IUserAddressService
     {
         var result = await _redisService.GetOrCreateAsync(CacheKey(_userContext.UserId), async () =>
         {
-            var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true) ?? throw new NotFoundException("i18nUser.messages.notFoundUser");
+            var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true) 
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
             var userAddresses = user.Addresses.ToList();
             var res = _mapper.Map<List<UserAddressDto>>(userAddresses);
             return res;
@@ -38,7 +41,8 @@ public class UserAddressService : IUserAddressService
 
     public async Task<Guid> CreateUserAddressAsync(UserAddressRequestDto param)
     {
-        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true) ?? throw new NotFoundException("i18nUser.messages.notFoundUser");
+        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true)
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
         var userAddressProp = new UserAddressProps()
         {
             FullName = param.FullName,
@@ -58,7 +62,8 @@ public class UserAddressService : IUserAddressService
 
     public async Task<bool> UpdateUserAddressAsync(UserAddressRequestDto param, Guid userAddressId)
     {
-        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true) ?? throw new NotFoundException("i18nUser.messages.notFoundUser");
+        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true)
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
         var userAddress = user.Addresses.FirstOrDefault(x => x.Id == userAddressId);
 
         if (userAddress is not null)
@@ -84,7 +89,8 @@ public class UserAddressService : IUserAddressService
 
     public async Task<bool> SetDefaultUserAddressAsync(Guid userAddressId)
     {
-        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true) ?? throw new NotFoundException("i18nUser.messages.notFoundUser");
+        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true)
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
         var userAddress = user.Addresses.FirstOrDefault(x => x.Id == userAddressId);
 
         if (userAddress is not null)
@@ -99,7 +105,8 @@ public class UserAddressService : IUserAddressService
 
     public async Task<bool> DeleteUserAddressAsync(Guid userAddressId)
     {
-        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true) ?? throw new NotFoundException("i18nUser.messages.notFoundUser");
+        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true)
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
         var userAddress = user.Addresses.FirstOrDefault(x => x.Id == userAddressId);
 
         if (userAddress is not null)
@@ -114,7 +121,8 @@ public class UserAddressService : IUserAddressService
 
     public async Task<UserAddress> GetByIdAsync(Guid userAddressId)
     {
-        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true) ?? throw new NotFoundException("i18nUser.messages.notFoundUser");
-        return user.Addresses.FirstOrDefault(x => x.Id == userAddressId) ?? throw new NotFoundException("i18nUserAddress.messages.notFoundAddress");
+        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true)
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
+        return user.Addresses.FirstOrDefault(x => x.Id == userAddressId) ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserAddressNotFound);
     }
 }
