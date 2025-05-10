@@ -33,6 +33,11 @@ public class TransactionService(HiveSpaceDbContext context) : ITransactionServic
                 await _dbContext.SaveChangesAsync();
                 await transaction.CommitAsync();
             }
+            catch (DbUpdateConcurrencyException ex)
+            {
+                await transaction.RollbackAsync();
+                throw new Exception("Concurrency error occurred", ex);
+            }
             catch (Exception)
             {
                 await transaction.RollbackAsync();

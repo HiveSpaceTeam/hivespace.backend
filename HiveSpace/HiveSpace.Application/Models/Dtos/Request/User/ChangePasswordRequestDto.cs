@@ -1,8 +1,7 @@
-﻿namespace HiveSpace.Application.Models.Dtos.Request.User
+﻿namespace HiveSpace.Application.Models.Dtos.Request.User;
+
+public class ChangePasswordRequestDto
 {
-    public class ChangePasswordRequestDto
-    {
-        public string Password { get; set; }
-        public string NewPassword { get; set; }
-    }
+    public string Password { get; set; } = string.Empty;
+    public string NewPassword { get; set; } = string.Empty;
 }
