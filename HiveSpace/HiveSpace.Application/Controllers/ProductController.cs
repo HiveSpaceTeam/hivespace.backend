@@ -13,16 +13,13 @@ namespace HiveSpace.Application.Controllers
     {
         private readonly IProductService _productService;
         private readonly IValidator<ProductSearchRequestDto> _productSearchValidator;
-        private readonly IValidator<ProductHomeRequestDto> _productHomeValidator;
 
         public ProductController(
             IProductService productService,
-            IValidator<ProductSearchRequestDto> productSearchValidator,
-            IValidator<ProductHomeRequestDto> productHomeValidator)
+            IValidator<ProductSearchRequestDto> productSearchValidator)
         {
             _productService = productService;
             _productSearchValidator = productSearchValidator;
-            _productHomeValidator = productHomeValidator;
         }
 
         [HttpGet("{productId}")]
@@ -35,6 +32,7 @@ namespace HiveSpace.Application.Controllers
 
         [HttpPost("search")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> GetProductSearchViewModel([FromBody] ProductSearchRequestDto param)
         {
             var validationResult = _productSearchValidator.Validate(param);
@@ -51,13 +49,7 @@ namespace HiveSpace.Application.Controllers
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<IActionResult> GetProductHomeViewModel(bool isHome = false, int pageSize = 50, int pageIndex = 0)
         {
-            var validationResult = _productHomeValidator.Validate(param);
-            if (!validationResult.IsValid)
-            {
-                return BadRequest(validationResult.Errors);
-            }
-
-            var result = await _productService.GetProductHomeViewModelAsync(param);
+            var result = await _productService.GetProductHomeViewModelAsync(pageSize, pageIndex);
             return Ok(result);
         }
 

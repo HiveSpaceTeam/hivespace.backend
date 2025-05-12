@@ -73,7 +73,6 @@ public static class ApplicationDI
         services.AddScoped<IValidator<ChangePasswordRequestDto>, ChangePasswordValidator>();
         services.AddScoped<IValidator<UpdateUserRequestDto>, UpdateUserValidator>();
         services.AddScoped<IValidator<ProductSearchRequestDto>, ProductSearchValidator>();
-        services.AddScoped<IValidator<ProductHomeRequestDto>, ProductHomeValidator>();
         services.AddScoped<IValidator<CreateOrderRequestDto>, CreateOrderValidator>();
         services.AddScoped<IValidator<AddItemToCartRequestDto>, AddItemToCartValidator>();
         services.AddScoped<IValidator<UpdateCartItemRequestDto>, UpdateCartItemValidator>();

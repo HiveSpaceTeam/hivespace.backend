@@ -38,7 +38,6 @@ public class UserController : Controller
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     public async Task<IActionResult> Signup([FromBody] CreateUserRequestDto requestDto)
     {
-        Log.Debug($"Vào hàm singup data ${JsonConvert.SerializeObject(requestDto)}");
         var validationResult = _createUserValidator.Validate(requestDto);
         if (!validationResult.IsValid)
         {

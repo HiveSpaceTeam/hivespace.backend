@@ -156,7 +156,7 @@ public class QueryService(HiveSpaceDbContext dbContext) : IQueryService
         }
 
         // Handle offset
-        int offSet = param.PageSize * (param.PageIndex - 1);
+        int offSet = param.PageSize * (param.PageNumber - 1);
 
         string query = $@"
             WITH first_sku_per_product
