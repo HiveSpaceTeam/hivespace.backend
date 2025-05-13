@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using FluentValidation;
 using HiveSpace.Application.Interfaces;
 using HiveSpace.Application.Models.Dtos.Request.CartItem;
 using HiveSpace.Application.Models.Dtos.Request.ShoppingCart;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
 namespace HiveSpace.Application.Controllers;
@@ -13,10 +14,20 @@ namespace HiveSpace.Application.Controllers;
 public class ShoppingCartController : Controller
 {
     private readonly IShoppingCartService _shoppingCartService;
+    private readonly IValidator<AddItemToCartRequestDto> _addItemToCartValidator;
+    private readonly IValidator<UpdateCartItemRequestDto> _updateCartItemValidator;
+    private readonly IValidator<UpdateMultiCartItemSelectionDto> _updateMultiCartItemSelectionValidator;
 
-    public ShoppingCartController(IShoppingCartService shoppingCartService)
+    public ShoppingCartController(
+        IShoppingCartService shoppingCartService,
+        IValidator<AddItemToCartRequestDto> addItemToCartValidator,
+        IValidator<UpdateCartItemRequestDto> updateCartItemValidator,
+        IValidator<UpdateMultiCartItemSelectionDto> updateMultiCartItemSelectionValidator)
     {
         _shoppingCartService = shoppingCartService;
+        _addItemToCartValidator = addItemToCartValidator;
+        _updateCartItemValidator = updateCartItemValidator;
+        _updateMultiCartItemSelectionValidator = updateMultiCartItemSelectionValidator;
     }
 
     [HttpGet]
@@ -34,6 +45,12 @@ public class ShoppingCartController : Controller
     [ProducesResponseType((int)HttpStatusCode.UnprocessableContent)]
     public async Task<IActionResult> AddItemToCart([FromBody] AddItemToCartRequestDto param)
     {
+        var validationResult = _addItemToCartValidator.Validate(param);
+        if (!validationResult.IsValid)
+        {
+            return BadRequest(validationResult.Errors);
+        }
+
         var result = await _shoppingCartService.AddItemToCartAsync(param);
         return Ok(result);
     }
@@ -42,8 +59,14 @@ public class ShoppingCartController : Controller
     [ProducesResponseType((int)HttpStatusCode.OK)]
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
     [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
-    public async Task<IActionResult> UpdateCartItem(UpdateCartItemRequestDto updateCartItemRequestDto)
+    public async Task<IActionResult> UpdateCartItem([FromBody] UpdateCartItemRequestDto updateCartItemRequestDto)
     {
+        var validationResult = _updateCartItemValidator.Validate(updateCartItemRequestDto);
+        if (!validationResult.IsValid)
+        {
+            return BadRequest(validationResult.Errors);
+        }
+
         var result = await _shoppingCartService.UpdateCartItem(updateCartItemRequestDto);
         return Ok(result);
     }
@@ -52,8 +75,14 @@ public class ShoppingCartController : Controller
     [ProducesResponseType((int)HttpStatusCode.OK)]
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
     [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
-    public async Task<IActionResult> UpdateCartItemMultiSelection(UpdateMultiCartItemSelectionDto updateSeletionDto)
+    public async Task<IActionResult> UpdateCartItemMultiSelection([FromBody] UpdateMultiCartItemSelectionDto updateSeletionDto)
     {
+        var validationResult = _updateMultiCartItemSelectionValidator.Validate(updateSeletionDto);
+        if (!validationResult.IsValid)
+        {
+            return BadRequest(validationResult.Errors);
+        }
+
         var result = await _shoppingCartService.UpdateMultiSelection(updateSeletionDto);
         return Ok(result);
     }
