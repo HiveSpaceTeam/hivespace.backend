@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using HiveSpace.Domain.Exceptions;
+using HiveSpace.Common.Exceptions;
 using Serilog;
 
 namespace HiveSpace.Application.Filters
@@ -11,45 +12,30 @@ namespace HiveSpace.Application.Filters
         {
 
             context.ExceptionHandled = true;
-
-            switch (context.Exception)
+            var errorResponse = new ErrorModel
             {
-                case NotFoundException notFoundException:
-                    context.Result = new ObjectResult(notFoundException)
-                    {
-                        StatusCode = 404,
-                        Value = notFoundException.Message
-                    };
-                    break;
-                case UnauthorizedAccessException unauthorizedAccessException:
-                    context.Result = new ObjectResult(unauthorizedAccessException)
-                    {
-                        StatusCode = 401,
-                        Value = unauthorizedAccessException.Message
-                    };
-                    break;
+                Errors = [],
+                Status = "500",
+                Timestamp = DateTime.UtcNow,
+                TraceId = Guid.NewGuid().ToString(),
+                Version = "1.0"
+            };
 
-                case DomainException domainException:
-                    context.Result = new ObjectResult(domainException)
-                    {
-                        StatusCode = 422,
-                        Value = domainException.ToString()
-                    };
-                    break;
-                default:
-                    string msg = "Exception";
-#if DEBUG
-                    msg = context.Exception.ToString();
-#endif
-                    context.Result = new ObjectResult(context.Exception)
-                    {
-                        StatusCode = 500,
-                        Value = msg
-                    };
-
-                    Log.Error(context.Exception.ToString());
-                    break;
+            if (context.Exception is BaseException exception)
+            {
+                var errors = exception.ErrorCodeList.Select(x => new ErrorCodeDto
+                {
+                    Code = x.Code == null ? "000000" : Convert.ToInt32(x.Code).ToString(),
+                    Source = x.Source ?? (x.Data is not null && x.Data.Count > 0 ? x.Data[0].Key :  null),
+                });
+                errorResponse.Errors = errors.ToList();
+                errorResponse.Status = exception.HttpCode.ToString();
             }
+
+            context.Result = new ObjectResult(errorResponse)
+            {
+                StatusCode = int.Parse(errorResponse.Status),
+            };
         }
     }
 }

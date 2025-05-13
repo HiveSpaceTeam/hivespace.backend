@@ -22,7 +22,7 @@ public class Money : ValueObject
                    new() {
                         Field="Amount",
                         MessageCode="i18nMoney.InvalidMoney",
-                        ErrorCode=ErrorCode.InvalidMoney
+                        ErrorCode=ApplicationErrorCode.InvalidMoney
                     }
                ]
             };

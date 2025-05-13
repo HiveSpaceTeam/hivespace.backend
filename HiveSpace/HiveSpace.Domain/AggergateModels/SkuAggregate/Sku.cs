@@ -42,7 +42,7 @@ public class Sku : AggregateRoot<int>
                    new() {
                         Field="Quantity",
                         MessageCode= "i18nSku.InvalidSku",
-                        ErrorCode=ErrorCode.InvalidSku
+                        ErrorCode=ApplicationErrorCode.InvalidSku
                     }
                 ]
             };

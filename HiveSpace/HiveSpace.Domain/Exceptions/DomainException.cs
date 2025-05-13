@@ -20,6 +20,6 @@ namespace HiveSpace.Domain.Exceptions
     {
         public string Field { get; set; }
         public string MessageCode { get; set; }
-        public ErrorCode ErrorCode { get; set; }
+        public ApplicationErrorCode ErrorCode { get; set; }
     }
 }
