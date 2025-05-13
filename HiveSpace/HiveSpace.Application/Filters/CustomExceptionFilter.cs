@@ -25,7 +25,7 @@ namespace HiveSpace.Application.Filters
             {
                 var errors = exception.ErrorCodeList.Select(x => new ErrorCodeDto
                 {
-                    Code = x.Code?.ToString() ?? string.Empty,
+                    Code = x.Code == null ? "000000" : Convert.ToInt32(x.Code).ToString(),
                     Source = x.Source ?? (x.Data is not null && x.Data.Count > 0 ? x.Data[0].Key :  null),
                 });
                 errorResponse.Errors = errors.ToList();
