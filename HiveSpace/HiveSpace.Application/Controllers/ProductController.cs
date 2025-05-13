@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FluentValidation;
 using HiveSpace.Application.Interfaces;
 using HiveSpace.Application.Models.Dtos.Request.Product;
+using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
 namespace HiveSpace.Application.Controllers
@@ -11,10 +12,14 @@ namespace HiveSpace.Application.Controllers
     public class ProductController : Controller
     {
         private readonly IProductService _productService;
+        private readonly IValidator<ProductSearchRequestDto> _productSearchValidator;
 
-        public ProductController(IProductService productService)
+        public ProductController(
+            IProductService productService,
+            IValidator<ProductSearchRequestDto> productSearchValidator)
         {
             _productService = productService;
+            _productSearchValidator = productSearchValidator;
         }
 
         [HttpGet("{productId}")]
@@ -27,8 +32,15 @@ namespace HiveSpace.Application.Controllers
 
         [HttpPost("search")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> GetProductSearchViewModel([FromBody] ProductSearchRequestDto param)
         {
+            var validationResult = _productSearchValidator.Validate(param);
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors);
+            }
+
             var result = await _productService.GetProductSearchViewModelAsync(param);
             return Ok(result);
         }
