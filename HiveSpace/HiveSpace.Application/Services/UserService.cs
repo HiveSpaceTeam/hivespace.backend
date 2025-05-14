@@ -43,7 +43,7 @@ public class UserService(IUserRepository userRepository, IJwtService jwtService,
         {
             UserId = newUser.Id,
             PhoneNumber = newUser.PhoneNumber.Value,
-            Email = newUser.Email ?? "",
+            Email = newUser.Email ?? string.Empty,
         };
 
         ContextData contextData = new()
