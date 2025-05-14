@@ -17,7 +17,7 @@ public class UserService(IUserRepository userRepository, IJwtService jwtService,
     private readonly IUserRepository _userRepository = userRepository;
     private readonly IJwtService _jwtService = jwtService;
     private readonly IUserContext _userContext = userContext;
-    public async Task<Guid> CreateUserAsync(CreateUserRequestDto requestDto)
+    public async Task<SignupResponseDto> CreateUserAsync(CreateUserRequestDto requestDto)
     {
         var user = await _userRepository.FindUserByPhoneNumber(requestDto.PhoneNumber);
 
@@ -39,7 +39,23 @@ public class UserService(IUserRepository userRepository, IJwtService jwtService,
         _userRepository.Add(newUser);
         await _userRepository.SaveChangesAsync();
 
-        return newUser.Id;
+        var identity = new Identity
+        {
+            UserId = newUser.Id,
+            PhoneNumber = newUser.PhoneNumber.Value,
+            Email = newUser.Email ?? "",
+        };
+
+        ContextData contextData = new()
+        {
+            Username = newUser.UserName,
+            FullName = newUser.FullName,
+        };
+        return new SignupResponseDto 
+        { 
+            Token = _jwtService.GenerateToken(identity), 
+            ContextData = contextData 
+        };
     }
 
 
@@ -67,17 +83,20 @@ public class UserService(IUserRepository userRepository, IJwtService jwtService,
             Username = user.UserName,
             FullName = user.FullName,
         };
-        return new LoginResponseDto { Token = _jwtService.GenerateToken(identity), ContextData = contextData };
+        return new LoginResponseDto 
+        { 
+            Token = _jwtService.GenerateToken(identity), 
+            ContextData = contextData 
+        };
     }
 
-    public async Task<bool> UpdateUserInfoAsync(UpdateUserRequestDto param)
+    public async Task UpdateUserInfoAsync(UpdateUserRequestDto param)
     {
         var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true)
             ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
 
         user.UpdateUserInfo(param.UserName, param.FullName, param.Email, param.PhoneNumber, param.Gender, param.DateOfBirth);
         await _userRepository.SaveChangesAsync();
-        return true;
     }
 
     public async Task<UserInfoDto> GetUserInfoAsync()
@@ -88,7 +107,7 @@ public class UserService(IUserRepository userRepository, IJwtService jwtService,
         return res;
     }
 
-    public async Task<bool> ChangePassword(ChangePasswordRequestDto requestDto)
+    public async Task ChangePassword(ChangePasswordRequestDto requestDto)
     {
         var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true)
             ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
@@ -102,6 +121,5 @@ public class UserService(IUserRepository userRepository, IJwtService jwtService,
         var passwordHashed = PasswordHelper.Hash(requestDto.NewPassword);
         user.UpdatePassword(passwordHashed);
         await _userRepository.SaveChangesAsync();
-        return true;
     }
 }

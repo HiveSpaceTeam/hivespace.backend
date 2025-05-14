@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using HiveSpace.Application.Filters;
+using HiveSpace.Common.Filters;
 using HiveSpace.Application.Interfaces;
 using HiveSpace.Application.Models.AppSettings;
 using HiveSpace.Application.Models.Dtos.Request.CartItem;

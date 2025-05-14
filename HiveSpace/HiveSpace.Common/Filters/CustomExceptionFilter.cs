@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using HiveSpace.Domain.Exceptions;
 using HiveSpace.Common.Exceptions;
-using Serilog;
 
-namespace HiveSpace.Application.Filters
+namespace HiveSpace.Common.Filters
 {
     public class CustomExceptionFilter : IExceptionFilter
     {
@@ -26,10 +24,26 @@ namespace HiveSpace.Application.Filters
                 var errors = exception.ErrorCodeList.Select(x => new ErrorCodeDto
                 {
                     Code = x.Code == null ? "000000" : Convert.ToInt32(x.Code).ToString(),
+                    MessageCode = x.Code?.ToString() ?? string.Empty,
+                    Data = x.Data == null ? [] : x.Data.ToDictionary(item => item.Key, item => item.Value),
                     Source = x.Source ?? (x.Data is not null && x.Data.Count > 0 ? x.Data[0].Key :  null),
                 });
                 errorResponse.Errors = errors.ToList();
                 errorResponse.Status = exception.HttpCode.ToString();
+            }
+            else
+            {
+                var error = new ErrorCodeDto
+                {
+                    Code = "000000",
+                    MessageCode = "ServerError",
+                    Data = [],
+                    Source = null,
+                };
+#if DEBUG
+                error.MessageCode = context.Exception.Message;
+#endif
+                errorResponse.Errors = [error];
             }
 
             context.Result = new ObjectResult(errorResponse)

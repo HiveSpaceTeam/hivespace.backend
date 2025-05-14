@@ -67,7 +67,7 @@ public class User : AggregateRoot<Guid>
         PasswordHashed = passwordHashed;
     }
 
-    public void UpdateUserInfo(string userName, string? fullName, string? email, string? phoneNumber, Gender? gender, DateTime? dob)
+    public void UpdateUserInfo(string? userName, string? fullName, string? email, string? phoneNumber, Gender? gender, DateTime? dob)
     {
         if (!string.IsNullOrWhiteSpace(userName)) UserName = userName;
         if (!string.IsNullOrWhiteSpace(fullName)) FullName = fullName;
