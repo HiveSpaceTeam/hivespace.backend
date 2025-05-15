@@ -13,4 +13,7 @@ public enum ApplicationErrorCode
     InvalidQuantity = 422009,
     InvalidQuantitySku = 422010,
     FluentValidationError = 422011,
+    CategoryNotFound = 422012,
+    ShoppingCartNotFound = 422013,
+    CacheNotFound = 422014,
 }
