@@ -30,7 +30,7 @@ public class UserAddressService : IUserAddressService
     {
         var result = await _redisService.GetOrCreateAsync(CacheKey(_userContext.UserId), async () =>
         {
-            var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true) 
+            var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true)
             ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
             var userAddresses = user.Addresses.ToList();
             var res = _mapper.Map<List<UserAddressDto>>(userAddresses);
@@ -64,59 +64,53 @@ public class UserAddressService : IUserAddressService
     {
         var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true)
             ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
-        var userAddress = user.Addresses.FirstOrDefault(x => x.Id == userAddressId);
+        
+        var userAddress = user.Addresses.FirstOrDefault(x => x.Id == userAddressId)
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserAddressNotFound);
 
-        if (userAddress is not null)
+        var userAddressProp = new UserAddressProps()
         {
-            var userAddressProp = new UserAddressProps()
-            {
-                FullName = param.FullName,
-                Street = param.Street,
-                Ward = param.Ward,
-                District = param.District,
-                Province = param.Province,
-                Country = param.Country,
-                ZipCode = param.ZipCode,
-                PhoneNumber = param.PhoneNumber,
-            };
-            user.UpdateAddress(userAddressId, userAddressProp);
-            await _userRepository.SaveChangesAsync();
-            await _redisService.RemoveAsync(CacheKey(_userContext.UserId));
-            return true;
-        }
-        return false;
+            FullName = param.FullName,
+            Street = param.Street,
+            Ward = param.Ward,
+            District = param.District,
+            Province = param.Province,
+            Country = param.Country,
+            ZipCode = param.ZipCode,
+            PhoneNumber = param.PhoneNumber,
+        };
+        user.UpdateAddress(userAddressId, userAddressProp);
+        await _userRepository.SaveChangesAsync();
+        await _redisService.RemoveAsync(CacheKey(_userContext.UserId));
+        return true;
     }
 
     public async Task<bool> SetDefaultUserAddressAsync(Guid userAddressId)
     {
         var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true)
             ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
-        var userAddress = user.Addresses.FirstOrDefault(x => x.Id == userAddressId);
+        
+        var userAddress = user.Addresses.FirstOrDefault(x => x.Id == userAddressId)
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserAddressNotFound);
 
-        if (userAddress is not null)
-        {
-            user.SetDefaultAddress(userAddressId);
-            await _userRepository.SaveChangesAsync();
-            await _redisService.RemoveAsync(CacheKey(_userContext.UserId));
-            return true;
-        }
-        return false;
+        user.SetDefaultAddress(userAddressId);
+        await _userRepository.SaveChangesAsync();
+        await _redisService.RemoveAsync(CacheKey(_userContext.UserId));
+        return true;
     }
 
     public async Task<bool> DeleteUserAddressAsync(Guid userAddressId)
     {
         var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true)
             ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
-        var userAddress = user.Addresses.FirstOrDefault(x => x.Id == userAddressId);
+        
+        var userAddress = user.Addresses.FirstOrDefault(x => x.Id == userAddressId)
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserAddressNotFound);
 
-        if (userAddress is not null)
-        {
-            user.RemoveAddress(userAddressId);
-            await _userRepository.SaveChangesAsync();
-            await _redisService.RemoveAsync(CacheKey(_userContext.UserId));
-            return true;
-        }
-        return false;
+        user.RemoveAddress(userAddressId);
+        await _userRepository.SaveChangesAsync();
+        await _redisService.RemoveAsync(CacheKey(_userContext.UserId));
+        return true;
     }
 
     public async Task<UserAddress> GetByIdAsync(Guid userAddressId)

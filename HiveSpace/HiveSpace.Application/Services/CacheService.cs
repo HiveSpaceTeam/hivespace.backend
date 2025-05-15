@@ -1,5 +1,7 @@
-﻿using HiveSpace.Application.Interfaces;
+﻿using HiveSpace.Application.Helpers;
+using HiveSpace.Application.Interfaces;
 using HiveSpace.Application.Models.AppSettings;
+using HiveSpace.Domain.Enums;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
 using StackExchange.Redis;
@@ -32,7 +34,7 @@ public class CacheService(IMemoryCache memoryCache, IDatabase redisDb, IOptions<
             return value;
         }
 
-        return default;
+        throw ExceptionHelper.NotFoundException(ApplicationErrorCode.CacheNotFound, ApplicationErrorCode.CacheNotFound.ToString(), key);
     }
 
     public async Task<bool> SetAsync<T>(string key, T value, TimeSpan? expiration = null)

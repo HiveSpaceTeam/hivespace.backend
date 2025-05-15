@@ -4,12 +4,10 @@ using HiveSpace.Application.Models.Dtos.Request.CartItem;
 using HiveSpace.Application.Models.Dtos.Request.ShoppingCart;
 using HiveSpace.Application.Models.ViewModels;
 using HiveSpace.Application.Queries;
-using HiveSpace.Common.Exceptions;
 using HiveSpace.Common.Interface;
 using HiveSpace.Domain.AggergateModels.ShoppingCartAggregate;
 using HiveSpace.Domain.AggergateModels.SkuAggregate;
 using HiveSpace.Domain.Enums;
-using HiveSpace.Domain.Exceptions;
 using HiveSpace.Domain.Repositories;
 
 namespace HiveSpace.Application.Services;
@@ -34,16 +32,16 @@ public class ShoppingCartService : IShoppingCartService
     public async Task<CartViewModel> GetShoppingCartByUserIdAsync()
     {
         var userId = _userContext.UserId;
-        var result = new CartViewModel();
 
-        var shoppingCart = await _shoppingCartRepository.GetShoppingCartByUserIdAsync(userId);
+        var shoppingCart = await _shoppingCartRepository.GetShoppingCartByUserIdAsync(userId)
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.ShoppingCartNotFound);
 
-        if (shoppingCart is not null)
+        var cartItems = await _queryService.GetCartItemViewModelsAsync(userId);
+        var result = new CartViewModel
         {
-            var cartItems = await _queryService.GetCartItemViewModelsAsync(userId);
-            result.Id = shoppingCart.Id;
-            result.Items = cartItems;
-        }
+            Id = shoppingCart.Id,
+            Items = cartItems
+        };
         return result;
     }
 
@@ -63,7 +61,7 @@ public class ShoppingCartService : IShoppingCartService
     public async Task<bool> DeleteCartItems(List<Guid> cartItemIds)
     {
         var userId = _userContext.UserId;
-        var shoppingCart = await _shoppingCartRepository.GetShoppingCartByUserIdAsync(userId) 
+        var shoppingCart = await _shoppingCartRepository.GetShoppingCartByUserIdAsync(userId)
             ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
         shoppingCart.RemoveItems(cartItemIds);
         return await _shoppingCartRepository.SaveChangesAsync() > 0;
@@ -115,7 +113,8 @@ public class ShoppingCartService : IShoppingCartService
         var result = new CheckOutDto();
 
         var addresses = await _userAddressService.GetUserAddressAsync();
-        var addressDefault = addresses.Find(x => x.IsDefault);
+        var addressDefault = addresses.Find(x => x.IsDefault)
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserAddressNotFound);
         result.Address = addressDefault;
 
         var products = await GetShoppingCartByUserIdAsync();
