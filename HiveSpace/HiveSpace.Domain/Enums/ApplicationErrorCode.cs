@@ -12,4 +12,5 @@ public enum ApplicationErrorCode
     UserAddressNotFound = 422008,
     InvalidQuantity = 422009,
     InvalidQuantitySku = 422010,
+    FluentValidationError = 422011,
 }

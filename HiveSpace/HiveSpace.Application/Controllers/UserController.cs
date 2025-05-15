@@ -1,10 +1,9 @@
 ﻿using FluentValidation;
+using HiveSpace.Application.Helpers;
 using HiveSpace.Application.Interfaces;
 using HiveSpace.Application.Models.Dtos.Request.User;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using Serilog;
 using System.Net;
 
 namespace HiveSpace.Application.Controllers;
@@ -43,8 +42,8 @@ public class UserController : Controller
         {
             return BadRequest(validationResult.Errors);
         }
-        await _userService.CreateUserAsync(requestDto);
-        return Ok(true);
+        var result = await _userService.CreateUserAsync(requestDto);
+        return Ok(result);
     }
 
     [HttpPost("login")]
@@ -72,8 +71,8 @@ public class UserController : Controller
         {
             return BadRequest(validationResult.Errors);
         }
-        var result = await _userService.UpdateUserInfoAsync(param);
-        return Ok(result);
+        await _userService.UpdateUserInfoAsync(param);
+        return NoContent();
     }
 
     [Authorize]
@@ -91,11 +90,12 @@ public class UserController : Controller
     public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordRequestDto requestDto)
     {
         var validationResult = _changePasswordValidator.Validate(requestDto);
+
         if (!validationResult.IsValid)
         {
             return BadRequest(validationResult.Errors);
         }
-        var res = await _userService.ChangePassword(requestDto);
-        return Ok(res);
+        await _userService.ChangePassword(requestDto);
+        return NoContent();
     }
 }

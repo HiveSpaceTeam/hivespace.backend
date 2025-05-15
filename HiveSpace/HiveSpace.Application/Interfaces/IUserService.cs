@@ -5,9 +5,9 @@ namespace HiveSpace.Application.Interfaces;
 
 public interface IUserService
 {
-    Task<Guid> CreateUserAsync(CreateUserRequestDto requestDto);
+    Task<SignupResponseDto> CreateUserAsync(CreateUserRequestDto requestDto);
     Task<LoginResponseDto> LoginAsync(LoginRequestDto requestDto);
-    Task<bool> UpdateUserInfoAsync(UpdateUserRequestDto param);
+    Task UpdateUserInfoAsync(UpdateUserRequestDto param);
     Task<UserInfoDto> GetUserInfoAsync();
-    Task<bool> ChangePassword(ChangePasswordRequestDto requestDto);
+    Task ChangePassword(ChangePasswordRequestDto requestDto);
 }
