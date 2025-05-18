@@ -13,4 +13,6 @@ public enum ApplicationErrorCode
     InvalidQuantity = 422009,
     InvalidQuantitySku = 422010,
     FluentValidationError = 422011,
+    FileNotFound = 422012,
+    NoFileUploaded = 422013,
 }
