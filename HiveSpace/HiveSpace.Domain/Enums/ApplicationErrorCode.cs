@@ -13,4 +13,7 @@ public enum ApplicationErrorCode
     InvalidQuantity = 422009,
     InvalidQuantitySku = 422010,
     FluentValidationError = 422011,
+    NotFoundSku = 422012,
+    OutOfStock = 422013,
+    NotFoundProduct = 422014,
 }

@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using HiveSpace.Application.Helpers;
 using HiveSpace.Application.Interfaces;
 using HiveSpace.Application.Models.Dtos.Request.Product;
 using HiveSpace.Application.Models.ViewModels;
 using HiveSpace.Application.Queries;
+using HiveSpace.Domain.Enums;
 using HiveSpace.Domain.Exceptions;
 using HiveSpace.Domain.Repositories;
 
@@ -23,7 +25,8 @@ namespace HiveSpace.Application.Services
 
         public async Task<ProductDetailViewModel> GetProductDetailAsync(int productId)
         {
-            var product = await _productRepository.GetByIdAsync(productId, includeDetail: true) ?? throw new NotFoundException("Product not found");
+            var product = await _productRepository.GetByIdAsync(productId, includeDetail: true) ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.NotFoundProduct);
+            
             var productDetailViewModel = _mapper.Map<ProductDetailViewModel>(product);
             if (product?.Categories != null && product.Categories.Count > 0)
             {
