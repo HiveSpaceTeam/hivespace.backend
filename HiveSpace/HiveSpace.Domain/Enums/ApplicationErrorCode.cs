@@ -16,4 +16,7 @@ public enum ApplicationErrorCode
     NotFoundSku = 422012,
     OutOfStock = 422013,
     NotFoundProduct = 422014,
+    CategoryNotFound = 422015,
+    ShoppingCartNotFound = 422016,
+    CacheNotFound = 422017,
 }
