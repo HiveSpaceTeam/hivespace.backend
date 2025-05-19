@@ -1,4 +1,5 @@
-﻿using HiveSpace.Application.Interfaces;
+﻿using HiveSpace.Application.Helpers;
+using HiveSpace.Application.Interfaces;
 using HiveSpace.Application.Models.Dtos.Request.Paging;
 using HiveSpace.Application.Models.Dtos.Request.ShoppingCart;
 using HiveSpace.Common.Interface;
@@ -52,18 +53,18 @@ namespace HiveSpace.Application.Services
                 var products = cart.Items.FindAll(x => x.IsSelected);
 
                 var filtersWithComparison = new Dictionary<string, FilterItem>
-            {
-                { "Id",
+                {
+                    { "Id",
 
-                    new FilterItem
-                    {
-                        Value=products.Select(x=>x.SkuId),
-                        Comparison=SqlOperator.In
-                    }
-                },
-            };
+                        new FilterItem
+                        {
+                            Value=products.Select(x=>x.SkuId),
+                            Comparison=SqlOperator.In
+                        }
+                    },
+                };
 
-                var skus = await _skuService.GetByFitlers(filtersWithComparison) ?? throw new NotFoundException("i18nOrder.messages.notFoundSku");
+                var skus = await _skuService.GetByFitlers(filtersWithComparison) ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.NotFoundSku);
 
                 bool isOutOfStock = skus.Any(x =>
                 {
@@ -72,10 +73,7 @@ namespace HiveSpace.Application.Services
 
                 if (isOutOfStock)
                 {
-                    throw new DomainException
-                    {
-                        MessageCode = "i18nOrder.messages.outOfStock"
-                    };
+                    throw ExceptionHelper.DomainException(ApplicationErrorCode.OutOfStock);
                 }
                 List<OrderItemProps> orderItemProps = products.Select(product =>
                 {
@@ -106,7 +104,7 @@ namespace HiveSpace.Application.Services
                 //Giảm số lượng trong kho tương ứng với số lượng trong đơn hàng
                 await _skuService.UpdateSkus(skus.Select(sku =>
                 {
-                    var product = products.Find(product => product.SkuId == sku.Id) ?? throw new NotFoundException("i18nOrder.messages.notFoundSku");
+                    var product = products.Find(product => product.SkuId == sku.Id) ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.NotFoundSku);
                     sku.UpdateQuantity(sku.Quantity - product.Quantity);
                     return sku;
                 }).ToList());
