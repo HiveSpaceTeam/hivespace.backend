@@ -1,4 +1,5 @@
-﻿using HiveSpace.Application.Interfaces;
+﻿using HiveSpace.Application.Helpers;
+using HiveSpace.Application.Interfaces;
 using HiveSpace.Domain.AggergateModels.SkuAggregate;
 using HiveSpace.Domain.Enums;
 using HiveSpace.Domain.Exceptions;
@@ -37,7 +38,7 @@ namespace HiveSpace.Application.Services
             foundSkus = foundSkus.Select(
                 foundSku =>
                 {
-                    var skuUpdate = skus.Find(x => foundSku.Id == x.Id) ?? throw new NotFoundException("i18nSku.messages.notFoundSku");
+                    var skuUpdate = skus.Find(x => foundSku.Id == x.Id) ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.NotFoundSku);
                     return skuUpdate;
                 }
             ).ToList();
