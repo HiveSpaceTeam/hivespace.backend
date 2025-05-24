@@ -1,4 +1,4 @@
-﻿namespace HiveSpace.Common.Exceptions;
+﻿namespace HiveSpace.Common.Exceptions.Models;
 public class ErrorData(string key, string value)
 {
     public string Key { get; set; } = key;

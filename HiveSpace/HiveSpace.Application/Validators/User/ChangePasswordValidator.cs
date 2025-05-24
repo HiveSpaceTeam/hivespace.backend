@@ -1,6 +1,8 @@
 using FluentValidation;
+using HiveSpace.Application.Constants;
 using HiveSpace.Application.Models.Dtos.Request.User;
 using HiveSpace.Common.Exceptions;
+using HiveSpace.Common.Exceptions.Models;
 using HiveSpace.Domain.Enums;
 
 namespace HiveSpace.Application.Validators.User;
@@ -10,14 +12,14 @@ public class ChangePasswordValidator : AbstractValidator<ChangePasswordRequestDt
     public ChangePasswordValidator()
     {
         RuleFor(x => x.Password)
-            .NotEmpty().WithMessage("Current password is required")
-            .MinimumLength(8).WithMessage("Password length is at least 8 characters")
-            .Matches(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$").WithMessage("Password is not in correct format");
+            .NotEmpty().WithState(x => new ErrorCode { Code = ApplicationErrorCode.Required, Source = nameof(x.Password) })
+            .MinimumLength(8).WithState(x => new ErrorCode { Code = ApplicationErrorCode.MinLengthNotMet, Source = nameof(x.Password) })
+            .Matches(ApplicationConstant.PasswordFormat).WithState(x => new ErrorCode { Code = ApplicationErrorCode.InvalidFormat, Source = nameof(x.Password) });
 
         RuleFor(x => x.NewPassword)
-            .NotEmpty().WithMessage("New password is required")
-            .MinimumLength(8).WithMessage("Password length is at least 8 characters")
-            .Matches(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$").WithMessage("Password is not in correct format")
-            .NotEqual(x => x.Password).WithMessage("New password must be different from current password");
+            .NotEmpty().WithState(x => new ErrorCode { Code = ApplicationErrorCode.Required, Source = nameof(x.NewPassword) })
+            .MinimumLength(8).WithState(x => new ErrorCode { Code = ApplicationErrorCode.MinLengthNotMet, Source = nameof(x.NewPassword) })
+            .Matches(ApplicationConstant.PasswordFormat).WithState(x => new ErrorCode { Code = ApplicationErrorCode.InvalidFormat, Source = nameof(x.NewPassword) })
+            .NotEqual(x => x.Password).WithState(x => new ErrorCode { Code = ApplicationErrorCode.SimilarCurrentPassword, Source = nameof(x.NewPassword) });
     }
 }

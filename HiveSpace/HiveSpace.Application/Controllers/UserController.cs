@@ -37,11 +37,7 @@ public class UserController : Controller
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     public async Task<IActionResult> Signup([FromBody] CreateUserRequestDto requestDto)
     {
-        var validationResult = _createUserValidator.Validate(requestDto);
-        if (!validationResult.IsValid)
-        {
-            return BadRequest(validationResult.Errors);
-        }
+        ValidationHelper.ValidateResult(_createUserValidator.Validate(requestDto));
         var result = await _userService.CreateUserAsync(requestDto);
         return Ok(result);
     }
@@ -51,11 +47,7 @@ public class UserController : Controller
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     public async Task<IActionResult> Login([FromBody] LoginRequestDto requestDto)
     {
-        var validationResult = _loginValidator.Validate(requestDto);
-        if (!validationResult.IsValid)
-        {
-            return BadRequest(validationResult.Errors);
-        }
+        ValidationHelper.ValidateResult(_loginValidator.Validate(requestDto));
         var result = await _userService.LoginAsync(requestDto);
         return Ok(result);
     }
@@ -66,11 +58,7 @@ public class UserController : Controller
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     public async Task<IActionResult> UpdateUser([FromBody] UpdateUserRequestDto param)
     {
-        var validationResult = _updateUserValidator.Validate(param);
-        if (!validationResult.IsValid)
-        {
-            return BadRequest(validationResult.Errors);
-        }
+        ValidationHelper.ValidateResult(_updateUserValidator.Validate(param));
         await _userService.UpdateUserInfoAsync(param);
         return NoContent();
     }
@@ -89,12 +77,7 @@ public class UserController : Controller
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordRequestDto requestDto)
     {
-        var validationResult = _changePasswordValidator.Validate(requestDto);
-
-        if (!validationResult.IsValid)
-        {
-            return BadRequest(validationResult.Errors);
-        }
+        ValidationHelper.ValidateResult(_changePasswordValidator.Validate(requestDto));
         await _userService.ChangePassword(requestDto);
         return NoContent();
     }

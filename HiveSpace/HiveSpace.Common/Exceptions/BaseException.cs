@@ -1,4 +1,6 @@
-﻿namespace HiveSpace.Common.Exceptions;
+﻿using HiveSpace.Common.Exceptions.Models;
+
+namespace HiveSpace.Common.Exceptions;
 public class BaseException : Exception
 {
     private readonly int _httpCode = 500;

@@ -1,16 +1,26 @@
 ﻿using FluentValidation.Results;
 using HiveSpace.Common.Exceptions;
+using HiveSpace.Common.Exceptions.Models;
 using HiveSpace.Domain.Enums;
 
 namespace HiveSpace.Application.Helpers;
 
 public static class ValidationHelper
 {
-    public static void Validate(ValidationResult validationResult)
+    public static void ValidateResult(IEnumerable<ValidationResult> validationResults)
+    {
+        var errors = validationResults.SelectMany(x => ValidateResultWithState(x));
+        if (errors.Any())
+        {
+            throw new BadRequestException(errors.ToList());
+        }
+    }
+
+    public static void ValidateResult(ValidationResult validationResult)
     {
         if (!validationResult.IsValid)
         {
-            throw ExceptionHelper.BadRequestException(ApplicationErrorCode.FluentValidationError, validationResult.Errors);
+            throw new BadRequestException(ValidateResultWithState(validationResult).ToList());
         }
     }
 

@@ -19,4 +19,13 @@ public enum ApplicationErrorCode
     CategoryNotFound = 422015,
     ShoppingCartNotFound = 422016,
     CacheNotFound = 422017,
+    FileNotFound = 422018,
+    NoFileUploaded = 422019,
+    Required = 422020,
+    InvalidFormat = 422021,
+    MinLengthNotMet = 422022,
+    SimilarCurrentPassword = 422023,
+    InvalidDate = 422024,
+    InvalidValue = 4220125,
+    MaxLengthExceeded = 422026,
 }

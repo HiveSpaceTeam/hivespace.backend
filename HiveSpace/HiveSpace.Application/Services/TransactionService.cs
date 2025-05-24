@@ -1,4 +1,5 @@
 ﻿using HiveSpace.Application.Interfaces;
+using HiveSpace.Common.Exceptions;
 using HiveSpace.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
@@ -36,7 +37,8 @@ public class TransactionService(HiveSpaceDbContext context) : ITransactionServic
             catch (DbUpdateConcurrencyException ex)
             {
                 await transaction.RollbackAsync();
-                throw new Exception("Concurrency error occurred", ex);
+                _dbContext.ChangeTracker.Clear();
+                throw new ConcurrencyException([new () { Code = CommonErrorCode.ConcurrencyException }], ex);
             }
             catch (Exception)
             {

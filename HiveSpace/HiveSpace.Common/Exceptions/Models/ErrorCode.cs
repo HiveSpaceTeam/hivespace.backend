@@ -1,4 +1,4 @@
-﻿namespace HiveSpace.Common.Exceptions;
+﻿namespace HiveSpace.Common.Exceptions.Models;
 public class ErrorCode
 {
     public Enum? Code { get; set; }

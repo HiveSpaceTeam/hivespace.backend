@@ -1,8 +1,8 @@
-﻿namespace HiveSpace.Common.Exceptions;
+﻿namespace HiveSpace.Common.Exceptions.Models;
 public class ErrorCodeDto
 {
     public string Code { get; set; } = string.Empty;
     public string MessageCode { get; set; } = string.Empty;
-    public Dictionary<string, string> Data { get; set; } = [];
+    public Dictionary<string, string> Data { get; } = [];
     public string? Source { get; set; }
 }

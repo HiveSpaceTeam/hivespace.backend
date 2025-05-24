@@ -1,3 +1,5 @@
+using HiveSpace.Common.Exceptions.Models;
+
 namespace HiveSpace.Common.Exceptions;
 
 public class NotFoundException : BaseException

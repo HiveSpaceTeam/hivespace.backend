@@ -3,6 +3,7 @@ using HiveSpace.Application.Interfaces;
 using HiveSpace.Domain.Enums;
 using HiveSpace.Application.Extensions;
 using Azure.Storage.Blobs.Models;
+using HiveSpace.Application.Helpers;
 
 namespace HiveSpace.Application.Services;
 
@@ -10,16 +11,15 @@ public class AzureBlobStorageService : IStorageService
 {
     private readonly BlobServiceClient _blobServiceClient;
 
-    public AzureBlobStorageService(IConfiguration _configuration)
+    public AzureBlobStorageService(BlobServiceClient blobServiceClient)
     {
-        string connectionString = _configuration.GetSection("AzureBlobStorage:Connectionstring").Value ?? throw new ArgumentNullException();
-        _blobServiceClient = new BlobServiceClient(connectionString);
+        _blobServiceClient = blobServiceClient ?? throw new ArgumentNullException(nameof(blobServiceClient));
     }
 
     public async Task<BlobContainerClient> GetContainerClient(string containerName)
     {
         BlobContainerClient containerClient = _blobServiceClient.GetBlobContainerClient(containerName);
-        await containerClient.CreateIfNotExistsAsync(PublicAccessType.Blob);
+        var result = await containerClient.CreateIfNotExistsAsync(PublicAccessType.Blob);
         return containerClient;
     }
 
@@ -28,9 +28,10 @@ public class AzureBlobStorageService : IStorageService
         var containerClient = await GetContainerClient(type.GetDisplayName());
         var blobClient = containerClient.GetBlobClient(fileId.ToString());
 
-        if (await blobClient.ExistsAsync())
+        var result = await blobClient.ExistsAsync();
+        if (result)
         {
-            await blobClient.DeleteAsync(); // Deletes the blob
+            await blobClient.DeleteAsync();
         }
     }
 
@@ -45,7 +46,7 @@ public class AzureBlobStorageService : IStorageService
         var blobClient = containerClient.GetBlobClient(fileId.ToString());
 
         if (!await blobClient.ExistsAsync())
-            throw new FileNotFoundException();
+            throw ExceptionHelper.NotFoundException(ApplicationErrorCode.FileNotFound, nameof(File), fileId);
 
         return blobClient.Uri.ToString();
     }
@@ -54,7 +55,7 @@ public class AzureBlobStorageService : IStorageService
     {
         if (file == null || file.Length == 0)
         {
-            throw new Exception("No file uploaded.");
+            throw ExceptionHelper.DomainException(ApplicationErrorCode.NoFileUploaded);
         }
 
         using var stream = file.OpenReadStream();

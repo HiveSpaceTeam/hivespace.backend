@@ -34,8 +34,10 @@ public class CopyBlobStorageCommandHandler : IRequestHandler<CopyBlobStorageComm
             .Build();
 
         // Create instances of AzureBlobStorageService
-        _devStorageService = new AzureBlobStorageService(devConfiguration);
-        _prodStorageService = new AzureBlobStorageService(prodConfiguration);
+        string devConnectionString = devConfiguration.GetSection("AzureBlobStorage:Connectionstring").Value ?? throw new ArgumentNullException();
+        string prdConnectionString = devConfiguration.GetSection("AzureBlobStorage:Connectionstring").Value ?? throw new ArgumentNullException();
+        _devStorageService = new AzureBlobStorageService(new BlobServiceClient(devConnectionString));
+        _prodStorageService = new AzureBlobStorageService(new BlobServiceClient(prdConnectionString));
     }
 
     public async Task Handle(CopyBlobStorageCommand request, CancellationToken cancellationToken)
