@@ -15,4 +15,11 @@ public enum ApplicationErrorCode
     FluentValidationError = 422011,
     FileNotFound = 422012,
     NoFileUploaded = 422013,
+    Required = 422014,
+    InvalidFormat = 422015,
+    MinLengthNotMet = 422016,
+    SimilarCurrentPassword = 422017,
+    InvalidDate = 422018,
+    InvalidValue = 422019,
+    MaxLengthExceeded = 422020,
 }

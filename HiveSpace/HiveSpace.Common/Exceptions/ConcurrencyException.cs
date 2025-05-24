@@ -1,4 +1,6 @@
-﻿namespace HiveSpace.Common.Exceptions;
+﻿using HiveSpace.Common.Exceptions.Models;
+
+namespace HiveSpace.Common.Exceptions;
 public class ConcurrencyException : BaseException
 {
     private static readonly int _httpCode = 409; // HTTP 409 Conflict

@@ -5,16 +5,16 @@ namespace HiveSpace.Application.Extensions;
 
 public static class DbMigrationExtension
 {
-    public static IHost Migrate(this IHost host)
+    public static IApplicationBuilder Migrate(this IApplicationBuilder app)
     {
-        using var scope = host.Services.CreateScope();
+        using var scope = app.ApplicationServices.GetService<IServiceScopeFactory>()!.CreateScope();
         var services = scope.ServiceProvider;
         var logger = services.GetRequiredService<ILogger<HiveSpaceDbContext>>();
         var dbContext = services.GetRequiredService<HiveSpaceDbContext>();
         try
         {
             var pendingMigrations = dbContext.Database.GetPendingMigrations().ToList();
-            if (pendingMigrations.Any())
+            if (pendingMigrations.Count != 0)
             {
                 foreach (var migration in pendingMigrations)
                 {
@@ -41,6 +41,6 @@ public static class DbMigrationExtension
         {
             logger.LogError(ex, "An error occurred while migrating the database");
         }
-        return host;
+        return app;
     }
 }

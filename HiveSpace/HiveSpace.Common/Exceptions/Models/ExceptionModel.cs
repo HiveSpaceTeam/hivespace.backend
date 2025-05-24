@@ -1,5 +1,5 @@
-﻿namespace HiveSpace.Common.Exceptions;
-public class ErrorModel
+﻿namespace HiveSpace.Common.Exceptions.Models;
+public class ExceptionModel
 {
     public List<ErrorCodeDto> Errors { get; set; } = [];
     public string Status { get; set; } = string.Empty;
