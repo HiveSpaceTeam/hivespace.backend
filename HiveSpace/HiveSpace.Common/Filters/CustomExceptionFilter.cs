@@ -41,7 +41,7 @@ namespace HiveSpace.Common.Filters
                     if (exception.EnableData)
                     {
                         foreach (var item in error.Data)
-                        {
+                {
                             errorDto.Data.Add(item.Key, item.Value);
                         }
                     }
@@ -56,6 +56,7 @@ namespace HiveSpace.Common.Filters
                 {
                     Code = "000000",
                     MessageCode = "ServerError",
+                    Data = [],
                     Source = null,
                 };
 #if DEBUG
