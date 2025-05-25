@@ -25,6 +25,7 @@ using Microsoft.IdentityModel.Tokens;
 using NLog.Extensions.Logging;
 using StackExchange.Redis;
 using System.Text;
+using Azure.Storage.Blobs;
 
 namespace HiveSpace.Application.Extensions;
 
@@ -102,6 +103,14 @@ public static class ApplicationDI
         services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         services.AddScoped<IJwtService, JwtService>();
         services.AddScoped<IUserContext, UserContext>();
+        // In Program.cs or Startup.cs
+        services.AddSingleton(serviceProvider =>
+        {
+            var configuration = serviceProvider.GetRequiredService<IConfiguration>();
+            var connectionString = configuration.GetSection("AzureBlobStorage:Connectionstring").Value;
+            return new BlobServiceClient(connectionString);
+        });
+
         return services;
     }
 

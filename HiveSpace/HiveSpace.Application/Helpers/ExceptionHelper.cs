@@ -1,5 +1,5 @@
-﻿using FluentValidation.Results;
-using HiveSpace.Common.Exceptions;
+﻿using HiveSpace.Common.Exceptions;
+using HiveSpace.Common.Exceptions.Models;
 
 namespace HiveSpace.Application.Helpers;
 
@@ -43,20 +43,6 @@ public class ExceptionHelper
         return BadRequestException(errorCode, [new ErrorData(errorKey, StringHelper.ToStringOrEmpty(errorValue))], innerException);
     }
 
-    /// <summary>
-    /// Create a HTTP 400 Bad Request exception.
-    /// </summary>
-    public static BadRequestException BadRequestException(Enum errorCode, IEnumerable<ValidationFailure> validationErrors)
-    {
-        return new BadRequestException(
-        [
-            new()
-            {
-                Code = errorCode,
-                Data = validationErrors.Select(e => new ErrorData(e.PropertyName, e.ErrorMessage)).ToList()
-            }
-        ], true);
-    }
 
     /// <summary>
     /// Create a HTTP 403 Forbidden exception.
