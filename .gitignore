@@ -25,3 +25,4 @@
 /.vs
 /HiveSpace/HiveSpace.Test/bin/Debug
 /HiveSpace/HiveSpace.Test/obj
+/HiveSpace/HiveSpace.Test/bin/Release/net8.0

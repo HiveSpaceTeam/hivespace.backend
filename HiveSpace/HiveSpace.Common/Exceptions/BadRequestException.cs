@@ -1,4 +1,6 @@
-﻿namespace HiveSpace.Common.Exceptions;
+﻿using HiveSpace.Common.Exceptions.Models;
+
+namespace HiveSpace.Common.Exceptions;
 public class BadRequestException : BaseException
 {
     private static readonly int _httpCode = 400;

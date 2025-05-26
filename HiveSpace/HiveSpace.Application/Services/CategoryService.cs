@@ -2,6 +2,7 @@
 using HiveSpace.Application.Interfaces;
 using HiveSpace.Application.Models.ViewModels;
 using HiveSpace.Application.Queries;
+using HiveSpace.Domain.Enums;
 
 namespace HiveSpace.Application.Services;
 
@@ -13,6 +14,7 @@ public class CategoryService(IQueryService queryService, ICacheService redisServ
 
     public async Task<List<CategoryViewModel>> GetCategoryAsync()
     {
-        return await _redisService.GetOrCreateAsync(CacheKeys.Categories, _queryService.GetCategoryViewModelsAsync);
+        return await _redisService.GetOrCreateAsync(CacheKeys.Categories, _queryService.GetCategoryViewModelsAsync)
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.CategoryNotFound);
     }
 }
