@@ -34,14 +34,16 @@ public class CacheService(IMemoryCache memoryCache, IDatabase redisDb, IOptions<
             return value;
         }
 
-        throw ExceptionHelper.NotFoundException(ApplicationErrorCode.CacheNotFound, ApplicationErrorCode.CacheNotFound.ToString(), key);
+        return default;
     }
 
     public async Task<bool> SetAsync<T>(string key, T value, TimeSpan? expiration = null)
     {
         var expiry = expiration ?? _defaultExpiration;
-        _memoryCache.Set(GetPrefixedKey(key), value, expiry);
-        return await _redisDb.StringSetAsync(GetPrefixedKey(key), JsonSerializer.Serialize(value), expiry);
+        using var entry = _memoryCache.CreateEntry(GetPrefixedKey(key));
+        entry.Value = value;
+        entry.AbsoluteExpirationRelativeToNow = expiry;
+        return await _redisDb.StringSetAsync(GetPrefixedKey(key), JsonSerializer.Serialize(value), expiry, When.Always, CommandFlags.None);
     }
 
     public async Task<bool> RemoveAsync(string key)
