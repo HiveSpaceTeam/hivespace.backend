@@ -56,7 +56,6 @@ namespace HiveSpace.Common.Filters
                 {
                     Code = "000000",
                     MessageCode = "ServerError",
-                    Data = [],
                     Source = null,
                 };
 #if DEBUG
