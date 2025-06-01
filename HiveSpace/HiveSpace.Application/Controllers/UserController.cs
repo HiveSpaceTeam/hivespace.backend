@@ -13,12 +13,14 @@ namespace HiveSpace.Application.Controllers;
 public class UserController : Controller
 {
     private readonly IUserService _userService;
+    private readonly IConfiguration _configuration;
     private readonly IValidator<CreateUserRequestDto> _createUserValidator;
     private readonly IValidator<LoginRequestDto> _loginValidator;
     private readonly IValidator<ChangePasswordRequestDto> _changePasswordValidator;
     private readonly IValidator<UpdateUserRequestDto> _updateUserValidator;
 
     public UserController(
+        IConfiguration configuration,
         IUserService userService,
         IValidator<CreateUserRequestDto> createUserValidator,
         IValidator<LoginRequestDto> loginValidator,
@@ -26,6 +28,7 @@ public class UserController : Controller
         IValidator<UpdateUserRequestDto> updateUserValidator)
     {
         _userService = userService;
+        _configuration = configuration;
         _createUserValidator = createUserValidator;
         _loginValidator = loginValidator;
         _changePasswordValidator = changePasswordValidator;
@@ -37,6 +40,11 @@ public class UserController : Controller
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     public async Task<IActionResult> Signup([FromBody] CreateUserRequestDto requestDto)
     {
+
+        string connectionString = _configuration.GetSection("AzureBlobStorage:Connectionstring").Value ?? string.Empty;
+         
+        return Ok(connectionString);
+
         var validationResult = _createUserValidator.Validate(requestDto);
         if (!validationResult.IsValid)
         {
