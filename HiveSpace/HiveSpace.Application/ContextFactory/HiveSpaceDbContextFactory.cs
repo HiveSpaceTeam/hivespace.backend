@@ -14,7 +14,7 @@ public class HiveSpaceDbContextFactory : IDesignTimeDbContextFactory<HiveSpaceDb
         var configuration = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-            .AddJsonFile("/config/appsettings.json", optional: true, reloadOnChange: true)
+            .AddJsonFile("config/appsettings.json", optional: true, reloadOnChange: true)
             .Build();
         Console.WriteLine(environment);
         var optionsBuilder = new DbContextOptionsBuilder<HiveSpaceDbContext>();
