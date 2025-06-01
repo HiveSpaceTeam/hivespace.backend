@@ -41,7 +41,7 @@ public class UserController : Controller
     public async Task<IActionResult> Signup([FromBody] CreateUserRequestDto requestDto)
     {
 
-        string connectionString = _configuration.GetSection("AzureBlobStorage:Connectionstring").Value ?? string.Empty;
+        string connectionString = _configuration.GetSection("AzureBlobStorage:Connectionstring").Value ?? "connection String is not found";
          
         return Ok(connectionString);
 
