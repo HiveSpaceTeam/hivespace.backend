@@ -40,7 +40,6 @@ public class UserController : Controller
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     public async Task<IActionResult> Signup([FromBody] CreateUserRequestDto requestDto)
     {
-        return Ok(_configuration.GetSection("AzureBlobStorage"));
         string connectionString = _configuration.GetSection("AzureBlobStorage:Connectionstring").Value ?? "connection String is not found";
          
         return Ok(connectionString);
