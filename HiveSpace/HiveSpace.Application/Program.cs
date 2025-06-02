@@ -16,6 +16,11 @@ if (environment == "Production")
 }
 var configuration = builder.Configuration;
 
+foreach (var kvp in configuration.AsEnumerable())
+{
+    Console.WriteLine($"{kvp.Key} = {kvp.Value}");
+}
+
 // Add services to the container.
 builder.Services
     .AddSetupOption(configuration)
@@ -26,6 +31,8 @@ builder.Services
 LoggingSetup.ConfigureLogging(builder.Environment, configuration);
 
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
