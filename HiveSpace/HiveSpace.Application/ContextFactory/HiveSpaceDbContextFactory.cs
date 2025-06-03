@@ -18,6 +18,14 @@ public class HiveSpaceDbContextFactory : IDesignTimeDbContextFactory<HiveSpaceDb
            .AddEnvironmentVariables()
             //.AddJsonFile("config/appsettings.json", optional: true)
             .Build();
+
+        Console.WriteLine("🔍 Config keys loaded:");
+        foreach (var kvp in configuration.AsEnumerable())
+        {
+            Console.WriteLine($"  {kvp.Key} = {kvp.Value}");
+        }
+
+
         Console.WriteLine(environment);
         var optionsBuilder = new DbContextOptionsBuilder<HiveSpaceDbContext>();
         var connectionString = configuration.GetSection("Postgres:ConnectionString").Value;

@@ -16,10 +16,6 @@ if (environment == "Production")
 }
 var configuration = builder.Configuration;
 
-foreach (var kvp in configuration.AsEnumerable())
-{
-    Console.WriteLine($"{kvp.Key} = {kvp.Value}");
-}
 
 // Add services to the container.
 builder.Services
