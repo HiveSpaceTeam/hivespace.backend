@@ -18,7 +18,7 @@ var configuration = builder.Configuration;
 configuration
     .SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("appsettings.json", optional: false)
-    .AddJsonFile("/app/secrets/appsettings.secrets.json", optional: true)
+    .AddJsonFile("/config/appsettings.json", optional: true)
     .AddEnvironmentVariables();
 
 
