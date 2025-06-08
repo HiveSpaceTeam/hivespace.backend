@@ -1,4 +1,6 @@
-﻿namespace HiveSpace.Common.Exceptions;
+﻿using HiveSpace.Common.Exceptions.Models;
+
+namespace HiveSpace.Common.Exceptions;
 public class UnauthorizedException : BaseException
 {
     private static readonly int _httpCode = 401;
