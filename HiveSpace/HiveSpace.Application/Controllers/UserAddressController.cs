@@ -38,7 +38,7 @@ public class UserAddressController : ControllerBase
     }
 
     [HttpPut("{userAddressId}")]
-    [ProducesResponseType((int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.NoContent)]
     public async Task<IActionResult> UpdateUserAddress(Guid userAddressId, [FromBody] UserAddressRequestDto param)
     {
         ValidationHelper.ValidateResult(_userAddressValidator.Validate(param));
@@ -47,7 +47,7 @@ public class UserAddressController : ControllerBase
     }
 
     [HttpPut("{userAddressId}/default")]
-    [ProducesResponseType((int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.NoContent)]
     public async Task<IActionResult> SetDefaultUserAddress(Guid userAddressId)
     {
         await _userAddressService.SetDefaultUserAddressAsync(userAddressId);
@@ -55,7 +55,7 @@ public class UserAddressController : ControllerBase
     }
 
     [HttpDelete("{userAddressId}")]
-    [ProducesResponseType((int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.NoContent)]
     public async Task<IActionResult> DeleteUserAddress(Guid userAddressId)
     {
         await _userAddressService.DeleteUserAddressAsync(userAddressId);
