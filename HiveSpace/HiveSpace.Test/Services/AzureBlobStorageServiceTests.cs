@@ -1,12 +1,10 @@
 using Azure;
 using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
-using HiveSpace.Application.Interfaces;
 using HiveSpace.Application.Services;
 using HiveSpace.Common.Exceptions;
 using HiveSpace.Domain.Enums;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
 using Moq;
 
 namespace HiveSpace.Test.Services;

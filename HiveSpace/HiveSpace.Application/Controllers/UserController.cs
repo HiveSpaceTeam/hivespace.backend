@@ -10,7 +10,7 @@ namespace HiveSpace.Application.Controllers;
 
 [Route("api/v1/users")]
 [ApiController]
-public class UserController : Controller
+public class UserController : ControllerBase
 {
     private readonly IUserService _userService;
     private readonly IValidator<CreateUserRequestDto> _createUserValidator;
@@ -38,8 +38,7 @@ public class UserController : Controller
     public async Task<IActionResult> Signup([FromBody] CreateUserRequestDto requestDto)
     {
         ValidationHelper.ValidateResult(_createUserValidator.Validate(requestDto));
-        var result = await _userService.CreateUserAsync(requestDto);
-        return Ok(result);
+        return Ok(await _userService.CreateUserAsync(requestDto));
     }
 
     [HttpPost("login")]
@@ -48,8 +47,7 @@ public class UserController : Controller
     public async Task<IActionResult> Login([FromBody] LoginRequestDto requestDto)
     {
         ValidationHelper.ValidateResult(_loginValidator.Validate(requestDto));
-        var result = await _userService.LoginAsync(requestDto);
-        return Ok(result);
+        return Ok(await _userService.LoginAsync(requestDto));
     }
 
     [Authorize]
@@ -68,8 +66,7 @@ public class UserController : Controller
     [ProducesResponseType((int)HttpStatusCode.OK)]
     public async Task<IActionResult> GetUserInfo()
     {
-        var result = await _userService.GetUserInfoAsync();
-        return Ok(result);
+        return Ok(await _userService.GetUserInfoAsync());
     }
 
     [HttpPut("change-password")]
