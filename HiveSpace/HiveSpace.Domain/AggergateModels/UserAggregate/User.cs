@@ -4,23 +4,18 @@ using HiveSpace.Domain.SeedWork;
 using HiveSpace.Domain.Shared;
 
 namespace HiveSpace.Domain.AggergateModels.UserAggregate;
-public class User : AggregateRoot<Guid>
+public sealed class User : AggregateRoot<Guid>
 {
     public string? FullName { get; private set; }
-
     public string UserName { get; private set; }
-
     public string? Email { get; private set; }
-
     public PhoneNumber PhoneNumber { get; private set; }
-
     public string PasswordHashed { get; private set; }
-
     public Gender? Gender { get; private set; }
     public DateTime? DateOfBirth { get; private set; }
 
-    private readonly List<UserAddress> _addresses = [];
-    public IReadOnlyCollection<UserAddress> Addresses => _addresses.AsReadOnly();
+    private readonly List<UserAddress> _addresses = new();
+    public IReadOnlyCollection<UserAddress> Addresses => _addresses;
 
     private User() { }
 
@@ -51,9 +46,15 @@ public class User : AggregateRoot<Guid>
 
     public void RemoveAddress(Guid userAddressId)
     {
-        var deletedAddressIndex = _addresses.FindIndex(x => x.Id == userAddressId);
-        if (deletedAddressIndex == -1) throw new NotFoundException("Address not found");
-        _addresses.RemoveAt(deletedAddressIndex);
+        for (int i = 0; i < _addresses.Count; i++)
+        {
+            if (_addresses[i].Id == userAddressId)
+            {
+                _addresses.RemoveAt(i);
+                return;
+            }
+        }
+        throw new NotFoundException("Address not found");
     }
 
     public void UpdateAddress(Guid userAddressId, UserAddressProps props)
@@ -73,14 +74,21 @@ public class User : AggregateRoot<Guid>
         if (!string.IsNullOrWhiteSpace(fullName)) FullName = fullName;
         if (!string.IsNullOrWhiteSpace(email)) Email = email;
         if (!string.IsNullOrWhiteSpace(phoneNumber) && PhoneNumber.Value != phoneNumber) PhoneNumber = new PhoneNumber(phoneNumber);
-        if (gender is not null) Gender = (Gender)gender;
-        if (!string.IsNullOrWhiteSpace(email)) DateOfBirth = dob;
+        if (gender is not null) Gender = gender;
+        if (dob is not null) DateOfBirth = dob;
     }
 
     public void SetDefaultAddress(Guid userAddressId)
     {
-        var address = _addresses.Find(x => x.Id == userAddressId) ?? throw new NotFoundException("Address not found");
-        _addresses.ForEach(x => x.SetDefault(false));
+        UserAddress? address = null;
+        foreach (var addr in _addresses)
+        {
+            if (addr.Id == userAddressId)
+                address = addr;
+            addr.SetDefault(false);
+        }
+        if (address is null)
+            throw new NotFoundException("Address not found");
         address.SetDefault(true);
     }
 }
