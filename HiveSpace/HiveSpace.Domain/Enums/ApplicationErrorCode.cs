@@ -28,4 +28,5 @@ public enum ApplicationErrorCode
     InvalidDate = 422024,
     InvalidValue = 4220125,
     MaxLengthExceeded = 422026,
+    MustBeGreaterThanZero = 422027,
 }
