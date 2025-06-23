@@ -1,5 +1,7 @@
 ﻿using FluentValidation;
 using HiveSpace.Application.Models.Dtos.Request.UserAddress;
+using HiveSpace.Common.Exceptions.Models;
+using HiveSpace.Domain.Enums;
 
 namespace HiveSpace.Application.Validators.UserAddress;
 
@@ -8,24 +10,31 @@ public class UserAddressValidator : AbstractValidator<UserAddressRequestDto>
     public UserAddressValidator()
     {
         RuleFor(x => x.FullName)
-            .NotEmpty().WithMessage("FullName is required");
-        
+            .NotEmpty()
+            .WithState(_ => new ErrorCode { Code = ApplicationErrorCode.Required, Source = nameof(UserAddressRequestDto.FullName) });
+
         RuleFor(x => x.Street)
-            .NotEmpty().WithMessage("Street is required");
+            .NotEmpty()
+            .WithState(_ => new ErrorCode { Code = ApplicationErrorCode.Required, Source = nameof(UserAddressRequestDto.Street) });
 
         RuleFor(x => x.Ward)
-            .NotEmpty().WithMessage("Ward is required");
+            .NotEmpty()
+            .WithState(_ => new ErrorCode { Code = ApplicationErrorCode.Required, Source = nameof(UserAddressRequestDto.Ward) });
 
         RuleFor(x => x.District)
-            .NotEmpty().WithMessage("District is required");
+            .NotEmpty()
+            .WithState(_ => new ErrorCode { Code = ApplicationErrorCode.Required, Source = nameof(UserAddressRequestDto.District) });
 
         RuleFor(x => x.Province)
-            .NotEmpty().WithMessage("Province is required");
+            .NotEmpty()
+            .WithState(_ => new ErrorCode { Code = ApplicationErrorCode.Required, Source = nameof(UserAddressRequestDto.Province) });
 
         RuleFor(x => x.Country)
-            .NotEmpty().WithMessage("Country is required");
+            .NotEmpty()
+            .WithState(_ => new ErrorCode { Code = ApplicationErrorCode.Required, Source = nameof(UserAddressRequestDto.Country) });
 
         RuleFor(x => x.PhoneNumber)
-            .NotEmpty().WithMessage("PhoneNumber is required");
+            .NotEmpty()
+            .WithState(_ => new ErrorCode { Code = ApplicationErrorCode.Required, Source = nameof(UserAddressRequestDto.PhoneNumber) });
     }
 }

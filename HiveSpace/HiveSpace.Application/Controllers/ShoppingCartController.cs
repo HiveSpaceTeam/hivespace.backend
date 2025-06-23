@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using HiveSpace.Application.Helpers;
 using HiveSpace.Application.Interfaces;
 using HiveSpace.Application.Models.Dtos.Request.CartItem;
 using HiveSpace.Application.Models.Dtos.Request.ShoppingCart;
@@ -45,12 +46,7 @@ public class ShoppingCartController : Controller
     [ProducesResponseType((int)HttpStatusCode.UnprocessableContent)]
     public async Task<IActionResult> AddItemToCart([FromBody] AddItemToCartRequestDto param)
     {
-        var validationResult = _addItemToCartValidator.Validate(param);
-        if (!validationResult.IsValid)
-        {
-            return BadRequest(validationResult.Errors);
-        }
-
+        ValidationHelper.ValidateResult(_addItemToCartValidator.Validate(param));
         var result = await _shoppingCartService.AddItemToCartAsync(param);
         return Ok(result);
     }
@@ -61,12 +57,7 @@ public class ShoppingCartController : Controller
     [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
     public async Task<IActionResult> UpdateCartItem([FromBody] UpdateCartItemRequestDto updateCartItemRequestDto)
     {
-        var validationResult = _updateCartItemValidator.Validate(updateCartItemRequestDto);
-        if (!validationResult.IsValid)
-        {
-            return BadRequest(validationResult.Errors);
-        }
-
+        ValidationHelper.ValidateResult(_updateCartItemValidator.Validate(updateCartItemRequestDto));
         var result = await _shoppingCartService.UpdateCartItem(updateCartItemRequestDto);
         return Ok(result);
     }
@@ -77,12 +68,7 @@ public class ShoppingCartController : Controller
     [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
     public async Task<IActionResult> UpdateCartItemMultiSelection([FromBody] UpdateMultiCartItemSelectionDto updateSeletionDto)
     {
-        var validationResult = _updateMultiCartItemSelectionValidator.Validate(updateSeletionDto);
-        if (!validationResult.IsValid)
-        {
-            return BadRequest(validationResult.Errors);
-        }
-
+        ValidationHelper.ValidateResult(_updateMultiCartItemSelectionValidator.Validate(updateSeletionDto));
         var result = await _shoppingCartService.UpdateMultiSelection(updateSeletionDto);
         return Ok(result);
     }

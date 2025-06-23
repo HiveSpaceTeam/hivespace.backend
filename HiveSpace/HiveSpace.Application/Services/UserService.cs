@@ -11,17 +11,28 @@ using HiveSpace.Domain.Repositories;
 
 namespace HiveSpace.Application.Services;
 
-public class UserService(IUserRepository userRepository, IJwtService jwtService, IUserContext userContext, IMapper mapper) : IUserService
+public class UserService : IUserService
 {
-    private readonly IMapper _mapper = mapper;
-    private readonly IUserRepository _userRepository = userRepository;
-    private readonly IJwtService _jwtService = jwtService;
-    private readonly IUserContext _userContext = userContext;
+    private readonly IMapper _mapper;
+    private readonly IUserRepository _userRepository;
+    private readonly IJwtService _jwtService;
+    private readonly IUserContext _userContext;
+
+    public UserService(
+        IUserRepository userRepository,
+        IJwtService jwtService,
+        IUserContext userContext,
+        IMapper mapper)
+    {
+        _userRepository = userRepository;
+        _jwtService = jwtService;
+        _userContext = userContext;
+        _mapper = mapper;
+    }
+
     public async Task<SignupResponseDto> CreateUserAsync(CreateUserRequestDto requestDto)
     {
-        var user = await _userRepository.FindUserByPhoneNumber(requestDto.PhoneNumber);
-
-        if (user is not null)
+        if (await _userRepository.FindUserByPhoneNumber(requestDto.PhoneNumber) is not null)
         {
             throw ExceptionHelper.DomainException(ApplicationErrorCode.PhoneNumberExisted, nameof(User.PhoneNumber), requestDto.PhoneNumber);
         }
@@ -33,7 +44,7 @@ public class UserService(IUserRepository userRepository, IJwtService jwtService,
             requestDto.UserName,
             null,
             null,
-            null, 
+            null,
             null);
 
         _userRepository.Add(newUser);
@@ -46,27 +57,25 @@ public class UserService(IUserRepository userRepository, IJwtService jwtService,
             Email = newUser.Email ?? string.Empty,
         };
 
-        ContextData contextData = new()
+        var contextData = new ContextData
         {
             Username = newUser.UserName,
             FullName = newUser.FullName,
         };
-        return new SignupResponseDto 
-        { 
-            Token = _jwtService.GenerateToken(identity), 
-            ContextData = contextData 
+
+        return new SignupResponseDto
+        {
+            Token = _jwtService.GenerateToken(identity),
+            ContextData = contextData
         };
     }
 
-
     public async Task<LoginResponseDto> LoginAsync(LoginRequestDto requestDto)
     {
-        var user = await _userRepository.FindUserByPhoneNumber(requestDto.PhoneNumber) 
+        var user = await _userRepository.FindUserByPhoneNumber(requestDto.PhoneNumber)
             ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound, nameof(User.PhoneNumber), requestDto.PhoneNumber);
 
-        var isVerified = PasswordHelper.Verify(requestDto.Password, user.PasswordHashed);
-
-        if (!isVerified)
+        if (!PasswordHelper.Verify(requestDto.Password, user.PasswordHashed))
         {
             throw ExceptionHelper.DomainException(ApplicationErrorCode.IncorrectPassword);
         }
@@ -75,24 +84,26 @@ public class UserService(IUserRepository userRepository, IJwtService jwtService,
         {
             UserId = user.Id,
             PhoneNumber = user.PhoneNumber.Value,
-            Email = user.Email ?? "",
+            Email = user.Email ?? string.Empty,
         };
 
-        ContextData contextData = new ()
+        var contextData = new ContextData
         {
             Username = user.UserName,
             FullName = user.FullName,
         };
-        return new LoginResponseDto 
-        { 
-            Token = _jwtService.GenerateToken(identity), 
-            ContextData = contextData 
+
+        return new LoginResponseDto
+        {
+            Token = _jwtService.GenerateToken(identity),
+            ContextData = contextData
         };
     }
 
     public async Task UpdateUserInfoAsync(UpdateUserRequestDto param)
     {
-        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true)
+        var userId = _userContext.UserId;
+        var user = await _userRepository.GetByIdAsync(userId, includeDetail: true)
             ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
 
         user.UpdateUserInfo(param.UserName, param.FullName, param.Email, param.PhoneNumber, param.Gender, param.DateOfBirth);
@@ -101,25 +112,24 @@ public class UserService(IUserRepository userRepository, IJwtService jwtService,
 
     public async Task<UserInfoDto> GetUserInfoAsync()
     {
-        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true)
+        var userId = _userContext.UserId;
+        var user = await _userRepository.GetByIdAsync(userId, includeDetail: true)
             ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
-        var res = _mapper.Map<UserInfoDto>(user);
-        return res;
+        return _mapper.Map<UserInfoDto>(user);
     }
 
     public async Task ChangePassword(ChangePasswordRequestDto requestDto)
     {
-        var user = await _userRepository.GetByIdAsync(_userContext.UserId, includeDetail: true)
+        var userId = _userContext.UserId;
+        var user = await _userRepository.GetByIdAsync(userId, includeDetail: true)
             ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
 
-        var isVerified = PasswordHelper.Verify(requestDto.Password, user.PasswordHashed);
-
-        if (!isVerified)
+        if (!PasswordHelper.Verify(requestDto.Password, user.PasswordHashed))
         {
             throw ExceptionHelper.DomainException(ApplicationErrorCode.IncorrectPassword, nameof(user.PasswordHashed), requestDto.Password);
         }
-        var passwordHashed = PasswordHelper.Hash(requestDto.NewPassword);
-        user.UpdatePassword(passwordHashed);
+
+        user.UpdatePassword(PasswordHelper.Hash(requestDto.NewPassword));
         await _userRepository.SaveChangesAsync();
     }
 }
