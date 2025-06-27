@@ -233,11 +233,7 @@ public static class ApplicationDI
                 var jwtToken = jwtHandler.ReadJwtToken(token);
                 var issuer = jwtToken.Claims.FirstOrDefault(c => c.Type == "iss")?.Value;
                 var identityAuthority = identityServerJwtSetting.Authority;
-                if (issuer == jwtSetting.Issuer)
-                {
-                    return MonolithJwtScheme;
-                }
-                else if (issuer == identityAuthority ||  issuer == (identityAuthority?.TrimEnd('/') + "/"))
+                if (issuer == identityAuthority ||  issuer == (identityAuthority?.TrimEnd('/') + "/"))
                 {
                     return IdentityServerJwtScheme;
                 }
