@@ -1,6 +1,9 @@
-﻿using FluentValidation;
+﻿using Elasticsearch.Net;
+using FluentValidation;
+using HiveSpace.Application.Helpers;
 using HiveSpace.Application.Interfaces;
 using HiveSpace.Application.Models.Dtos.Request.Product;
+using HiveSpace.Application.Validators.User;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
@@ -35,12 +38,7 @@ namespace HiveSpace.Application.Controllers
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> GetProductSearchViewModel([FromBody] ProductSearchRequestDto param)
         {
-            var validationResult = _productSearchValidator.Validate(param);
-            if (!validationResult.IsValid)
-            {
-                return BadRequest(validationResult.Errors);
-            }
-
+            ValidationHelper.ValidateResult(_productSearchValidator.Validate(param));
             var result = await _productService.GetProductSearchViewModelAsync(param);
             return Ok(result);
         }
