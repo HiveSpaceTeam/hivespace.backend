@@ -34,12 +34,13 @@ if (app.Environment.IsDevelopment())
 }
 
 
-app.UseAuthentication();
-app.UseAuthorization();
-
-app.MapControllers();
 app.UseHttpsRedirection();
+
 app.UseCors("_myAllowSpecificOrigins");
+app.UseAuthentication();
+
+app.UseAuthorization();
+app.MapControllers();
 
 app.Migrate();
 
