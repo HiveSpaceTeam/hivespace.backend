@@ -7,7 +7,8 @@ public static class SetupOption
 {
     public static IServiceCollection AddSetupOption(this IServiceCollection services, IConfiguration configuration)
     {
-        services.Configure<JwtOptions>(configuration.GetSection(nameof(JwtOptions)));
+        services.Configure<JwtSetting>(configuration.GetSection("MonolithJwtSetting"));
+        services.Configure<IdentityServerJwtSetting>(configuration.GetSection("IdentityServerJwtSetting"));
         services.Configure<AppConfig>(configuration.GetSection(nameof(AppConfig)));
         services.Configure<RedisOption>(configuration.GetSection("Redis"));
         return services;

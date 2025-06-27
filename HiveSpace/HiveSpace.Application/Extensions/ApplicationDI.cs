@@ -26,24 +26,28 @@ using NLog.Extensions.Logging;
 using StackExchange.Redis;
 using System.Text;
 using Azure.Storage.Blobs;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.JsonWebTokens;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace HiveSpace.Application.Extensions;
+
 
 public static class ApplicationDI
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
     {
+        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         services.AddControllers(options =>
         {
             options.Filters.Add<CustomExceptionFilter>();
         });
-        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         services.ConfigureSwagger();
         //services.ConfigureLogging();
         services.ConfigureApplicationService();
         services.ConfigureFluentValidation();
         services.ConfigureCustomService();
-        services.ConfigureAuthencation(configuration);
+        services.ConfigureAuthentication(configuration);
         services.ConfigureQuery();
         services.ConfigureCors(configuration);
         services.ConfigureCache(configuration);
@@ -114,28 +118,6 @@ public static class ApplicationDI
         return services;
     }
 
-    public static IServiceCollection ConfigureAuthencation(this IServiceCollection services, IConfiguration configuration)
-    {
-        services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            .AddJwtBearer(options =>
-            {
-                var serviceProvider = services.BuildServiceProvider();
-                var jwtOption = serviceProvider.GetRequiredService<IOptions<JwtOptions>>().Value;
-                options.TokenValidationParameters = new()
-                {
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
-                    ValidateLifetime = true,
-                    ValidateIssuerSigningKey = true,
-                    ValidIssuer = jwtOption!.Issuer,
-                    ValidAudience = jwtOption!.Audience,
-                    IssuerSigningKey = new SymmetricSecurityKey(
-                        Encoding.UTF8.GetBytes(jwtOption.SecretKey))
-                };
-            });
-        return services;
-    }
-
     public static IServiceCollection ConfigureCors(this IServiceCollection services, IConfiguration configuration)
     {
         var appConfig = configuration.GetSection("AppConfig").Get<AppConfig>();
@@ -172,6 +154,100 @@ public static class ApplicationDI
             ConnectionMultiplexer.Connect(redisOption.ConnectionString));
         services.AddSingleton<IDatabase>(sp =>
             sp.GetRequiredService<IConnectionMultiplexer>().GetDatabase());
+        return services;
+    }
+
+    public static IServiceCollection ConfigureAuthentication(this IServiceCollection services, IConfiguration configuration)
+    {
+        const string MonolithJwtScheme = "MonolithJwt";
+        const string IdentityServerJwtScheme = "IdentityServerJwt";
+        const string HybridJwtScheme = "HybridJwt";
+        var serviceProvider = services.BuildServiceProvider();
+        var jwtSetting = serviceProvider.GetRequiredService<IOptions<JwtSetting>>().Value; 
+        var identityServerJwtSetting = serviceProvider.GetRequiredService<IOptions<IdentityServerJwtSetting>>().Value; ;
+        services.AddAuthentication(options =>
+        {
+            options.DefaultAuthenticateScheme = HybridJwtScheme;
+            options.DefaultChallengeScheme = HybridJwtScheme;
+        })
+        .AddJwtBearer(MonolithJwtScheme, options =>
+        {
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
+                ValidIssuer = jwtSetting!.Issuer,
+                ValidAudience = jwtSetting.Audience,
+                IssuerSigningKey = new SymmetricSecurityKey(
+                    Encoding.UTF8.GetBytes(jwtSetting.SecretKey))
+            };
+        })
+        .AddJwtBearer(IdentityServerJwtScheme, options =>
+        {
+            
+            options.Authority = identityServerJwtSetting!.Authority;
+            options.Audience = identityServerJwtSetting.Audience;
+            options.RequireHttpsMetadata = false;
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateLifetime = true,
+                ValidIssuer = identityServerJwtSetting.Authority,
+                ValidAudience = identityServerJwtSetting.Audience,
+                ValidateIssuerSigningKey = false,
+                ClockSkew = TimeSpan.FromMinutes(5),
+                SignatureValidator = (token, _) => new JsonWebToken(token)
+            };
+            //options.Events = new JwtBearerEvents
+            //{
+            //    OnAuthenticationFailed = context =>
+            //    {
+            //        Console.WriteLine($"Authentication failed for {IdentityServerJwtScheme}: {context.Exception}");
+            //        return Task.CompletedTask;
+            //    },
+            //    OnTokenValidated = context =>
+            //    {
+            //        Console.WriteLine($"Token successfully validated for {IdentityServerJwtScheme}. User: {context.Principal?.Identity?.Name}");
+            //        return Task.CompletedTask;
+            //    }
+            //};
+        })
+        .AddPolicyScheme(HybridJwtScheme, "JWT from Monolith or Identity Server", options =>
+        {
+            options.ForwardDefaultSelector = context =>
+            {
+                string? authorizationHeader = context.Request.Headers["Authorization"].FirstOrDefault();
+                if (string.IsNullOrEmpty(authorizationHeader) || !authorizationHeader.StartsWith("Bearer "))
+                {
+                    return MonolithJwtScheme;
+                }
+                var token = authorizationHeader.Substring("Bearer ".Length).Trim();
+                var jwtHandler = new JwtSecurityTokenHandler();
+                if (!jwtHandler.CanReadToken(token))
+                {
+                    return MonolithJwtScheme;
+                }
+                var jwtToken = jwtHandler.ReadJwtToken(token);
+                var issuer = jwtToken.Claims.FirstOrDefault(c => c.Type == "iss")?.Value;
+                var identityAuthority = identityServerJwtSetting.Authority;
+                if (issuer == jwtSetting.Issuer)
+                {
+                    return MonolithJwtScheme;
+                }
+                else if (issuer == identityAuthority ||  issuer == (identityAuthority?.TrimEnd('/') + "/"))
+                {
+                    return IdentityServerJwtScheme;
+                }
+                return MonolithJwtScheme;
+            };
+        });
+
+        // Add authorization services
+        services.AddAuthorization();
+
         return services;
     }
 }

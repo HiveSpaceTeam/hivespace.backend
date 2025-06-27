@@ -22,7 +22,6 @@ builder.Services
     .AddApplicationServices(configuration)
     .AddInfrastructureServices(configuration)
     .AddAutoMapper(typeof(AutoMapperProfiles));
-
 LoggingSetup.ConfigureLogging(builder.Environment, configuration);
 
 var app = builder.Build();
@@ -34,13 +33,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
 
-app.UseCors("_myAllowSpecificOrigins");
 app.UseAuthentication();
-
 app.UseAuthorization();
+
 app.MapControllers();
+app.UseHttpsRedirection();
+app.UseCors("_myAllowSpecificOrigins");
 
 app.Migrate();
 
