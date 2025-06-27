@@ -72,8 +72,8 @@ public class UserService : IUserService
 
     public async Task<LoginResponseDto> LoginAsync(LoginRequestDto requestDto)
     {
-        var user = await _userRepository.FindUserByPhoneNumber(requestDto.PhoneNumber)
-            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound, nameof(User.PhoneNumber), requestDto.PhoneNumber);
+        var user = await _userRepository.FindUserByEmail(requestDto.Email)
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound, nameof(User.Email), requestDto.Email);
 
         if (!PasswordHelper.Verify(requestDto.Password, user.PasswordHashed))
         {
