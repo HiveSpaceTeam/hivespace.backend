@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 using HiveSpace.Common.Exceptions;
 using HiveSpace.Common.Exceptions.Models;
+using HiveSpace.Domain.Exceptions;
 
 namespace HiveSpace.Common.Filters
 {
@@ -22,13 +23,6 @@ namespace HiveSpace.Common.Filters
 
             if (context.Exception is BaseException exception)
             {
-                //var errors = exception.ErrorCodeList.Select(x => new ErrorCodeDto
-                //{
-                //    Code = x.Code == null ? "000000" : Convert.ToInt32(x.Code).ToString(),
-                //    MessageCode = x.Code?.ToString() ?? string.Empty,
-                //    Data = x.Data == null ? [] : x.Data.ToDictionary(item => item.Key, item => item.Value),
-                //    Source = x.Source ?? (x.Data is not null && x.Data.Count > 0 ? x.Data[0].Key : null),
-                //});
                 var errorList = new List<ErrorCodeDto>();
                 foreach (var error in exception.ErrorCodeList)
                 {
@@ -38,10 +32,10 @@ namespace HiveSpace.Common.Filters
                         MessageCode = error.Code?.ToString() ?? string.Empty,
                         Source = error.Source ?? (error.Data is not null && error.Data.Count > 0 ? error.Data[0].Key : null),
                     };
-                    if (exception.EnableData)
+                    if (exception.EnableData && error.Data is not null)
                     {
                         foreach (var item in error.Data)
-                {
+                        {
                             errorDto.Data.Add(item.Key, item.Value);
                         }
                     }
@@ -49,6 +43,16 @@ namespace HiveSpace.Common.Filters
                 }
                 errorResponse.Errors = [.. errorList];
                 errorResponse.Status = exception.HttpCode.ToString();
+            }
+            else if (context.Exception is DomainException domainException)
+            {
+                var errorCode = domainException.ErrorCode;
+                var error = new ErrorCodeDto
+                {
+                    Code = errorCode == null ? "000000" : Convert.ToInt32(errorCode).ToString(),
+                    MessageCode = errorCode?.ToString() ?? string.Empty,
+                    Source = domainException.Key
+                };
             }
             else
             {

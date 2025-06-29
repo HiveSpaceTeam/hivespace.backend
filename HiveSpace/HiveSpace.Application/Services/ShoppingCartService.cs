@@ -8,6 +8,7 @@ using HiveSpace.Common.Interface;
 using HiveSpace.Domain.AggergateModels.ShoppingCartAggregate;
 using HiveSpace.Domain.AggergateModels.SkuAggregate;
 using HiveSpace.Domain.Enums;
+using HiveSpace.Domain.Exceptions;
 using HiveSpace.Domain.Repositories;
 
 namespace HiveSpace.Application.Services;
@@ -51,7 +52,7 @@ public class ShoppingCartService : IShoppingCartService
             ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
         if (!await IsValidQuantitySkuAsync(updateCartItemRequestDto.Quantity, updateCartItemRequestDto.Id))
         {
-            throw ExceptionHelper.DomainException(ApplicationErrorCode.InvalidQuantity, nameof(Sku.Quantity), updateCartItemRequestDto.Quantity);
+            throw new DomainException(ApplicationErrorCode.InvalidQuantity, nameof(Sku.Quantity), updateCartItemRequestDto.Quantity);
         }
 
         cart.UpdateCartItem(new CartItem(updateCartItemRequestDto.Id, updateCartItemRequestDto.Quantity));
@@ -102,7 +103,7 @@ public class ShoppingCartService : IShoppingCartService
 
         if (!await IsValidQuantitySkuAsync(itemCartAdd.Quantity, itemCartAdd.SkuId))
         {
-            throw ExceptionHelper.DomainException(ApplicationErrorCode.InvalidQuantity, nameof(Sku.Quantity), param.Quantity);
+            throw new DomainException(ApplicationErrorCode.InvalidQuantity, nameof(Sku.Quantity), param.Quantity);
         }
 
         return await _shoppingCartRepository.SaveChangesAsync() > 0;
@@ -114,7 +115,7 @@ public class ShoppingCartService : IShoppingCartService
 
         var addresses = await _userAddressService.GetUserAddressAsync();
         var addressDefault = addresses.Find(x => x.IsDefault)
-            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserAddressNotFound);
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.NotFoundAddress);
         result.Address = addressDefault;
 
         var products = await GetShoppingCartByUserIdAsync();

@@ -7,6 +7,7 @@ using HiveSpace.Common.Interface;
 using HiveSpace.Common.Models;
 using HiveSpace.Domain.AggergateModels.UserAggregate;
 using HiveSpace.Domain.Enums;
+using HiveSpace.Domain.Exceptions;
 using HiveSpace.Domain.Repositories;
 
 namespace HiveSpace.Application.Services;
@@ -32,17 +33,17 @@ public class UserService : IUserService
 
     public async Task<SignupResponseDto> CreateUserAsync(CreateUserRequestDto requestDto)
     {
-        if (await _userRepository.FindUserByPhoneNumber(requestDto.PhoneNumber) is not null)
+        if (await _userRepository.FindUserByPhoneNumber(requestDto.Email) is not null)
         {
-            throw ExceptionHelper.DomainException(ApplicationErrorCode.PhoneNumberExisted, nameof(User.PhoneNumber), requestDto.PhoneNumber);
+            throw new DomainException(ApplicationErrorCode.PhoneNumberExisted, nameof(User.PhoneNumber), requestDto.Email);
         }
 
         var passwordHashed = PasswordHelper.Hash(requestDto.Password);
         var newUser = new User(
-            requestDto.PhoneNumber,
+            requestDto.Email,
             passwordHashed,
             requestDto.UserName,
-            null,
+            string.Empty,
             null,
             null,
             null);
@@ -77,7 +78,7 @@ public class UserService : IUserService
 
         if (!PasswordHelper.Verify(requestDto.Password, user.PasswordHashed))
         {
-            throw ExceptionHelper.DomainException(ApplicationErrorCode.IncorrectPassword);
+            throw new DomainException(ApplicationErrorCode.IncorrectPassword);
         }
 
         var identity = new Identity
@@ -126,7 +127,7 @@ public class UserService : IUserService
 
         if (!PasswordHelper.Verify(requestDto.Password, user.PasswordHashed))
         {
-            throw ExceptionHelper.DomainException(ApplicationErrorCode.IncorrectPassword, nameof(user.PasswordHashed), requestDto.Password);
+            throw new DomainException(ApplicationErrorCode.IncorrectPassword, nameof(user.PasswordHashed), requestDto.Password);
         }
 
         user.UpdatePassword(PasswordHelper.Hash(requestDto.NewPassword));

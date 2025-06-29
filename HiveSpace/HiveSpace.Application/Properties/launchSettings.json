@@ -5,7 +5,8 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "APP_CONFIGURATION_ENDPOINT": "https://hivespace-appcfg.azconfig.io"
       },
       "dotnetRunMessages": true,
       "applicationUrl": "https://localhost:5100"

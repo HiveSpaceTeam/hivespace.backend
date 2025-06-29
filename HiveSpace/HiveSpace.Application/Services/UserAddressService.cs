@@ -73,7 +73,7 @@ public class UserAddressService : IUserAddressService
             ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
 
         var userAddress = user.Addresses.FirstOrDefault(x => x.Id == userAddressId)
-            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserAddressNotFound);
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.NotFoundAddress);
 
         var userAddressProp = new UserAddressProps
         {
@@ -100,7 +100,7 @@ public class UserAddressService : IUserAddressService
             ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
 
         if (!user.Addresses.Any(x => x.Id == userAddressId))
-            throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserAddressNotFound);
+            throw ExceptionHelper.NotFoundException(ApplicationErrorCode.NotFoundAddress);
 
         user.SetDefaultAddress(userAddressId);
         await _userRepository.SaveChangesAsync();
@@ -115,7 +115,7 @@ public class UserAddressService : IUserAddressService
             ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
 
         if (!user.Addresses.Any(x => x.Id == userAddressId))
-            throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserAddressNotFound);
+            throw ExceptionHelper.NotFoundException(ApplicationErrorCode.NotFoundAddress);
 
         user.RemoveAddress(userAddressId);
         await _userRepository.SaveChangesAsync();
@@ -130,6 +130,6 @@ public class UserAddressService : IUserAddressService
             ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserNotFound);
 
         return user.Addresses.FirstOrDefault(x => x.Id == userAddressId)
-            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.UserAddressNotFound);
+            ?? throw ExceptionHelper.NotFoundException(ApplicationErrorCode.NotFoundAddress);
     }
 }

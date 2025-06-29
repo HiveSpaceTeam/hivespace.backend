@@ -34,10 +34,7 @@ public class OrderItem : Entity<Guid>
 
         if (IsInvalid())
         {
-            throw new DomainException
-            {
-                MessageCode = "i18nOrder.messages.invalidOrderItem"
-            };
+            throw new DomainException(ApplicationErrorCode.InvalidOrder);
         }
     }
 

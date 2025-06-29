@@ -10,9 +10,9 @@ using System.Text;
 namespace HiveSpace.Common.Service;
 public sealed class JwtService : IJwtService
 {
-    private readonly JwtOptions _jwtOptions;
+    private readonly JwtSetting _jwtOptions;
 
-    public JwtService(IOptions<JwtOptions> jwtOptions)
+    public JwtService(IOptions<JwtSetting> jwtOptions)
     {
         _jwtOptions = jwtOptions.Value;
     }

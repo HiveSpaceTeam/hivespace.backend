@@ -81,24 +81,6 @@ public class ExceptionHelper
     }
 
     /// <summary>
-    /// Create a HTTP 422 Domain exception.
-    /// </summary>
-    public static DomainException DomainException(Enum errorCode, IEnumerable<ErrorData>? errorData = null, string? source = null, Exception? innerException = null)
-    {
-        return innerException is null
-            ? new DomainException(CreateErrorCodeList(errorCode, errorData, source), errorData is not null)
-            : new DomainException(CreateErrorCodeList(errorCode, errorData), innerException, errorData is not null);
-    }
-
-    /// <summary>
-    /// Create a HTTP 422 Domain exception.
-    /// </summary>
-    public static DomainException DomainException(Enum errorCode, string errorKey, object errorValue, string? source = null, Exception? innerException = null)
-    {
-        return DomainException(errorCode, [new ErrorData(errorKey, StringHelper.ToStringOrEmpty(errorValue))], source, innerException);
-    }
-
-    /// <summary>
     /// Create a Base exception.
     /// </summary>
     public static BaseException BaseException(Enum errorCode, IEnumerable<ErrorData>? errorData = null, Exception? innerException = null, int? httpCode = 500)

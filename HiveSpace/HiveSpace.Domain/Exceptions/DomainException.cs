@@ -1,25 +1,18 @@
-﻿using Newtonsoft.Json;
-using HiveSpace.Domain.Enums;
+﻿namespace HiveSpace.Domain.Exceptions;
 
-namespace HiveSpace.Domain.Exceptions
+public class DomainException : Exception
 {
-    public class DomainException : Exception
+    public int HttpCode { get; } = 422;
+    public Enum ErrorCode { get; }
+
+    public string? Key { get; }
+    public object? Value { get; }
+
+    public DomainException(Enum errorCode, string? key = null, object? value = null)
+        : base()
     {
-        public List<DomainError> Errors { get; set; }
-        public string MessageCode { get; set; }
-        public override string ToString()
-        {
-            return JsonConvert.SerializeObject(new
-            {
-                Errors,
-                MessageCode,
-            });
-        }
-    }
-    public class DomainError
-    {
-        public string Field { get; set; }
-        public string MessageCode { get; set; }
-        public ApplicationErrorCode ErrorCode { get; set; }
+        ErrorCode = errorCode;
+        Key = key;
+        Value = value;
     }
 }

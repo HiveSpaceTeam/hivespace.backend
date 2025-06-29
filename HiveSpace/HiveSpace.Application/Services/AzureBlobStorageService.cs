@@ -4,6 +4,7 @@ using HiveSpace.Domain.Enums;
 using HiveSpace.Application.Extensions;
 using Azure.Storage.Blobs.Models;
 using HiveSpace.Application.Helpers;
+using HiveSpace.Domain.Exceptions;
 
 namespace HiveSpace.Application.Services;
 
@@ -55,7 +56,7 @@ public class AzureBlobStorageService : IStorageService
     {
         if (file == null || file.Length == 0)
         {
-            throw ExceptionHelper.DomainException(ApplicationErrorCode.NoFileUploaded);
+            throw new DomainException(ApplicationErrorCode.NoFileUploaded);
         }
 
         using var stream = file.OpenReadStream();

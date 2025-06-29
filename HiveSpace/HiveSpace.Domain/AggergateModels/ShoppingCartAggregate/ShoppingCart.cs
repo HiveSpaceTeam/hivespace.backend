@@ -1,4 +1,5 @@
-﻿using HiveSpace.Domain.Exceptions;
+﻿using HiveSpace.Domain.Enums;
+using HiveSpace.Domain.Exceptions;
 using HiveSpace.Domain.SeedWork;
 
 namespace HiveSpace.Domain.AggergateModels.ShoppingCartAggregate;
@@ -30,7 +31,7 @@ public class ShoppingCart(Guid customerId) : AggregateRoot<Guid>
     public void RemoveItem(Guid cartItem)
     {
         var deletedItemIndex = _items.FindIndex(x => x.Id == cartItem);
-        if (deletedItemIndex == -1) throw new NotFoundException("Item not found");
+        if (deletedItemIndex == -1) throw new DomainException(ApplicationErrorCode.NotFoundCartItem);
         _items.RemoveAt(deletedItemIndex);
     }
 
@@ -42,7 +43,7 @@ public class ShoppingCart(Guid customerId) : AggregateRoot<Guid>
     public void UpdateCartItem(CartItem cartItem)
     {
         var foundCartItem = _items.Find(x => x.SkuId == cartItem.SkuId);
-        if (foundCartItem is null) throw new NotFoundException("Item not found");
+        if (foundCartItem is null) throw new DomainException(ApplicationErrorCode.NotFoundCartItem);
 
         foundCartItem.SetQuantity(cartItem.Quantity);
     }

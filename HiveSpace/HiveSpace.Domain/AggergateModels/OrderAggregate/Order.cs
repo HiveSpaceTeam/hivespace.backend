@@ -48,10 +48,7 @@ public class Order : AggregateRoot<Guid>
             );
         PaymentMethod = paymentMethod;
         orderItemProps.ForEach(x => AddItem(x.Quantity, x.SkuId, x.ProductName, x.VariantName, x.Thumbnail, x.Amount, x.Currency));
-        if (IsInvalid()) throw new DomainException
-        {
-            MessageCode = "i18nOrder.messages.orderInvalid"
-        };
+        if (IsInvalid()) throw new DomainException(ApplicationErrorCode.InvalidOrder);
     }
 
     private bool IsInvalid()

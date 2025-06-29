@@ -24,19 +24,13 @@ public partial class PhoneNumber : ValueObject
 
     protected void ValidateValueObject()
     {
+        if (string.IsNullOrWhiteSpace(Value))
+        {
+            return;
+        }
         if (!regex.IsMatch(Value))
         {
-            throw new DomainException
-            {
-                Errors =
-                [
-                    new() {
-                        Field="PhoneNumber",
-                        MessageCode="i18nPhoneNumber.InvalidPhoneNumber",
-                        ErrorCode=ApplicationErrorCode.InvalidPhoneNumber
-                    }
-                ]
-            };
+            throw new DomainException(ApplicationErrorCode.InvalidPhoneNumber, nameof(PhoneNumber));
         }
     }
 

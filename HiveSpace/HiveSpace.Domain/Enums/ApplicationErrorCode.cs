@@ -9,7 +9,7 @@ public enum ApplicationErrorCode
     IncorrectPassword = 422005,
     UserNotFound = 422006,
     Unauthorized = 422007,
-    UserAddressNotFound = 422008,
+    NotFoundAddress = 422008,
     InvalidQuantity = 422009,
     InvalidQuantitySku = 422010,
     FluentValidationError = 422011,
@@ -29,4 +29,6 @@ public enum ApplicationErrorCode
     InvalidValue = 4220125,
     MaxLengthExceeded = 422026,
     MustBeGreaterThanZero = 422027,
+    InvalidOrder = 422028,
+    NotFoundCartItem = 422029,
 }
