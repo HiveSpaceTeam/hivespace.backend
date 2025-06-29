@@ -19,7 +19,6 @@ using HiveSpace.Application.Validators.UserAddress;
 using HiveSpace.Common.Interface;
 using HiveSpace.Common.Service;
 using HiveSpace.Commons.Models;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using NLog.Extensions.Logging;
@@ -28,7 +27,6 @@ using System.Text;
 using Azure.Storage.Blobs;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.JsonWebTokens;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace HiveSpace.Application.Extensions;
 

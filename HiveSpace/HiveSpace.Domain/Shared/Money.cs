@@ -15,17 +15,7 @@ public class Money : ValueObject
         Currency = currency;
         if (IsInvalid())
         {
-            throw new DomainException
-            {
-                Errors =
-               [
-                   new() {
-                        Field="Amount",
-                        MessageCode="i18nMoney.InvalidMoney",
-                        ErrorCode=ApplicationErrorCode.InvalidMoney
-                    }
-               ]
-            };
+            throw new DomainException(ApplicationErrorCode.InvalidMoney);
         }
     }
 
