@@ -73,7 +73,7 @@ namespace HiveSpace.Application.Services
 
                 if (isOutOfStock)
                 {
-                    throw ExceptionHelper.DomainException(ApplicationErrorCode.OutOfStock);
+                    throw new DomainException(ApplicationErrorCode.OutOfStock);
                 }
                 List<OrderItemProps> orderItemProps = products.Select(product =>
                 {

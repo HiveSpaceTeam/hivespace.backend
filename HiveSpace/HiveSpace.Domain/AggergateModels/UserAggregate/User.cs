@@ -20,11 +20,11 @@ public sealed class User : AggregateRoot<Guid>
     private User() { }
 
     public User(
-        string phoneNumber,
+        string email,
         string password,
         string userName,
+        string phoneNumber,
         string? fullName,
-        string? email,
         Gender? gender = null,
         DateTime? dob = null)
     {
@@ -54,12 +54,12 @@ public sealed class User : AggregateRoot<Guid>
                 return;
             }
         }
-        throw new NotFoundException("Address not found");
+        throw new DomainException(ApplicationErrorCode.NotFoundAddress);
     }
 
     public void UpdateAddress(Guid userAddressId, UserAddressProps props)
     {
-        var address = _addresses.Find(x => x.Id == userAddressId) ?? throw new NotFoundException("Address not found");
+        var address = _addresses.Find(x => x.Id == userAddressId) ?? throw new DomainException(ApplicationErrorCode.NotFoundAddress);
         address.UpdateAddress(props);
     }
 
@@ -88,7 +88,7 @@ public sealed class User : AggregateRoot<Guid>
             addr.SetDefault(false);
         }
         if (address is null)
-            throw new NotFoundException("Address not found");
+            throw new DomainException(ApplicationErrorCode.NotFoundAddress);
         address.SetDefault(true);
     }
 }

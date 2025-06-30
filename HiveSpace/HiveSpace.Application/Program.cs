@@ -1,17 +1,23 @@
 ﻿using HiveSpace.Application.Extensions;
 using HiveSpace.Application.Mappers;
+using Azure.Identity;
+
 
 var builder = WebApplication.CreateBuilder(args);
-
 var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 
 if (environment == "Production")
 {
-    string connectionString = builder.Configuration.GetValue<string>("AppConfiguration")
-    ?? throw new InvalidOperationException("The setting `AppConfiguration` was not found.");
+    
     builder.Configuration.AddAzureAppConfiguration(options =>
     {
-        options.Connect(connectionString);
+        string endpoint = Environment.GetEnvironmentVariable("APP_CONFIGURATION_ENDPOINT")
+            ?? throw new InvalidOperationException("The setting `AppConfigureEndpoint` was not found.");
+        options.Connect(new Uri(endpoint), new DefaultAzureCredential());
+        options.ConfigureKeyVault(kv =>
+        {
+            kv.SetCredential(new DefaultAzureCredential(new DefaultAzureCredentialOptions()));
+        });
     });
 }
 var configuration = builder.Configuration;
@@ -22,7 +28,6 @@ builder.Services
     .AddApplicationServices(configuration)
     .AddInfrastructureServices(configuration)
     .AddAutoMapper(typeof(AutoMapperProfiles));
-
 LoggingSetup.ConfigureLogging(builder.Environment, configuration);
 
 var app = builder.Build();
@@ -33,6 +38,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 
 app.UseHttpsRedirection();
 
@@ -45,6 +51,3 @@ app.MapControllers();
 app.Migrate();
 
 app.Run();
-
-
-
